@@ -1,0 +1,38 @@
+/**
+ * @file 设备库
+ * @author luwenlong <zuiwosuifeng@gmail.com>
+ */
+ @require '../view'
+
+
+.gfyshebeiguanli
+    position relative
+    min-height 800px
+    height auto!important
+    width 100%
+    .gfyshebeiguanli-body
+        margin auto
+        width 90%
+        height 50%
+        margin-top 35px
+        h2
+            margin 0px 0 10px
+            font-size 24px
+            color $base
+        .gfyshebeiguanli-choice
+            width 100%
+            height 30px
+            flexbox()
+            margin-top 20px
+            span
+                width 80px
+                font-size 16px
+                line-height 30px
+                text-align center
+                margin-right 10px
+                &.active,&:hover
+                    background #7ac6ff
+                    cursor pointer
+        .gfyshebeiguanli-table
+            margin-top 20px
+            width 100%

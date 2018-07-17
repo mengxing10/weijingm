@@ -1,0 +1,144 @@
+/**
+ * @file 报表
+ * @author luwenlong <zuiwosuifeng@gmail.com>
+ */
+
+.nengxiaofenxi
+    background-size 100% 100%
+    .shuibengfenxi-top
+        height 50px
+        flexbox()
+        justify-content(space-between)
+        align-items(center)
+        font-size 20px
+        color #fff
+        margin 10px 20px 10px 10px
+        // text-indent 10px  取消，影响datepicker
+        .query-data
+            font-size 16px
+            height 50px
+            width 120px
+            color #fff
+            margin-left 30px
+            .ui.fluid.selection.dropdown
+                min-height 30px
+                margin-top 10px
+                padding 6px 0px 6px 10px
+                .dropdown.icon
+                    padding 5px 10px
+            .ui.dropdown
+                color #fff
+                background #3c75c2
+                margin auto
+                .default.text
+                    color #fff
+                .ui.label
+                    color #fff
+                    background #0a448c
+                    font-weight normal
+                .menu.visible
+                    color #fff
+                    background #3c75c2
+                    .item
+                        color #fff
+                        border-bottom 1px solid #5da6ea
+                        &:hover
+                            background #59a1e1
+        .labStyle
+            line-height 50px
+        .query-condition
+            flexbox()
+            justify-content(flex-start)
+            align-items(center)
+            font-size 16px
+            position relative
+            margin auto
+            label
+                margin 0 10px
+                color #fff
+            .query-name
+                font-size 16px
+                margin-right 10px
+            .query-value
+                font-size 14px
+            .daily-wrap
+                margin auto
+                border 1px solid #ebebed
+                width 216px
+                height 28px
+                line-height 28px
+                inline-flex()
+                justify-content(flex-start)
+                align-items(center)
+                font-size 14px
+                .icon.calendar
+                    margin 0 5px
+                    height auto
+                >div
+                    display inline-block
+                input
+                    border none
+                    width 90px
+        .query-btn
+            width 106px
+            height 30px
+            font-size 16px
+            line-height 30px
+            text-align center
+            background #2c8cf9
+            color #fff
+            border-radius 3px
+            cursor pointer
+            &:hover
+                background #2a57ff
+            &.gray,
+            &.gray:hover
+                background #c6c6c6
+    .charts-wrap
+        width 100%
+        height 300px
+        margin 10px
+        flexbox()
+        justify-content(space-around)
+        .left-charts
+            width 70%
+            background-color #21427E
+            flexbox()
+            flex-direction(column)
+            justify-content(space-around)
+            .charts-title
+                font-size 16px
+                color #70b2ed
+                margin 10px 20px 10px 20px
+                height 30px
+            .charts-body
+                height 270px
+        .right-charts
+            font-size 14px
+            color white
+            width 28%
+            flexbox()
+            flex-direction(column)
+            justify-content(space-around)
+            background-color #21427E
+            h3
+                height 30px
+                font-size 16px
+                color #70b2ed
+                margin 10px 20px 10px 20px
+            .tongji
+                 height 270px
+                 text-align left
+                 font-size 14px
+                 flexbox()
+                 flex-wrap(wrap)
+                 align-items(center)
+                 justify-content(space-between)
+                 .tongji-item
+                     width 30%
+                     height 30%
+                     text-align center
+                     h3
+                         font-size 16px
+                     span
+                         font-size 14px

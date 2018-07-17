@@ -1,0 +1,1376 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:x="adobe:ns:meta/"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="二氧化氯加药系统"
+   width="1251"
+   height="416"
+   viewBox="0 0 1251 416"
+   version="1.1"
+   sodipodi:docname="28-eryanghualv.svg"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1012"
+     id="namedview214"
+     showgrid="false"
+     inkscape:zoom="1.9353586"
+     inkscape:cx="261.3959"
+     inkscape:cy="112.33107"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="s91" />
+  <metadata
+     id="metadata2">
+<?xpacket begin="�" id="W5M0MpCehiHzreSzNTczkc9d"?>    <x:xmpmeta
+       x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
+      <metadata>
+        <rdf:RDF>
+          <rdf:Description
+             rdf:about="" />
+          <cc:Work
+             rdf:about="">
+            <dc:format>image/svg+xml</dc:format>
+            <dc:type
+               rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+            <dc:title></dc:title>
+          </cc:Work>
+        </rdf:RDF>
+      </metadata>
+    </x:xmpmeta>
+<?xpacket end="w"?>  </metadata>
+  <defs
+     id="defs112">
+    <style
+       id="style4">
+      .cls-1, .cls-2 {
+        fill: #14204e;
+        opacity: 0.32;
+      }
+
+      .cls-1, .cls-11, .cls-15, .cls-16, .cls-17, .cls-18, .cls-6 {
+        fill-rule: evenodd;
+      }
+
+      .cls-3 {
+        filter: url(#filter);
+      }
+
+      .cls-10, .cls-12, .cls-13, .cls-4, .cls-5, .cls-8 {
+        fill: none;
+      }
+
+      .cls-4 {
+        stroke: #0ff4c4;
+        stroke-width: 2px;
+      }
+
+      .cls-10, .cls-12, .cls-13, .cls-5, .cls-8 {
+        opacity: 0.72;
+      }
+
+      .cls-5 {
+        filter: url(#filter-2);
+      }
+
+      .cls-6 {
+        fill: #5b83e1;
+      }
+
+      .cls-11, .cls-6 {
+        opacity: 0.37;
+      }
+
+      .cls-7 {
+        fill: #00e099;
+        opacity: 0.7;
+      }
+
+      .cls-8 {
+        filter: url(#filter-4);
+      }
+
+      .cls-9 {
+        font-size: 18px;
+        fill: #fff;
+        font-family: &quot;Microsoft YaHei&quot;;
+      }
+
+      .cls-10 {
+        filter: url(#filter-6);
+      }
+
+      .cls-11 {
+        fill: #11ebc3;
+      }
+
+      .cls-12 {
+        filter: url(#filter-7);
+      }
+
+      .cls-13 {
+        filter: url(#filter-8);
+      }
+
+      .cls-14 {
+        fill: #de5247;
+      }
+
+      .cls-15, .cls-16, .cls-17, .cls-18 {
+        fill: #fcf7f7;
+      }
+
+      .cls-15 {
+        filter: url(#filter-9);
+      }
+
+      .cls-16 {
+        filter: url(#filter-10);
+      }
+
+      .cls-17 {
+        filter: url(#filter-11);
+      }
+
+      .cls-18 {
+        filter: url(#filter-12);
+      }
+    </style>
+    <filter
+       id="filter"
+       filterUnits="userSpaceOnUse">
+      <feFlood
+         result="flood"
+         flood-color="#3890fb"
+         id="feFlood6" />
+      <feComposite
+         result="composite"
+         operator="in"
+         in2="SourceGraphic"
+         id="feComposite8" />
+      <feBlend
+         result="blend"
+         in2="SourceGraphic"
+         id="feBlend10" />
+    </filter>
+    <filter
+       id="filter-2"
+       x="30"
+       y="24"
+       width="51.91"
+       height="52"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         result="blur"
+         stdDeviation="9.667"
+         in="SourceAlpha"
+         id="feGaussianBlur13" />
+      <feFlood
+         result="flood"
+         flood-color="#00e099"
+         flood-opacity="0.68"
+         id="feFlood15" />
+      <feComposite
+         result="composite-2"
+         operator="out"
+         in2="blur"
+         id="feComposite17" />
+      <feComposite
+         result="composite"
+         operator="in"
+         in2="SourceAlpha"
+         id="feComposite19" />
+      <feBlend
+         result="blend"
+         in2="SourceGraphic"
+         id="feBlend21" />
+    </filter>
+    <filter
+       id="filter-4"
+       x="347"
+       y="24"
+       width="52"
+       height="52"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         result="blur"
+         stdDeviation="9.667"
+         in="SourceAlpha"
+         id="feGaussianBlur24" />
+      <feFlood
+         result="flood"
+         flood-color="#00e099"
+         flood-opacity="0.68"
+         id="feFlood26" />
+      <feComposite
+         result="composite-2"
+         operator="out"
+         in2="blur"
+         id="feComposite28" />
+      <feComposite
+         result="composite"
+         operator="in"
+         in2="SourceAlpha"
+         id="feComposite30" />
+      <feBlend
+         result="blend"
+         in2="SourceGraphic"
+         id="feBlend32" />
+    </filter>
+    <filter
+       id="filter-6"
+       x="30"
+       y="182"
+       width="52"
+       height="52"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         result="blur"
+         stdDeviation="9.667"
+         in="SourceAlpha"
+         id="feGaussianBlur35" />
+      <feFlood
+         result="flood"
+         flood-color="#00e099"
+         flood-opacity="0.68"
+         id="feFlood37" />
+      <feComposite
+         result="composite-2"
+         operator="out"
+         in2="blur"
+         id="feComposite39" />
+      <feComposite
+         result="composite"
+         operator="in"
+         in2="SourceAlpha"
+         id="feComposite41" />
+      <feBlend
+         result="blend"
+         in2="SourceGraphic"
+         id="feBlend43" />
+    </filter>
+    <filter
+       id="filter-7"
+       x="662"
+       y="24"
+       width="51.91"
+       height="52"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         result="blur"
+         stdDeviation="9.667"
+         in="SourceAlpha"
+         id="feGaussianBlur46" />
+      <feFlood
+         result="flood"
+         flood-color="#00e099"
+         flood-opacity="0.68"
+         id="feFlood48" />
+      <feComposite
+         result="composite-2"
+         operator="out"
+         in2="blur"
+         id="feComposite50" />
+      <feComposite
+         result="composite"
+         operator="in"
+         in2="SourceAlpha"
+         id="feComposite52" />
+      <feBlend
+         result="blend"
+         in2="SourceGraphic"
+         id="feBlend54" />
+    </filter>
+    <filter
+       id="filter-8"
+       x="979"
+       y="24"
+       width="52"
+       height="52"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         result="blur"
+         stdDeviation="9.667"
+         in="SourceAlpha"
+         id="feGaussianBlur57" />
+      <feFlood
+         result="flood"
+         flood-color="#00e099"
+         flood-opacity="0.68"
+         id="feFlood59" />
+      <feComposite
+         result="composite-2"
+         operator="out"
+         in2="blur"
+         id="feComposite61" />
+      <feComposite
+         result="composite"
+         operator="in"
+         in2="SourceAlpha"
+         id="feComposite63" />
+      <feBlend
+         result="blend"
+         in2="SourceGraphic"
+         id="feBlend65" />
+    </filter>
+    <filter
+       id="filter-9"
+       x="9442"
+       y="3658"
+       width="82"
+       height="81"
+       filterUnits="userSpaceOnUse">
+      <feOffset
+         result="offset"
+         dy="3"
+         in="SourceAlpha"
+         id="feOffset68" />
+      <feGaussianBlur
+         result="blur"
+         stdDeviation="4.899"
+         id="feGaussianBlur70" />
+      <feFlood
+         result="flood"
+         flood-color="#b21942"
+         flood-opacity="0.35"
+         id="feFlood72" />
+      <feComposite
+         result="composite"
+         operator="in"
+         in2="blur"
+         id="feComposite74" />
+      <feBlend
+         result="blend"
+         in="SourceGraphic"
+         in2="composite"
+         id="feBlend76" />
+    </filter>
+    <filter
+       id="filter-10"
+       x="9125"
+       y="3815"
+       width="82"
+       height="81"
+       filterUnits="userSpaceOnUse">
+      <feOffset
+         result="offset"
+         dy="3"
+         in="SourceAlpha"
+         id="feOffset79" />
+      <feGaussianBlur
+         result="blur"
+         stdDeviation="4.899"
+         id="feGaussianBlur81" />
+      <feFlood
+         result="flood"
+         flood-color="#b21942"
+         flood-opacity="0.35"
+         id="feFlood83" />
+      <feComposite
+         result="composite"
+         operator="in"
+         in2="blur"
+         id="feComposite85" />
+      <feBlend
+         result="blend"
+         in="SourceGraphic"
+         in2="composite"
+         id="feBlend87" />
+    </filter>
+    <filter
+       id="filter-11"
+       x="9757"
+       y="3658"
+       width="82"
+       height="81"
+       filterUnits="userSpaceOnUse">
+      <feOffset
+         result="offset"
+         dy="3"
+         in="SourceAlpha"
+         id="feOffset90" />
+      <feGaussianBlur
+         result="blur"
+         stdDeviation="4.899"
+         id="feGaussianBlur92" />
+      <feFlood
+         result="flood"
+         flood-color="#b21942"
+         flood-opacity="0.35"
+         id="feFlood94" />
+      <feComposite
+         result="composite"
+         operator="in"
+         in2="blur"
+         id="feComposite96" />
+      <feBlend
+         result="blend"
+         in="SourceGraphic"
+         in2="composite"
+         id="feBlend98" />
+    </filter>
+    <filter
+       id="filter-12"
+       x="10074"
+       y="3658"
+       width="82"
+       height="81"
+       filterUnits="userSpaceOnUse">
+      <feOffset
+         result="offset"
+         dy="3"
+         in="SourceAlpha"
+         id="feOffset101" />
+      <feGaussianBlur
+         result="blur"
+         stdDeviation="4.899"
+         id="feGaussianBlur103" />
+      <feFlood
+         result="flood"
+         flood-color="#b21942"
+         flood-opacity="0.35"
+         id="feFlood105" />
+      <feComposite
+         result="composite"
+         operator="in"
+         in2="blur"
+         id="feComposite107" />
+      <feBlend
+         result="blend"
+         in="SourceGraphic"
+         in2="composite"
+         id="feBlend109" />
+    </filter>
+    <filter
+       id="filter-7-8"
+       x="662"
+       y="24"
+       width="51.91"
+       height="52"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         result="blur"
+         stdDeviation="9.667"
+         in="SourceAlpha"
+         id="feGaussianBlur46-5" />
+      <feFlood
+         result="flood"
+         flood-color="#00e099"
+         flood-opacity="0.68"
+         id="feFlood48-5" />
+      <feComposite
+         result="composite-2"
+         operator="out"
+         in2="blur"
+         id="feComposite50-2" />
+      <feComposite
+         result="composite"
+         operator="in"
+         in2="SourceAlpha"
+         id="feComposite52-8" />
+      <feBlend
+         mode="normal"
+         result="blend"
+         in2="SourceGraphic"
+         id="feBlend54-2" />
+    </filter>
+    <filter
+       id="filter-7-3"
+       x="662"
+       y="24"
+       width="51.91"
+       height="52"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         result="blur"
+         stdDeviation="9.667"
+         in="SourceAlpha"
+         id="feGaussianBlur46-1" />
+      <feFlood
+         result="flood"
+         flood-color="#00e099"
+         flood-opacity="0.68"
+         id="feFlood48-2" />
+      <feComposite
+         result="composite-2"
+         operator="out"
+         in2="blur"
+         id="feComposite50-4" />
+      <feComposite
+         result="composite"
+         operator="in"
+         in2="SourceAlpha"
+         id="feComposite52-0" />
+      <feBlend
+         mode="normal"
+         result="blend"
+         in2="SourceGraphic"
+         id="feBlend54-5" />
+    </filter>
+    <filter
+       id="filter-11-8"
+       x="9757"
+       y="3658"
+       width="82"
+       height="81"
+       filterUnits="userSpaceOnUse">
+      <feOffset
+         result="offset"
+         dy="3"
+         in="SourceAlpha"
+         id="feOffset90-5" />
+      <feGaussianBlur
+         result="blur"
+         stdDeviation="4.899"
+         id="feGaussianBlur92-1" />
+      <feFlood
+         result="flood"
+         flood-color="#b21942"
+         flood-opacity="0.35"
+         id="feFlood94-5" />
+      <feComposite
+         result="composite"
+         operator="in"
+         in2="blur"
+         id="feComposite96-9" />
+      <feBlend
+         mode="normal"
+         result="blend"
+         in="SourceGraphic"
+         in2="composite"
+         id="feBlend98-3" />
+    </filter>
+    <filter
+       id="filter-7-8-4"
+       x="662"
+       y="24"
+       width="51.91"
+       height="52"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         result="blur"
+         stdDeviation="9.667"
+         in="SourceAlpha"
+         id="feGaussianBlur46-5-2" />
+      <feFlood
+         result="flood"
+         flood-color="#00e099"
+         flood-opacity="0.68"
+         id="feFlood48-5-3" />
+      <feComposite
+         result="composite-2"
+         operator="out"
+         in2="blur"
+         id="feComposite50-2-5" />
+      <feComposite
+         result="composite"
+         operator="in"
+         in2="SourceAlpha"
+         id="feComposite52-8-8" />
+      <feBlend
+         mode="normal"
+         result="blend"
+         in2="SourceGraphic"
+         id="feBlend54-2-8" />
+    </filter>
+  </defs>
+  <g
+     id="_4"
+     data-name="4">
+    <path
+       id="矩形_4113_拷贝_3"
+       data-name="矩形 4113 拷贝 3"
+       class="cls-1"
+       d="M10062.3,3487H10356a4.005,4.005,0,0,1,4,4v94a4.005,4.005,0,0,1-4,4h-293.7a3.943,3.943,0,0,1-4-4v-94A3.943,3.943,0,0,1,10062.3,3487Z"
+       transform="translate(-9109 -3487)" />
+    <rect
+       id="矩形_4113_拷贝_4"
+       data-name="矩形 4113 拷贝 4"
+       class="cls-2"
+       x="632.47"
+       width="301.73"
+       height="102"
+       rx="4"
+       ry="4" />
+    <rect
+       id="矩形_4113_拷贝_5"
+       data-name="矩形 4113 拷贝 5"
+       class="cls-2"
+       x="316.75"
+       width="301.78"
+       height="102"
+       rx="4"
+       ry="4" />
+    <rect
+       id="矩形_4113_拷贝_6"
+       data-name="矩形 4113 拷贝 6"
+       class="cls-2"
+       width="301.75"
+       height="102"
+       rx="4"
+       ry="4" />
+  </g>
+  <g
+     id="_4-2"
+     data-name="4">
+    <path
+       id="矩形_4113_拷贝_3-2"
+       data-name="矩形 4113 拷贝 3"
+       class="cls-1"
+       d="m 10062.3,3644 h 293.7 a 4.005,4.005 0 0 1 4,4 v 94 a 4.005,4.005 0 0 1 -4,4 h -293.7 a 3.943,3.943 0 0 1 -4,-4 v -94 a 3.943,3.943 0 0 1 4,-4 z"
+       transform="translate(-9109,-3487)"
+       inkscape:connector-curvature="0"
+       style="opacity:0.32000002;fill:#14204e;fill-rule:evenodd" />
+    <rect
+       id="矩形_4113_拷贝_4-2"
+       data-name="矩形 4113 拷贝 4"
+       class="cls-2"
+       x="632.46997"
+       y="157"
+       width="301.73001"
+       height="102"
+       rx="4"
+       ry="4"
+       style="opacity:0.32000002;fill:#14204e" />
+    <rect
+       id="矩形_4113_拷贝_5-2"
+       data-name="矩形 4113 拷贝 5"
+       class="cls-2"
+       x="316.75"
+       y="157"
+       width="301.78"
+       height="102"
+       rx="4"
+       ry="4"
+       style="opacity:0.32000002;fill:#14204e" />
+    <rect
+       id="矩形_4113_拷贝_6-2"
+       data-name="矩形 4113 拷贝 6"
+       class="cls-2"
+       y="157"
+       width="301.75"
+       height="102"
+       rx="4"
+       ry="4"
+       x="0"
+       style="opacity:0.32000002;fill:#14204e" />
+    <rect
+       id="矩形_4113_拷贝_7"
+       data-name="矩形 4113 拷贝 7"
+       class="cls-2"
+       y="314"
+       width="302"
+       height="102"
+       rx="4"
+       ry="4"
+       x="0"
+       style="opacity:0.32000002;fill:#14204e" />
+  </g>
+  <g
+     id="_4-3"
+     data-name="4">
+    <g
+       id="组_844"
+       data-name="组 844">
+      <text
+         id="_1_二氧化氯发生器"
+         data-name="1#二氧化氯发生器"
+         class="cls-9"
+         transform="translate(100.441,56.205)"
+         style="font-size:18px;font-family:'Microsoft YaHei';fill:#ffffff">1#二氧化氯发生器</text>
+    </g>
+    <g
+       id="组_844-2"
+       data-name="组 844">
+      <g
+         id="icon-3"
+         data-name="icon"
+         class="cls-3"
+         style="filter:url(#filter)">
+        <circle
+           id="椭圆_782-3"
+           data-name="椭圆 782"
+           class="cls-4"
+           cx="56"
+           cy="208"
+           r="26"
+           style="fill:none;stroke:#0ff4c4;stroke-width:2px" />
+        <circle
+           id="椭圆_782_拷贝-3"
+           data-name="椭圆 782 拷贝"
+           class="cls-10"
+           cx="56"
+           cy="208"
+           r="26"
+           style="opacity:0.72000002;fill:none;filter:url(#filter-6)" />
+        <g
+           id="组_903-3"
+           data-name="组 903">
+          <path
+             id="椭圆_6835_拷贝_7-3"
+             data-name="椭圆 6835 拷贝 7"
+             class="cls-6"
+             d="m 9165.05,3695 c -2.49,-4.31 -0.43,-10.15 4.6,-13.04 5.03,-2.89 11.12,-1.76 13.61,2.54 z"
+             transform="translate(-9109,-3487)"
+             inkscape:connector-curvature="0"
+             style="opacity:0.37000002;fill:#5b83e1;fill-rule:evenodd" />
+          <path
+             id="椭圆_6835_拷贝_8-3"
+             data-name="椭圆 6835 拷贝 8"
+             class="cls-6"
+             d="m 9165.05,3695 c 2.49,-4.3 8.59,-5.44 13.62,-2.54 5.03,2.9 7.08,8.73 4.59,13.04 z"
+             transform="translate(-9109,-3487)"
+             inkscape:connector-curvature="0"
+             style="opacity:0.37000002;fill:#5b83e1;fill-rule:evenodd" />
+          <path
+             id="椭圆_6835_拷贝_9-3"
+             data-name="椭圆 6835 拷贝 9"
+             class="cls-6"
+             d="m 9165.05,3695.01 c 4.98,0 9.01,4.7 9.01,10.49 0,5.79 -4.03,10.49 -9.01,10.49 z"
+             transform="translate(-9109,-3487)"
+             inkscape:connector-curvature="0"
+             style="opacity:0.37000002;fill:#5b83e1;fill-rule:evenodd" />
+          <path
+             id="椭圆_6835_拷贝_10-3"
+             data-name="椭圆 6835 拷贝 10"
+             class="cls-6"
+             d="m 9165.04,3695 c 2.49,4.31 0.43,10.15 -4.6,13.04 -5.03,2.89 -11.12,1.76 -13.61,-2.54 z"
+             transform="translate(-9109,-3487)"
+             inkscape:connector-curvature="0"
+             style="opacity:0.37000002;fill:#5b83e1;fill-rule:evenodd" />
+          <path
+             id="椭圆_6835_拷贝_11-3"
+             data-name="椭圆 6835 拷贝 11"
+             class="cls-6"
+             d="m 9165.04,3695 c -2.49,4.3 -8.58,5.44 -13.61,2.54 -5.03,-2.9 -7.09,-8.73 -4.6,-13.04 z"
+             transform="translate(-9109,-3487)"
+             inkscape:connector-curvature="0"
+             style="opacity:0.37000002;fill:#5b83e1;fill-rule:evenodd" />
+          <path
+             id="椭圆_6835_拷贝_12-3"
+             data-name="椭圆 6835 拷贝 12"
+             class="cls-6"
+             d="m 9165.05,3694.99 c -4.98,0 -9.02,-4.7 -9.02,-10.49 0,-5.79 4.04,-10.49 9.02,-10.49 z"
+             transform="translate(-9109,-3487)"
+             inkscape:connector-curvature="0"
+             style="opacity:0.37000002;fill:#5b83e1;fill-rule:evenodd" />
+        </g>
+        <circle
+           id="椭圆_782_拷贝_2-3"
+           data-name="椭圆 782 拷贝 2"
+           class="cls-7"
+           cx="56"
+           cy="208"
+           r="11"
+           style="opacity:0.7;fill:#00e099" />
+      </g>
+      <text
+         id="二氧化氯酸物吸收泵"
+         class="cls-9"
+         transform="translate(100.455,214.205)"
+         style="font-size:18px;font-family:'Microsoft YaHei';fill:#ffffff">二氧化氯酸物吸收泵</text>
+    </g>
+    <g
+       id="组_844-3"
+       data-name="组 844">
+      <text
+         id="_1_二氧化氯发生器-2"
+         data-name="1#二氧化氯发生器"
+         class="cls-9"
+         transform="translate(417.421,56.205)"
+         style="font-size:18px;font-family:'Microsoft YaHei';fill:#ffffff">1#二氧化氯发生器</text>
+    </g>
+    <g
+       id="组_844-4"
+       data-name="组 844">
+      <g
+         id="s3"
+         data-name="组 846"
+         inkscape:label="#组_846-2">
+        <g
+           id="icon-4"
+           data-name="icon">
+          <g
+             id="组_903-4"
+             data-name="组 903">
+            <path
+               id="椭圆_6835_拷贝_7-4"
+               data-name="椭圆 6835 拷贝 7"
+               class="cls-11"
+               d="m 9796.51,3537 c -2.52,-4.31 -0.44,-10.15 4.65,-13.04 5.09,-2.89 11.26,-1.76 13.78,2.54 z"
+               transform="translate(-9109,-3487)"
+               inkscape:connector-curvature="0"
+               style="opacity:0.37000002;fill:#11ebc3;fill-rule:evenodd" />
+            <path
+               id="椭圆_6835_拷贝_8-4"
+               data-name="椭圆 6835 拷贝 8"
+               class="cls-11"
+               d="m 9796.51,3537 c 2.52,-4.3 8.69,-5.44 13.77,-2.54 5.08,2.9 7.18,8.73 4.66,13.04 z"
+               transform="translate(-9109,-3487)"
+               inkscape:connector-curvature="0"
+               style="opacity:0.37000002;fill:#11ebc3;fill-rule:evenodd" />
+            <path
+               id="椭圆_6835_拷贝_9-4"
+               data-name="椭圆 6835 拷贝 9"
+               class="cls-11"
+               d="m 9796.5,3537.01 c 5.04,0 9.13,4.7 9.13,10.49 0,5.79 -4.09,10.49 -9.13,10.49 z"
+               transform="translate(-9109,-3487)"
+               inkscape:connector-curvature="0"
+               style="opacity:0.37000002;fill:#11ebc3;fill-rule:evenodd" />
+            <path
+               id="椭圆_6835_拷贝_10-4"
+               data-name="椭圆 6835 拷贝 10"
+               class="cls-11"
+               d="m 9796.49,3537 c 2.52,4.31 0.44,10.15 -4.65,13.04 -5.09,2.89 -11.26,1.76 -13.78,-2.54 z"
+               transform="translate(-9109,-3487)"
+               inkscape:connector-curvature="0"
+               style="opacity:0.37000002;fill:#11ebc3;fill-rule:evenodd" />
+            <path
+               id="椭圆_6835_拷贝_11-4"
+               data-name="椭圆 6835 拷贝 11"
+               class="cls-11"
+               d="m 9796.49,3537 c -2.52,4.3 -8.69,5.44 -13.77,2.54 -5.08,-2.9 -7.18,-8.73 -4.66,-13.04 z"
+               transform="translate(-9109,-3487)"
+               inkscape:connector-curvature="0"
+               style="opacity:0.37000002;fill:#11ebc3;fill-rule:evenodd" />
+            <path
+               id="椭圆_6835_拷贝_12-4"
+               data-name="椭圆 6835 拷贝 12"
+               class="cls-11"
+               d="m 9796.5,3536.99 c -5.04,0 -9.13,-4.7 -9.13,-10.49 0,-5.79 4.09,-10.49 9.13,-10.49 z"
+               transform="translate(-9109,-3487)"
+               inkscape:connector-curvature="0"
+               style="opacity:0.37000002;fill:#11ebc3;fill-rule:evenodd" />
+          </g>
+          <ellipse
+             id="椭圆_782-4"
+             data-name="椭圆 782"
+             class="cls-4"
+             cx="687.95502"
+             cy="50"
+             rx="25.955"
+             ry="26"
+             style="fill:none;stroke:#0ff4c4;stroke-width:2px" />
+          <ellipse
+             id="椭圆_782_拷贝-4"
+             data-name="椭圆 782 拷贝"
+             class="cls-12"
+             cx="687.95502"
+             cy="50"
+             rx="25.955"
+             ry="26"
+             style="opacity:0.72000002;fill:none;filter:url(#filter-7)" />
+          <circle
+             id="椭圆_782_拷贝_2-4"
+             data-name="椭圆 782 拷贝 2"
+             class="cls-7"
+             cx="687.95502"
+             cy="50"
+             r="10.985"
+             style="opacity:0.7;fill:#00e099" />
+        </g>
+      </g>
+      <text
+         id="_1_二氧化氯增加泵"
+         data-name="1#二氧化氯增加泵"
+         class="cls-9"
+         transform="translate(732.441,56.205)"
+         style="font-size:18px;font-family:'Microsoft YaHei';fill:#ffffff">1#二氧化氯增加泵</text>
+      <g
+         transform="translate(-631.48)"
+         id="s1"
+         data-name="组 846"
+         inkscape:label="#组_846-2-7">
+        <g
+           id="icon-4-8"
+           data-name="icon">
+          <g
+             id="组_903-4-2"
+             data-name="组 903">
+            <path
+               id="椭圆_6835_拷贝_7-4-8"
+               data-name="椭圆 6835 拷贝 7"
+               class="cls-11"
+               d="m 9796.51,3537 c -2.52,-4.31 -0.44,-10.15 4.65,-13.04 5.09,-2.89 11.26,-1.76 13.78,2.54 z"
+               transform="translate(-9109,-3487)"
+               inkscape:connector-curvature="0"
+               style="opacity:0.37000002;fill:#11ebc3;fill-rule:evenodd" />
+            <path
+               id="椭圆_6835_拷贝_8-4-3"
+               data-name="椭圆 6835 拷贝 8"
+               class="cls-11"
+               d="m 9796.51,3537 c 2.52,-4.3 8.69,-5.44 13.77,-2.54 5.08,2.9 7.18,8.73 4.66,13.04 z"
+               transform="translate(-9109,-3487)"
+               inkscape:connector-curvature="0"
+               style="opacity:0.37000002;fill:#11ebc3;fill-rule:evenodd" />
+            <path
+               id="椭圆_6835_拷贝_9-4-9"
+               data-name="椭圆 6835 拷贝 9"
+               class="cls-11"
+               d="m 9796.5,3537.01 c 5.04,0 9.13,4.7 9.13,10.49 0,5.79 -4.09,10.49 -9.13,10.49 z"
+               transform="translate(-9109,-3487)"
+               inkscape:connector-curvature="0"
+               style="opacity:0.37000002;fill:#11ebc3;fill-rule:evenodd" />
+            <path
+               id="椭圆_6835_拷贝_10-4-0"
+               data-name="椭圆 6835 拷贝 10"
+               class="cls-11"
+               d="m 9796.49,3537 c 2.52,4.31 0.44,10.15 -4.65,13.04 -5.09,2.89 -11.26,1.76 -13.78,-2.54 z"
+               transform="translate(-9109,-3487)"
+               inkscape:connector-curvature="0"
+               style="opacity:0.37000002;fill:#11ebc3;fill-rule:evenodd" />
+            <path
+               id="椭圆_6835_拷贝_11-4-0"
+               data-name="椭圆 6835 拷贝 11"
+               class="cls-11"
+               d="m 9796.49,3537 c -2.52,4.3 -8.69,5.44 -13.77,2.54 -5.08,-2.9 -7.18,-8.73 -4.66,-13.04 z"
+               transform="translate(-9109,-3487)"
+               inkscape:connector-curvature="0"
+               style="opacity:0.37000002;fill:#11ebc3;fill-rule:evenodd" />
+            <path
+               id="椭圆_6835_拷贝_12-4-6"
+               data-name="椭圆 6835 拷贝 12"
+               class="cls-11"
+               d="m 9796.5,3536.99 c -5.04,0 -9.13,-4.7 -9.13,-10.49 0,-5.79 4.09,-10.49 9.13,-10.49 z"
+               transform="translate(-9109,-3487)"
+               inkscape:connector-curvature="0"
+               style="opacity:0.37000002;fill:#11ebc3;fill-rule:evenodd" />
+          </g>
+          <ellipse
+             id="椭圆_782-4-9"
+             data-name="椭圆 782"
+             class="cls-4"
+             cx="687.95502"
+             cy="50"
+             rx="25.955"
+             ry="26"
+             style="fill:none;stroke:#0ff4c4;stroke-width:2px" />
+          <ellipse
+             id="椭圆_782_拷贝-4-3"
+             data-name="椭圆 782 拷贝"
+             class="cls-12"
+             cx="687.95502"
+             cy="50"
+             rx="25.955"
+             ry="26"
+             style="opacity:0.72000002;fill:none;filter:url(#filter-7-8)" />
+          <circle
+             id="椭圆_782_拷贝_2-4-0"
+             data-name="椭圆 782 拷贝 2"
+             class="cls-7"
+             cx="687.95502"
+             cy="50"
+             r="10.985"
+             style="opacity:0.7;fill:#00e099" />
+        </g>
+      </g>
+      <g
+         transform="translate(-320.06454,0.17632392)"
+         id="S2"
+         data-name="组 846"
+         inkscape:label="#组_846-2-5">
+        <g
+           id="icon-4-1"
+           data-name="icon">
+          <g
+             id="组_903-4-1"
+             data-name="组 903">
+            <path
+               id="椭圆_6835_拷贝_7-4-9"
+               data-name="椭圆 6835 拷贝 7"
+               class="cls-11"
+               d="m 9796.51,3537 c -2.52,-4.31 -0.44,-10.15 4.65,-13.04 5.09,-2.89 11.26,-1.76 13.78,2.54 z"
+               transform="translate(-9109,-3487)"
+               inkscape:connector-curvature="0"
+               style="opacity:0.37000002;fill:#11ebc3;fill-rule:evenodd" />
+            <path
+               id="椭圆_6835_拷贝_8-4-8"
+               data-name="椭圆 6835 拷贝 8"
+               class="cls-11"
+               d="m 9796.51,3537 c 2.52,-4.3 8.69,-5.44 13.77,-2.54 5.08,2.9 7.18,8.73 4.66,13.04 z"
+               transform="translate(-9109,-3487)"
+               inkscape:connector-curvature="0"
+               style="opacity:0.37000002;fill:#11ebc3;fill-rule:evenodd" />
+            <path
+               id="椭圆_6835_拷贝_9-4-1"
+               data-name="椭圆 6835 拷贝 9"
+               class="cls-11"
+               d="m 9796.5,3537.01 c 5.04,0 9.13,4.7 9.13,10.49 0,5.79 -4.09,10.49 -9.13,10.49 z"
+               transform="translate(-9109,-3487)"
+               inkscape:connector-curvature="0"
+               style="opacity:0.37000002;fill:#11ebc3;fill-rule:evenodd" />
+            <path
+               id="椭圆_6835_拷贝_10-4-03"
+               data-name="椭圆 6835 拷贝 10"
+               class="cls-11"
+               d="m 9796.49,3537 c 2.52,4.31 0.44,10.15 -4.65,13.04 -5.09,2.89 -11.26,1.76 -13.78,-2.54 z"
+               transform="translate(-9109,-3487)"
+               inkscape:connector-curvature="0"
+               style="opacity:0.37000002;fill:#11ebc3;fill-rule:evenodd" />
+            <path
+               id="椭圆_6835_拷贝_11-4-5"
+               data-name="椭圆 6835 拷贝 11"
+               class="cls-11"
+               d="m 9796.49,3537 c -2.52,4.3 -8.69,5.44 -13.77,2.54 -5.08,-2.9 -7.18,-8.73 -4.66,-13.04 z"
+               transform="translate(-9109,-3487)"
+               inkscape:connector-curvature="0"
+               style="opacity:0.37000002;fill:#11ebc3;fill-rule:evenodd" />
+            <path
+               id="椭圆_6835_拷贝_12-4-0"
+               data-name="椭圆 6835 拷贝 12"
+               class="cls-11"
+               d="m 9796.5,3536.99 c -5.04,0 -9.13,-4.7 -9.13,-10.49 0,-5.79 4.09,-10.49 9.13,-10.49 z"
+               transform="translate(-9109,-3487)"
+               inkscape:connector-curvature="0"
+               style="opacity:0.37000002;fill:#11ebc3;fill-rule:evenodd" />
+          </g>
+          <ellipse
+             id="椭圆_782-4-1"
+             data-name="椭圆 782"
+             class="cls-4"
+             cx="687.95502"
+             cy="50"
+             rx="25.955"
+             ry="26"
+             style="fill:none;stroke:#0ff4c4;stroke-width:2px" />
+          <ellipse
+             id="椭圆_782_拷贝-4-39"
+             data-name="椭圆 782 拷贝"
+             class="cls-12"
+             cx="687.95502"
+             cy="50"
+             rx="25.955"
+             ry="26"
+             style="opacity:0.72000002;fill:none;filter:url(#filter-7-3)" />
+          <circle
+             id="椭圆_782_拷贝_2-4-7"
+             data-name="椭圆 782 拷贝 2"
+             class="cls-7"
+             cx="687.95502"
+             cy="50"
+             r="10.985"
+             style="opacity:0.7;fill:#00e099" />
+        </g>
+      </g>
+    </g>
+    <g
+       id="组_844-5"
+       data-name="组 844">
+      <g
+         id="s4"
+         data-name="icon"
+         inkscape:label="#icon-5">
+        <g
+           id="组_903-5"
+           data-name="组 903">
+          <path
+             id="椭圆_6835_拷贝_7-5"
+             data-name="椭圆 6835 拷贝 7"
+             class="cls-11"
+             d="m 10113.6,3537 c -2.6,-4.31 -0.5,-10.15 4.6,-13.04 5.1,-2.89 11.3,-1.76 13.8,2.54 z"
+             transform="translate(-9109,-3487)"
+             inkscape:connector-curvature="0"
+             style="opacity:0.37000002;fill:#11ebc3;fill-rule:evenodd" />
+          <path
+             id="椭圆_6835_拷贝_8-5"
+             data-name="椭圆 6835 拷贝 8"
+             class="cls-11"
+             d="m 10113.6,3537 c 2.5,-4.3 8.7,-5.44 13.8,-2.54 5.1,2.9 7.1,8.73 4.6,13.04 z"
+             transform="translate(-9109,-3487)"
+             inkscape:connector-curvature="0"
+             style="opacity:0.37000002;fill:#11ebc3;fill-rule:evenodd" />
+          <path
+             id="椭圆_6835_拷贝_9-5"
+             data-name="椭圆 6835 拷贝 9"
+             class="cls-11"
+             d="m 10113.5,3537.01 c 5.1,0 9.2,4.7 9.2,10.49 0,5.79 -4.1,10.49 -9.2,10.49 z"
+             transform="translate(-9109,-3487)"
+             inkscape:connector-curvature="0"
+             style="opacity:0.37000002;fill:#11ebc3;fill-rule:evenodd" />
+          <path
+             id="椭圆_6835_拷贝_10-5"
+             data-name="椭圆 6835 拷贝 10"
+             class="cls-11"
+             d="m 10113.5,3537 c 2.6,4.31 0.5,10.15 -4.6,13.04 -5.1,2.89 -11.3,1.76 -13.8,-2.54 z"
+             transform="translate(-9109,-3487)"
+             inkscape:connector-curvature="0"
+             style="opacity:0.37000002;fill:#11ebc3;fill-rule:evenodd" />
+          <path
+             id="椭圆_6835_拷贝_11-5"
+             data-name="椭圆 6835 拷贝 11"
+             class="cls-11"
+             d="m 10113.5,3537 c -2.5,4.3 -8.7,5.44 -13.8,2.54 -5.1,-2.9 -7.1,-8.73 -4.6,-13.04 z"
+             transform="translate(-9109,-3487)"
+             inkscape:connector-curvature="0"
+             style="opacity:0.37000002;fill:#11ebc3;fill-rule:evenodd" />
+          <path
+             id="椭圆_6835_拷贝_12-5"
+             data-name="椭圆 6835 拷贝 12"
+             class="cls-11"
+             d="m 10113.5,3536.99 c -5,0 -9.1,-4.7 -9.1,-10.49 0,-5.79 4.1,-10.49 9.1,-10.49 z"
+             transform="translate(-9109,-3487)"
+             inkscape:connector-curvature="0"
+             style="opacity:0.37000002;fill:#11ebc3;fill-rule:evenodd" />
+        </g>
+        <ellipse
+           id="椭圆_782-5"
+           data-name="椭圆 782"
+           class="cls-4"
+           cx="1005"
+           cy="50"
+           rx="25.955"
+           ry="26"
+           style="fill:none;stroke:#0ff4c4;stroke-width:2px" />
+        <ellipse
+           id="椭圆_782_拷贝-5"
+           data-name="椭圆 782 拷贝"
+           class="cls-13"
+           cx="1005"
+           cy="50"
+           rx="25.955"
+           ry="26"
+           style="opacity:0.72000002;fill:none;filter:url(#filter-8)" />
+        <circle
+           id="椭圆_782_拷贝_2-5"
+           data-name="椭圆 782 拷贝 2"
+           class="cls-7"
+           cx="1005"
+           cy="50"
+           r="11"
+           style="opacity:0.7;fill:#00e099" />
+      </g>
+      <text
+         id="_2_二氧化氯增加泵"
+         data-name="2#二氧化氯增加泵"
+         class="cls-9"
+         transform="translate(1049.422,56.205)"
+         style="font-size:18px;font-family:'Microsoft YaHei';fill:#ffffff">2#二氧化氯增加泵</text>
+    </g>
+  </g>
+  <g
+     id="组_844-6"
+     data-name="组 844">
+    <g
+       id="s61"
+       data-name="组 882"
+       inkscape:label="#组_882">
+      <circle
+         id="s6"
+         data-name="椭圆 782"
+         class="cls-14"
+         cx="373.07999"
+         cy="208"
+         r="26.08"
+         style="fill:#5085c6;fill-opacity:1"
+         inkscape:label="#椭圆_782-6" />
+      <path
+         id="椭圆_798"
+         data-name="椭圆 798"
+         class="cls-15"
+         d="m 9482.07,3710 a 15,15 0 1 1 15.04,-15 15.027,15.027 0 0 1 -15.04,15 z m 0.5,-6 a 2.5,2.5 0 1 0 -2.5,-2.5 2.5,2.5 0 0 0 2.5,2.5 z m 1.26,-18.01 h -2.52 a 1.25,1.25 0 0 0 -1.25,1.25 l 1.25,7.51 a 1.26,1.26 0 0 0 2.52,0 l 1.26,-7.51 a 1.253,1.253 0 0 0 -1.26,-1.25 z"
+         transform="translate(-9109,-3487)"
+         inkscape:connector-curvature="0"
+         style="fill:#fcf7f7;fill-rule:evenodd;filter:url(#filter-9)" />
+    </g>
+    <text
+       id="盐酸罐液位低报警"
+       class="cls-9"
+       transform="translate(416.839,216.206)"
+       style="font-size:18px;font-family:'Microsoft YaHei';fill:#ffffff">盐酸罐液位低报警</text>
+  </g>
+  <g
+     id="组_844-7"
+     data-name="组 844">
+    <g
+       id="s91"
+       data-name="组 882"
+       inkscape:label="#组_882-2">
+      <circle
+         id="s9"
+         data-name="椭圆 782"
+         class="cls-14"
+         cx="56.095001"
+         cy="365"
+         r="26.094999"
+         style="fill:#5085c6;fill-opacity:1"
+         inkscape:label="#椭圆_782-7" />
+      <path
+         id="椭圆_798-2"
+         data-name="椭圆 798"
+         class="cls-16"
+         d="m 9165.09,3867 a 15,15 0 1 1 15.06,-15 15.029,15.029 0 0 1 -15.06,15 z m 0.51,-6 a 2.5,2.5 0 1 0 -2.51,-2.5 2.509,2.509 0 0 0 2.51,2.5 z m 1.26,-18.01 h -2.52 a 1.261,1.261 0 0 0 -1.27,1.25 l 1.27,7.51 a 1.26,1.26 0 1 0 2.52,0 l 1.26,-7.51 a 1.259,1.259 0 0 0 -1.26,-1.25 z"
+         transform="translate(-9109,-3487)"
+         inkscape:connector-curvature="0"
+         style="fill:#fcf7f7;fill-rule:evenodd;filter:url(#filter-10)" />
+    </g>
+    <text
+       id="漏氯报警"
+       class="cls-9"
+       transform="translate(99.901,373.206)"
+       style="font-size:18px;font-family:'Microsoft YaHei';fill:#ffffff">漏氯报警</text>
+  </g>
+  <g
+     id="组_844-8"
+     data-name="组 844">
+    <g
+       id="s71"
+       data-name="组 882"
+       inkscape:label="#组_882-3">
+      <circle
+         id="s7"
+         data-name="椭圆 782"
+         class="cls-14"
+         cx="688.09497"
+         cy="208"
+         r="26.094999"
+         style="fill:#5085c6;fill-opacity:1"
+         inkscape:label="#椭圆_782-8" />
+      <path
+         id="椭圆_798-3"
+         data-name="椭圆 798"
+         class="cls-17"
+         d="m 9797.09,3710 a 15,15 0 1 1 15.06,-15 15.029,15.029 0 0 1 -15.06,15 z m 0.51,-6 a 2.5,2.5 0 1 0 -2.51,-2.5 2.509,2.509 0 0 0 2.51,2.5 z m 1.26,-18.01 h -2.52 a 1.253,1.253 0 0 0 -1.26,1.25 l 1.26,7.51 a 1.26,1.26 0 1 0 2.52,0 l 1.26,-7.51 a 1.259,1.259 0 0 0 -1.26,-1.25 z"
+         transform="translate(-9109,-3487)"
+         inkscape:connector-curvature="0"
+         style="fill:#fcf7f7;fill-rule:evenodd;filter:url(#filter-11)" />
+    </g>
+    <text
+       id="次氯酸钠罐液位低报警"
+       class="cls-9"
+       transform="translate(731.901,216.206)"
+       style="font-size:18px;font-family:'Microsoft YaHei';fill:#ffffff">次氯酸钠罐液位低报警</text>
+    <g
+       transform="translate(-631.46,157.99)"
+       id="s5"
+       data-name="组 846"
+       inkscape:label="#组_846-2-7">
+      <g
+         id="icon-4-8-4"
+         data-name="icon">
+        <g
+           id="组_903-4-2-5"
+           data-name="组 903">
+          <path
+             id="椭圆_6835_拷贝_7-4-8-4"
+             data-name="椭圆 6835 拷贝 7"
+             class="cls-11"
+             d="m 9796.51,3537 c -2.52,-4.31 -0.44,-10.15 4.65,-13.04 5.09,-2.89 11.26,-1.76 13.78,2.54 z"
+             transform="translate(-9109,-3487)"
+             inkscape:connector-curvature="0"
+             style="opacity:0.37000002;fill:#11ebc3;fill-rule:evenodd" />
+          <path
+             id="椭圆_6835_拷贝_8-4-3-8"
+             data-name="椭圆 6835 拷贝 8"
+             class="cls-11"
+             d="m 9796.51,3537 c 2.52,-4.3 8.69,-5.44 13.77,-2.54 5.08,2.9 7.18,8.73 4.66,13.04 z"
+             transform="translate(-9109,-3487)"
+             inkscape:connector-curvature="0"
+             style="opacity:0.37000002;fill:#11ebc3;fill-rule:evenodd" />
+          <path
+             id="椭圆_6835_拷贝_9-4-9-4"
+             data-name="椭圆 6835 拷贝 9"
+             class="cls-11"
+             d="m 9796.5,3537.01 c 5.04,0 9.13,4.7 9.13,10.49 0,5.79 -4.09,10.49 -9.13,10.49 z"
+             transform="translate(-9109,-3487)"
+             inkscape:connector-curvature="0"
+             style="opacity:0.37000002;fill:#11ebc3;fill-rule:evenodd" />
+          <path
+             id="椭圆_6835_拷贝_10-4-0-3"
+             data-name="椭圆 6835 拷贝 10"
+             class="cls-11"
+             d="m 9796.49,3537 c 2.52,4.31 0.44,10.15 -4.65,13.04 -5.09,2.89 -11.26,1.76 -13.78,-2.54 z"
+             transform="translate(-9109,-3487)"
+             inkscape:connector-curvature="0"
+             style="opacity:0.37000002;fill:#11ebc3;fill-rule:evenodd" />
+          <path
+             id="椭圆_6835_拷贝_11-4-0-6"
+             data-name="椭圆 6835 拷贝 11"
+             class="cls-11"
+             d="m 9796.49,3537 c -2.52,4.3 -8.69,5.44 -13.77,2.54 -5.08,-2.9 -7.18,-8.73 -4.66,-13.04 z"
+             transform="translate(-9109,-3487)"
+             inkscape:connector-curvature="0"
+             style="opacity:0.37000002;fill:#11ebc3;fill-rule:evenodd" />
+          <path
+             id="椭圆_6835_拷贝_12-4-6-3"
+             data-name="椭圆 6835 拷贝 12"
+             class="cls-11"
+             d="m 9796.5,3536.99 c -5.04,0 -9.13,-4.7 -9.13,-10.49 0,-5.79 4.09,-10.49 9.13,-10.49 z"
+             transform="translate(-9109,-3487)"
+             inkscape:connector-curvature="0"
+             style="opacity:0.37000002;fill:#11ebc3;fill-rule:evenodd" />
+        </g>
+        <ellipse
+           id="椭圆_782-4-9-3"
+           data-name="椭圆 782"
+           class="cls-4"
+           cx="687.95502"
+           cy="50"
+           rx="25.955"
+           ry="26"
+           style="fill:none;stroke:#0ff4c4;stroke-width:2px" />
+        <ellipse
+           id="椭圆_782_拷贝-4-3-6"
+           data-name="椭圆 782 拷贝"
+           class="cls-12"
+           cx="687.95502"
+           cy="50"
+           rx="25.955"
+           ry="26"
+           style="opacity:0.72000002;fill:none;filter:url(#filter-7-8-4)" />
+        <circle
+           id="椭圆_782_拷贝_2-4-0-4"
+           data-name="椭圆 782 拷贝 2"
+           class="cls-7"
+           cx="687.95502"
+           cy="50"
+           r="10.985"
+           style="opacity:0.7;fill:#00e099" />
+      </g>
+    </g>
+  </g>
+  <g
+     id="组_844-9"
+     data-name="组 844">
+    <g
+       id="s81"
+       data-name="组 882"
+       inkscape:label="#组_882-4">
+      <circle
+         id="椭圆_782-9"
+         data-name="椭圆 782"
+         class="cls-14"
+         cx="1005.1"
+         cy="208"
+         r="26.1"
+         style="fill:#5085c6;fill-opacity:1" />
+      <path
+         id="椭圆_798-4"
+         data-name="椭圆 798"
+         class="cls-18"
+         d="m 10114.1,3710 a 15,15 0 1 1 15,-15 15.078,15.078 0 0 1 -15,15 z m 0.5,-6 a 2.5,2.5 0 1 0 -2.5,-2.5 2.488,2.488 0 0 0 2.5,2.5 z m 1.2,-18.01 h -2.5 a 1.2,1.2 0 0 0 -1.2,1.25 l 1.2,7.51 a 1.289,1.289 0 0 0 1.3,1.26 1.205,1.205 0 0 0 1.2,-1.26 l 1.3,-7.51 a 1.288,1.288 0 0 0 -1.3,-1.25 z"
+         transform="translate(-9109,-3487)"
+         inkscape:connector-curvature="0"
+         style="fill:#fcf7f7;fill-rule:evenodd;filter:url(#filter-12)" />
+    </g>
+    <text
+       id="稀释水欠压"
+       class="cls-9"
+       transform="translate(1048.868,216.206)"
+       style="font-size:18px;font-family:'Microsoft YaHei';fill:#ffffff">稀释水欠压</text>
+  </g>
+</svg>

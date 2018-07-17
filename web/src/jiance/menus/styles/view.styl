@@ -1,0 +1,88 @@
+/**
+ * @file monlist
+ * @author luwenlong <zuiwosuifeng@gmail.com>
+ */
+ .charts-menu
+     flexbox()
+     flex-flow()
+     min-height 790px
+     height auto!important
+     .charts-menu-list
+         height 100%
+         background-color #2a2f43
+         display none
+         .charts-menu-innerbutton
+              position fixed
+              top 40%
+              left 139px
+              width 10px
+              height 200px
+              z-index 9999
+              background url('./img/menu-button.png') no-repeat  center
+              transform:rotate(180deg)
+         .charts-menu-item
+             color #8190a5
+             text-align  left
+             &:hover
+             &.active
+                 color #3a9ae6
+                 cursor pointer
+                 background #222638
+                 svg
+                     fill #3a9ae6
+             svg
+                 width 18px
+                 height 18px
+                 line-height 45px
+                 fill rgb(129, 144, 165)
+             .icon
+                 margin-left 10px
+                 font-size 18px
+
+             span
+                 font-size 14px
+                 margin-left 10px
+                 line-height 45px
+                 .icon
+                     margin-left 5px
+             .charts-menu-item-child
+                 background #222638
+                 margin-top -5px
+                 display none
+                 &.active
+                     display block
+                 span
+                     height 30px
+                     width 130px
+                     line-height 30px
+                     text-align center
+                     display block
+                     color #8190a5
+                     &.active
+                     &:hover
+
+                         background  rgb(58, 154, 230)
+                         color #fff
+                         border-radius: 8px;
+         h3
+             font-size  20px
+             color  rgb(243, 179, 54)
+             text-align: center;
+             height 45px
+             line-height 45px
+             margin-bottom 20px
+         &.active
+             width 150px
+             display block
+     .charts-menu-button
+         position fixed
+         text-align center
+         display none
+         top 40%
+         width 10px
+         height 200px
+         z-index 9999
+         background url('./img/menu-button.png') no-repeat  center
+         &.active
+             width 10px
+             display block

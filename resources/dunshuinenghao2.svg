@@ -1,0 +1,94 @@
+<svg id="组_915" data-name="组 915" xmlns="http://www.w3.org/2000/svg" width="172" height="176" viewBox="0 0 172 176">
+  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""/>
+   </rdf:RDF>
+</x:xmpmeta>
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                           
+<?xpacket end="w"?></metadata>
+<defs>
+    <style>
+      .cls-1, .cls-8 {
+        fill: #a3cff6;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-5, .cls-6, .cls-9 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #2b71ce;
+      }
+
+      .cls-3 {
+        fill: #2c8cf9;
+        opacity: 0.57;
+      }
+
+      .cls-4, .cls-8 {
+        font-size: 14px;
+      }
+
+      .cls-4, .cls-7 {
+        fill: #f7fafd;
+        font-family: "PingFang SC";
+      }
+
+      .cls-5 {
+        fill: #facc17;
+      }
+
+      .cls-6 {
+        fill: #daae28;
+      }
+
+      .cls-7 {
+        font-size: 24px;
+      }
+
+      .cls-9 {
+        fill: #31d100;
+      }
+    </style>
+  </defs>
+  <path id="矩形_7171" data-name="矩形 7171" class="cls-1" d="M3494.98,557h2V719h-2V557Zm0,0h6v2h-6v-2Zm0,15.988h6.01v2h-6.01v-2Zm0,16.018h6.01v2h-6.01v-2Zm0,15.988h6.01v2h-6.01v-2Zm0,16.019h6.01v2h-6.01v-2Zm0,15.987h6v2h-6v-2Zm0,15.987h6.01v2h-6.01v-2Zm0,16.019h6.01v2h-6.01v-2Zm0,15.988h6.01v2h-6.01v-2Zm0,16.018h6.01v2h-6.01v-2Zm0,15.988h6v2h-6v-2Z" transform="translate(-3437 -557)"/>
+  <g id="组_914-2" data-name="组 914">
+    <g id="g0" data-name="组 925">
+        <path id="多边形_7140" data-name="多边形 7140" class="cls-2" d="M3487.01,713.5l8-5.518v11.035Z" transform="translate(-3437 -557)"/>
+        <path id="矩形_7175" data-name="矩形 7175" class="cls-3" d="M3469.54,700.544l13.47,13.441-13.47,13.437a0.07,0.07,0,0,1-.01.008s0,0-.01.008l-1.41,1.408-0.07-.076a19.034,19.034,0,1,1,.75-28.9l0.03-.035,0.71,0.7v0S3469.54,700.542,3469.54,700.544Z" transform="translate(-3437 -557)"/>
+        <text id="最优" class="cls-4" transform="translate(4.683 162.199)">最优</text>
+      </g>
+    <g id="g2" data-name="组 917">
+      <path id="多边形_7140_拷贝" data-name="多边形 7140 拷贝" class="cls-5" d="M3487.01,713.5l8-5.517v11.035Z" transform="translate(-3437 -557)"/>
+      <g id="组_924" data-name="组 924">
+        <path id="矩形_7175_拷贝" data-name="矩形 7175 拷贝" class="cls-6" d="M3469.54,700.544l13.47,13.441-13.47,13.437a0.07,0.07,0,0,1-.01.008s0,0-.01.008l-1.41,1.408-0.07-.076a19.034,19.034,0,1,1,.75-28.9l0.03-.035,0.71,0.7v0S3469.54,700.542,3469.54,700.544Z" transform="translate(-3437 -557)"/>
+        <text id="基准" class="cls-4" transform="translate(8.572 162.199)">基准</text>
+      </g>
+    </g>
+    <g id="g1" data-name="组 914-2">
+    <text id="_75_KWh_m3" data-name="75 KWh/m3" class="cls-7" x="77.854" y="145.048">75 <tspan class="cls-8">KWh/m3</tspan></text>
+    <path id="多边形_7141" data-name="多边形 7141" class="cls-9" d="M3504,714v-1h105v1H3504Zm1-.5-9.99,5.491V708Z" transform="translate(-3437 -557)"/>
+    </g>
+  </g>
+</svg>

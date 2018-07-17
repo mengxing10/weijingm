@@ -1,0 +1,54 @@
+/**
+ * @file 用户管理
+ * @author luwenlong <zuiwosuifeng@gmail.com>
+ */
+
+$base = #3a9ae6;
+
+.ui.input.focus input,
+.ui.input input:focus
+    border-color $base
+
+.user
+    .u-wrap
+        width 1070px
+        margin 0 auto
+        padding-top 30px
+        min-height 790px
+        h3
+            font-size 24px
+            color $base
+            margin-bottom 25px
+
+    .u-info
+        width 1070px
+        margin 0 auto
+        li
+            height 80px
+            line-height 80px
+            border-bottom 1px solid #c8c8c8
+            font-size 14px
+            clearfix()
+            span
+                display inline-block
+                color #969696
+                width 100px
+            em
+                color #333
+            strong
+                float right
+                margin-top 15px
+                cursor pointer
+                width 160px
+                height 50px
+                line-height 50px
+                text-align center
+                color #fff
+                border-radius 5px
+                /*background #3a9ae6*/
+                background #254394
+                &:hover
+                    background #7ac6ff
+                &.gray,
+                &.gray:hover
+                    background #c6c6c6

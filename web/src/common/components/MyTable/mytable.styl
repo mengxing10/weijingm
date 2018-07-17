@@ -1,0 +1,49 @@
+/**
+ * @file 表格
+ * @author luwenlong <zuiwosuifeng@gmail.com>
+ */
+
+bgColor1=  #1d468a        /* gray: #2f2e4b   white： #f9fafc  blue: #1d468a  */
+bgColor2=  #20529e        /* gray: #333254   white： #ffffff  blue: #20529e  */
+tableTextColor = #ffffff  /* gray: #405e7c   white： #ffffff  blue: #ffffff  */
+.el-mytable
+    .el-thead,
+    .el-tbody
+        font-size 14px
+        height 50px
+        line-height 50px
+        background bgColor1
+        display flex
+        flex-align center
+        align-items center
+        /*color red*/
+        border-bottom 0px solid red
+        /*border-top 0px solid #3f6cbb*/
+        li
+            text-align center
+            border 0px solid #3f6cbb
+            height 50px
+            line-height 50px
+            color tableTextColor  
+    .el-thead
+        background bgColor1
+    .el-tbody
+        background bgColor1  
+        /*color #fff*/
+        &:nth-child(even)
+            background  bgColor2  
+        input
+            text-align center
+            width 80%
+            height 80%
+            border none
+            border-bottom 0px solid #ccc
+        .editli
+            display none
+        li
+            span
+                display block
+                width 100%
+                height 100%
+
+  

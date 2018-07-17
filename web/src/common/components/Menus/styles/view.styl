@@ -1,0 +1,68 @@
+/**
+ * @file monlist
+ * @author luwenlong <zuiwosuifeng@gmail.com>
+ */
+  menuBgColor = #ffffff  /* white:#ffffff,  gray: #1e202f  blue: #14204e */
+  menuItemColor = #a3cff6 /* white:#b2c2d0,  gray: #9e9eab blue: #a3cff6 */
+  menuItemOverColor = #2c8cf9 /*white:#405e7c    gray: #646390 blue: #2c8cf9 */
+  menuItemActiveColor = #ffffff /*white:#4886ff    gray: #ffffff blue: #ffffff*/
+   
+
+ .charts-menu-2
+     min-height 700px
+     height auto!important
+     background menuBgColor
+     border-right 0px solid #264b91  
+     width 9.3%
+     .charts-menu-head
+        /*height 3%*/
+        padding-top 34px
+        width 100%
+     .charts-menu-list
+         width 100%
+         display block
+         font-size 14px
+         margin-top 20px
+         .charts-menu-item
+             color menuItemColor
+             width 100%
+             height 45px
+             &:hover
+                 color menuItemOverColor
+                 cursor pointer
+             &.active
+                 color menuItemActiveColor
+                 cursor pointer
+                 /*background  #264591*/
+             span
+                 line-height 45px
+                 margin-left 20%
+                 display block
+                 dd
+                     display none
+                     float right
+                     margin-right 20px
+                     color menuItemColor
+                     &.active
+                        display block
+          .charts-menu-item-child
+              background menuBgColor  
+              display none
+              &.active
+                  display block
+              div
+                  color menuItemColor
+                  height 45px
+                  &.active
+                      /*background  #264591*/
+                      color menuItemActiveColor
+                      cursor pointer
+                  &:hover                
+                      color menuItemOverColor
+                      cursor pointer
+
+              span
+                  line-height 45px
+                  margin-left 30%
+                  text-align left
+                  display block

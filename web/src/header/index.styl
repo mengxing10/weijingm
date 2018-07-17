@@ -1,0 +1,97 @@
+/**
+ * @file 通用头部样式
+ * @author luwenlong <zuiwosuifeng@gmail.com>
+ */
+
+$base = #4e73c9;
+$normal = #3a9ae6;
+textColor = #2c8cf9;
+// clearfix
+// @see http://h5bp.com/q
+clearfix()
+    &:after,
+    &:before
+        content: ' '
+        display: table
+    &:after
+        clear: both
+.pumpheader
+    height 40px
+    line-height 40px
+    color white
+    border-bottom 0px solid #264b91
+    z-index 1
+    clearfix()
+    h1
+        float left
+        width 300px
+        height 40px
+        color white
+        margin-right 5px
+        p
+            display inline-block
+            line-height 40px
+            text-decoration none
+            /*color $normal*/
+            color white
+            span
+                padding-left 10px
+                color white
+                font-family SimHei
+                font-size 20px
+    .searchtext
+        float right
+        margin-top 10px
+        margin-right 25px
+        height 34px
+
+    .usericon,
+    .alarmicon
+        float right
+        cursor pointer
+        width 50px
+        height 40px
+        background-size 21px 23px
+        position relative
+        &.active
+            border-bottom 2px solid #fff
+    .usericon
+      background url('./img/user.png') no-repeat center center
+    .alarmicon
+      background url('./img/alarm.png') no-repeat center center
+      &.newalarm
+          background url('./img/alarm-active.png') no-repeat center center
+
+    .theMenu
+        font-size 18px
+        float right
+        color white
+        &.dropdown .menu>.item
+            font-size 16px
+            padding 15px!important
+        &.dropdown > .text,.icon
+            color white
+            padding 0px 10px
+    .ui.inline.dropdown .menu
+        border-radius 0px
+        width 130px
+        margin-top 0px
+    .ui.dropdown
+        color #fff
+        background #3c75c2
+        width 130px
+        .default.text
+            color #fff
+        .ui.label
+            color #fff
+            background #0a448c
+            font-weight normal
+        .menu.visible
+            color #fff
+            background #3c75c2
+            .item
+                color #fff
+                border-bottom 1px solid #5da6ea
+                width 121px
+                &:hover
+                    background #59a1e1

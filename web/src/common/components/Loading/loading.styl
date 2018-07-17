@@ -1,0 +1,234 @@
+/**
+ * @file
+ * @author luwenlong <zuiwosuifeng@gmail.com>
+ */
+
+ // off stylus compatibility settings (ex: keyframes), autoprefixer do it.
+ vendors = official
+
+ // the unit using `px` value(100% == 16px)
+ $-base-font-size ?= 16px
+
+ // @see http://iosfonts.com
+ $-base-font-family ?= "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif
+
+ // usually use `true` in hybrid app
+ $-prevent-user-select ?= false
+
+ // prevent iOS text size adjust after orientation change
+ $-prevent-text-size-adjust ?= true
+
+ // prevent tap highlight color
+ $-prevent-tap-highlight ?= true
+
+ // default image dppx (dots per px unit)
+ $-image-dppx ?= 2
+
+ // breakpoint slice
+ // default value: 0 400px 600px 800px 1050px
+ // slice number: <- 1 |  2  |  3  |  4  |  5 ->
+ $-breakpoint-slice ?= 0 400px 600px 800px 1050px
+
+ $-font-size = 46.875
+
+
+ px2rem($px)
+     $px / $-font-size * 1rem
+
+ px2px($px)
+
+     font-size round($px / 2) * 1px
+
+     [data-dpr='2'] & {
+         font-size $px * 1px
+     }
+     // for mx3
+     [data-dpr='2.5'] & {
+         font-size round($px * 2.5 / 2) * 1px
+     }
+     // for 小米note
+     [data-dpr='2.75'] & {
+         font-size round($px * 2.75 / 2) * 1px
+     }
+     [data-dpr='3'] & {
+         font-size round($px / 2 * 3) * 1px
+     }
+     // for 三星note4
+     [data-dpr='4'] & {
+         font-size $px * 2px
+     }
+
+ // flex
+ flexbox()
+     display -webkit-box
+     display -webkit-flex
+     display -moz-flex
+     display -ms-flexbox
+     display flex
+
+ // inline-flex
+ inline-flex()
+     display -webkit-inline-box
+     display -webkit-inline-flex
+     display -moz-inline-flex
+     display -ms-inline-flexbox
+     display inline-flex
+
+ // flex-direction
+ flex-direction($value)
+     if $value == row-reverse
+         -webkit-box-direction reverse
+         -webkit-box-orient horizontal
+     else if $value == column
+         -webkit-box-direction normal
+         -webkit-box-orient vertical
+     else if $value == column-reverse
+         -webkit-box-direction reverse
+         -webkit-box-orient vertical
+     else if $value == row
+         -webkit-box-direction normal
+         -webkit-box-orient horizontal
+
+     flex-direction $value
+
+ // flex-wrap
+ flex-wrap($value)
+     -webkit-flex-wrap $value
+     -moz-flex-wrap $value
+
+     if $value == nowrap
+         -ms-flex-wrap none
+     else
+         -ms-flex-wrap $value
+     flex-wrap $value
+
+ // flex-flow
+ flex-flow($value=row nowrap)
+     -webkit-flex-flow $value
+     -moz-flex-flow $value
+     -ms-flex-flow $value
+     flex-flow $value
+
+ // order
+ order($num=0)
+     -webkit-box-ordinal-group $num + 1
+     -webkit-order $num
+     -moz-order $num
+     -ms-flex-order $num
+     order $num
+
+ // flex-grow
+ flex-grow($int=0)
+     -webkit-box-flex $int
+     -webkit-flex-grow $int
+     -moz-flex-grow $int
+     -ms-flex-positive $int
+     flex-grow $int
+
+ // flex-shrink
+ flex-shrink($int=1)
+     -webkit-flex-shrink $int
+     -moz-flex-shrink $int
+     -ms-flex-negative $int
+     flex-shrink $int
+
+ // flex-basis
+ flex-basis($value=auto)
+     -webkit-flex-basis $value
+     -moz-flex-basis $value
+     -ms-flex-preferred $value
+     flex-basis $value
+
+ // item flex综合属性
+ flex($fg=1, $fs=0, $fb=auto)
+     $fg-boxflex $fg
+
+     -webkit-box-flex $fg-boxflex
+     -moz-box-flex $fg-boxflex
+     -webkit-flex $fg $fs $fb
+     -moz-flex $fg $fs $fb
+     -ms-flex $fg $fs $fb
+     flex $fg $fs $fb
+
+ // justify-content
+ justify-content($value=flex-start)
+     if $value == flex-start
+         -webkit-box-pack start
+         -ms-flex-pack start
+     else if $value == flex-end
+         -webkit-box-pack end
+         -ms-flex-pack end
+     else if $value == space-between
+         -webkit-box-pack justify
+         -ms-flex-pack justify
+     else if $value == space-around
+         -ms-flex-pack distribute
+     else
+         -webkit-box-pack $value
+         -ms-flex-pack $value
+
+     -webkit-justify-content $value
+     -moz-justify-content $value
+     justify-content $value
+
+ // align-items
+ align-items($value=stretch)
+     if $value == flex-start
+         -webkit-box-align start
+         -ms-flex-align start
+     else if $value == flex-end
+         -webkit-box-align end
+         -ms-flex-align end
+     else
+         -webkit-box-align $value
+         -ms-flex-align $value
+
+     -webkit-align-items $value
+     -moz-align-items $value
+     align-items $value
+
+ // align-self
+ align-self($value=auto)
+     -webkit-align-self $value
+     -moz-align-self $value
+
+     if $value == flex-start
+         -ms-flex-item-align start
+     else if $value == flex-end
+         -ms-flex-item-align end
+     else
+         -ms-flex-item-align $value
+
+     align-self $value
+
+ // align-content
+ align-content($value=stretch)
+     -webkit-align-content $value
+     -moz-align-content $value
+
+     if $value == flex-start
+         -ms-flex-line-pack start
+     else if $value == flex-end
+         -ms-flex-line-pack end
+     else
+         -ms-flex-line-pack $value
+
+     align-content $value
+
+
+ .pageLoading
+     background rgba(255, 255, 255, .5)
+     position fixed
+     width 100%
+     min-height 790px
+     height auto!important
+     z-index 20
+     flexbox()
+     justify-content(center)
+     align-items(center)
+     span
+         display block
+         width 200px
+         height 200px
+         background url('./loadingtoast.gif') no-repeat
+         background-size 100% 100%

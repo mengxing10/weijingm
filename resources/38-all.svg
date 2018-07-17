@@ -1,0 +1,1420 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:x="adobe:ns:meta/"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="_38泵站系统图"
+   data-name="38泵站系统图"
+   width="1110"
+   height="650"
+   viewBox="0 0 1110 650"
+   version="1.1"
+   sodipodi:docname="38-all.svg"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1012"
+     id="namedview1245"
+     showgrid="false"
+     inkscape:zoom="1.2864865"
+     inkscape:cx="539.26688"
+     inkscape:cy="367.63386"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="组_853-12" />
+  <metadata
+     id="metadata1031">
+<?xpacket begin="�" id="W5M0MpCehiHzreSzNTczkc9d"?>    <x:xmpmeta
+       x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
+      <metadata>
+        <rdf:RDF>
+          <rdf:Description
+             rdf:about="" />
+          <cc:Work
+             rdf:about="">
+            <dc:format>image/svg+xml</dc:format>
+            <dc:type
+               rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+          </cc:Work>
+        </rdf:RDF>
+      </metadata>
+    </x:xmpmeta>
+<?xpacket end="w"?>  </metadata>
+  <defs
+     id="defs1035">
+    <style
+       id="style1033">
+      .cls-1 {
+        fill: #fa607e;
+      }
+
+      .cls-1, .cls-10, .cls-2, .cls-3, .cls-4 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #5b83e1;
+      }
+
+      .cls-3 {
+        fill: #f0f0f0;
+      }
+
+      .cls-4 {
+        fill: #5085c6;
+      }
+
+      .cls-5, .cls-8 {
+        font-size: 14px;
+      }
+
+      .cls-5 {
+        fill: #fefefe;
+      }
+
+      .cls-5, .cls-6, .cls-8, .cls-9 {
+        font-family: PingFang SC;
+      }
+
+      .cls-6 {
+        font-size: 14.004px;
+      }
+
+      .cls-6, .cls-8 {
+        fill: #a3cff6;
+      }
+
+      .cls-7 {
+        fill: #4786ff;
+      }
+
+      .cls-9 {
+        font-size: 18px;
+        fill: #fff;
+      }
+
+      .cls-10 {
+        fill: #facc17;
+      }
+    </style>
+  </defs>
+  <rect
+     style="display:none;opacity:0.96600001;fill:#848689;fill-opacity:1;stroke:#ffffff;stroke-opacity:1"
+     id="rect1247"
+     width="1112.4751"
+     height="650.77594"
+     x="0"
+     y="-0.77592111"
+     rx="4"
+     ry="4" />
+  <g
+     id="组_884"
+     data-name="组 884">
+    <path
+       id="s7"
+       data-name="椭圆 4543 拷贝 7"
+       class="cls-1"
+       d="m 10257.5,1886.4 a 29.5,29.5 0 0 1 45,25.1 v 0.5 0 45 h -14 v -20.4 a 29.45,29.45 0 0 1 -44.9,-23.6 h -0.1 v -45 h 14 z m 0.5,25.1 a 15,15 0 1 0 15,-15 14.993,14.993 0 0 0 -15,15 z"
+       transform="translate(-9275,-1653)"
+       inkscape:connector-curvature="0"
+       style="fill:#fa607e;fill-rule:evenodd"
+       inkscape:label="#椭圆_4543_拷贝_7" />
+    <path
+       id="s6"
+       data-name="椭圆 4543 拷贝 10"
+       class="cls-1"
+       d="m 10106.6,1900.4 a 29.5,29.5 0 0 1 45,25.1 v 0.5 0 45 h -14 v -20.4 a 29.531,29.531 0 0 1 -45,-23.6 v 0 -45 h 14 z m 0.5,25.1 a 15,15 0 1 0 15,-15 14.993,14.993 0 0 0 -15,15 z"
+       transform="translate(-9275,-1653)"
+       inkscape:connector-curvature="0"
+       style="fill:#fa607e;fill-rule:evenodd"
+       inkscape:label="#椭圆_4543_拷贝_10" />
+    <path
+       id="s5"
+       data-name="椭圆 4543 拷贝 11"
+       class="cls-1"
+       d="m 9958.67,1898.4 a 29.446,29.446 0 0 1 44.93,25.1 v 0.5 0 45 h -13.95 v -20.4 a 29.474,29.474 0 0 1 -44.93,-23.6 h -0.04 v -45 h 13.99 z m 0.5,25.1 a 14.99,14.99 0 1 0 14.99,-15 15,15 0 0 0 -14.99,15 z"
+       transform="translate(-9275,-1653)"
+       inkscape:connector-curvature="0"
+       style="fill:#fa607e;fill-rule:evenodd"
+       inkscape:label="#椭圆_4543_拷贝_11" />
+    <path
+       id="Ws4"
+       data-name="椭圆 4543 拷贝 12"
+       class="cls-1"
+       d="m 9816.75,1911.4 a 29.485,29.485 0 0 1 44.98,25.1 c 0,0.17 -0.01,0.33 -0.01,0.5 h 0.01 v 45 h -13.99 v -20.4 A 29.483,29.483 0 0 1 9802.8,1938 h -0.04 v -45 h 13.99 z m 0.5,25.1 a 15,15 0 1 0 14.99,-15 15,15 0 0 0 -14.99,15 z"
+       transform="translate(-9275,-1653)"
+       inkscape:connector-curvature="0"
+       style="fill:#fa607e;fill-rule:evenodd"
+       inkscape:label="#椭圆_4543_拷贝_12" />
+    <path
+       id="Ws3"
+       data-name="椭圆 4543 拷贝 13"
+       class="cls-1"
+       d="m 9661.81,1911.4 a 29.485,29.485 0 0 1 44.98,25.1 c 0,0.17 -0.01,0.33 -0.01,0.5 h 0.01 v 45 h -13.99 v -20.4 a 29.483,29.483 0 0 1 -44.94,-23.6 h -0.04 v -45 h 13.99 z m 0.5,25.1 a 15,15 0 1 0 15,-15 15.005,15.005 0 0 0 -15,15 z"
+       transform="translate(-9275,-1653)"
+       inkscape:connector-curvature="0"
+       style="fill:#fa607e;fill-rule:evenodd"
+       inkscape:label="#椭圆_4543_拷贝_13" />
+    <path
+       id="Ws2"
+       data-name="椭圆 4543 拷贝 14"
+       class="cls-1"
+       d="m 9517.88,1911.4 a 29.485,29.485 0 0 1 44.98,25.1 c 0,0.17 -0.01,0.33 -0.02,0.5 h 0.02 v 45 h -14 v -20.4 a 29.483,29.483 0 0 1 -44.94,-23.6 h -0.03 v -45 h 13.99 z m 0.5,25.1 a 14.99,14.99 0 1 0 14.99,-15 15,15 0 0 0 -14.99,15 z"
+       transform="translate(-9275,-1653)"
+       inkscape:connector-curvature="0"
+       style="fill:#fa607e;fill-rule:evenodd"
+       inkscape:label="#椭圆_4543_拷贝_14" />
+    <path
+       id="Ws1"
+       data-name="椭圆 4543 拷贝 15"
+       class="cls-1"
+       d="m 9370.96,1911.4 a 29.477,29.477 0 0 1 44.97,25.1 c 0,0.17 -0.01,0.33 -0.01,0.5 h 0.01 v 45 h -13.99 v -20.4 A 29.483,29.483 0 0 1 9357,1938 h -0.04 v -45 h 14 z m 0.5,25.1 a 14.99,14.99 0 1 0 14.99,-15 15,15 0 0 0 -14.99,15 z"
+       transform="translate(-9275,-1653)"
+       inkscape:connector-curvature="0"
+       style="fill:#fa607e;fill-rule:evenodd"
+       inkscape:label="#椭圆_4543_拷贝_15" />
+  </g>
+  <path
+     id="矩形_5708"
+     data-name="矩形 5708"
+     class="cls-2"
+     d="M10296,2262v-58H9779v40h-2v-40H9647v-57h-79v-2h124v2h-43v55h128v-29h2v29h517v-24H9996V1969h2v207h146V1971h2v205h150V1957h2v305h-2Zm-45-488h2v94h-2v-94Zm-152,0h2v108h-2V1774Zm-149,0h2v106h-2V1774Zm-96,208h2v119h-2V1982Zm-45-208h2v119h-2V1774Zm-109,208h2v119h-2V1982Zm-46-208h2v119h-2V1774Zm-99,208h2v119h-2V1982Zm-44.03-208h2v119h-2V1774Zm0,470h-2v-72h2v72ZM9409,1982h2v119h-2V1982Zm-45-208h2v119h-2V1774Z"
+     transform="translate(-9275 -1653)" />
+  <g
+     id="_38泵站4-7号水泵电机"
+     data-name="38泵站4-7号水泵电机">
+    <g
+       id="_38泵站1-3号水泵电机"
+       data-name="38泵站1-3号水泵电机">
+      <g
+         id="组_887"
+         data-name="组 887"><path
+   id="多边形_4645_拷贝_13"
+   data-name="多边形 4645 拷贝 13"
+   class="cls-3"
+   d="m 9364.96,1807 7,10 h -14 z m 0,0 -7,-10.01 h 14.01 z"
+   transform="translate(-9275,-1653)"
+   inkscape:connector-curvature="0"
+   style="fill:#f0f0f0;fill-rule:evenodd" />
+
+        path
+           id=&quot;多边形_4645_拷贝_35&quot;
+           data-name=&quot;多边形 4645 拷贝 35&quot;
+           class=&quot;cls-3&quot;
+           d=&quot;m 9409.93,2033 7.01,10 h -14.01 z m 0.01,0 -7,-10.01 h 14 z&quot;
+           transform=&quot;translate(-9275,-1653)&quot;
+           inkscape:connector-curvature=&quot;0&quot;
+           style=&quot;fill:#f0f0f0;fill-rule:evenodd&quot; /&gt;
+        <path
+   id="多边形_4645_拷贝_18"
+   data-name="多边形 4645 拷贝 18"
+   class="cls-3"
+   d="m 9511.88,1808 7,10 h -14 z m 0.01,0 -7.01,-10.01 h 14.01 z"
+   transform="translate(-9275,-1653)"
+   inkscape:connector-curvature="0"
+   style="fill:#f0f0f0;fill-rule:evenodd" />
+<path
+   id="多边形_4645_拷贝_40"
+   data-name="多边形 4645 拷贝 40"
+   class="cls-3"
+   d="m 9654.81,1808 7.01,10 h -14.01 z m 0.01,0 -7,-10.01 h 14 z"
+   transform="translate(-9275,-1653)"
+   inkscape:connector-curvature="0"
+   style="fill:#f0f0f0;fill-rule:evenodd" />
+<path
+   id="多边形_4645_拷贝_41"
+   data-name="多边形 4645 拷贝 41"
+   class="cls-3"
+   d="m 9810.75,1808 7,10 h -14 z m 0.01,0 -7,-10.01 h 14 z"
+   transform="translate(-9275,-1653)"
+   inkscape:connector-curvature="0"
+   style="fill:#f0f0f0;fill-rule:evenodd" />
+<path
+   id="多边形_4645_拷贝_44"
+   data-name="多边形 4645 拷贝 44"
+   class="cls-3"
+   d="m 10099.6,1796 7,10 h -14 z m 0,0 -7,-10.01 h 14 z"
+   transform="translate(-9275,-1653)"
+   inkscape:connector-curvature="0"
+   style="fill:#f0f0f0;fill-rule:evenodd" />
+<path
+   id="多边形_4645_拷贝_46"
+   data-name="多边形 4645 拷贝 46"
+   class="cls-3"
+   d="m 10252.5,1796 7,10 h -14 z m 0,0 -7,-10.01 h 14 z"
+   transform="translate(-9275,-1653)"
+   inkscape:connector-curvature="0"
+   style="fill:#f0f0f0;fill-rule:evenodd" />
+<path
+   id="多边形_4645_拷贝_36"
+   data-name="多边形 4645 拷贝 36"
+   class="cls-3"
+   d="m 9555.86,2033 7,10 h -14.01 z m 0,0 -7,-10.01 h 14 z"
+   transform="translate(-9275,-1653)"
+   inkscape:connector-curvature="0"
+   style="fill:#f0f0f0;fill-rule:evenodd" />
+<path
+   id="多边形_4645_拷贝_48"
+   data-name="多边形 4645 拷贝 48"
+   class="cls-3"
+   d="m 9647.82,2174 7,10 h -14 z m 0,0 -7,-10.01 h 14.01 z"
+   transform="translate(-9275,-1653)"
+   inkscape:connector-curvature="0"
+   style="fill:#f0f0f0;fill-rule:evenodd" />
+<path
+   id="多边形_4645_拷贝_49"
+   data-name="多边形 4645 拷贝 49"
+   class="cls-3"
+   d="m 9509.89,2207 7,10 h -14 z m 0.01,0 -7.01,-10.01 h 14.01 z"
+   transform="translate(-9275,-1653)"
+   inkscape:connector-curvature="0"
+   style="fill:#f0f0f0;fill-rule:evenodd" />
+<path
+   id="多边形_4645_拷贝_50"
+   data-name="多边形 4645 拷贝 50"
+   class="cls-3"
+   d="m 9778.75,2222 7,10 h -14 z m 0.01,0 -7,-10.01 h 14 z"
+   transform="translate(-9275,-1653)"
+   inkscape:connector-curvature="0"
+   style="fill:#f0f0f0;fill-rule:evenodd" />
+<path
+   id="多边形_4645_拷贝_38"
+   data-name="多边形 4645 拷贝 38"
+   class="cls-3"
+   d="m 9699.79,2034 7,10 h -14 z m 0.01,0 -7,-10.01 h 14 z"
+   transform="translate(-9275,-1653)"
+   inkscape:connector-curvature="0"
+   style="fill:#f0f0f0;fill-rule:evenodd" />
+<path
+   id="多边形_4645_拷贝_39"
+   data-name="多边形 4645 拷贝 39"
+   class="cls-3"
+   d="m 9855.73,2033 7,10 h -14 z m 0.01,0 -7,-10.01 h 14 z"
+   transform="translate(-9275,-1653)"
+   inkscape:connector-curvature="0"
+   style="fill:#f0f0f0;fill-rule:evenodd" />
+<path
+   id="多边形_4645_拷贝_42"
+   data-name="多边形 4645 拷贝 42"
+   class="cls-3"
+   d="m 9996.65,2103 6.95,10 h -13.95 z m 0,0 -7,-10.01 h 14.05 z"
+   transform="translate(-9275,-1653)"
+   inkscape:connector-curvature="0"
+   style="fill:#f0f0f0;fill-rule:evenodd" />
+<path
+   id="多边形_4645_拷贝_45"
+   data-name="多边形 4645 拷贝 45"
+   class="cls-3"
+   d="m 10144.6,2134 7,10 h -14 z m 0,0 -7,-10.01 h 14 z"
+   transform="translate(-9275,-1653)"
+   inkscape:connector-curvature="0"
+   style="fill:#f0f0f0;fill-rule:evenodd" />
+<path
+   id="多边形_4645_拷贝_47"
+   data-name="多边形 4645 拷贝 47"
+   class="cls-3"
+   d="m 10296.5,2033 7,10 h -14 z m 0,0 -7,-10.01 h 14 z"
+   transform="translate(-9275,-1653)"
+   inkscape:connector-curvature="0"
+   style="fill:#f0f0f0;fill-rule:evenodd" />
+<path
+   id="多边形_4645_拷贝_20"
+   data-name="多边形 4645 拷贝 20"
+   class="cls-3"
+   d="m 9593.83,2147 10,-7 v 14.01 z m 0,0 -10,7 v -14.01 z"
+   transform="translate(-9275,-1653)"
+   inkscape:connector-curvature="0"
+   style="fill:#f0f0f0;fill-rule:evenodd" />
+<path
+   id="多边形_4645_拷贝_37"
+   data-name="多边形 4645 拷贝 37"
+   class="cls-3"
+   d="m 9666.81,2147 10,-7 v 14.01 z m 0,0 -10,7 v -14.01 z"
+   transform="translate(-9275,-1653)"
+   inkscape:connector-curvature="0"
+   style="fill:#f0f0f0;fill-rule:evenodd" />
+</g>
+      <g
+         id="组_859"
+         data-name="组 859">
+        <g
+           id="组_886"
+           data-name="组 886">
+          <g
+             id="组_853"
+             data-name="组 853">
+            <path
+               id="矩形_4944_拷贝_4"
+               data-name="矩形 4944 拷贝 4"
+               class="cls-4"
+               d="m 9323,1714 h 122 v 51 h -122 z m 2,2 h 118 v 47 h -118 z m -2,21 h 121 v 2 h -121 z m 68,0 h 2 v 28 h -2 z"
+               transform="translate(-9275,-1653)"
+               inkscape:connector-curvature="0"
+               style="fill:#5085c6;fill-rule:evenodd" />
+            <text
+               id="Wp4"
+               data-name="0.000"
+               class="cls-5"
+               transform="translate(68.749,102.1)"
+               style="font-size:14px;font-family:'PingFang SC';fill:#fefefe"
+               inkscape:label="#_0.000">0.000</text>
+            <text
+               id="A"
+               class="cls-6"
+               transform="translate(140.016,101.834)"
+               style="font-size:14.00399971px;font-family:'PingFang SC';fill:#a3cff6">A</text>
+            <text
+               id="_7_电机电流"
+               data-name="7#电机电流"
+               class="cls-6"
+               transform="translate(76.62,77.525)"
+               style="font-size:14.00399971px;font-family:'PingFang SC';fill:#a3cff6">7#电机电流</text>
+          </g>
+          <g
+             id="组_853-2"
+             data-name="组 853">
+            <path
+               id="矩形_4944_拷贝_4-2"
+               data-name="矩形 4944 拷贝 4"
+               class="cls-4"
+               d="m 9462,1714 h 122 v 51 h -122 z m 2,2 h 118 v 47 h -118 z m -2,21 h 121 v 2 h -121 z m 68,0 h 2 v 28 h -2 z"
+               transform="translate(-9275,-1653)"
+               inkscape:connector-curvature="0"
+               style="fill:#5085c6;fill-rule:evenodd" />
+            <text
+               id="Wp5"
+               data-name="0.000"
+               class="cls-5"
+               transform="translate(207.746,102.1)"
+               style="font-size:14px;font-family:'PingFang SC';fill:#fefefe"
+               inkscape:label="#_0.000-2">0.000</text>
+            <text
+               id="A-2"
+               data-name="A"
+               class="cls-6"
+               transform="translate(279.013,101.834)"
+               style="font-size:14.00399971px;font-family:'PingFang SC';fill:#a3cff6">A</text>
+            <text
+               id="_6_电机电流"
+               data-name="6#电机电流"
+               class="cls-6"
+               transform="translate(215.617,77.525)"
+               style="font-size:14.00399971px;font-family:'PingFang SC';fill:#a3cff6">6#电机电流</text>
+          </g>
+          <g
+             id="组_853-3"
+             data-name="组 853">
+            <path
+               id="矩形_4944_拷贝_4-3"
+               data-name="矩形 4944 拷贝 4"
+               class="cls-4"
+               d="m 9594,1714 h 122 v 51 h -122 z m 2,2 h 118 v 47 h -118 z m -2,21 h 121 v 2 h -121 z m 68,0 h 2 v 28 h -2 z"
+               transform="translate(-9275,-1653)"
+               inkscape:connector-curvature="0"
+               style="fill:#5085c6;fill-rule:evenodd" />
+            <text
+               id="Wp6"
+               data-name="0.000"
+               class="cls-5"
+               transform="translate(339.753,102.1)"
+               style="font-size:14px;font-family:'PingFang SC';fill:#fefefe"
+               inkscape:label="#_0.000-3">0.000</text>
+            <text
+               id="A-3"
+               data-name="A"
+               class="cls-6"
+               transform="translate(411.02,101.834)"
+               style="font-size:14.00399971px;font-family:'PingFang SC';fill:#a3cff6">A</text>
+            <text
+               id="_5_电机电流"
+               data-name="5#电机电流"
+               class="cls-6"
+               transform="translate(347.624,77.525)"
+               style="font-size:14.00399971px;font-family:'PingFang SC';fill:#a3cff6">5#电机电流</text>
+          </g>
+          <g
+             id="组_853-4"
+             data-name="组 853">
+            <path
+               id="矩形_4944_拷贝_4-4"
+               data-name="矩形 4944 拷贝 4"
+               class="cls-4"
+               d="m 9723,1714 h 122 v 51 h -122 z m 2,2 h 118 v 47 h -118 z m -2,21 h 121 v 2 h -121 z m 68,0 h 2 v 28 h -2 z"
+               transform="translate(-9275,-1653)"
+               inkscape:connector-curvature="0"
+               style="fill:#5085c6;fill-rule:evenodd" />
+            <text
+               id="Wp7"
+               data-name="0.000"
+               class="cls-5"
+               transform="translate(468.747,102.1)"
+               style="font-size:14px;font-family:'PingFang SC';fill:#fefefe"
+               inkscape:label="#_0.000-4">0.000</text>
+            <text
+               id="A-4"
+               data-name="A"
+               class="cls-6"
+               transform="translate(540.014,101.834)"
+               style="font-size:14.00399971px;font-family:'PingFang SC';fill:#a3cff6">A</text>
+            <text
+               id="_4_电机电流"
+               data-name="4#电机电流"
+               class="cls-6"
+               transform="translate(476.618,77.525)"
+               style="font-size:14.00399971px;font-family:'PingFang SC';fill:#a3cff6">4#电机电流</text>
+          </g>
+          <g
+             id="组_853-5"
+             data-name="组 853">
+            <path
+               id="矩形_4944_拷贝_4-5"
+               data-name="矩形 4944 拷贝 4"
+               class="cls-4"
+               d="m 9872,1653 h 122 v 51 h -122 z m 2,2 h 118 v 47 h -118 z m -2,21 h 121 v 2 h -121 z m 68,0 h 2 v 28 h -2 z"
+               transform="translate(-9275,-1653)"
+               inkscape:connector-curvature="0"
+               style="fill:#5085c6;fill-rule:evenodd" />
+            <text
+               id="p3"
+               data-name="0.000"
+               class="cls-5"
+               transform="translate(617.746,41.099)"
+               style="font-size:14px;font-family:'PingFang SC';fill:#fefefe"
+               inkscape:label="#_0.000-5">0.000</text>
+            <text
+               id="A-5"
+               data-name="A"
+               class="cls-6"
+               transform="translate(689.014,40.833)"
+               style="font-size:14.00399971px;font-family:'PingFang SC';fill:#a3cff6">A</text>
+            <text
+               id="_3_电机电流"
+               data-name="3#电机电流"
+               class="cls-6"
+               transform="translate(625.617,16.523)"
+               style="font-size:14.00399971px;font-family:'PingFang SC';fill:#a3cff6">3#电机电流</text>
+          </g>
+          <g
+             id="组_853-6"
+             data-name="组 853">
+            <text
+               id="p1"
+               data-name="0.000"
+               class="cls-5"
+               transform="translate(162.749,42.1)"
+               style="font-size:14px;font-family:'PingFang SC';fill:#fefefe"
+               inkscape:label="#_0.000-6">0.000</text>
+            <path
+               id="矩形_5835"
+               data-name="矩形 5835"
+               class="cls-4"
+               d="m 9323,1674 h 202 v 30 h -202 z m 2,2 h 198 v 26 h -198 z"
+               transform="translate(-9275,-1653)"
+               inkscape:connector-curvature="0"
+               style="fill:#5085c6;fill-rule:evenodd" />
+            <text
+               id="出口总管压力表"
+               class="cls-6"
+               transform="translate(54.626,40.526)"
+               style="font-size:14.00399971px;font-family:'PingFang SC';fill:#a3cff6">出口总管压力表</text>
+            <text
+               id="MPa"
+               class="cls-6"
+               transform="translate(210.63,40.526)"
+               style="font-size:14.00399971px;font-family:'PingFang SC';fill:#a3cff6">MPa</text>
+          </g>
+          <g
+             id="组_853-7"
+             data-name="组 853">
+            <text
+               id="p2"
+               data-name="0.000"
+               class="cls-5"
+               transform="translate(383.755,42.1)"
+               style="font-size:14px;font-family:'PingFang SC';fill:#fefefe"
+               inkscape:label="#_0.000-7">0.000</text>
+            <path
+               id="矩形_5835-2"
+               data-name="矩形 5835"
+               class="cls-4"
+               d="m 9535,1674 h 217 v 30 h -217 z m 2,2 h 213 v 26 h -213 z"
+               transform="translate(-9275,-1653)"
+               inkscape:connector-curvature="0"
+               style="fill:#5085c6;fill-rule:evenodd" />
+            <text
+               id="二氧化氯泄漏监测"
+               class="cls-6"
+               transform="translate(266.624,40.526)"
+               style="font-size:14.00399971px;font-family:'PingFang SC';fill:#a3cff6">二氧化氯泄漏监测</text>
+            <text
+               id="ug_m3"
+               data-name="ug/m3"
+               class="cls-6"
+               transform="translate(427.629,40.526)"
+               style="font-size:14.00399971px;font-family:'PingFang SC';fill:#a3cff6">ug/m3</text>
+          </g>
+          <g
+             id="组_853-8"
+             data-name="组 853">
+            <path
+               id="矩形_4944_拷贝_4-6"
+               data-name="矩形 4944 拷贝 4"
+               class="cls-4"
+               d="m 9872,1715 h 122 v 51 h -122 z m 2,2 h 118 v 47 h -118 z m -2,21 h 121 v 2 h -121 z m 68,0 h 2 v 28 h -2 z"
+               transform="translate(-9275,-1653)"
+               inkscape:connector-curvature="0"
+               style="fill:#5085c6;fill-rule:evenodd" />
+            <text
+               id="p8"
+               data-name="0.000"
+               class="cls-5"
+               transform="translate(617.746,103.097)"
+               style="font-size:14px;font-family:'PingFang SC';fill:#fefefe"
+               inkscape:label="#_0.000-8">0.000</text>
+            <text
+               id="_"
+               data-name="%"
+               class="cls-6"
+               transform="translate(687.024,102.835)"
+               style="font-size:14.00399971px;font-family:'PingFang SC';fill:#a3cff6">%</text>
+            <text
+               id="_3_出水门开度"
+               data-name="3#出水门开度"
+               class="cls-6"
+               transform="translate(617.618,78.525)"
+               style="font-size:14.00399971px;font-family:'PingFang SC';fill:#a3cff6">3#出水门开度</text>
+          </g>
+          <g
+             id="组_853-9"
+             data-name="组 853">
+            <path
+               id="矩形_4944_拷贝_4-7"
+               data-name="矩形 4944 拷贝 4"
+               class="cls-4"
+               d="m 9821,1816 h 122 v 51 h -122 z m 2,2 h 118 v 47 h -118 z m -2,21 h 121 v 2 h -121 z m 68,0 h 2 v 28 h -2 z"
+               transform="translate(-9275,-1653)"
+               inkscape:connector-curvature="0"
+               style="fill:#5085c6;fill-rule:evenodd" />
+            <text
+               id="p11"
+               data-name="0.000"
+               class="cls-5"
+               transform="translate(566.754,204.098)"
+               style="font-size:14px;font-family:'PingFang SC';fill:#fefefe"
+               inkscape:label="#_0.000-9">0.000</text>
+            <text
+               id="MPa-2"
+               data-name="MPa"
+               class="cls-6"
+               transform="translate(628.019,203.837)"
+               style="font-size:14.00399971px;font-family:'PingFang SC';fill:#a3cff6">MPa</text>
+            <text
+               id="_3_水泵出口压力"
+               data-name="3#水泵出口压力"
+               class="cls-6"
+               transform="translate(560.63,179.527)"
+               style="font-size:14.00399971px;font-family:'PingFang SC';fill:#a3cff6">3#水泵出口压力</text>
+          </g>
+          <g
+             id="组_853-10"
+             data-name="组 853">
+            <path
+               id="矩形_4944_拷贝_4-8"
+               data-name="矩形 4944 拷贝 4"
+               class="cls-4"
+               d="m 10110,1816 h 122 v 51 h -122 z m 2,2 h 118 v 47 h -118 z m -2,21 h 121 v 2 h -121 z m 68,0 h 2 v 28 h -2 z"
+               transform="translate(-9275,-1653)"
+               inkscape:connector-curvature="0"
+               style="fill:#5085c6;fill-rule:evenodd" />
+            <text
+               id="p13"
+               data-name="0.000"
+               class="cls-5"
+               transform="translate(855.744,204.098)"
+               style="font-size:14px;font-family:'PingFang SC';fill:#fefefe"
+               inkscape:label="#_0.000-10">0.000</text>
+            <text
+               id="MPa-3"
+               data-name="MPa"
+               class="cls-6"
+               transform="translate(917.024,203.837)"
+               style="font-size:14.00399971px;font-family:'PingFang SC';fill:#a3cff6">MPa</text>
+            <text
+               id="_2_水泵出口压力"
+               data-name="2#水泵出口压力"
+               class="cls-6"
+               transform="translate(849.621,179.527)"
+               style="font-size:14.00399971px;font-family:'PingFang SC';fill:#a3cff6">2#水泵出口压力</text>
+          </g>
+          <g
+             id="组_853-11"
+             data-name="组 853">
+            <path
+               id="矩形_4944_拷贝_4-9"
+               data-name="矩形 4944 拷贝 4"
+               class="cls-4"
+               d="m 10263,1816 h 122 v 51 h -122 z m 2,2 h 118 v 47 h -118 z m -2,21 h 121 v 2 h -121 z m 68,0 h 2 v 28 h -2 z"
+               transform="translate(-9275,-1653)"
+               inkscape:connector-curvature="0"
+               style="fill:#5085c6;fill-rule:evenodd" />
+            <text
+               id="p14"
+               data-name="0.000"
+               class="cls-5"
+               transform="translate(1008.75,204.098)"
+               style="font-size:14px;font-family:'PingFang SC';fill:#fefefe"
+               inkscape:label="#_0.000-11">0.000</text>
+            <text
+               id="MPa-4"
+               data-name="MPa"
+               class="cls-6"
+               transform="translate(1070.015,203.837)"
+               style="font-size:14.00399971px;font-family:'PingFang SC';fill:#a3cff6">MPa</text>
+            <text
+               id="_1_水泵出口压力"
+               data-name="1#水泵出口压力"
+               class="cls-6"
+               transform="translate(1002.627,179.527)"
+               style="font-size:14.00399971px;font-family:'PingFang SC';fill:#a3cff6">1#水泵出口压力</text>
+          </g>
+          <g
+             id="组_853-12"
+             data-name="组 853">
+            <path
+               id="矩形_4944_拷贝_4-10"
+               data-name="矩形 4944 拷贝 4"
+               class="cls-4"
+               d="m 9869,2022 h 122 v 51 h -122 z m 2,2 h 118 v 47 h -118 z m -2,21 h 121 v 2 h -121 z m 68,0 h 2 v 28 h -2 z"
+               transform="translate(-9275,-1653)"
+               inkscape:connector-curvature="0"
+               style="fill:#5085c6;fill-rule:evenodd" />
+            <text
+               id="p19"
+               data-name="0.000"
+               class="cls-5"
+               transform="translate(614.748,410.1)"
+               style="font-size:14px;font-family:'PingFang SC';fill:#fefefe"
+               inkscape:label="#_0.000-12">0.000</text>
+            <text
+               id="MPa-5"
+               data-name="MPa"
+               class="cls-6"
+               transform="translate(676.013,409.834)"
+               style="font-size:14.00399971px;font-family:'PingFang SC';fill:#a3cff6">MPa</text>
+            <text
+               id="_3_水泵入口压力"
+               data-name="3#水泵入口压力"
+               class="cls-6"
+               transform="translate(608.625,385.524)"
+               style="font-size:14.00399971px;font-family:'PingFang SC';fill:#a3cff6">3#水泵入口压力</text>
+          </g>
+          <g
+             id="组_853-14"
+             data-name="组 853"
+             transform="translate(0,-16)">
+            <path
+               id="矩形_4944_拷贝_4-12"
+               data-name="矩形 4944 拷贝 4"
+               class="cls-4"
+               d="m 10011,1982 h 122 v 51 h -122 z m 2,2 h 118 v 47 h -118 z m -2,21 h 121 v 2 h -121 z m 68,0 h 2 v 28 h -2 z"
+               transform="translate(-9275,-1653)"
+               inkscape:connector-curvature="0"
+               style="fill:#5085c6;fill-rule:evenodd" />
+            <text
+               id="p20"
+               data-name="0.000"
+               class="cls-5"
+               transform="translate(756.757,370.099)"
+               style="font-size:14px;font-family:'PingFang SC';fill:#fefefe"
+               inkscape:label="#_0.000-14">0.000</text>
+            <text
+               id="Hz-2"
+               data-name="Hz"
+               class="cls-6"
+               transform="translate(820.026,369.834)"
+               style="font-size:14.00399971px;font-family:'PingFang SC';fill:#a3cff6">Hz</text>
+            <text
+               id="_2_电机频率"
+               data-name="2#电机频率"
+               class="cls-6"
+               transform="translate(760.622,345.524)"
+               style="font-size:14.00399971px;font-family:'PingFang SC';fill:#a3cff6">2#电机频率</text>
+          </g>
+          <g
+             id="组_853-15"
+             data-name="组 853">
+            <path
+               id="矩形_4944_拷贝_4-13"
+               data-name="矩形 4944 拷贝 4"
+               class="cls-4"
+               d="m 10156,1969 h 122 v 51 h -122 z m 2,2 h 118 v 47 h -118 z m -2,21 h 121 v 2 h -121 z m 68,0 h 2 v 28 h -2 z"
+               transform="translate(-9275,-1653)"
+               inkscape:connector-curvature="0"
+               style="fill:#5085c6;fill-rule:evenodd" />
+            <text
+               id="p21"
+               data-name="0.000"
+               class="cls-5"
+               transform="translate(901.75,357.099)"
+               style="font-size:14px;font-family:'PingFang SC';fill:#fefefe"
+               inkscape:label="#_0.000-15">0.000</text>
+            <text
+               id="Hz-3"
+               data-name="Hz"
+               class="cls-6"
+               transform="translate(965.018,356.834)"
+               style="font-size:14.00399971px;font-family:'PingFang SC';fill:#a3cff6">Hz</text>
+            <text
+               id="_1_电机频率"
+               data-name="1#电机频率"
+               class="cls-6"
+               transform="translate(905.629,332.524)"
+               style="font-size:14.00399971px;font-family:'PingFang SC';fill:#a3cff6">1#电机频率</text>
+          </g>
+          <g
+             id="组_853-16"
+             data-name="组 853">
+            <path
+               id="矩形_4944_拷贝_4-14"
+               data-name="矩形 4944 拷贝 4"
+               class="cls-4"
+               d="m 10008,1714 h 122 v 51 h -122 z m 2,2 h 118 v 47 h -118 z m -2,21 h 121 v 2 h -121 z m 68,0 h 2 v 28 h -2 z"
+               transform="translate(-9275,-1653)"
+               inkscape:connector-curvature="0"
+               style="fill:#5085c6;fill-rule:evenodd" />
+            <text
+               id="p9"
+               data-name="0.000"
+               class="cls-5"
+               transform="translate(753.745,102.1)"
+               style="font-size:14px;font-family:'PingFang SC';fill:#fefefe"
+               inkscape:label="#_0.000-16">0.000</text>
+            <text
+               id="A-6"
+               data-name="A"
+               class="cls-6"
+               transform="translate(825.013,101.834)"
+               style="font-size:14.00399971px;font-family:'PingFang SC';fill:#a3cff6">A</text>
+            <text
+               id="_2_电机电流"
+               data-name="2#电机电流"
+               class="cls-6"
+               transform="translate(761.631,77.525)"
+               style="font-size:14.00399971px;font-family:'PingFang SC';fill:#a3cff6">2#电机电流</text>
+          </g>
+          <g
+             id="组_853-17"
+             data-name="组 853">
+            <path
+               id="矩形_4944_拷贝_4-15"
+               data-name="矩形 4944 拷贝 4"
+               class="cls-4"
+               d="m 10162,1714 h 122 v 51 h -122 z m 2,2 h 118 v 47 h -118 z m -2,21 h 121 v 2 h -121 z m 68,0 h 2 v 28 h -2 z"
+               transform="translate(-9275,-1653)"
+               inkscape:connector-curvature="0"
+               style="fill:#5085c6;fill-rule:evenodd" />
+            <text
+               id="p10"
+               data-name="0.000"
+               class="cls-5"
+               transform="translate(907.746,102.1)"
+               style="font-size:14px;font-family:'PingFang SC';fill:#fefefe"
+               inkscape:label="#_0.000-17">0.000</text>
+            <text
+               id="A-7"
+               data-name="A"
+               class="cls-6"
+               transform="translate(977.024,101.834)"
+               style="font-size:14.00399971px;font-family:'PingFang SC';fill:#a3cff6">A</text>
+            <text
+               id="_1_电机电流"
+               data-name="1#电机电流"
+               class="cls-6"
+               transform="translate(915.617,77.525)"
+               style="font-size:14.00399971px;font-family:'PingFang SC';fill:#a3cff6">1#电机电流</text>
+          </g>
+          <g
+             id="组_853-18"
+             data-name="组 853">
+            <path
+               id="矩形_4944_拷贝_4-16"
+               data-name="矩形 4944 拷贝 4"
+               class="cls-4"
+               d="m 9275,2039 h 122 v 51 h -122 z m 2,2 h 118 v 47 h -118 z m -2,21 h 121 v 2 h -121 z m 68,0 h 2 v 28 h -2 z"
+               transform="translate(-9275,-1653)"
+               inkscape:connector-curvature="0"
+               style="fill:#5085c6;fill-rule:evenodd" />
+            <text
+               id="p15"
+               data-name="0.000"
+               class="cls-5"
+               transform="translate(20.754,427.098)"
+               style="font-size:14px;font-family:'PingFang SC';fill:#fefefe"
+               inkscape:label="#_0.000-18">0.000</text>
+            <text
+               id="m3_h"
+               data-name="m3/h"
+               class="cls-6"
+               transform="translate(80.016,426.836)"
+               style="font-size:14.00399971px;font-family:'PingFang SC';fill:#a3cff6">m3/h</text>
+            <text
+               id="_7_流量"
+               data-name="7#流量"
+               class="cls-6"
+               transform="translate(48.631,402.526)"
+               style="font-size:14.00399971px;font-family:'PingFang SC';fill:#a3cff6">7#流量</text>
+          </g>
+          <g
+             id="组_853-19"
+             data-name="组 853">
+            <path
+               id="矩形_4944_拷贝_4-17"
+               data-name="矩形 4944 拷贝 4"
+               class="cls-4"
+               d="m 9424,2039 h 122 v 51 h -122 z m 2,2 h 118 v 47 h -118 z m -2,21 h 121 v 2 h -121 z m 68,0 h 2 v 28 h -2 z"
+               transform="translate(-9275,-1653)"
+               inkscape:connector-curvature="0"
+               style="fill:#5085c6;fill-rule:evenodd" />
+            <text
+               id="p16"
+               data-name="0.000"
+               class="cls-5"
+               transform="translate(169.754,427.098)"
+               style="font-size:14px;font-family:'PingFang SC';fill:#fefefe"
+               inkscape:label="#_0.000-19">0.000</text>
+            <text
+               id="m3_h-2"
+               data-name="m3/h"
+               class="cls-6"
+               transform="translate(229.015,426.836)"
+               style="font-size:14.00399971px;font-family:'PingFang SC';fill:#a3cff6">m3/h</text>
+            <text
+               id="_6_流量"
+               data-name="6#流量"
+               class="cls-6"
+               transform="translate(197.63,402.526)"
+               style="font-size:14.00399971px;font-family:'PingFang SC';fill:#a3cff6">6#流量</text>
+          </g>
+          <g
+             id="组_853-20"
+             data-name="组 853">
+            <path
+               id="矩形_4944_拷贝_4-18"
+               data-name="矩形 4944 拷贝 4"
+               class="cls-4"
+               d="m 9567,2039 h 122 v 51 h -122 z m 2,2 h 118 v 47 h -118 z m -2,21 h 121 v 2 h -121 z m 68,0 h 2 v 28 h -2 z"
+               transform="translate(-9275,-1653)"
+               inkscape:connector-curvature="0"
+               style="fill:#5085c6;fill-rule:evenodd" />
+            <text
+               id="p17"
+               data-name="0.000"
+               class="cls-5"
+               transform="translate(312.757,427.098)"
+               style="font-size:14px;font-family:'PingFang SC';fill:#fefefe"
+               inkscape:label="#_0.000-20">0.000</text>
+            <text
+               id="m3_h-3"
+               data-name="m3/h"
+               class="cls-6"
+               transform="translate(372.019,426.836)"
+               style="font-size:14.00399971px;font-family:'PingFang SC';fill:#a3cff6">m3/h</text>
+            <text
+               id="_5_流量"
+               data-name="5#流量"
+               class="cls-6"
+               transform="translate(340.619,402.526)"
+               style="font-size:14.00399971px;font-family:'PingFang SC';fill:#a3cff6">5#流量</text>
+          </g>
+          <g
+             id="组_853-21"
+             data-name="组 853">
+            <path
+               id="矩形_4944_拷贝_4-19"
+               data-name="矩形 4944 拷贝 4"
+               class="cls-4"
+               d="m 9719,2039 h 122 v 51 h -122 z m 2,2 h 118 v 47 h -118 z m -2,21 h 121 v 2 h -121 z m 68,0 h 2 v 28 h -2 z"
+               transform="translate(-9275,-1653)"
+               inkscape:connector-curvature="0"
+               style="fill:#5085c6;fill-rule:evenodd" />
+            <text
+               id="p18"
+               data-name="0.000"
+               class="cls-5"
+               transform="translate(464.754,427.098)"
+               style="font-size:14px;font-family:'PingFang SC';fill:#fefefe"
+               inkscape:label="#_0.000-21">0.000</text>
+            <text
+               id="m3_h-4"
+               data-name="m3/h"
+               class="cls-6"
+               transform="translate(524.016,426.836)"
+               style="font-size:14.00399971px;font-family:'PingFang SC';fill:#a3cff6">m3/h</text>
+            <text
+               id="_4_流量"
+               data-name="4#流量"
+               class="cls-6"
+               transform="translate(487.629,402.526)"
+               style="font-size:14.00399971px;font-family:'PingFang SC';fill:#a3cff6">4#流量</text>
+          </g>
+          <g
+             id="组_853-22"
+             data-name="组 853">
+            <path
+               id="矩形_4944_拷贝_4-20"
+               data-name="矩形 4944 拷贝 4"
+               class="cls-4"
+               d="m 9867,2118 h 122 v 51 h -122 z m 2,2 h 118 v 47 h -118 z m -2,21 h 121 v 2 h -121 z m 68,0 h 2 v 28 h -2 z"
+               transform="translate(-9275,-1653)"
+               inkscape:connector-curvature="0"
+               style="fill:#5085c6;fill-rule:evenodd" />
+            <text
+               id="p26"
+               data-name="0.000"
+               class="cls-5"
+               transform="translate(612.745,506.098)"
+               style="font-size:14px;font-family:'PingFang SC';fill:#fefefe"
+               inkscape:label="#_0.000-22">0.000</text>
+            <text
+               id="m3_h-5"
+               data-name="m3/h"
+               class="cls-6"
+               transform="translate(672.021,505.837)"
+               style="font-size:14.00399971px;font-family:'PingFang SC';fill:#a3cff6">m3/h</text>
+            <text
+               id="_3_流量"
+               data-name="3#流量"
+               class="cls-6"
+               transform="translate(635.62,481.527)"
+               style="font-size:14.00399971px;font-family:'PingFang SC';fill:#a3cff6">3#流量</text>
+          </g>
+          <g
+             id="组_853-23"
+             data-name="组 853">
+            <path
+               id="矩形_4944_拷贝_4-21"
+               data-name="矩形 4944 拷贝 4"
+               class="cls-4"
+               d="m 10009,2115 h 122 v 51 h -122 z m 2,2 h 118 v 47 h -118 z m -2,21 h 121 v 2 h -121 z m 68,0 h 2 v 28 h -2 z"
+               transform="translate(-9275,-1653)"
+               inkscape:connector-curvature="0"
+               style="fill:#5085c6;fill-rule:evenodd" />
+            <text
+               id="p27"
+               data-name="0.000"
+               class="cls-5"
+               transform="translate(754.754,503.1)"
+               style="font-size:14px;font-family:'PingFang SC';fill:#fefefe"
+               inkscape:label="#_0.000-23">0.000</text>
+            <text
+               id="m3_h-6"
+               data-name="m3/h"
+               class="cls-6"
+               transform="translate(814.016,502.835)"
+               style="font-size:14.00399971px;font-family:'PingFang SC';fill:#a3cff6">m3/h</text>
+            <text
+               id="_2_流量"
+               data-name="2#流量"
+               class="cls-6"
+               transform="translate(777.629,478.525)"
+               style="font-size:14.00399971px;font-family:'PingFang SC';fill:#a3cff6">2#流量</text>
+          </g>
+          <g
+             id="组_853-24"
+             data-name="组 853"
+             transform="translate(0,-32)">
+            <path
+               id="矩形_4944_拷贝_4-22"
+               data-name="矩形 4944 拷贝 4"
+               class="cls-4"
+               d="m 10009,2052 h 122 v 51 h -122 z m 2,2 h 118 v 47 h -118 z m -2,21 h 121 v 2 h -121 z m 68,0 h 2 v 28 h -2 z"
+               transform="translate(-9275,-1653)"
+               inkscape:connector-curvature="0"
+               style="fill:#5085c6;fill-rule:evenodd" />
+            <text
+               id="p22"
+               data-name="0.000"
+               class="cls-5"
+               transform="translate(754.754,440.098)"
+               style="font-size:14px;font-family:'PingFang SC';fill:#fefefe"
+               inkscape:label="#_0.000-24">0.000</text>
+            <text
+               id="MPa-6"
+               data-name="MPa"
+               class="cls-6"
+               transform="translate(814.016,439.836)"
+               style="font-size:14.00399971px;font-family:'PingFang SC';fill:#a3cff6">MPa</text>
+            <text
+               id="_2_水泵入口压力"
+               data-name="2#水泵入口压力"
+               class="cls-6"
+               transform="translate(746.627,415.526)"
+               style="font-size:14.00399971px;font-family:'PingFang SC';fill:#a3cff6">2#水泵入口压力</text>
+          </g>
+          <g
+             id="组_853-25"
+             data-name="组 853">
+            <path
+               id="矩形_4944_拷贝_4-23"
+               data-name="矩形 4944 拷贝 4"
+               class="cls-4"
+               d="m 10168,2115 h 122 v 51 h -122 z m 2,2 h 118 v 47 h -118 z m -2,21 h 121 v 2 h -121 z m 68,0 h 2 v 28 h -2 z"
+               transform="translate(-9275,-1653)"
+               inkscape:connector-curvature="0"
+               style="fill:#5085c6;fill-rule:evenodd" />
+            <text
+               id="p28"
+               data-name="0.000"
+               class="cls-5"
+               transform="translate(913.756,503.1)"
+               style="font-size:14px;font-family:'PingFang SC';fill:#fefefe"
+               inkscape:label="#_0.000-25">0.000</text>
+            <text
+               id="m3_h-7"
+               data-name="m3/h"
+               class="cls-6"
+               transform="translate(973.017,502.835)"
+               style="font-size:14.00399971px;font-family:'PingFang SC';fill:#a3cff6">m3/h</text>
+            <text
+               id="_1_流量"
+               data-name="1#流量"
+               class="cls-6"
+               transform="translate(936.631,478.525)"
+               style="font-size:14.00399971px;font-family:'PingFang SC';fill:#a3cff6">1#流量</text>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g
+       id="组_885"
+       data-name="组 885">
+      <g
+         id="水箱">
+        <path
+           id="矩形_5720"
+           data-name="矩形 5720"
+           class="cls-2"
+           d="m 9397.01,2172 v -71 h 171 v 71 z m 169,-69 h -167 v 67 h 167 z"
+           transform="translate(-9275,-1653)"
+           inkscape:connector-curvature="0"
+           style="fill:#5b83e1;fill-rule:evenodd" />
+        <rect
+           id="矩形_5721"
+           data-name="矩形 5721"
+           class="cls-7"
+           x="124"
+           y="472"
+           width="167.03"
+           height="45"
+           style="fill:#4786ff" />
+      </g>
+      <g
+         id="水箱-2"
+         data-name="水箱">
+        <path
+           id="矩形_5720-2"
+           data-name="矩形 5720"
+           class="cls-2"
+           d="m 9688.8,2172 v -71 h 170.91 v 71 z m 168.91,-69 H 9690.8 v 67 h 166.91 z"
+           transform="translate(-9275,-1653)"
+           inkscape:connector-curvature="0"
+           style="fill:#5b83e1;fill-rule:evenodd" />
+        <rect
+           id="矩形_5721-2"
+           data-name="矩形 5721"
+           class="cls-7"
+           x="415.78"
+           y="472"
+           width="166.94"
+           height="45"
+           style="fill:#4786ff" />
+      </g>
+      <g
+         id="水箱-3"
+         data-name="水箱">
+        <path
+           id="矩形_5720-3"
+           data-name="矩形 5720"
+           class="cls-2"
+           d="m 9424.94,2303 v -59 h 170.91 v 59 z m 168.91,-57 h -166.91 v 55 h 166.91 z"
+           transform="translate(-9275,-1653)"
+           inkscape:connector-curvature="0"
+           style="fill:#5b83e1;fill-rule:evenodd" />
+        <rect
+           id="矩形_5721-3"
+           data-name="矩形 5721"
+           class="cls-7"
+           x="151.94"
+           y="611"
+           width="166.89999"
+           height="37"
+           style="fill:#4786ff" />
+      </g>
+      <g
+         id="水箱-4"
+         data-name="水箱">
+        <path
+           id="矩形_5720-4"
+           data-name="矩形 5720"
+           class="cls-2"
+           d="m 9688.8,2303 v -59 h 170.91 v 59 z m 168.91,-57 H 9690.8 v 55 h 166.91 z"
+           transform="translate(-9275,-1653)"
+           inkscape:connector-curvature="0"
+           style="fill:#5b83e1;fill-rule:evenodd" />
+        <rect
+           id="矩形_5721-4"
+           data-name="矩形 5721"
+           class="cls-7"
+           x="415.78"
+           y="611"
+           width="166.94"
+           height="37"
+           style="fill:#4786ff" />
+      </g>
+    </g>
+    <g
+       id="组_865"
+       data-name="组 865">
+      <g
+         id="组_889"
+         data-name="组 889">
+        <text
+           id="_7_"
+           data-name="7 "
+           class="cls-8"
+           transform="translate(155.944,287.271)"
+           style="font-size:14px;font-family:'PingFang SC';fill:#a3cff6">7</text>
+        <text
+           id="_7_R"
+           data-name="7 R"
+           class="cls-8"
+           transform="translate(51.955,161.27)"
+           style="font-size:14px;font-family:'PingFang SC';fill:#a3cff6">7 R</text>
+        <text
+           id="_7_C"
+           data-name="7 C"
+           class="cls-8"
+           transform="translate(94.934,374.268)"
+           style="font-size:14px;font-family:'PingFang SC';fill:#a3cff6">7 C</text>
+        <text
+           id="_6_R"
+           data-name="6 R"
+           class="cls-8"
+           transform="translate(202.915,161.27)"
+           style="font-size:14px;font-family:'PingFang SC';fill:#a3cff6">6 R</text>
+        <text
+           id="_6_C"
+           data-name="6 C"
+           class="cls-8"
+           transform="translate(239.899,376.269)"
+           style="font-size:14px;font-family:'PingFang SC';fill:#a3cff6">6 C</text>
+        <text
+           id="_1_清水池"
+           data-name="1#清水池"
+           class="cls-8"
+           transform="translate(163.9,537.267)"
+           style="font-size:14px;font-family:'PingFang SC';fill:#a3cff6">1#清水池</text>
+        <text
+           id="_2_清水池"
+           data-name="2#清水池"
+           class="cls-8"
+           transform="translate(436.907,538.268)"
+           style="font-size:14px;font-family:'PingFang SC';fill:#a3cff6">2#清水池</text>
+        <text
+           id="_3_清水池"
+           data-name="3#清水池"
+           class="cls-8"
+           transform="translate(597.898,642.271)"
+           style="font-size:14px;font-family:'PingFang SC';fill:#a3cff6">3#清水池</text>
+        <text
+           id="_4_清水池"
+           data-name="4#清水池"
+           class="cls-8"
+           transform="translate(76.905,642.271)"
+           style="font-size:14px;font-family:'PingFang SC';fill:#a3cff6">4#清水池</text>
+        <text
+           id="Wp24"
+           data-name="0.000 m"
+           class="cls-9"
+           x="177.82401"
+           y="485.633"
+           style="font-size:18px;font-family:'PingFang SC';fill:#ffffff"
+           inkscape:label="#_0.000_m">0.000</text>
+        <text
+           id="p29"
+           data-name="0.000 m 拷贝"
+           class="cls-9"
+           x="197.815"
+           y="618.63397"
+           style="font-size:18px;font-family:'PingFang SC';fill:#ffffff"
+           inkscape:label="#_0.000_m_拷贝">0.000</text>
+        <text
+           id="Wp25"
+           data-name="0.000 m 拷贝 2"
+           class="cls-9"
+           x="466.815"
+           y="488.63501"
+           style="font-size:18px;font-family:'PingFang SC';fill:#ffffff"
+           inkscape:label="#_0.000_m_拷贝_2">0.000</text>
+        <text
+           id="p30"
+           data-name="0.000 m 拷贝 3"
+           class="cls-9"
+           x="463.81699"
+           y="624.63397"
+           style="font-size:18px;font-family:'PingFang SC';fill:#ffffff"
+           inkscape:label="#_0.000_m_拷贝_3">0.000</text>
+        <text
+           id="_5_R"
+           data-name="5 R"
+           class="cls-8"
+           transform="translate(402.04,161.27)"
+           style="font-size:14px;font-family:'PingFang SC';fill:#a3cff6">5 R</text>
+        <text
+           id="_5_C"
+           data-name="5 C"
+           class="cls-8"
+           transform="translate(385.019,376.269)"
+           style="font-size:14px;font-family:'PingFang SC';fill:#a3cff6">5 C</text>
+        <text
+           id="_4_R"
+           data-name="4 R"
+           class="cls-8"
+           transform="translate(499.053,160.27)"
+           style="font-size:14px;font-family:'PingFang SC';fill:#a3cff6">4 R</text>
+        <text
+           id="_4_C"
+           data-name="4 C"
+           class="cls-8"
+           transform="translate(534.047,376.269)"
+           style="font-size:14px;font-family:'PingFang SC';fill:#a3cff6">4 C</text>
+        <text
+           id="_3_R"
+           data-name="3 R"
+           class="cls-8"
+           transform="translate(641.488,150.268)"
+           style="font-size:14px;font-family:'PingFang SC';fill:#a3cff6">3 R</text>
+        <text
+           id="_3_C"
+           data-name="3 C"
+           class="cls-8"
+           transform="translate(679.48,447.268)"
+           style="font-size:14px;font-family:'PingFang SC';fill:#a3cff6">3 C</text>
+        <text
+           id="_2_R"
+           data-name="2 R"
+           class="cls-8"
+           transform="translate(787.376,149.271)"
+           style="font-size:14px;font-family:'PingFang SC';fill:#a3cff6">2 R</text>
+        <text
+           id="_2_C"
+           data-name="2 C"
+           class="cls-8"
+           transform="translate(879.358,456.27)"
+           style="font-size:14px;font-family:'PingFang SC';fill:#a3cff6">2 C</text>
+        <text
+           id="_1_R"
+           data-name="1 R"
+           class="cls-8"
+           transform="translate(939.145,149.271)"
+           style="font-size:14px;font-family:'PingFang SC';fill:#a3cff6">1 R</text>
+        <text
+           id="_1_C"
+           data-name="1 C"
+           class="cls-8"
+           transform="translate(1036.129,377.27)"
+           style="font-size:14px;font-family:'PingFang SC';fill:#a3cff6">1 C</text>
+        <text
+           id="_6"
+           data-name="6"
+           class="cls-8"
+           transform="translate(303.877,287.271)"
+           style="font-size:14px;font-family:'PingFang SC';fill:#a3cff6">6</text>
+        <text
+           id="_5"
+           data-name="5"
+           class="cls-8"
+           transform="translate(443.84,287.271)"
+           style="font-size:14px;font-family:'PingFang SC';fill:#a3cff6">5</text>
+        <text
+           id="_4"
+           data-name="4"
+           class="cls-8"
+           transform="translate(511.797,287.271)"
+           style="font-size:14px;font-family:'PingFang SC';fill:#a3cff6">4</text>
+        <text
+           id="_3"
+           data-name="3"
+           class="cls-8"
+           transform="translate(653.735,286.27)"
+           style="font-size:14px;font-family:'PingFang SC';fill:#a3cff6">3</text>
+        <text
+           id="_2"
+           data-name="2"
+           class="cls-8"
+           transform="translate(800.688,287.271)"
+           style="font-size:14px;font-family:'PingFang SC';fill:#a3cff6">2</text>
+        <text
+           id="_1"
+           data-name="1"
+           class="cls-8"
+           transform="translate(1046.643,287.271)"
+           style="font-size:14px;font-family:'PingFang SC';fill:#a3cff6">1</text>
+      </g>
+    </g>
+    <path
+       id="矩形_4855_拷贝_9"
+       data-name="矩形 4855 拷贝 9"
+       class="cls-10"
+       d="m 9968.19,1799 h -15.79 l 5.6,8 h -14.01 l 7.01,-10.01 v 0 l -7,-10 h 14.01 l -6.31,9.01 h 16.35 a 11.008,11.008 0 1 1 0.14,3 z m 16.81,4.99 v -2 l -8.66,-5 8.66,-4.99 v -2 h -12 v 2 h 8 l -8,3.99 v 2 l 8,4 h -8 v 2 z"
+       transform="translate(-9275,-1653)"
+       inkscape:connector-curvature="0"
+       style="fill:#facc17;fill-rule:evenodd" />
+  </g>
+  <text
+     id="p24-4"
+     data-name="0.000 m"
+     class="cls-9"
+     x="267.66956"
+     y="485.75024"
+     style="font-size:18px;font-family:'PingFang SC';fill:#ffffff"
+     inkscape:label="#_0.000_m">m</text>
+  <text
+     id="p24-4-6"
+     data-name="0.000 m"
+     class="cls-9"
+     x="290.47565"
+     y="616.56805"
+     style="font-size:18px;font-family:'PingFang SC';fill:#ffffff"
+     inkscape:label="#_0.000_m">m</text>
+  <text
+     id="p24-4-3"
+     data-name="0.000 m"
+     class="cls-9"
+     x="563.70044"
+     y="488.31174"
+     style="font-size:18px;font-family:'PingFang SC';fill:#ffffff"
+     inkscape:label="#_0.000_m">m</text>
+  <text
+     id="p24-4-37"
+     data-name="0.000 m"
+     class="cls-9"
+     x="556.70465"
+     y="623.56384"
+     style="font-size:18px;font-family:'PingFang SC';fill:#ffffff"
+     inkscape:label="#_0.000_m">m</text>
+</svg>

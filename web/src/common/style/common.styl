@@ -1,0 +1,177 @@
+@require 'initialize';
+@require 'image';
+@require 'mixin';
+@require 'styleblue'; /* 样式: stylegray stylewhite styleblue */
+
+
+initialize()
+/* 白色菜单项 active over color 交换*/
+menuBgColor = #ffffff  /* white:#ffffff,  gray: #1e202f  blue: #14204e */
+menuItemColor = #b2c2d0 /* white:#b2c2d0,  gray: #9e9eab blue: #a3cff6 */
+menuItemOverColor = #405e7c /*white:#405e7c    gray: #646390 blue: #2c8cf9 */
+menuItemActiveColor = #4886ff /*white:#4886ff    gray: #ffffff blue: #ffffff*/
+
+html,
+body
+    height 100%
+    -webkit-overflow-scrolling touch
+    -webkit-text-size-adjust 100% !important
+    background #f3f3f3
+    width 100%
+    font-size 12px
+
+
+html
+    font-size 12px
+    color #333
+
+a
+    color #3a9ae6
+    text-decoration none
+
+input,
+select {
+    -webkit-appearance:none; /*去除系统默认的样式*/
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /*点击高亮的颜色*/
+    outline: none;
+}
+
+//a:focus,
+button:focus,
+input:focus {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-user-modify: read-write-plaintext-only;
+    outline: none;
+}
+
+.blur
+    filter blur(px2rem(5))
+
+::-webkit-input-placeholder
+    position relative
+    top -1px
+    color #999
+
+#app
+    height 100%
+    min-height 100%
+
+.per
+    height auto!important
+    flexbox()
+    flex-direction(column)
+    justify-content(between-space)
+    .per-body
+        height auto!important
+        background url('./img/sybeijing.png') no-repeat
+        background-size 100% 100%
+
+.per-content
+    width 100%
+    height 100%
+    min-height 700px
+    flexbox()
+    justify-content(space-between)
+    border-top 1px solid #14204e
+    position relative
+    .charts-main-menus-icon
+        position absolute
+        left 0
+        top 0px
+        width 40px
+        height 20px
+        display block
+        background url('../common/img/main-menu-icon.png') no-repeat center center
+        background-size 100% 100%
+        z-index 9999
+        &.active
+            display none
+            z-index 0
+    .charts-main-menus
+        position absolute
+        left 0
+        top 0px
+        width 9.3%
+        height 100%
+        display block
+        font-size 16px
+        padding-top 20px
+        border-right 0px solid #264b91
+        z-index 9999
+        &.active
+            display none
+            z-index 0
+        .charts-menu-item
+            width 100%
+            height 45px
+            line-height 45px
+            text-align center
+        .charts-menu-item.active
+              cursor pointer
+        .charts-menu-item:hover
+              cursor pointer
+    .charts-menu-list2
+        width 9.3%
+        display block
+        font-size 16px
+        padding-top 20px
+        border-right 0px solid #264b91
+        .charts-menu-item
+            width 100%
+            height 45px
+            line-height 45px
+            text-align center
+        .charts-menu-item.active
+              cursor pointer
+        .charts-menu-item:hover
+              cursor pointer
+
+
+    .right-content
+       width 90.7%
+       height 100%
+       min-height 700px
+       flexbox()
+       justify-content(space-between)
+       flex-direction column
+       padding-left 10px
+       .right-menus
+           font-size 16px
+           width 100%
+           height 50px
+           border-bottom 1px solid #5085c6
+           .mitem
+               text-align center
+               line-height 50px
+               margin-left 30px
+               display inline-block
+               width auto
+               cursor pointer
+           .mitem.active
+              cursor pointer
+              border-bottom 2px solid #fff
+           .mitem:hover
+              cursor pointer
+
+
+
+
+.pageLoading
+    background rgba(255, 255, 255, .5)
+    position fixed
+    width 100%
+    height 100%
+    z-index 20
+    flexbox()
+    justify-content(center)
+    align-items(center)
+    span
+        display block
+        width px2rem(39)
+        height px2rem(39)
+        background url('../common/img/pageloading.gif') no-repeat
+        background-size 100% 100%
+
+
+
+// @require '../common/dist/semantic.css';

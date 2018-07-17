@@ -1,0 +1,149 @@
+/**
+ * @file 报表
+ * @author luwenlong <zuiwosuifeng@gmail.com>
+ */
+.chaxun
+    overflow-x hidden
+    overflow-y auto
+    .top-charts
+        height 50px
+        width 90%
+        flexbox()
+        justify-content(space-between)
+        align-items(center)
+        font-size 16px
+        color #fff
+        position relative
+        // text-indent 10px  取消，影响datepicker
+        .query-data
+            font-size 16px
+            height 50px
+            width 120px
+            color #fff
+            margin-left 30px
+            .ui.fluid.selection.dropdown
+                min-height 30px
+                margin-top 10px
+                padding 6px 0px 6px 10px
+                .dropdown.icon
+                    padding 5px 10px
+            .ui.dropdown
+                color #fff
+                background #3c75c2
+                margin auto
+                .default.text
+                    color #fff
+                .ui.label
+                    color #fff
+                    background #0a448c
+                    font-weight normal
+                .menu.visible
+                    color #fff
+                    background #3c75c2
+                    .item
+                        color #fff
+                        border-bottom 1px solid #5da6ea
+                        &:hover
+                            background #59a1e1
+        .labStyle
+            line-height 50px
+        .query-condition
+            flexbox()
+            justify-content(flex-start)
+            align-items(center)
+            font-size 16px
+            position relative
+            margin auto
+            label
+                margin 0 10px
+                color #fff
+            .query-name
+                font-size 16px
+                margin-right 10px
+            .query-value
+                font-size 14px
+            .daily-wrap
+                margin auto
+                border 1px solid #ebebed
+                width 216px
+                height 28px
+                line-height 28px
+                inline-flex()
+                justify-content(flex-start)
+                align-items(center)
+                font-size 14px
+                .icon.calendar
+                    margin 0 5px
+                    height auto
+                >div
+                    display inline-block
+                input
+                    border none
+                    width 90px
+        .query-btn
+            width 106px
+            height 30px
+            line-height 30px
+            text-align center
+            background #254394
+            color #fff
+            border-radius 3px
+            cursor pointer
+            position absolute
+            right 0px
+            &:hover
+                background #2a57ff
+            &.gray,
+            &.gray:hover
+                background #c6c6c6
+
+    .rp-wrap
+        width 96%
+        padding-bottom 80px
+        .query-data
+            flexbox()
+            justify-content(flex-start)
+            align-items(center)
+            font-size 16px
+            color #fff
+            position relative
+            margin auto
+            width 90%
+
+            .ui.dropdown
+                color #fff
+                background #3c75c2
+                .default.text
+                    color #fff
+                .ui.label
+                    color #fff
+                    background #0a448c
+                    font-weight normal
+                .menu.visible
+                    color #fff
+                    background #3c75c2
+                    .item
+                        color #fff
+                        border-bottom 1px solid #5da6ea
+                        &:hover
+                            background #59a1e1
+
+        .contain
+            margin-top 40px
+            flexbox()
+            justify-content(flex-start)
+            .curves
+                margin-left 5%
+                width 100%
+                flexbox()
+                flex-direction(column)
+                .charts_body
+                    position relative
+                    height 180px
+                    &:last-child
+                      height 240px
+
+                    .close-icon
+                        position absolute
+                        right 0px
+                        top 0px

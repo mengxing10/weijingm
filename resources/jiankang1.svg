@@ -1,0 +1,73 @@
+<svg id="组_918" data-name="组 918" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="298" height="77" viewBox="0 0 298 77">
+  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""/>
+   </rdf:RDF>
+</x:xmpmeta>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?xpacket end="w"?></metadata>
+<defs>
+    <style>
+      .cls-jiankan-1 {
+        font-size: 14px;
+        fill: #97c1eb;
+      }
+
+      .cls-jiankan-1, .cls-jiankan-5 {
+        font-family: "PingFang SC";
+      }
+
+      .cls-jiankan-2 {
+        fill: none;
+        stroke: #4f76c9;
+        stroke-width: 1px;
+      }
+
+      .cls-jiankan-3 {
+        fill: #f04864;
+        filter: url(#filter-jiankang);
+      }
+
+      .cls-jiankan-4 {
+        fill: #ffeef1;
+      }
+
+      .cls-jiankan-5 {
+        font-size: 18px;
+        fill: #f7fafd;
+      }
+    </style>
+    <filter id="filter-jiankang" x="19.03" y="33.688" width="259.13" height="14" filterUnits="userSpaceOnUse">
+      <feImage preserveAspectRatio="none" x="19.030000000000655" y="33.68799999999999" width="259.13" height="14" result="image" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjU5LjEzIiBoZWlnaHQ9IjE0IiB2aWV3Qm94PSIwIDAgMjU5LjEzIDE0Ij4KICA8ZGVmcz4KICAgIDxzdHlsZT4KICAgICAgLmNscy0xIHsKICAgICAgICBmaWxsOiB1cmwoI2xpbmVhci1ncmFkaWVudCk7CiAgICAgIH0KICAgIDwvc3R5bGU+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImxpbmVhci1ncmFkaWVudCIgeTE9IjciIHgyPSIyNTkuMTMiIHkyPSI3IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzViZGY4MyIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjAuNTQxIiBzdG9wLWNvbG9yPSIjZjBkYTQ4Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2YwZGE0OCIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCBjbGFzcz0iY2xzLTEiIHdpZHRoPSIyNTkuMTMiIGhlaWdodD0iMTQiLz4KPC9zdmc+Cg=="/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <text id="健康" class="cls-jiankan-1" transform="translate(0.513 74.555)">健康</text>
+  <text id="故障" class="cls-jiankan-1" transform="translate(270.653 74.555)">故障</text>
+  <rect id="矩形_7177" data-name="矩形 7177" class="cls-jiankan-2" x="14.03" y="27.688" width="270.13" height="26"/>
+  <rect id="矩形_7176" data-name="矩形 7176" class="cls-jiankan-3" x="19.03" y="33.688" width="259.13" height="14"/>
+  <rect id="g1" data-name="矩形 7178" class="cls-jiankan-4" x="19" y="29" width="2" height="24"/>
+  <text id="p1" data-name="80%" class="cls-jiankan-5" transform="translate(18.522 14.194) scale(1 1.007)">80%</text>
+</svg>

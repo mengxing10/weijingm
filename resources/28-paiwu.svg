@@ -1,0 +1,974 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:x="adobe:ns:meta/"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="_28泵站潜污泵_排污泵"
+   data-name="28泵站潜污泵、排污泵"
+   width="1231"
+   height="656"
+   viewBox="0 0 1231 656"
+   version="1.1"
+   sodipodi:docname="28-paiwu.svg"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1012"
+     id="namedview208"
+     showgrid="false"
+     inkscape:zoom="1.2217709"
+     inkscape:cx="556.82315"
+     inkscape:cy="212.43307"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="组_880-7" />
+  <metadata
+     id="metadata2">
+<?xpacket begin="�" id="W5M0MpCehiHzreSzNTczkc9d"?>    <x:xmpmeta
+       x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
+      <metadata>
+        <rdf:RDF>
+          <rdf:Description
+             rdf:about="" />
+          <cc:Work
+             rdf:about="">
+            <dc:format>image/svg+xml</dc:format>
+            <dc:type
+               rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+          </cc:Work>
+        </rdf:RDF>
+      </metadata>
+    </x:xmpmeta>
+<?xpacket end="w"?>  </metadata>
+  <defs
+     id="defs125">
+    <style
+       id="style4">
+      .cls-1 {
+        fill: #5b83e1;
+      }
+
+      .cls-1, .cls-10, .cls-9 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #4f76c9;
+        opacity: 0.3;
+      }
+
+      .cls-11, .cls-3, .cls-5 {
+        font-size: 18px;
+        font-family: PingFang SC;
+      }
+
+      .cls-3 {
+        fill: #a3cff6;
+      }
+
+      .cls-4 {
+        fill: #5087c7;
+      }
+
+      .cls-5 {
+        fill: #fafafb;
+      }
+
+      .cls-6 {
+        fill: #5085c6;
+      }
+
+      .cls-12, .cls-13, .cls-14, .cls-15, .cls-16, .cls-7, .cls-8 {
+        fill: #00e099;
+      }
+
+      .cls-7 {
+        filter: url(#filter);
+      }
+
+      .cls-8 {
+        filter: url(#filter-2);
+      }
+
+      .cls-9 {
+        fill: none;
+        stroke: #5b83e1;
+        stroke-width: 2px;
+      }
+
+      .cls-10 {
+        fill: #4786ff;
+      }
+
+      .cls-11 {
+        fill: #fff;
+      }
+
+      .cls-12 {
+        filter: url(#filter-3);
+      }
+
+      .cls-13 {
+        filter: url(#filter-4);
+      }
+
+      .cls-14 {
+        filter: url(#filter-5);
+      }
+
+      .cls-15 {
+        filter: url(#filter-6);
+      }
+
+      .cls-16 {
+        filter: url(#filter-7);
+      }
+    </style>
+    <filter
+       id="filter"
+       x="713"
+       y="159"
+       width="85"
+       height="85"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         result="blur"
+         stdDeviation="10.667"
+         in="SourceAlpha"
+         id="feGaussianBlur6" />
+      <feComposite
+         result="composite"
+         in2="blur"
+         id="feComposite8" />
+      <feComposite
+         result="composite-2"
+         in2="composite"
+         id="feComposite10" />
+      <feComposite
+         result="composite-3"
+         in2="composite-2"
+         id="feComposite12" />
+      <feFlood
+         result="flood"
+         flood-color="#00e099"
+         flood-opacity="0.35"
+         id="feFlood14" />
+      <feComposite
+         result="composite-4"
+         operator="in"
+         in2="composite-3"
+         id="feComposite16" />
+      <feBlend
+         result="blend"
+         mode="screen"
+         in2="SourceGraphic"
+         id="feBlend18" />
+      <feBlend
+         result="blend-2"
+         in="SourceGraphic"
+         in2="blend"
+         id="feBlend20" />
+    </filter>
+    <filter
+       id="filter-2"
+       x="713"
+       y="358"
+       width="85"
+       height="85"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         result="blur"
+         stdDeviation="10.667"
+         in="SourceAlpha"
+         id="feGaussianBlur23" />
+      <feComposite
+         result="composite"
+         in2="blur"
+         id="feComposite25" />
+      <feComposite
+         result="composite-2"
+         in2="composite"
+         id="feComposite27" />
+      <feComposite
+         result="composite-3"
+         in2="composite-2"
+         id="feComposite29" />
+      <feFlood
+         result="flood"
+         flood-color="#00e099"
+         flood-opacity="0.35"
+         id="feFlood31" />
+      <feComposite
+         result="composite-4"
+         operator="in"
+         in2="composite-3"
+         id="feComposite33" />
+      <feBlend
+         result="blend"
+         mode="screen"
+         in2="SourceGraphic"
+         id="feBlend35" />
+      <feBlend
+         result="blend-2"
+         in="SourceGraphic"
+         in2="blend"
+         id="feBlend37" />
+    </filter>
+    <filter
+       id="filter-3"
+       x="193"
+       y="50"
+       width="85"
+       height="85"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         result="blur"
+         stdDeviation="10.667"
+         in="SourceAlpha"
+         id="feGaussianBlur40" />
+      <feComposite
+         result="composite"
+         in2="blur"
+         id="feComposite42" />
+      <feComposite
+         result="composite-2"
+         in2="composite"
+         id="feComposite44" />
+      <feComposite
+         result="composite-3"
+         in2="composite-2"
+         id="feComposite46" />
+      <feFlood
+         result="flood"
+         flood-color="#00e099"
+         flood-opacity="0.35"
+         id="feFlood48" />
+      <feComposite
+         result="composite-4"
+         operator="in"
+         in2="composite-3"
+         id="feComposite50" />
+      <feBlend
+         result="blend"
+         mode="screen"
+         in2="SourceGraphic"
+         id="feBlend52" />
+      <feBlend
+         result="blend-2"
+         in="SourceGraphic"
+         in2="blend"
+         id="feBlend54" />
+    </filter>
+    <filter
+       id="filter-4"
+       x="193"
+       y="180"
+       width="85"
+       height="85"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         result="blur"
+         stdDeviation="10.667"
+         in="SourceAlpha"
+         id="feGaussianBlur57" />
+      <feComposite
+         result="composite"
+         in2="blur"
+         id="feComposite59" />
+      <feComposite
+         result="composite-2"
+         in2="composite"
+         id="feComposite61" />
+      <feComposite
+         result="composite-3"
+         in2="composite-2"
+         id="feComposite63" />
+      <feFlood
+         result="flood"
+         flood-color="#00e099"
+         flood-opacity="0.35"
+         id="feFlood65" />
+      <feComposite
+         result="composite-4"
+         operator="in"
+         in2="composite-3"
+         id="feComposite67" />
+      <feBlend
+         result="blend"
+         mode="screen"
+         in2="SourceGraphic"
+         id="feBlend69" />
+      <feBlend
+         result="blend-2"
+         in="SourceGraphic"
+         in2="blend"
+         id="feBlend71" />
+    </filter>
+    <filter
+       id="filter-5"
+       x="193"
+       y="310"
+       width="85"
+       height="85"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         result="blur"
+         stdDeviation="10.667"
+         in="SourceAlpha"
+         id="feGaussianBlur74" />
+      <feComposite
+         result="composite"
+         in2="blur"
+         id="feComposite76" />
+      <feComposite
+         result="composite-2"
+         in2="composite"
+         id="feComposite78" />
+      <feComposite
+         result="composite-3"
+         in2="composite-2"
+         id="feComposite80" />
+      <feFlood
+         result="flood"
+         flood-color="#00e099"
+         flood-opacity="0.35"
+         id="feFlood82" />
+      <feComposite
+         result="composite-4"
+         operator="in"
+         in2="composite-3"
+         id="feComposite84" />
+      <feBlend
+         result="blend"
+         mode="screen"
+         in2="SourceGraphic"
+         id="feBlend86" />
+      <feBlend
+         result="blend-2"
+         in="SourceGraphic"
+         in2="blend"
+         id="feBlend88" />
+    </filter>
+    <filter
+       id="filter-6"
+       x="193"
+       y="440"
+       width="85"
+       height="85"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         result="blur"
+         stdDeviation="10.667"
+         in="SourceAlpha"
+         id="feGaussianBlur91" />
+      <feComposite
+         result="composite"
+         in2="blur"
+         id="feComposite93" />
+      <feComposite
+         result="composite-2"
+         in2="composite"
+         id="feComposite95" />
+      <feComposite
+         result="composite-3"
+         in2="composite-2"
+         id="feComposite97" />
+      <feFlood
+         result="flood"
+         flood-color="#00e099"
+         flood-opacity="0.35"
+         id="feFlood99" />
+      <feComposite
+         result="composite-4"
+         operator="in"
+         in2="composite-3"
+         id="feComposite101" />
+      <feBlend
+         result="blend"
+         mode="screen"
+         in2="SourceGraphic"
+         id="feBlend103" />
+      <feBlend
+         result="blend-2"
+         in="SourceGraphic"
+         in2="blend"
+         id="feBlend105" />
+    </filter>
+    <filter
+       id="filter-7"
+       x="193"
+       y="571"
+       width="85"
+       height="85"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         result="blur"
+         stdDeviation="10.667"
+         in="SourceAlpha"
+         id="feGaussianBlur108" />
+      <feComposite
+         result="composite"
+         in2="blur"
+         id="feComposite110" />
+      <feComposite
+         result="composite-2"
+         in2="composite"
+         id="feComposite112" />
+      <feComposite
+         result="composite-3"
+         in2="composite-2"
+         id="feComposite114" />
+      <feFlood
+         result="flood"
+         flood-color="#00e099"
+         flood-opacity="0.35"
+         id="feFlood116" />
+      <feComposite
+         result="composite-4"
+         operator="in"
+         in2="composite-3"
+         id="feComposite118" />
+      <feBlend
+         result="blend"
+         mode="screen"
+         in2="SourceGraphic"
+         id="feBlend120" />
+      <feBlend
+         result="blend-2"
+         in="SourceGraphic"
+         in2="blend"
+         id="feBlend122" />
+    </filter>
+  </defs>
+  <rect
+     id="rect210"
+     width="1777.7473"
+     height="825.03192"
+     x="-216.07979"
+     y="-18.430849"
+     style="display:none" />
+  <path
+     id="矩形_5734"
+     data-name="矩形 5734"
+     class="cls-1"
+     d="m 1692,3586 158.799,-0.1023 0.2895,2 L 1692,3588 Z m -10,0.5 12.01,-6.5 v 13 z m 10,-200.5 158.6966,0.3069 0.2047,1.2839 L 1692,3388 Z m -12,1.5 12.01,-6.5 v 13 z m 625,201.5 h -196 v -2 h 51 v -199 h -51 v -2 h 53 v 201 h 143 z"
+     transform="translate(-1229,-3216)"
+     inkscape:connector-curvature="0"
+     style="fill:#5b83e1;fill-rule:evenodd"
+     sodipodi:nodetypes="ccccccccccccccccccccccccccccc" />
+  <g
+     id="组_880"
+     data-name="组 880">
+    <rect
+       id="矩形_5736"
+       data-name="矩形 5736"
+       class="cls-2"
+       x="621.90125"
+       y="109"
+       width="258.09872"
+       height="120"
+       style="opacity:0.3;fill:#4f76c9;stroke-width:0.84672368" />
+    <text
+       id="设备名称"
+       class="cls-3"
+       transform="scale(0.99105798,1.0090227)"
+       style="font-size:18.0352726px;font-family:'PingFang SC';fill:#a3cff6;stroke-width:1.00195956"
+       x="635.88794"
+       y="147.7588">设备名称</text>
+    <text
+       id="运行信号"
+       class="cls-3"
+       transform="scale(0.99105798,1.0090227)"
+       style="font-size:18.0352726px;font-family:'PingFang SC';fill:#a3cff6;stroke-width:1.00195956"
+       x="728.67865"
+       y="147.7588">运行信号</text>
+    <text
+       id="故障"
+       class="cls-3"
+       transform="matrix(0.993,0,0,1.011,815.105,149.092)"
+       style="font-size:18px;font-family:'PingFang SC';fill:#a3cff6">故障</text>
+    <rect
+       id="矩形_5743"
+       data-name="矩形 5743"
+       class="cls-4"
+       x="630.75934"
+       y="170"
+       width="224.24069"
+       height="1"
+       style="fill:#5087c7;stroke-width:0.84913552" />
+    <text
+       id="_1_潜污泵"
+       data-name="1#潜污泵"
+       class="cls-5"
+       transform="scale(0.99450684,1.0055235)"
+       style="font-size:17.97272682px;font-family:'PingFang SC';fill:#fafafb;stroke-width:0.99848485"
+       x="634.69653"
+       y="206.05286">1#潜污泵</text>
+    <circle
+       id="s1"
+       data-name="椭圆 5744"
+       class="cls-6"
+       cx="758"
+       cy="201"
+       r="9"
+       style="fill:#5085c6"
+       inkscape:label="#椭圆_5744" />
+    <circle
+       id="s2"
+       data-name="椭圆 5744 拷贝 2"
+       class="cls-6"
+       cx="838"
+       cy="201"
+       r="9"
+       style="fill:#5085c6"
+       inkscape:label="#椭圆_5744_拷贝_2" />
+  </g>
+  <g
+     id="组_880-2"
+     data-name="组 880">
+    <rect
+       id="矩形_5736-2"
+       data-name="矩形 5736"
+       class="cls-2"
+       x="622.71973"
+       y="308"
+       width="257.28024"
+       height="120"
+       style="opacity:0.3;fill:#4f76c9;stroke-width:0.84538001" />
+    <text
+       id="设备名称-2"
+       data-name="设备名称"
+       class="cls-3"
+       transform="scale(0.99105798,1.0090227)"
+       style="font-size:18.0352726px;font-family:'PingFang SC';fill:#a3cff6;stroke-width:1.00195956"
+       x="639.92407"
+       y="344.98035">设备名称</text>
+    <text
+       id="运行信号-2"
+       data-name="运行信号"
+       class="cls-3"
+       transform="scale(0.99105798,1.0090227)"
+       style="font-size:18.0352726px;font-family:'PingFang SC';fill:#a3cff6;stroke-width:1.00195956"
+       x="732.71478"
+       y="344.98035">运行信号</text>
+    <text
+       id="故障-2"
+       data-name="故障"
+       class="cls-3"
+       transform="matrix(0.993,0,0,1.011,815.105,348.093)"
+       style="font-size:18px;font-family:'PingFang SC';fill:#a3cff6">故障</text>
+    <rect
+       id="矩形_5743-2"
+       data-name="矩形 5743"
+       class="cls-4"
+       x="636.48871"
+       y="369"
+       width="218.51131"
+       height="1"
+       style="fill:#5087c7;stroke-width:0.83821756" />
+    <text
+       id="_2_潜污泵"
+       data-name="2#潜污泵"
+       class="cls-5"
+       transform="scale(0.99450684,1.0055235)"
+       style="font-size:17.97272682px;font-family:'PingFang SC';fill:#fafafb;stroke-width:0.99848485"
+       x="638.71863"
+       y="403.96072">2#潜污泵</text>
+    <circle
+       id="s3"
+       data-name="椭圆 5744"
+       class="cls-6"
+       cx="762"
+       cy="400"
+       r="9"
+       style="fill:#5085c6"
+       inkscape:label="#椭圆_5744-2" />
+    <circle
+       id="s4"
+       data-name="椭圆 5744 拷贝 2"
+       class="cls-6"
+       cx="838"
+       cy="400"
+       r="9"
+       style="fill:#5085c6"
+       inkscape:label="#s6" />
+  </g>
+  <g
+     id="水箱">
+    <path
+       id="矩形_4857"
+       data-name="矩形 4857"
+       class="cls-9"
+       d="m 2279,3406 h 180 v 166 h -180 z m 22,158 h 136 v 45 h -136 z"
+       transform="translate(-1229,-3216)"
+       inkscape:connector-curvature="0"
+       style="fill:none;fill-rule:evenodd;stroke:#5b83e1;stroke-width:2px" />
+    <path
+       id="s15"
+       data-name="矩形 4857 拷贝"
+       class="cls-10"
+       d="m 2434.94,3570 v 37.06 H 2303.06 V 3570 H 2281 v -83 h 176 v 83 z"
+       transform="translate(-1229,-3216)"
+       inkscape:connector-curvature="0"
+       style="display:inline;fill:#4786ff;fill-rule:evenodd"
+       inkscape:label="#矩形_4857_拷贝" />
+  </g>
+  <text
+     id="_28泵室集水坑"
+     data-name="28泵室集水坑"
+     class="cls-3"
+     x="1083.835"
+     y="442.099">28泵室集水坑</text>
+  <text
+     id="p1"
+     data-name="0.000  m"
+     class="cls-11"
+     x="1105.829"
+     y="249.097"
+     inkscape:label="#_0.000_m">0.000  m</text>
+  <g
+     id="组_881"
+     data-name="组 881">
+    <g
+       id="组_880-3"
+       data-name="组 880">
+      <rect
+         id="矩形_5736-3"
+         data-name="矩形 5736"
+         class="cls-2"
+         width="296.33688"
+         height="120"
+         x="0"
+         y="0"
+         style="opacity:0.3;fill:#4f76c9;stroke-width:0.90728056" />
+      <text
+         id="设备名称-3"
+         data-name="设备名称"
+         class="cls-3"
+         transform="matrix(0.993,0,0,1.011,24.195,40.094)"
+         style="font-size:18px;font-family:'PingFang SC';fill:#a3cff6">设备名称</text>
+      <text
+         id="运行信号-3"
+         data-name="运行信号"
+         class="cls-3"
+         transform="matrix(0.993,0,0,1.011,120.163,40.094)"
+         style="font-size:18px;font-family:'PingFang SC';fill:#a3cff6">运行信号</text>
+      <text
+         id="故障-3"
+         data-name="故障"
+         class="cls-3"
+         transform="scale(0.99105798,1.0090227)"
+         style="font-size:18.0352726px;font-family:'PingFang SC';fill:#a3cff6;stroke-width:1.00195956"
+         x="215.02882"
+         y="39.735477">故障</text>
+      <rect
+         id="矩形_5743-3"
+         data-name="矩形 5743"
+         class="cls-4"
+         x="24"
+         y="61"
+         width="243.28561"
+         height="1"
+         style="fill:#5087c7;stroke-width:0.88445961" />
+      <text
+         id="_43_排污泵"
+         data-name="43#排污泵"
+         class="cls-5"
+         transform="matrix(0.993,0,0,1.004,25.213,98.193)"
+         style="font-size:18px;font-family:'PingFang SC';fill:#fafafb">43#排污泵</text>
+      <circle
+         id="s5"
+         data-name="椭圆 5744"
+         class="cls-6"
+         cx="156"
+         cy="92"
+         r="9"
+         style="fill:#5085c6"
+         inkscape:label="#椭圆_5744-3" />
+      <circle
+         id="s6"
+         data-name="椭圆 5744 拷贝 2"
+         class="cls-6"
+         cx="236"
+         cy="92"
+         r="9"
+         style="fill:#5085c6"
+         inkscape:label="#椭圆_5744_拷贝_2-3" />
+    </g>
+    <g
+       id="组_880-4"
+       data-name="组 880">
+      <rect
+         id="矩形_5736-4"
+         data-name="矩形 5736"
+         class="cls-2"
+         y="130"
+         width="296.33688"
+         height="120"
+         x="0"
+         style="opacity:0.3;fill:#4f76c9;stroke-width:0.90728056" />
+      <text
+         id="设备名称-4"
+         data-name="设备名称"
+         class="cls-3"
+         transform="matrix(0.993,0,0,1.011,24.195,170.093)"
+         style="font-size:18px;font-family:'PingFang SC';fill:#a3cff6">设备名称</text>
+      <text
+         id="运行信号-4"
+         data-name="运行信号"
+         class="cls-3"
+         transform="matrix(0.993,0,0,1.011,120.163,170.093)"
+         style="font-size:18px;font-family:'PingFang SC';fill:#a3cff6">运行信号</text>
+      <text
+         id="故障-4"
+         data-name="故障"
+         class="cls-3"
+         transform="scale(0.99105798,1.0090227)"
+         style="font-size:18.0352726px;font-family:'PingFang SC';fill:#a3cff6;stroke-width:1.00195956"
+         x="215.02882"
+         y="168.57202">故障</text>
+      <rect
+         id="矩形_5743-4"
+         data-name="矩形 5743"
+         class="cls-4"
+         x="24"
+         y="191"
+         width="248.63907"
+         height="1"
+         style="fill:#5087c7;stroke-width:0.89413786" />
+      <text
+         id="_44_污泵"
+         data-name="44#污泵"
+         class="cls-5"
+         transform="matrix(0.993,0,0,1.004,25.213,228.192)"
+         style="font-size:18px;font-family:'PingFang SC';fill:#fafafb">44#污泵</text>
+      <circle
+         id="s7"
+         data-name="椭圆 5744"
+         class="cls-6"
+         cx="156"
+         cy="222"
+         r="9"
+         style="fill:#5085c6"
+         inkscape:label="#椭圆_5744-4" />
+      <circle
+         id="s8"
+         data-name="椭圆 5744 拷贝 2"
+         class="cls-6"
+         cx="236"
+         cy="222"
+         r="9"
+         style="fill:#5085c6"
+         inkscape:label="#椭圆_5744_拷贝_2-4" />
+    </g>
+    <g
+       id="组_880-5"
+       data-name="组 880"
+       inkscape:transform-center-x="1.1575112"
+       inkscape:transform-center-y="-8.6575112">
+      <rect
+         id="矩形_5736-5"
+         data-name="矩形 5736"
+         class="cls-2"
+         y="260"
+         width="298.07315"
+         height="120"
+         x="0"
+         style="opacity:0.3;fill:#4f76c9;stroke-width:0.90993458"
+         ry="0" />
+      <text
+         id="设备名称-5"
+         data-name="设备名称"
+         class="cls-3"
+         transform="matrix(0.993,0,0,1.011,24.195,300.092)"
+         style="font-size:18px;font-family:'PingFang SC';fill:#a3cff6">设备名称</text>
+      <text
+         id="运行信号-5"
+         data-name="运行信号"
+         class="cls-3"
+         transform="matrix(0.993,0,0,1.011,120.163,300.092)"
+         style="font-size:18px;font-family:'PingFang SC';fill:#a3cff6">运行信号</text>
+      <text
+         id="故障-5"
+         data-name="故障"
+         class="cls-3"
+         transform="scale(0.99105798,1.0090227)"
+         style="font-size:18.0352726px;font-family:'PingFang SC';fill:#a3cff6;stroke-width:1.00195956"
+         x="215.02882"
+         y="297.40857">故障</text>
+      <rect
+         id="矩形_5743-5"
+         data-name="矩形 5743"
+         class="cls-4"
+         x="24"
+         y="321"
+         width="250.23067"
+         height="1"
+         style="fill:#5087c7;stroke-width:0.89699507" />
+      <text
+         id="_45_排污泵"
+         data-name="45#排污泵"
+         class="cls-5"
+         transform="matrix(0.993,0,0,1.004,25.213,358.191)"
+         style="font-size:18px;font-family:'PingFang SC';fill:#fafafb">45#排污泵</text>
+      <circle
+         id="s9"
+         data-name="椭圆 5744"
+         class="cls-6"
+         cx="156"
+         cy="352"
+         r="9"
+         style="fill:#5085c6"
+         inkscape:label="#椭圆_5744-5" />
+      <circle
+         id="s10"
+         data-name="椭圆 5744 拷贝 2"
+         class="cls-6"
+         cx="236"
+         cy="352"
+         r="9"
+         style="fill:#5085c6"
+         inkscape:label="#椭圆_5744_拷贝_2-5" />
+    </g>
+    <g
+       id="组_880-6"
+       data-name="组 880">
+      <rect
+         id="矩形_5736-6"
+         data-name="矩形 5736"
+         class="cls-2"
+         y="390"
+         width="298"
+         height="120"
+         x="0"
+         style="opacity:0.3;fill:#4f76c9" />
+      <text
+         id="设备名称-6"
+         data-name="设备名称"
+         class="cls-3"
+         transform="matrix(0.993,0,0,1.011,24.195,430.091)"
+         style="font-size:18px;font-family:'PingFang SC';fill:#a3cff6">设备名称</text>
+      <text
+         id="开到位"
+         class="cls-3"
+         transform="matrix(0.993,0,0,1.011,130.164,430.091)"
+         style="font-size:18px;font-family:'PingFang SC';fill:#a3cff6">开到位</text>
+      <text
+         id="关到位"
+         class="cls-3"
+         transform="matrix(0.993,0,0,1.011,217.133,430.091)"
+         style="font-size:18px;font-family:'PingFang SC';fill:#a3cff6">关到位</text>
+      <rect
+         id="矩形_5743-6"
+         data-name="矩形 5743"
+         class="cls-4"
+         x="24"
+         y="451"
+         width="250"
+         height="1"
+         style="fill:#5087c7" />
+      <text
+         id="_43_排污阀"
+         data-name="43#排污阀"
+         class="cls-5"
+         transform="matrix(0.993,0,0,1.004,25.213,488.19)"
+         style="font-size:18px;font-family:'PingFang SC';fill:#fafafb">43#排污阀</text>
+      <circle
+         id="s11"
+         data-name="椭圆 5744"
+         class="cls-6"
+         cx="156"
+         cy="482"
+         r="9"
+         style="fill:#5085c6"
+         inkscape:label="#椭圆_5744-6" />
+      <circle
+         id="s12"
+         data-name="椭圆 5744"
+         class="cls-6"
+         cx="234.7859"
+         cy="481.29987"
+         r="9"
+         style="fill:#5085c6"
+         inkscape:label="#椭圆_5744-6" />
+    </g>
+    <g
+       id="组_880-7"
+       data-name="组 880">
+      <rect
+         id="矩形_5736-7"
+         data-name="矩形 5736"
+         class="cls-2"
+         y="521"
+         width="298"
+         height="120"
+         x="0"
+         style="opacity:0.3;fill:#4f76c9" />
+      <text
+         id="设备名称-7"
+         data-name="设备名称"
+         class="cls-3"
+         transform="matrix(0.993,0,0,1.011,24.195,561.091)"
+         style="font-size:18px;font-family:'PingFang SC';fill:#a3cff6">设备名称</text>
+      <text
+         id="开到位-2"
+         data-name="开到位"
+         class="cls-3"
+         transform="matrix(0.993,0,0,1.011,125.164,561.091)"
+         style="font-size:18px;font-family:'PingFang SC';fill:#a3cff6">开到位</text>
+      <text
+         id="关到位-2"
+         data-name="关到位"
+         class="cls-3"
+         transform="matrix(0.993,0,0,1.011,217.133,561.091)"
+         style="font-size:18px;font-family:'PingFang SC';fill:#a3cff6">关到位</text>
+      <rect
+         id="矩形_5743-7"
+         data-name="矩形 5743"
+         class="cls-4"
+         x="24"
+         y="582"
+         width="250"
+         height="1"
+         style="fill:#5087c7" />
+      <text
+         id="_44_排污阀"
+         data-name="44#排污阀"
+         class="cls-5"
+         transform="matrix(0.993,0,0,1.004,25.213,619.19)"
+         style="font-size:18px;font-family:'PingFang SC';fill:#fafafb">44#排污阀</text>
+      <circle
+         id="s13"
+         data-name="椭圆 5744"
+         class="cls-6"
+         cx="156"
+         cy="613"
+         r="9"
+         style="fill:#5085c6"
+         inkscape:label="#椭圆_5744-7" />
+      <circle
+         id="s14"
+         data-name="椭圆 5744"
+         class="cls-6"
+         cx="233.51196"
+         cy="611.80188"
+         r="9"
+         style="fill:#5085c6"
+         inkscape:label="#椭圆_5744-7" />
+    </g>
+  </g>
+</svg>

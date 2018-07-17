@@ -1,0 +1,162 @@
+<svg id="_38泵站潜污泵" data-name="38泵站潜污泵" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="950" height="335" viewBox="0 0 950 335">
+  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""/>
+   </rdf:RDF>
+</x:xmpmeta>
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                           
+<?xpacket end="w"?></metadata>
+<defs>
+    <style>
+      .cls-1 {
+        fill: #5b83e1;
+      }
+
+      .cls-1, .cls-11, .cls-12, .cls-14, .cls-15, .cls-8, .cls-9 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2, .cls-8 {
+        fill: #4f76c9;
+        opacity: 0.3;
+      }
+
+      .cls-13, .cls-3, .cls-5 {
+        font-size: 18px;
+        font-family: "PingFang SC";
+      }
+
+      .cls-3 {
+        fill: #a3cff6;
+      }
+
+      .cls-4, .cls-9 {
+        fill: #5087c7;
+      }
+
+      .cls-5 {
+        fill: #fafafb;
+      }
+
+      .cls-6 {
+        fill: #5085c6;
+      }
+
+      .cls-10, .cls-7 {
+        fill: #00e099;
+      }
+
+      .cls-7 {
+        filter: url(#filter);
+      }
+
+      .cls-10 {
+        filter: url(#filter-2);
+      }
+
+      .cls-11 {
+        fill: none;
+        stroke: #5b83e1;
+        stroke-width: 2px;
+      }
+
+      .cls-12 {
+        fill: #4786ff;
+      }
+
+      .cls-13 {
+        fill: #fff;
+      }
+
+      .cls-14 {
+        fill: #2c8cf9;
+      }
+
+      .cls-15 {
+        fill: #fa607e;
+      }
+    </style>
+    <filter id="filter" x="432" y="50" width="85" height="85" filterUnits="userSpaceOnUse">
+      <feGaussianBlur result="blur" stdDeviation="10.667" in="SourceAlpha"/>
+      <feComposite result="composite"/>
+      <feComposite result="composite-2"/>
+      <feComposite result="composite-3"/>
+      <feFlood result="flood" flood-color="#00e099" flood-opacity="0.35"/>
+      <feComposite result="composite-4" operator="in" in2="composite-3"/>
+      <feBlend result="blend" mode="screen" in2="SourceGraphic"/>
+      <feBlend result="blend-2" in="SourceGraphic"/>
+    </filter>
+    <filter id="filter-2" x="432" y="249" width="85" height="85" filterUnits="userSpaceOnUse">
+      <feGaussianBlur result="blur" stdDeviation="10.667" in="SourceAlpha"/>
+      <feComposite result="composite"/>
+      <feComposite result="composite-2"/>
+      <feComposite result="composite-3"/>
+      <feFlood result="flood" flood-color="#00e099" flood-opacity="0.35"/>
+      <feComposite result="composite-4" operator="in" in2="composite-3"/>
+      <feBlend result="blend" mode="screen" in2="SourceGraphic"/>
+      <feBlend result="blend-2" in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path id="矩形_5734" data-name="矩形 5734" class="cls-1" d="M1414,3586.01h227v2H1414v-2Zm-10,.5,12.01-6.5v13ZM1414,3386h227v2H1414v-2Zm-12,1.5,12.01-6.5v13Zm795,201.51H2001v-2h51V3386h2v201.01h143v2ZM2001,3386h53v2h-53v-2Z" transform="translate(-1402 -3325)"/>
+  <g id="组_880" data-name="组 880">
+    <rect id="矩形_5736" data-name="矩形 5736" class="cls-2" x="239" width="360" height="120"/>
+    <text id="设备名称" class="cls-3" transform="translate(263.192 40.092) scale(0.993 1.011)">设备名称</text>
+    <text id="运行信号" class="cls-3" transform="translate(359.167 40.092) scale(0.993 1.011)">运行信号</text>
+    <text id="停机" class="cls-3" transform="translate(456.136 40.092) scale(0.993 1.011)">停机</text>
+    <text id="故障" class="cls-3" transform="translate(534.11 40.092) scale(0.993 1.011)">故障</text>
+    <rect id="矩形_5743" data-name="矩形 5743" class="cls-4" x="263" y="61" width="311" height="1"/>
+    <text id="_1_潜污泵" data-name="1#潜污泵" class="cls-5" transform="translate(264.215 98.195) scale(0.993 1.004)">1#潜污泵</text>
+    <circle id="椭圆_5744" data-name="椭圆 5744" class="cls-6" cx="395" cy="92" r="9"/>
+    <circle id="椭圆_5744_拷贝" data-name="椭圆 5744 拷贝" class="cls-7" cx="474" cy="92" r="9"/>
+    <circle id="椭圆_5744_拷贝_2" data-name="椭圆 5744 拷贝 2" class="cls-6" cx="557" cy="92" r="9"/>
+  </g>
+  <g id="组_880-2" data-name="组 880">
+    <path id="矩形_5736-2" data-name="矩形 5736" class="cls-8" d="M1641,3524.01h360v120H1641v-120Z" transform="translate(-1402 -3325)"/>
+    <text id="设备名称-2" data-name="设备名称" class="cls-3" transform="translate(263.192 239.102) scale(0.993 1.011)">设备名称</text>
+    <text id="运行信号-2" data-name="运行信号" class="cls-3" transform="translate(359.167 239.102) scale(0.993 1.011)">运行信号</text>
+    <text id="停机-2" data-name="停机" class="cls-3" transform="translate(456.136 239.102) scale(0.993 1.011)">停机</text>
+    <text id="故障-2" data-name="故障" class="cls-3" transform="translate(534.11 239.102) scale(0.993 1.011)">故障</text>
+    <path id="矩形_5743-2" data-name="矩形 5743" class="cls-9" d="M1665,3585.01h311v1H1665v-1Z" transform="translate(-1402 -3325)"/>
+    <text id="_2_潜污泵" data-name="2#潜污泵" class="cls-5" transform="translate(264.215 297.201) scale(0.993 1.004)">2#潜污泵</text>
+    <circle id="椭圆_5744-2" data-name="椭圆 5744" class="cls-6" cx="395" cy="291" r="9"/>
+    <circle id="椭圆_5744_拷贝-2" data-name="椭圆 5744 拷贝" class="cls-10" cx="474" cy="291" r="9"/>
+    <circle id="椭圆_5744_拷贝_2-2" data-name="椭圆 5744 拷贝 2" class="cls-6" cx="557" cy="291" r="9"/>
+  </g>
+  <g id="水箱">
+    <path id="矩形_4857" data-name="矩形 4857" class="cls-11" d="M2171,3406h180v166.01H2171V3406Zm22,158.01h136v45H2193v-45Z" transform="translate(-1402 -3325)"/>
+    <path id="矩形_4857_拷贝" data-name="矩形 4857 拷贝" class="cls-12" d="M2326.94,3570.01v37.06H2195.06v-37.06H2173v-83h176v83h-22.06Z" transform="translate(-1402 -3325)"/>
+  </g>
+  <text id="集水坑" class="cls-3" transform="translate(832.833 333.111)">集水坑</text>
+  <text id="_0.000_m" data-name="0.000  m" class="cls-13" transform="translate(824.834 140.101)">0.000  m</text>
+  <g id="阀门">
+    <path id="矩形_4637" data-name="矩形 4637" class="cls-14" d="M1520,3338h23v25h-23v-25Zm3,2h2v21h-2v-21Zm5,21v-21h2v21h-2Zm6,0v-21h2v21h-2Zm5-21h2v21h-2v-21Zm-7.53,32.99L1520,3362.5l1.48-1.36,11.47,10.49Zm-1.09-1.78,11.18-10.22,1.45,1.33-11.18,10.22Z" transform="translate(-1402 -3325)"/>
+    <path id="多边形_4635" data-name="多边形 4635" class="cls-15" d="M1532,3387.01l-12,7.01v-14.03Zm-0.99-.01,12-7.01v14.02Zm-1.01-13h3v14h-3v-14Zm-8-3h19v3h-19v-3Z" transform="translate(-1402 -3325)"/>
+  </g>
+  <g id="阀门-2" data-name="阀门">
+    <path id="矩形_4637-2" data-name="矩形 4637" class="cls-14" d="M1520,3538.01h23v25h-23v-25Zm3,2h2v21h-2v-21Zm5,21v-21h2v21h-2Zm6,0v-21h2v21h-2Zm5-21h2v21h-2v-21Zm-7.53,32.99L1520,3562.51l1.48-1.36,11.47,10.49Zm-1.09-1.78,11.18-10.22,1.45,1.32-11.18,10.23Z" transform="translate(-1402 -3325)"/>
+    <path id="多边形_4635-2" data-name="多边形 4635" class="cls-15" d="M1532,3587.01l-12,7.01V3580Zm-0.99-.01,12-7.01v14.03Zm-1.01-12.99h3v14h-3v-14Zm-8-3h19v3h-19v-3Z" transform="translate(-1402 -3325)"/>
+  </g>
+  <text id="_1_V" data-name="1 V" class="cls-3" transform="translate(117.546 93.956)">1 V</text>
+  <text id="_2_V" data-name="2 V" class="cls-3" transform="translate(117.546 308.963)">2 V</text>
+</svg>

@@ -1,0 +1,50 @@
+.img{
+    position:absolute;
+    top:40%;
+    left:45%;
+    animation:myfirst .5s linear infinite;
+    /* Firefox: */
+    -moz-animation:myfirst .5s linear infinite;
+    /* Safari and Chrome: */
+    -webkit-animation:myfirst .5s linear infinite;
+    /* Opera: */
+    -o-animation:myfirst .5s linear infinite;
+
+
+@keyframes myfirst
+{
+    0%   {transform:rotate(0deg)}
+    25%  {transform:rotate(45deg)}
+    50%  {transform:rotate(90deg)}
+    75%  {transform:rotate(135deg)}
+    100% {transform:rotate(180deg)}
+
+};
+
+@-moz-keyframes myfirst /* Firefox */
+{
+    0%   {transform:rotate(0deg)}
+    25%  {transform:rotate(45deg)}
+    50%  {transform:rotate(90deg)}
+    75%  {transform:rotate(135deg)}
+    100% {transform:rotate(180deg)}
+};
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+    0%   {transform:rotate(0deg)}
+    25%  {transform:rotate(45deg)}
+    50%  {transform:rotate(90deg)}
+    75%  {transform:rotate(135deg)}
+    100% {transform:rotate(180deg)}
+};
+
+@-o-keyframes myfirst /* Opera */
+{
+    0%   {transform:rotate(0deg)}
+    25%  {transform:rotate(45deg)}
+    50%  {transform:rotate(90deg)}
+    75%  {transform:rotate(135deg)}
+    100% {transform:rotate(180deg)}
+};
+}

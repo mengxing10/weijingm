@@ -1,0 +1,2563 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:x="adobe:ns:meta/"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="首页"
+   width="1079"
+   height="586"
+   viewBox="0 0 1079 586"
+   version="1.1"
+   sodipodi:docname="zonglan.svg"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1012"
+     id="namedview490"
+     showgrid="false"
+     inkscape:zoom="3.1733087"
+     inkscape:cx="791.82641"
+     inkscape:cy="245.29214"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="组_869-3" />
+  <metadata
+     id="metadata2">
+<?xpacket begin="�" id="W5M0MpCehiHzreSzNTczkc9d"?>    <x:xmpmeta
+       x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
+      <metadata>
+        <rdf:RDF>
+          <rdf:Description
+             rdf:about="" />
+          <cc:Work
+             rdf:about="">
+            <dc:format>image/svg+xml</dc:format>
+            <dc:type
+               rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+            <dc:title />
+          </cc:Work>
+        </rdf:RDF>
+      </metadata>
+    </x:xmpmeta>
+<?xpacket end="w"?>  </metadata>
+  <defs
+     id="defs243">
+    <style
+       id="style4">
+      .cls-1 {
+        fill: #a97fff;
+      }
+
+      .cls-1, .cls-10, .cls-11, .cls-12, .cls-13, .cls-14, .cls-15, .cls-16, .cls-17, .cls-19, .cls-20, .cls-21, .cls-3, .cls-34, .cls-4, .cls-43, .cls-44, .cls-47, .cls-5, .cls-6, .cls-7, .cls-8 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        filter: url(#filter);
+      }
+
+      .cls-3 {
+        fill: #c4bb8f;
+      }
+
+      .cls-4 {
+        fill: #18cbff;
+      }
+
+      .cls-5 {
+        fill: #5085c6;
+      }
+
+      .cls-6 {
+        fill: #7e8dfe;
+      }
+
+      .cls-7 {
+        fill: #96a2fa;
+      }
+
+      .cls-42, .cls-8 {
+        fill: #38ebfb;
+      }
+
+      .cls-10, .cls-9 {
+        fill: #b7bff9;
+      }
+
+      .cls-11 {
+        fill: #6f80fc;
+      }
+
+      .cls-12 {
+        fill: #9aa6fa;
+      }
+
+      .cls-13 {
+        fill: #fae99a;
+      }
+
+      .cls-14 {
+        fill: #8ae22b;
+      }
+
+      .cls-15 {
+        fill: #18dff0;
+      }
+
+      .cls-16 {
+        fill: #1ade32;
+      }
+
+      .cls-17 {
+        fill: #69bc9e;
+      }
+
+      .cls-18 {
+        fill: #1658ef;
+      }
+
+      .cls-19 {
+        fill: #19ddf0;
+      }
+
+      .cls-20 {
+        fill: #3d5ba3;
+      }
+
+      .cls-21 {
+        fill: #0cdff2;
+      }
+
+      .cls-22, .cls-25, .cls-26, .cls-30, .cls-31, .cls-32, .cls-33 {
+        fill: #77761c;
+      }
+
+      .cls-22, .cls-26, .cls-27, .cls-30, .cls-31, .cls-32, .cls-33 {
+        opacity: 0.34;
+      }
+
+      .cls-22 {
+        filter: url(#filter-2);
+      }
+
+      .cls-23, .cls-24, .cls-46 {
+        fill: #fbf938;
+      }
+
+      .cls-23, .cls-25 {
+        opacity: 0.5;
+      }
+
+      .cls-25 {
+        filter: url(#filter-3);
+      }
+
+      .cls-26 {
+        filter: url(#filter-4);
+      }
+
+      .cls-27, .cls-29 {
+        fill: #fe5e56;
+      }
+
+      .cls-27 {
+        filter: url(#filter-5);
+      }
+
+      .cls-28 {
+        fill: #ff6058;
+        opacity: 0.38;
+      }
+
+      .cls-30 {
+        filter: url(#filter-6);
+      }
+
+      .cls-31 {
+        filter: url(#filter-7);
+      }
+
+      .cls-32 {
+        filter: url(#filter-8);
+      }
+
+      .cls-33 {
+        filter: url(#filter-9);
+      }
+
+      .cls-34, .cls-35, .cls-36, .cls-37 {
+        fill: #fff;
+      }
+
+      .cls-34, .cls-35 {
+        opacity: 0.36;
+      }
+
+      .cls-36, .cls-37 {
+        font-size: 16px;
+      }
+
+      .cls-36, .cls-37, .cls-39, .cls-40, .cls-46 {
+        font-family: PingFang SC;
+      }
+
+      .cls-37, .cls-39 {
+        text-anchor: middle;
+      }
+
+      .cls-38 {
+        filter: url(#filter-10);
+      }
+
+      .cls-39, .cls-40 {
+        font-size: 12px;
+        fill: #a3cff6;
+      }
+
+      .cls-41 {
+        filter: url(#filter-11);
+      }
+
+      .cls-43 {
+        fill: #c7e0ff;
+      }
+
+      .cls-44 {
+        fill: #bfdcff;
+      }
+
+      .cls-45 {
+        fill: none;
+        stroke: #fbf938;
+        stroke-width: 1px;
+      }
+
+      .cls-46 {
+        font-size: 14.004px;
+      }
+
+      .cls-47, .cls-48 {
+        fill: #496fca;
+      }
+    </style>
+    <filter
+       id="filter"
+       filterUnits="userSpaceOnUse">
+      <feFlood
+         result="flood"
+         flood-color="#3d5ba3"
+         id="feFlood6" />
+      <feComposite
+         result="composite"
+         operator="in"
+         in2="SourceGraphic"
+         id="feComposite8" />
+      <feBlend
+         result="blend"
+         in2="SourceGraphic"
+         id="feBlend10" />
+    </filter>
+    <filter
+       id="filter-2"
+       x="853"
+       y="375"
+       width="61"
+       height="62"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         result="blur"
+         stdDeviation="5.333"
+         in="SourceAlpha"
+         id="feGaussianBlur13" />
+      <feComposite
+         result="composite"
+         in2="blur"
+         id="feComposite15" />
+      <feComposite
+         result="composite-2"
+         in2="composite"
+         id="feComposite17" />
+      <feComposite
+         result="composite-3"
+         in2="composite-2"
+         id="feComposite19" />
+      <feFlood
+         result="flood"
+         flood-color="#fffe02"
+         flood-opacity="0.5"
+         id="feFlood21" />
+      <feComposite
+         result="composite-4"
+         operator="in"
+         in2="composite-3"
+         id="feComposite23" />
+      <feBlend
+         result="blend"
+         mode="screen"
+         in2="SourceGraphic"
+         id="feBlend25" />
+      <feBlend
+         result="blend-2"
+         in="SourceGraphic"
+         in2="blend"
+         id="feBlend27" />
+      <feGaussianBlur
+         result="blur-2"
+         stdDeviation="2.667"
+         in="SourceAlpha"
+         id="feGaussianBlur29" />
+      <feFlood
+         result="flood-2"
+         flood-color="#fffd10"
+         flood-opacity="0.68"
+         id="feFlood31" />
+      <feComposite
+         result="composite-6"
+         operator="out"
+         in2="blur-2"
+         id="feComposite33" />
+      <feComposite
+         result="composite-5"
+         operator="in"
+         in2="SourceAlpha"
+         id="feComposite35" />
+      <feBlend
+         result="blend-3"
+         in2="blend-2"
+         id="feBlend37" />
+    </filter>
+    <filter
+       id="filter-3"
+       x="571"
+       y="53"
+       width="61"
+       height="62"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         result="blur"
+         stdDeviation="5.333"
+         in="SourceAlpha"
+         id="feGaussianBlur40" />
+      <feComposite
+         result="composite"
+         in2="blur"
+         id="feComposite42" />
+      <feComposite
+         result="composite-2"
+         in2="composite"
+         id="feComposite44" />
+      <feComposite
+         result="composite-3"
+         in2="composite-2"
+         id="feComposite46" />
+      <feFlood
+         result="flood"
+         flood-color="#fffe02"
+         flood-opacity="0.35"
+         id="feFlood48" />
+      <feComposite
+         result="composite-4"
+         operator="in"
+         in2="composite-3"
+         id="feComposite50" />
+      <feBlend
+         result="blend"
+         mode="screen"
+         in2="SourceGraphic"
+         id="feBlend52" />
+      <feBlend
+         result="blend-2"
+         in="SourceGraphic"
+         in2="blend"
+         id="feBlend54" />
+      <feGaussianBlur
+         result="blur-2"
+         stdDeviation="2.667"
+         in="SourceAlpha"
+         id="feGaussianBlur56" />
+      <feFlood
+         result="flood-2"
+         flood-color="#fffd10"
+         flood-opacity="0.68"
+         id="feFlood58" />
+      <feComposite
+         result="composite-6"
+         operator="out"
+         in2="blur-2"
+         id="feComposite60" />
+      <feComposite
+         result="composite-5"
+         operator="in"
+         in2="SourceAlpha"
+         id="feComposite62" />
+      <feBlend
+         result="blend-3"
+         in2="blend-2"
+         id="feBlend64" />
+    </filter>
+    <filter
+       id="filter-4"
+       x="571"
+       y="93"
+       width="61"
+       height="62"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         result="blur"
+         stdDeviation="5.333"
+         in="SourceAlpha"
+         id="feGaussianBlur67" />
+      <feComposite
+         result="composite"
+         in2="blur"
+         id="feComposite69" />
+      <feComposite
+         result="composite-2"
+         in2="composite"
+         id="feComposite71" />
+      <feComposite
+         result="composite-3"
+         in2="composite-2"
+         id="feComposite73" />
+      <feFlood
+         result="flood"
+         flood-color="#fffe02"
+         flood-opacity="0.5"
+         id="feFlood75" />
+      <feComposite
+         result="composite-4"
+         operator="in"
+         in2="composite-3"
+         id="feComposite77" />
+      <feBlend
+         result="blend"
+         mode="screen"
+         in2="SourceGraphic"
+         id="feBlend79" />
+      <feBlend
+         result="blend-2"
+         in="SourceGraphic"
+         in2="blend"
+         id="feBlend81" />
+      <feGaussianBlur
+         result="blur-2"
+         stdDeviation="2.667"
+         in="SourceAlpha"
+         id="feGaussianBlur83" />
+      <feFlood
+         result="flood-2"
+         flood-color="#fffd10"
+         flood-opacity="0.68"
+         id="feFlood85" />
+      <feComposite
+         result="composite-6"
+         operator="out"
+         in2="blur-2"
+         id="feComposite87" />
+      <feComposite
+         result="composite-5"
+         operator="in"
+         in2="SourceAlpha"
+         id="feComposite89" />
+      <feBlend
+         result="blend-3"
+         in2="blend-2"
+         id="feBlend91" />
+    </filter>
+    <filter
+       id="filter-5"
+       x="23"
+       y="248"
+       width="61"
+       height="62"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         result="blur"
+         stdDeviation="5.333"
+         in="SourceAlpha"
+         id="feGaussianBlur94" />
+      <feComposite
+         result="composite"
+         in2="blur"
+         id="feComposite96" />
+      <feComposite
+         result="composite-2"
+         in2="composite"
+         id="feComposite98" />
+      <feComposite
+         result="composite-3"
+         in2="composite-2"
+         id="feComposite100" />
+      <feFlood
+         result="flood"
+         flood-color="#ff4e00"
+         flood-opacity="0.83"
+         id="feFlood102" />
+      <feComposite
+         result="composite-4"
+         operator="in"
+         in2="composite-3"
+         id="feComposite104" />
+      <feBlend
+         result="blend"
+         mode="screen"
+         in2="SourceGraphic"
+         id="feBlend106" />
+      <feBlend
+         result="blend-2"
+         in="SourceGraphic"
+         in2="blend"
+         id="feBlend108" />
+      <feGaussianBlur
+         result="blur-2"
+         stdDeviation="2.667"
+         in="SourceAlpha"
+         id="feGaussianBlur110" />
+      <feFlood
+         result="flood-2"
+         flood-color="#ff5f5f"
+         id="feFlood112" />
+      <feComposite
+         result="composite-6"
+         operator="out"
+         in2="blur-2"
+         id="feComposite114" />
+      <feComposite
+         result="composite-5"
+         operator="in"
+         in2="SourceAlpha"
+         id="feComposite116" />
+      <feBlend
+         result="blend-3"
+         in2="blend-2"
+         id="feBlend118" />
+    </filter>
+    <filter
+       id="filter-6"
+       x="622"
+       y="147"
+       width="61"
+       height="62"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         result="blur"
+         stdDeviation="5.333"
+         in="SourceAlpha"
+         id="feGaussianBlur121" />
+      <feComposite
+         result="composite"
+         in2="blur"
+         id="feComposite123" />
+      <feComposite
+         result="composite-2"
+         in2="composite"
+         id="feComposite125" />
+      <feComposite
+         result="composite-3"
+         in2="composite-2"
+         id="feComposite127" />
+      <feFlood
+         result="flood"
+         flood-color="#fffe02"
+         flood-opacity="0.5"
+         id="feFlood129" />
+      <feComposite
+         result="composite-4"
+         operator="in"
+         in2="composite-3"
+         id="feComposite131" />
+      <feBlend
+         result="blend"
+         mode="screen"
+         in2="SourceGraphic"
+         id="feBlend133" />
+      <feBlend
+         result="blend-2"
+         in="SourceGraphic"
+         in2="blend"
+         id="feBlend135" />
+      <feGaussianBlur
+         result="blur-2"
+         stdDeviation="2.667"
+         in="SourceAlpha"
+         id="feGaussianBlur137" />
+      <feFlood
+         result="flood-2"
+         flood-color="#fffd10"
+         flood-opacity="0.68"
+         id="feFlood139" />
+      <feComposite
+         result="composite-6"
+         operator="out"
+         in2="blur-2"
+         id="feComposite141" />
+      <feComposite
+         result="composite-5"
+         operator="in"
+         in2="SourceAlpha"
+         id="feComposite143" />
+      <feBlend
+         result="blend-3"
+         in2="blend-2"
+         id="feBlend145" />
+    </filter>
+    <filter
+       id="filter-7"
+       x="24"
+       y="377"
+       width="61"
+       height="62"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         result="blur"
+         stdDeviation="5.333"
+         in="SourceAlpha"
+         id="feGaussianBlur148" />
+      <feComposite
+         result="composite"
+         in2="blur"
+         id="feComposite150" />
+      <feComposite
+         result="composite-2"
+         in2="composite"
+         id="feComposite152" />
+      <feComposite
+         result="composite-3"
+         in2="composite-2"
+         id="feComposite154" />
+      <feFlood
+         result="flood"
+         flood-color="#fffe02"
+         flood-opacity="0.56"
+         id="feFlood156" />
+      <feComposite
+         result="composite-4"
+         operator="in"
+         in2="composite-3"
+         id="feComposite158" />
+      <feBlend
+         result="blend"
+         mode="screen"
+         in2="SourceGraphic"
+         id="feBlend160" />
+      <feBlend
+         result="blend-2"
+         in="SourceGraphic"
+         in2="blend"
+         id="feBlend162" />
+      <feGaussianBlur
+         result="blur-2"
+         stdDeviation="2.667"
+         in="SourceAlpha"
+         id="feGaussianBlur164" />
+      <feFlood
+         result="flood-2"
+         flood-color="#fffd10"
+         flood-opacity="0.68"
+         id="feFlood166" />
+      <feComposite
+         result="composite-6"
+         operator="out"
+         in2="blur-2"
+         id="feComposite168" />
+      <feComposite
+         result="composite-5"
+         operator="in"
+         in2="SourceAlpha"
+         id="feComposite170" />
+      <feBlend
+         result="blend-3"
+         in2="blend-2"
+         id="feBlend172" />
+    </filter>
+    <filter
+       id="filter-8"
+       x="24"
+       y="493"
+       width="61"
+       height="62"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         result="blur"
+         stdDeviation="5.333"
+         in="SourceAlpha"
+         id="feGaussianBlur175" />
+      <feComposite
+         result="composite"
+         in2="blur"
+         id="feComposite177" />
+      <feComposite
+         result="composite-2"
+         in2="composite"
+         id="feComposite179" />
+      <feComposite
+         result="composite-3"
+         in2="composite-2"
+         id="feComposite181" />
+      <feFlood
+         result="flood"
+         flood-color="#fffe02"
+         flood-opacity="0.49"
+         id="feFlood183" />
+      <feComposite
+         result="composite-4"
+         operator="in"
+         in2="composite-3"
+         id="feComposite185" />
+      <feBlend
+         result="blend"
+         mode="screen"
+         in2="SourceGraphic"
+         id="feBlend187" />
+      <feBlend
+         result="blend-2"
+         in="SourceGraphic"
+         in2="blend"
+         id="feBlend189" />
+      <feGaussianBlur
+         result="blur-2"
+         stdDeviation="2.667"
+         in="SourceAlpha"
+         id="feGaussianBlur191" />
+      <feFlood
+         result="flood-2"
+         flood-color="#fffd10"
+         flood-opacity="0.68"
+         id="feFlood193" />
+      <feComposite
+         result="composite-6"
+         operator="out"
+         in2="blur-2"
+         id="feComposite195" />
+      <feComposite
+         result="composite-5"
+         operator="in"
+         in2="SourceAlpha"
+         id="feComposite197" />
+      <feBlend
+         result="blend-3"
+         in2="blend-2"
+         id="feBlend199" />
+    </filter>
+    <filter
+       id="filter-9"
+       x="908"
+       y="375"
+       width="61"
+       height="62"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         result="blur"
+         stdDeviation="5.333"
+         in="SourceAlpha"
+         id="feGaussianBlur202" />
+      <feComposite
+         result="composite"
+         in2="blur"
+         id="feComposite204" />
+      <feComposite
+         result="composite-2"
+         in2="composite"
+         id="feComposite206" />
+      <feComposite
+         result="composite-3"
+         in2="composite-2"
+         id="feComposite208" />
+      <feFlood
+         result="flood"
+         flood-color="#fffe02"
+         flood-opacity="0.5"
+         id="feFlood210" />
+      <feComposite
+         result="composite-4"
+         operator="in"
+         in2="composite-3"
+         id="feComposite212" />
+      <feBlend
+         result="blend"
+         mode="screen"
+         in2="SourceGraphic"
+         id="feBlend214" />
+      <feBlend
+         result="blend-2"
+         in="SourceGraphic"
+         in2="blend"
+         id="feBlend216" />
+      <feGaussianBlur
+         result="blur-2"
+         stdDeviation="2.667"
+         in="SourceAlpha"
+         id="feGaussianBlur218" />
+      <feFlood
+         result="flood-2"
+         flood-color="#fffd10"
+         flood-opacity="0.68"
+         id="feFlood220" />
+      <feComposite
+         result="composite-6"
+         operator="out"
+         in2="blur-2"
+         id="feComposite222" />
+      <feComposite
+         result="composite-5"
+         operator="in"
+         in2="SourceAlpha"
+         id="feComposite224" />
+      <feBlend
+         result="blend-3"
+         in2="blend-2"
+         id="feBlend226" />
+    </filter>
+    <filter
+       id="filter-10"
+       filterUnits="userSpaceOnUse">
+      <feFlood
+         result="flood"
+         flood-color="#7b8ccf"
+         id="feFlood229" />
+      <feComposite
+         result="composite"
+         operator="in"
+         in2="SourceGraphic"
+         id="feComposite231" />
+      <feBlend
+         result="blend"
+         in2="SourceGraphic"
+         id="feBlend233" />
+    </filter>
+    <filter
+       id="filter-11"
+       filterUnits="userSpaceOnUse">
+      <feFlood
+         result="flood"
+         flood-color="#496fca"
+         id="feFlood236" />
+      <feComposite
+         result="composite"
+         operator="in"
+         in2="SourceGraphic"
+         id="feComposite238" />
+      <feBlend
+         result="blend"
+         in2="SourceGraphic"
+         id="feBlend240" />
+    </filter>
+  </defs>
+  <path
+     id="矩形_658"
+     data-name="矩形 658"
+     class="cls-1"
+     d="M837,243.062v-38H820v83H768v24H412v17.3h-2v-19.3H766v-24h52V159.065h0v-2h32v2H820v44h19v38H958v-35h2v37H837Zm-427,86.3h2v47.693H311v26H295v41h25v3h6v2h-6v33h15v-33h-6v-2h6v-3h26v49H335v-9H320v9H295v70h-3V400.055h16v-25H410V329.363ZM337,491.051h22v-45H337v45Zm-42,0h23v-45H295v45Z" />
+  <g
+     id="组_861"
+     data-name="组 861">
+    <g
+       id="组_856"
+       data-name="组 856"
+       class="cls-2"
+       style="filter:url(#filter)">
+      <path
+         id="矩形_767"
+         data-name="矩形 767"
+         class="cls-3"
+         d="M 1038,465.052 H 810 V 324.058 h 2 v 138.994 h 226 z"
+         inkscape:connector-curvature="0"
+         style="fill:#c4bb8f;fill-rule:evenodd" />
+      <path
+         id="矩形_658_拷贝"
+         data-name="矩形 658 拷贝"
+         class="cls-4"
+         d="m 316,512.05 h -44 v -45 H 258 V 202.063 h 4 v 260.989 h 14 v 45 h 40 v 4 z"
+         inkscape:connector-curvature="0"
+         style="fill:#18cbff;fill-rule:evenodd" />
+      <path
+         id="矩形_666"
+         data-name="矩形 666"
+         class="cls-5"
+         d="M 333,429.054 V 245.061 h -9 v 76 h -2 v -78 h 6 v -18 h 2 v 18 h 5 v 185.993 z"
+         inkscape:connector-curvature="0"
+         style="fill:#5085c6;fill-rule:evenodd" />
+      <path
+         id="矩形_772"
+         data-name="矩形 772"
+         class="cls-6"
+         d="m 835,403.055 v 24 h -59 v -2 h 57 v -24 h 40 v 2 z"
+         inkscape:connector-curvature="0"
+         style="fill:#7e8dfe;fill-rule:evenodd" />
+      <path
+         id="矩形_668"
+         data-name="矩形 668"
+         class="cls-7"
+         d="m 508,310.059 v -40 h -69 v -57 h -62 v -119 H 260 v -58 h 2 v 56 h 117 v 119 h 62 v 57 h 69 v 42 z"
+         inkscape:connector-curvature="0"
+         style="fill:#96a2fa;fill-rule:evenodd" />
+      <path
+         id="矩形_669"
+         data-name="矩形 669"
+         class="cls-6"
+         d="M 476,349.057 V 221.062 h -46 v -32 h -12 v -79 H 289 v 19 h -2 v -21 h 36 v -76 h 1 v 76 h 96 v 48 h 38 v 2 h -38 v 29 h 12 v 32 h 46 v 130 h -2 z"
+         inkscape:connector-curvature="0"
+         style="fill:#7e8dfe;fill-rule:evenodd" />
+      <path
+         id="矩形_669-2"
+         data-name="矩形 669"
+         class="cls-6"
+         d="m 398,178.064 v 12 h 10 v 51 h 49 v 164.991 h -2 V 243.062 h -49 v -51 h -10 v -33 h -48 v -30 h -95 v -95 h 2 v 93 h 63 v -94 h 2 v 94 h 28 v -94 h 1 v 94 h 19 v -18 h 1 v 18 h 29 v 49 h 61 v 2 h -61 z m -49,-49 v 20 h 19 v -20 z m 47,0 h -27 v 21 h -20 v 8 h 47 z"
+         inkscape:connector-curvature="0"
+         style="fill:#7e8dfe;fill-rule:evenodd" />
+      <path
+         id="矩形_740"
+         data-name="矩形 740"
+         class="cls-6"
+         d="m 501,353.057 h 2 v 118 h -2 z"
+         inkscape:connector-curvature="0"
+         style="fill:#7e8dfe;fill-rule:evenodd" />
+      <path
+         id="矩形_781"
+         data-name="矩形 781"
+         class="cls-8"
+         d="m 873,55.069 h 2 v 114 h -2 z"
+         inkscape:connector-curvature="0"
+         style="fill:#38ebfb;fill-rule:evenodd" />
+      <path
+         id="矩形_781_拷贝"
+         data-name="矩形 781 拷贝"
+         class="cls-8"
+         d="m 863,126.066 v -22.043 h -43 v -1.956 h 45 v 24 h -2 z"
+         inkscape:connector-curvature="0"
+         style="fill:#38ebfb;fill-rule:evenodd" />
+      <path
+         id="矩形_787"
+         data-name="矩形 787"
+         class="cls-8"
+         d="m 898,88.068 h 2 v 81 h -2 z"
+         inkscape:connector-curvature="0"
+         style="fill:#38ebfb;fill-rule:evenodd" />
+      <path
+         id="矩形_787_拷贝"
+         data-name="矩形 787 拷贝"
+         class="cls-8"
+         d="m 984,84.068 h 2 v 85 h -2 z"
+         inkscape:connector-curvature="0"
+         style="fill:#38ebfb;fill-rule:evenodd" />
+      <path
+         id="矩形_788"
+         data-name="矩形 788"
+         class="cls-8"
+         d="m 894,88.068 h 2 v 37 h -2 z"
+         inkscape:connector-curvature="0"
+         style="fill:#38ebfb;fill-rule:evenodd" />
+      <path
+         id="矩形_788_拷贝"
+         data-name="矩形 788 拷贝"
+         class="cls-8"
+         d="m 981,86.068 h 2 v 40 h -2 z"
+         inkscape:connector-curvature="0"
+         style="fill:#38ebfb;fill-rule:evenodd" />
+      <rect
+         id="矩形_692"
+         data-name="矩形 692"
+         class="cls-9"
+         x="676"
+         y="260.06201"
+         width="2"
+         height="50"
+         style="fill:#b7bff9" />
+      <path
+         id="矩形_693"
+         data-name="矩形 693"
+         class="cls-10"
+         d="m 644,312.059 h 2 v 180.992 h -2 z"
+         inkscape:connector-curvature="0"
+         style="fill:#b7bff9;fill-rule:evenodd" />
+      <path
+         id="矩形_694"
+         data-name="矩形 694"
+         class="cls-11"
+         d="m 734,310.059 v -25 h -36 v 207.992 h -2 V 283.06 h 40 v 27 h -2 z"
+         inkscape:connector-curvature="0"
+         style="fill:#6f80fc;fill-rule:evenodd" />
+      <path
+         id="矩形_695"
+         data-name="矩形 695"
+         class="cls-12"
+         d="m 980,338.057 h -19 v -79 H 749 v 68 h -11 v 162.994 h 148 v 2 H 736 V 325.058 h 11 v -68 h 216 v 79 h 17 v 2 z"
+         inkscape:connector-curvature="0"
+         style="fill:#9aa6fa;fill-rule:evenodd" />
+      <path
+         id="矩形_696"
+         data-name="矩形 696"
+         class="cls-13"
+         d="m 758,274.06 h 2 v 59 h -2 z m 0,-2 h 179 v 2 H 758 Z m 177,2 h 2 v 42 h -2 z"
+         inkscape:connector-curvature="0"
+         style="fill:#fae99a;fill-rule:evenodd" />
+      <path
+         id="矩形_659"
+         data-name="矩形 659"
+         class="cls-5"
+         d="m 280,406.055 v -111 h -11 v 26 h -2 V 205.063 h 2 v 18 h 13 v 50 h -13 v 20 h 13 v 113 h -2 z m 0,-134.995 v -46 h -11 v 46 z"
+         inkscape:connector-curvature="0"
+         style="fill:#5085c6;fill-rule:evenodd" />
+    </g>
+    <g
+       id="组_857"
+       data-name="组 857">
+      <path
+         id="矩形_651"
+         data-name="矩形 651"
+         class="cls-14"
+         d="m 402,290.059 v 35 H 147 v -0.152 L 101.852,280.06 H 63 v -4 h 41 v 0.5 l 44.8,44.5 H 398 v -33 h 100 v 2 h -96 z"
+         inkscape:connector-curvature="0"
+         style="fill:#8ae22b;fill-rule:evenodd" />
+      <path
+         id="矩形_652_拷贝"
+         data-name="矩形 652 拷贝"
+         class="cls-15"
+         d="m 1074,309.059 v -91 H 852 v 117 h -96.343 l -12.657,9 h -33 v 33 h 17 v 13 h 22 v 93 h 136 v 2 H 747 v -93 h -20 v 15 h -2 v -28 h -15 v 51 h -46 v -75 H 564 l -42,21 h -97 l -25,20.956 v 36.041 H 151.394 L 112,468.652 v 56.4 H 69 v -4 h 39 V 467.24 l -0.188,-0.188 41.188,-37.22 v -0.778 h 247 v -34 h 0.3 l 24.949,-21 0.749,0.4 v -0.4 h 99 l 42,-20.871 v -0.128 H 666 v 75 h 42 v -86 h 34 l 13,-8.918 v -0.081 h 0.118 l 0.143,-0.1 0.019,0.1 H 850 v -207.99 h 226 v 183.993 z m 0,-181.993 H 852 v 89 h 222 z"
+         inkscape:connector-curvature="0"
+         style="fill:#18dff0;fill-rule:evenodd" />
+      <path
+         id="矩形_654"
+         data-name="矩形 654"
+         class="cls-16"
+         d="m 1074,230.062 v 2 H 867 v 126 h -91 v 106 H 572 V 425.011 L 503.006,353.057 H 96 v -4 h 409 v 0.3 l 71,73.7 v 39 h 198 v -113 h 2 v 7 h 89 V 169.065 h 209 v 2 H 867 v 59 h 207 z"
+         inkscape:connector-curvature="0"
+         style="fill:#1ade32;fill-rule:evenodd" />
+      <path
+         id="矩形_653"
+         data-name="矩形 653"
+         class="cls-17"
+         d="m 64,406.055 h 809 v 3 H 64 Z"
+         inkscape:connector-curvature="0"
+         style="fill:#69bc9e;fill-rule:evenodd" />
+      <rect
+         id="矩形_653_拷贝"
+         data-name="矩形 653 拷贝"
+         class="cls-18"
+         x="893"
+         y="405.06201"
+         width="35"
+         height="2"
+         style="fill:#1658ef" />
+      <path
+         id="矩形_705"
+         data-name="矩形 705"
+         class="cls-19"
+         d="m 96,280.06 h 2 v 244.99 h -2 z"
+         inkscape:connector-curvature="0"
+         style="fill:#19ddf0;fill-rule:evenodd" />
+      <g
+         id="组_864"
+         data-name="组 864">
+        <path
+           id="矩形_690"
+           data-name="矩形 690"
+           class="cls-20"
+           d="M 649,260.061 H 539 v -1 h 77 v -40 h 1 v 40 h 32 v -40 h 1 v 41 z"
+           inkscape:connector-curvature="0"
+           style="fill:#3d5ba3;fill-rule:evenodd" />
+        <rect
+           id="矩形_795"
+           data-name="矩形 795"
+           class="cls-18"
+           x="651"
+           y="186.062"
+           width="2"
+           height="25"
+           style="fill:#1658ef" />
+        <path
+           id="矩形_691"
+           data-name="矩形 691"
+           class="cls-16"
+           d="m 651,273.06 h -38 v 188.992 h -1 V 272.06 h 39 v -54 h 1 v 55 z"
+           inkscape:connector-curvature="0"
+           style="fill:#1ade32;fill-rule:evenodd" />
+        <path
+           id="矩形_691_拷贝"
+           data-name="矩形 691 拷贝"
+           class="cls-15"
+           d="m 653,290.059 h -62 v 64 h -1 v -65 h 63 v -69 h 1 v 70 z"
+           inkscape:connector-curvature="0"
+           style="fill:#18dff0;fill-rule:evenodd" />
+      </g>
+      <path
+         id="矩形_690_拷贝_2"
+         data-name="矩形 690 拷贝 2"
+         class="cls-1"
+         d="m 602,269.06 h -48 v 41 h -2 v -43 h 47 V 133.066 h 4 V 269.06 Z"
+         inkscape:connector-curvature="0"
+         style="fill:#a97fff;fill-rule:evenodd" />
+      <path
+         id="矩形_690_拷贝_4"
+         data-name="矩形 690 拷贝 4"
+         class="cls-20"
+         d="m 554,289.06 v -2 h 25 v -91 h 2 v 93 z m 0,-11 v -2 h 18 v -16 h 2 v 18 z"
+         inkscape:connector-curvature="0"
+         style="fill:#3d5ba3;fill-rule:evenodd" />
+      <path
+         id="矩形_690_拷贝_3"
+         data-name="矩形 690 拷贝 3"
+         class="cls-21"
+         d="m 600,88.068 h 2 v 25 h -2 z"
+         inkscape:connector-curvature="0"
+         style="fill:#0cdff2;fill-rule:evenodd" />
+    </g>
+    <g
+       id="组_863"
+       data-name="组 863">
+      <g
+         id="s7"
+         data-name="组 866"
+         inkscape:label="#组_866">
+        <circle
+           id="b1-7"
+           data-name="椭圆 699 拷贝 36"
+           class="cls-22"
+           cx="883"
+           cy="405.06201"
+           r="15"
+           style="opacity:0.34000017;fill:#77761c;filter:url(#filter-2)"
+           inkscape:label="#椭圆_699_拷贝_36" />
+        <circle
+           id="椭圆_699_拷贝_21"
+           data-name="椭圆 699 拷贝 21"
+           class="cls-23"
+           cx="883"
+           cy="405.06201"
+           r="10"
+           style="opacity:0.5;fill:#fbf938" />
+        <circle
+           id="椭圆_699_拷贝_37"
+           data-name="椭圆 699 拷贝 37"
+           class="cls-24"
+           cx="883"
+           cy="405.06201"
+           r="6"
+           style="fill:#fbf938" />
+      </g>
+      <g
+         id="s4"
+         data-name="组 866"
+         inkscape:label="#组_866-2">
+        <circle
+           id="b1-4"
+           data-name="椭圆 699 拷贝 36"
+           class="cls-25"
+           cx="601"
+           cy="83.063004"
+           r="15"
+           style="opacity:0.5;fill:#77761c;filter:url(#filter-3)"
+           inkscape:label="#椭圆_699_拷贝_36-2" />
+        <circle
+           id="erre5"
+           data-name="椭圆 699 拷贝 21"
+           class="cls-23"
+           cx="601"
+           cy="83.063004"
+           r="10"
+           style="opacity:0.5;fill:#fbf938"
+           inkscape:label="#椭圆_699_拷贝_21-2" />
+        <circle
+           id="椭圆_699_拷贝_37-2"
+           data-name="椭圆 699 拷贝 37"
+           class="cls-24"
+           cx="601"
+           cy="83.063004"
+           r="6"
+           style="fill:#fbf938" />
+      </g>
+      <g
+         id="s5"
+         data-name="组 866"
+         inkscape:label="#组_866-3">
+        <circle
+           id="b1-5"
+           data-name="椭圆 699 拷贝 36"
+           class="cls-26"
+           cx="601"
+           cy="123.062"
+           r="15"
+           style="opacity:0.34000017;fill:#77761c;filter:url(#filter-4)"
+           inkscape:label="#椭圆_699_拷贝_36-3" />
+        <circle
+           id="ererasfweeghg"
+           data-name="椭圆 699 拷贝 21"
+           class="cls-23"
+           cx="601"
+           cy="123.062"
+           r="10"
+           style="opacity:0.5;fill:#fbf938"
+           inkscape:label="#椭圆_699_拷贝_21-3" />
+        <circle
+           id="椭圆_699_拷贝_37-3"
+           data-name="椭圆 699 拷贝 37"
+           class="cls-24"
+           cx="601"
+           cy="123.062"
+           r="6"
+           style="fill:#fbf938" />
+      </g>
+      <g
+         id="s1"
+         data-name="组 866"
+         inkscape:label="#组_866-4">
+        <circle
+           id="b1-1"
+           data-name="椭圆 699 拷贝 36"
+           class="cls-27"
+           cx="53"
+           cy="278.06201"
+           r="15"
+           style="opacity:0.34000017;fill:#fe5e56;filter:url(#filter-5)"
+           inkscape:label="#椭圆_699_拷贝_36-4" />
+        <circle
+           id="re5r4ew"
+           data-name="椭圆 699 拷贝 21"
+           class="cls-28"
+           cx="53"
+           cy="278.06201"
+           r="10"
+           style="opacity:0.38000039;fill:#ff6058"
+           inkscape:label="#椭圆_699_拷贝_21-4" />
+        <circle
+           id="椭圆_699_拷贝_37-4"
+           data-name="椭圆 699 拷贝 37"
+           class="cls-29"
+           cx="53"
+           cy="278.06201"
+           r="6"
+           style="fill:#fe5e56" />
+        <rect
+           style="opacity:0;fill:#c2227b;fill-opacity:1;stroke:#ffffff;stroke-opacity:1"
+           id="t1"
+           width="48.354004"
+           height="48.13118"
+           x="28.745005"
+           y="253.31557"
+           rx="10"
+           ry="10"
+           inkscape:label="#rect5246" />
+      </g>
+      <g
+         id="s6"
+         data-name="组 866"
+         inkscape:label="#组_866-5">
+        <circle
+           id="b1-6"
+           data-name="椭圆 699 拷贝 36"
+           class="cls-30"
+           cx="652"
+           cy="177.062"
+           r="15"
+           style="opacity:0.34000017;fill:#77761c;filter:url(#filter-6)"
+           inkscape:label="#椭圆_699_拷贝_36-5" />
+        <circle
+           id="椭圆_699_拷贝_21-5"
+           data-name="椭圆 699 拷贝 21"
+           class="cls-23"
+           cx="652"
+           cy="177.062"
+           r="10"
+           style="opacity:0.5;fill:#fbf938" />
+        <circle
+           id="椭圆_699_拷贝_37-5"
+           data-name="椭圆 699 拷贝 37"
+           class="cls-24"
+           cx="652"
+           cy="177.062"
+           r="6"
+           style="fill:#fbf938" />
+      </g>
+      <g
+         id="s2"
+         data-name="组 866"
+         inkscape:label="#组_866-6">
+        <g
+           id="g4869"
+           inkscape:label="#g4869">
+          <circle
+             inkscape:label="#椭圆_699_拷贝_36-6"
+             style="opacity:0.34000017;fill:#77761c;filter:url(#filter-7)"
+             r="15"
+             cy="407.06201"
+             cx="54"
+             class="cls-31"
+             data-name="椭圆 699 拷贝 36"
+             id="b1-2" />
+          <circle
+             style="opacity:0.5;fill:#fbf938"
+             r="10"
+             cy="407.06201"
+             cx="54"
+             class="cls-23"
+             data-name="椭圆 699 拷贝 21"
+             id="trewee4"
+             inkscape:label="#椭圆_699_拷贝_21-6" />
+          <circle
+             style="fill:#fbf938"
+             r="6"
+             cy="407.06201"
+             cx="54"
+             class="cls-24"
+             data-name="椭圆 699 拷贝 37"
+             id="椭圆_699_拷贝_37-6" />
+        </g>
+      </g>
+      <g
+         id="s3"
+         data-name="组 866"
+         inkscape:label="#组_866-7">
+        <circle
+           id="b1-3"
+           data-name="椭圆 699 拷贝 36"
+           class="cls-32"
+           cx="54"
+           cy="523.06201"
+           r="15"
+           style="opacity:0.34000017;fill:#77761c;filter:url(#filter-8)"
+           inkscape:label="#椭圆_699_拷贝_36-7" />
+        <circle
+           id="ertt543"
+           data-name="椭圆 699 拷贝 21"
+           class="cls-23"
+           cx="54"
+           cy="523.06201"
+           r="10"
+           style="opacity:0.5;fill:#fbf938"
+           inkscape:label="#椭圆_699_拷贝_21-7" />
+        <circle
+           id="椭圆_699_拷贝_37-7"
+           data-name="椭圆 699 拷贝 37"
+           class="cls-24"
+           cx="54"
+           cy="523.06201"
+           r="6"
+           style="fill:#fbf938" />
+      </g>
+      <g
+         id="s8"
+         data-name="组 866"
+         inkscape:label="#组_866-8">
+        <circle
+           id="b1-8"
+           data-name="椭圆 699 拷贝 36"
+           class="cls-33"
+           cx="938"
+           cy="405.06201"
+           r="15"
+           style="opacity:0.34000017;fill:#77761c;filter:url(#filter-9)"
+           inkscape:label="#椭圆_699_拷贝_36-8" />
+        <circle
+           id="reeer"
+           data-name="椭圆 699 拷贝 21"
+           class="cls-23"
+           cx="938"
+           cy="405.06201"
+           r="10"
+           style="opacity:0.5;fill:#fbf938"
+           inkscape:label="#椭圆_699_拷贝_21-8" />
+        <circle
+           id="椭圆_699_拷贝_37-8"
+           data-name="椭圆 699 拷贝 37"
+           class="cls-24"
+           cx="938"
+           cy="405.06201"
+           r="6"
+           style="fill:#fbf938" />
+      </g>
+      <rect
+         style="opacity:0;fill:#c2227b;fill-opacity:1;stroke:#ffffff;stroke-opacity:1"
+         id="t2"
+         width="42.560436"
+         height="44.788727"
+         x="32.310276"
+         y="384.33929"
+         rx="10"
+         ry="10"
+         inkscape:label="#rect5250" />
+      <rect
+         style="opacity:0;fill:#c2227b;fill-opacity:1;stroke:#ffffff;stroke-opacity:1"
+         id="t3"
+         width="39.886478"
+         height="37.435364"
+         x="34.761402"
+         y="503.99875"
+         rx="10"
+         ry="9.331542"
+         inkscape:label="#rect5252" />
+      <rect
+         style="opacity:0;fill:#c2227b;fill-opacity:1;stroke:#ffffff;stroke-opacity:1"
+         id="t4"
+         width="40.021301"
+         height="37.500298"
+         x="580.7818"
+         y="62.886696"
+         rx="10"
+         ry="9.3315401"
+         inkscape:label="#rect5256" />
+    </g>
+    <g
+       id="组_862"
+       data-name="组 862">
+      <path
+         id="圆角矩形_863"
+         data-name="圆角矩形 863"
+         class="cls-34"
+         d="m 638,70.069 h 32 a 10,10 0 0 1 10,10 v 7 a 10,10 0 0 1 -10,10 h -32 a 10,10 0 0 1 -10,-10 v -7 a 10,10 0 0 1 10,-10 z"
+         inkscape:connector-curvature="0"
+         style="opacity:0.36000001;fill:#ffffff;fill-rule:evenodd" />
+      <path
+         id="圆角矩形_863_拷贝"
+         data-name="圆角矩形 863 拷贝"
+         class="cls-34"
+         d="m 638,110.067 h 102 a 10,10 0 0 1 10,10 v 7 a 10,10 0 0 1 -10,10 H 638 a 10,10 0 0 1 -10,-10 v -7 a 10,10 0 0 1 10,-10 z"
+         inkscape:connector-curvature="0"
+         style="opacity:0.36000001;fill:#ffffff;fill-rule:evenodd" />
+      <rect
+         id="圆角矩形_863_拷贝_2"
+         data-name="圆角矩形 863 拷贝 2"
+         class="cls-35"
+         x="675"
+         y="165.062"
+         width="131"
+         height="27"
+         rx="10"
+         ry="10"
+         style="opacity:0.36000001;fill:#ffffff" />
+      <path
+         id="圆角矩形_863_拷贝_3"
+         data-name="圆角矩形 863 拷贝 3"
+         class="cls-34"
+         d="m 852,427.054 h 109 a 10,10 0 0 1 10,10 v 7 a 10,10 0 0 1 -10,10 H 852 a 10,10 0 0 1 -10,-10 v -7 a 10,10 0 0 1 10,-10 z"
+         inkscape:connector-curvature="0"
+         style="opacity:0.36000001;fill:#ffffff;fill-rule:evenodd" />
+      <rect
+         id="圆角矩形_863_拷贝_4"
+         data-name="圆角矩形 863 拷贝 4"
+         class="cls-35"
+         x="901"
+         y="358.06201"
+         width="75"
+         height="27"
+         rx="10"
+         ry="10"
+         style="opacity:0.36000001;fill:#ffffff" />
+      <rect
+         id="圆角矩形_863_拷贝_5"
+         data-name="圆角矩形 863 拷贝 5"
+         class="cls-35"
+         y="357.06201"
+         width="82"
+         height="27"
+         rx="10"
+         ry="10"
+         x="0"
+         style="opacity:0.36000001;fill:#ffffff" />
+      <rect
+         id="圆角矩形_863_拷贝_6"
+         data-name="圆角矩形 863 拷贝 6"
+         class="cls-35"
+         x="15"
+         y="226.062"
+         width="67"
+         height="27"
+         rx="10"
+         ry="10"
+         style="opacity:0.36000001;fill:#ffffff" />
+      <path
+         id="圆角矩形_863_拷贝_7"
+         data-name="圆角矩形 863 拷贝 7"
+         class="cls-34"
+         d="m 17,475.052 h 49 a 10,10 0 0 1 10,10 v 7 a 10,10 0 0 1 -10,10 H 17 a 10,10 0 0 1 -10,-10 v -7 a 10,10 0 0 1 10,-10 z"
+         inkscape:connector-curvature="0"
+         style="opacity:0.36000001;fill:#ffffff;fill-rule:evenodd" />
+      <text
+         id="_3_泵站"
+         data-name="3#泵站"
+         class="cls-36"
+         transform="translate(23.927,246.033)"
+         style="font-size:16px;font-family:'PingFang SC';fill:#ffffff">3#泵站</text>
+      <text
+         id="调节泵站"
+         class="cls-36"
+         transform="translate(8.927,377.027)"
+         style="font-size:16px;font-family:'PingFang SC';fill:#ffffff">调节泵站</text>
+      <text
+         id="_28_泵站"
+         data-name="28#泵站"
+         class="cls-36"
+         transform="translate(850.927,446.025)"
+         style="font-size:16px;font-family:'PingFang SC';fill:#ffffff">28#泵站</text>
+      <text
+         id="_38_泵站"
+         data-name="38#泵站"
+         class="cls-36"
+         transform="translate(907.927,378.027)"
+         style="font-size:16px;font-family:'PingFang SC';fill:#ffffff">38#泵站</text>
+      <text
+         id="_6_泵站"
+         data-name="6#泵站"
+         class="cls-36"
+         transform="translate(637.927,129.038)"
+         style="font-size:16px;font-family:'PingFang SC';fill:#ffffff">6#泵站</text>
+      <text
+         id="气浮"
+         class="cls-36"
+         transform="translate(636.927,90.039)"
+         style="font-size:16px;font-family:'PingFang SC';fill:#ffffff">气浮</text>
+      <text
+         id="_4_泵站"
+         data-name="4#泵站"
+         class="cls-36"
+         transform="translate(14.927,495.022)"
+         style="font-size:16px;font-family:'PingFang SC';fill:#ffffff">4#泵站</text>
+      <text
+         id="综合泵站"
+         class="cls-37"
+         transform="translate(716.338,184.804)"
+         style="font-size:16px;font-family:'PingFang SC';text-anchor:middle;fill:#ffffff">综合泵站</text>
+    </g>
+    <g
+       id="组_860"
+       data-name="组 860">
+      <g
+         id="组_865"
+         data-name="组 865"
+         class="cls-38"
+         style="filter:url(#filter-10)">
+        <text
+           id="昆都抡热点产_升压泵"
+           data-name="昆都抡热点产 升压泵"
+           class="cls-39"
+           transform="translate(260.338,161.805)"
+           style="font-size:12px;font-family:'PingFang SC';text-anchor:middle;fill:#a3cff6">昆都抡热点产<tspan
+   dy="14.004"
+   id="tspan332">升压泵</tspan>
+</text>
+        <text
+           id="绿化浇树"
+           class="cls-39"
+           transform="translate(543.338,197.804)"
+           style="font-size:12px;font-family:'PingFang SC';text-anchor:middle;fill:#a3cff6">绿化浇树</text>
+        <text
+           id="_27_泵站"
+           data-name="27#泵站"
+           class="cls-39"
+           transform="translate(786.338,103.808)"
+           style="font-size:12px;font-family:'PingFang SC';text-anchor:middle;fill:#a3cff6">27#泵站</text>
+        <text
+           id="_5_泵站"
+           data-name="5#泵站"
+           class="cls-39"
+           transform="translate(900.338,75.809)"
+           style="font-size:12px;font-family:'PingFang SC';text-anchor:middle;fill:#a3cff6">5#泵站</text>
+        <text
+           id="炼铁泵房"
+           class="cls-39"
+           transform="translate(982.338,75.809)"
+           style="font-size:12px;font-family:'PingFang SC';text-anchor:middle;fill:#a3cff6">炼铁泵房</text>
+        <text
+           id="_27_澄清池"
+           data-name="27#澄清池"
+           class="cls-39"
+           transform="translate(869.337,42.81)"
+           style="font-size:12px;font-family:'PingFang SC';text-anchor:middle;fill:#a3cff6">27#澄清池</text>
+        <text
+           id="绿化浇树_拷贝"
+           data-name="绿化浇树 拷贝"
+           class="cls-39"
+           transform="translate(709.338,261.801)"
+           style="font-size:12px;font-family:'PingFang SC';text-anchor:middle;fill:#a3cff6">绿化浇树</text>
+        <text
+           id="绿化浇树_拷贝_2"
+           data-name="绿化浇树 拷贝 2"
+           class="cls-39"
+           transform="translate(640.337,515.79)"
+           style="font-size:12px;font-family:'PingFang SC';text-anchor:middle;fill:#a3cff6">绿化浇树</text>
+        <text
+           id="白云蓄水池"
+           class="cls-39"
+           transform="translate(949.338,491.791)"
+           style="font-size:12px;font-family:'PingFang SC';text-anchor:middle;fill:#a3cff6">白云蓄水池</text>
+        <text
+           id="昆河蓄水_管线"
+           data-name="昆河蓄水 管线"
+           class="cls-39"
+           transform="translate(701.338,515.79)"
+           style="font-size:12px;font-family:'PingFang SC';text-anchor:middle;fill:#a3cff6">昆河蓄水<tspan
+   dy="14.004"
+   id="tspan343">管线</tspan>
+</text>
+        <text
+           id="钢管公司"
+           class="cls-39"
+           transform="translate(543.338,245.802)"
+           style="font-size:12px;font-family:'PingFang SC';text-anchor:middle;fill:#a3cff6">钢管公司</text>
+        <text
+           id="友谊轧钢厂"
+           class="cls-39"
+           transform="translate(504.338,489.791)"
+           style="font-size:12px;font-family:'PingFang SC';text-anchor:middle;fill:#a3cff6">友谊轧钢厂</text>
+        <text
+           id="澄清池"
+           class="cls-39"
+           transform="translate(681.337,218.803)"
+           style="font-size:12px;font-family:'PingFang SC';text-anchor:middle;fill:#a3cff6">澄清池</text>
+        <text
+           id="新体系"
+           class="cls-39"
+           transform="translate(330.337,210.803)"
+           style="font-size:12px;font-family:'PingFang SC';text-anchor:middle;fill:#a3cff6">新体系</text>
+        <text
+           id="一干线"
+           class="cls-39"
+           transform="translate(175.338,310.799)"
+           style="font-size:12px;font-family:'PingFang SC';text-anchor:middle;fill:#a3cff6">一干线</text>
+        <text
+           id="二干线"
+           class="cls-39"
+           transform="translate(175.338,369.796)"
+           style="font-size:12px;font-family:'PingFang SC';text-anchor:middle;fill:#a3cff6">二干线</text>
+        <text
+           id="三干线"
+           class="cls-39"
+           transform="translate(175.338,398.795)"
+           style="font-size:12px;font-family:'PingFang SC';text-anchor:middle;fill:#a3cff6">三干线</text>
+        <text
+           id="四干线"
+           class="cls-39"
+           transform="translate(175.338,447.793)"
+           style="font-size:12px;font-family:'PingFang SC';text-anchor:middle;fill:#a3cff6">四干线</text>
+        <text
+           id="六车间"
+           class="cls-39"
+           transform="translate(347.338,513.79)"
+           style="font-size:12px;font-family:'PingFang SC';text-anchor:middle;fill:#a3cff6">六车间</text>
+        <text
+           id="华电"
+           class="cls-39"
+           transform="translate(294.338,583.788)"
+           style="font-size:12px;font-family:'PingFang SC';text-anchor:middle;fill:#a3cff6">华电</text>
+        <text
+           id="焦化厂"
+           class="cls-40"
+           transform="translate(238.942,11.834)"
+           style="font-size:12px;font-family:'PingFang SC';fill:#a3cff6">焦化厂</text>
+        <text
+           id="四号澄清池"
+           class="cls-40"
+           transform="translate(285.943,9.834)"
+           style="font-size:12px;font-family:'PingFang SC';fill:#a3cff6">四号澄清池</text>
+        <text
+           id="稀土三厂"
+           class="cls-40"
+           transform="translate(352.943,9.834)"
+           style="font-size:12px;font-family:'PingFang SC';fill:#a3cff6">稀土三厂</text>
+      </g>
+      <g
+         id="组_867"
+         data-name="组 867"
+         class="cls-41"
+         style="filter:url(#filter-11)">
+        <circle
+           id="椭圆_699_拷贝_3"
+           data-name="椭圆 699 拷贝 3"
+           class="cls-42"
+           cx="258"
+           cy="30.063"
+           r="8"
+           style="fill:#38ebfb" />
+        <circle
+           id="椭圆_699_拷贝_4"
+           data-name="椭圆 699 拷贝 4"
+           class="cls-42"
+           cx="321"
+           cy="30.063"
+           r="5"
+           style="fill:#38ebfb" />
+        <circle
+           id="椭圆_699_拷贝_9"
+           data-name="椭圆 699 拷贝 9"
+           class="cls-42"
+           cx="329"
+           cy="221.062"
+           r="5"
+           style="fill:#38ebfb" />
+        <circle
+           id="椭圆_699_拷贝_23"
+           data-name="椭圆 699 拷贝 23"
+           class="cls-42"
+           cx="580"
+           cy="194.062"
+           r="5"
+           style="fill:#38ebfb" />
+        <circle
+           id="椭圆_699_拷贝_5"
+           data-name="椭圆 699 拷贝 5"
+           class="cls-42"
+           cx="349"
+           cy="30.063"
+           r="5"
+           style="fill:#38ebfb" />
+        <circle
+           id="椭圆_699_拷贝_10"
+           data-name="椭圆 699 拷贝 10"
+           class="cls-42"
+           cx="459"
+           cy="157.062"
+           r="3"
+           style="fill:#38ebfb" />
+        <circle
+           id="椭圆_699_拷贝_11"
+           data-name="椭圆 699 拷贝 11"
+           class="cls-42"
+           cx="459"
+           cy="177.062"
+           r="3"
+           style="fill:#38ebfb" />
+        <circle
+           id="椭圆_699_拷贝_14"
+           data-name="椭圆 699 拷贝 14"
+           class="cls-42"
+           cx="538.5"
+           cy="259.56201"
+           r="3.5"
+           style="fill:#38ebfb" />
+        <circle
+           id="椭圆_699_拷贝_24"
+           data-name="椭圆 699 拷贝 24"
+           class="cls-42"
+           cx="501.5"
+           cy="468.56201"
+           r="3.5"
+           style="fill:#38ebfb" />
+        <circle
+           id="椭圆_699_拷贝_15"
+           data-name="椭圆 699 拷贝 15"
+           class="cls-42"
+           cx="651.5"
+           cy="214.562"
+           r="5.5"
+           style="fill:#38ebfb" />
+        <circle
+           id="椭圆_699_拷贝_16"
+           data-name="椭圆 699 拷贝 16"
+           class="cls-42"
+           cx="616.5"
+           cy="217.562"
+           r="4.5"
+           style="fill:#38ebfb" />
+        <circle
+           id="椭圆_699_拷贝_19"
+           data-name="椭圆 699 拷贝 19"
+           class="cls-42"
+           cx="677"
+           cy="257.06201"
+           r="4"
+           style="fill:#38ebfb" />
+        <circle
+           id="椭圆_699_拷贝_25"
+           data-name="椭圆 699 拷贝 25"
+           class="cls-42"
+           cx="936"
+           cy="318.06201"
+           r="4"
+           style="fill:#38ebfb" />
+        <circle
+           id="椭圆_699_拷贝_30"
+           data-name="椭圆 699 拷贝 30"
+           class="cls-42"
+           cx="874"
+           cy="53.063"
+           r="4"
+           style="fill:#38ebfb" />
+        <circle
+           id="椭圆_699_拷贝_33"
+           data-name="椭圆 699 拷贝 33"
+           class="cls-42"
+           cx="983.5"
+           cy="84.563004"
+           r="4.5"
+           style="fill:#38ebfb" />
+        <circle
+           id="椭圆_699_拷贝_31"
+           data-name="椭圆 699 拷贝 31"
+           class="cls-42"
+           cx="819"
+           cy="103.062"
+           r="4"
+           style="fill:#38ebfb" />
+        <circle
+           id="椭圆_699_拷贝_26"
+           data-name="椭圆 699 拷贝 26"
+           class="cls-42"
+           cx="983"
+           cy="337.06201"
+           r="4"
+           style="fill:#38ebfb" />
+        <circle
+           id="椭圆_699_拷贝_17"
+           data-name="椭圆 699 拷贝 17"
+           class="cls-42"
+           cx="697"
+           cy="497.06201"
+           r="4"
+           style="fill:#38ebfb" />
+        <circle
+           id="椭圆_699_拷贝_27"
+           data-name="椭圆 699 拷贝 27"
+           class="cls-42"
+           cx="1037"
+           cy="464.06201"
+           r="4"
+           style="fill:#38ebfb" />
+        <circle
+           id="椭圆_699_拷贝_28"
+           data-name="椭圆 699 拷贝 28"
+           class="cls-42"
+           cx="959"
+           cy="206.062"
+           r="4"
+           style="fill:#38ebfb" />
+        <circle
+           id="椭圆_699_拷贝_29"
+           data-name="椭圆 699 拷贝 29"
+           class="cls-42"
+           cx="1075"
+           cy="306.06201"
+           r="4"
+           style="fill:#38ebfb" />
+        <circle
+           id="椭圆_699_拷贝_18"
+           data-name="椭圆 699 拷贝 18"
+           class="cls-42"
+           cx="645"
+           cy="497.06201"
+           r="4"
+           style="fill:#38ebfb" />
+        <circle
+           id="椭圆_699_拷贝_6"
+           data-name="椭圆 699 拷贝 6"
+           class="cls-42"
+           cx="293"
+           cy="563.06201"
+           r="5"
+           style="fill:#38ebfb" />
+        <circle
+           id="椭圆_699_拷贝_7"
+           data-name="椭圆 699 拷贝 7"
+           class="cls-42"
+           cx="316"
+           cy="510.06201"
+           r="5"
+           style="fill:#38ebfb" />
+        <circle
+           id="椭圆_699_拷贝_8"
+           data-name="椭圆 699 拷贝 8"
+           class="cls-42"
+           cx="263.5"
+           cy="195.562"
+           r="9.5"
+           style="fill:#38ebfb" />
+        <circle
+           id="椭圆_699_拷贝_20"
+           data-name="椭圆 699 拷贝 20"
+           class="cls-42"
+           cx="890"
+           cy="487.06201"
+           r="7"
+           style="fill:#38ebfb" />
+      </g>
+    </g>
+    <path
+       id="矩形_659-2"
+       data-name="矩形 659"
+       class="cls-43"
+       d="m 266,242.061 h 4 v 8 h -4 z m 13,0 h 4 v 8 h -4 z"
+       inkscape:connector-curvature="0"
+       style="fill:#c7e0ff;fill-rule:evenodd" />
+    <g
+       id="组_859"
+       data-name="组 859"
+       class="cls-38"
+       style="filter:url(#filter-10)"><path
+   id="多边形_660_拷贝_2"
+   data-name="多边形 660 拷贝 2"
+   class="cls-44"
+   d="m 369,137.054 -3,-4.98 h 5.991 z m 0.01,1.024 3,4.98 h -5.991 z m -4,-1.012 h 8 v 1 h -8 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_25"
+   data-name="多边形 660 拷贝 25"
+   class="cls-44"
+   d="m 302.012,128.062 4.98,-3 v 5.991 z m -1.024,0.009 -4.98,3 v -5.992 z m 0.012,-4 h 1 v 8 h -1 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_26"
+   data-name="多边形 660 拷贝 26"
+   class="cls-44"
+   d="m 301.012,109.063 4.98,-3 v 5.991 z m -1.024,0.009 -4.98,2.995 v -5.991 z M 300,105.067 h 1 v 8 h -1 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_3"
+   data-name="多边形 660 拷贝 3"
+   class="cls-44"
+   d="m 367.012,158.06 4.98,-3 v 5.991 z m -1.024,0.01 -4.98,3 v -5.991 z m 0.012,-4 h 1 v 8 h -1 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_27"
+   data-name="多边形 660 拷贝 27"
+   class="cls-44"
+   d="m 440.012,157.06 4.98,-3 v 5.991 z m -1.024,0.01 -4.98,3 v -5.991 z m 0.012,-4 h 1 v 8 h -1 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_28"
+   data-name="多边形 660 拷贝 28"
+   class="cls-44"
+   d="m 440.012,177.059 4.98,-3 v 5.991 z m -1.024,0.01 -4.98,3 v -5.991 z m 0.012,-4 h 1 v 8 h -1 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_29"
+   data-name="多边形 660 拷贝 29"
+   class="cls-44"
+   d="m 477,254.049 -3,-4.98 h 5.991 z m 0.01,1.024 3,4.98 h -5.991 z m -4,-1.012 h 8 v 1 h -8 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_32"
+   data-name="多边形 660 拷贝 32"
+   class="cls-44"
+   d="m 477,279.048 -3,-4.98 h 5.991 z m 0.01,1.024 3,4.98 h -5.991 z m -4,-1.012 h 8 v 1 h -8 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_37"
+   data-name="多边形 660 拷贝 37"
+   class="cls-44"
+   d="m 456,279.048 -3,-4.98 h 5.991 z m 0.01,1.024 3,4.98 h -5.991 z m -4,-1.012 h 8 v 1 h -8 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_38"
+   data-name="多边形 660 拷贝 38"
+   class="cls-44"
+   d="m 456,297.047 -3,-4.98 h 5.991 z m 0.01,1.024 3,4.98 h -5.991 z m -4,-1.012 h 8 v 1 h -8 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_39"
+   data-name="多边形 660 拷贝 39"
+   class="cls-44"
+   d="m 456,254.049 -3,-4.98 h 5.991 z m 0.01,1.024 3,4.98 h -5.991 z m -4,-1.012 h 8 v 1 h -8 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_34"
+   data-name="多边形 660 拷贝 34"
+   class="cls-44"
+   d="m 491.012,289.055 4.98,-3 v 5.991 z m -1.024,0.009 -4.98,3 v -5.991 z m 0.012,-4 h 1 v 8 h -1 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_35"
+   data-name="多边形 660 拷贝 35"
+   class="cls-44"
+   d="m 467.012,289.055 4.98,-3 v 5.991 z m -1.024,0.009 -4.981,3 v -5.991 z m 0.012,-4 h 1 v 8 h -1 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_36"
+   data-name="多边形 660 拷贝 36"
+   class="cls-44"
+   d="m 440.012,289.055 4.98,-3 v 5.991 z m -1.024,0.009 -4.98,3 v -5.991 z m 0.012,-4 h 1 v 8 h -1 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_44"
+   data-name="多边形 660 拷贝 44"
+   class="cls-44"
+   d="m 334.005,258.073 3,4.98 h -5.991 z m -0.005,-1.024 -3,-4.98 h 5.991 z m -4,0.012 h 8 v 1 h -8 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_45"
+   data-name="多边形 660 拷贝 45"
+   class="cls-44"
+   d="m 323.005,267.072 3,4.981 h -5.991 z m -0.005,-1.023 -3,-4.981 h 5.991 z m -4,0.011 h 8 v 1 h -8 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_48"
+   data-name="多边形 660 拷贝 48"
+   class="cls-44"
+   d="m 281.005,261.072 3,4.981 h -5.991 z m -0.005,-1.023 -3,-4.981 h 5.991 z m -4,0.012 h 8 v 1 h -8 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_49"
+   data-name="多边形 660 拷贝 49"
+   class="cls-44"
+   d="m 281.005,234.074 3,4.98 h -5.991 z M 281,233.05 l -3,-4.98 h 5.991 z m -4,0.012 h 8 v 1 h -8 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_50"
+   data-name="多边形 660 拷贝 50"
+   class="cls-44"
+   d="m 268.005,234.074 3,4.98 h -5.991 z M 268,233.05 l -3,-4.98 h 5.991 z m -4,0.012 h 8 v 1 h -8 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_51"
+   data-name="多边形 660 拷贝 51"
+   class="cls-44"
+   d="m 268.005,262.072 3,4.981 h -5.991 z m -0.005,-1.023 -3,-4.981 h 5.991 z m -4,0.012 h 8 v 1 h -8 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_46"
+   data-name="多边形 660 拷贝 46"
+   class="cls-44"
+   d="m 323.005,292.071 3,4.98 h -5.991 z m -0.005,-1.023 -3,-4.981 h 5.991 z m -4,0.011 h 8 v 1 h -8 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_47"
+   data-name="多边形 660 拷贝 47"
+   class="cls-44"
+   d="m 323.005,308.07 3,4.981 h -5.991 z m -0.005,-1.023 -3,-4.981 h 5.991 z m -4,0.012 h 8 v 1 h -8 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_41"
+   data-name="多边形 660 拷贝 41"
+   class="cls-44"
+   d="m 370.011,323.052 6.978,-3.994 v 7.988 z m -1.022,0.012 -6.978,3.994 V 319.07 Z M 369,317.058 h 1 v 11 h -1 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_63"
+   data-name="多边形 660 拷贝 63"
+   class="cls-44"
+   d="M 707.994,363.046 704,356.067 h 7.988 z m 0.012,1.021 3.994,6.978 h -7.988 z M 702,363.056 h 11 v 1 h -11 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_64"
+   data-name="多边形 660 拷贝 64"
+   class="cls-44"
+   d="M 707.994,393.044 704,386.066 h 7.988 z m 0.012,1.022 3.994,6.978 h -7.988 z M 702,393.055 h 11 v 1 h -11 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_42"
+   data-name="多边形 660 拷贝 42"
+   class="cls-44"
+   d="m 370.011,351.051 6.978,-3.994 v 7.988 z m -1.022,0.012 -6.978,3.994 v -7.988 z M 369,345.057 h 1 v 11 h -1 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_52"
+   data-name="多边形 660 拷贝 52"
+   class="cls-44"
+   d="M 333.994,418.043 330,411.065 h 7.988 z m 0.012,1.022 4,6.978 h -7.989 z M 328,418.054 h 11 v 1 h -11 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_53"
+   data-name="多边形 660 拷贝 53"
+   class="cls-44"
+   d="M 293.994,462.042 290,455.063 h 7.988 z m 0.012,1.021 3.994,6.978 h -7.988 z M 288,462.052 h 11 v 1 h -11 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_55"
+   data-name="多边形 660 拷贝 55"
+   class="cls-44"
+   d="M 318.994,461.042 315,454.063 h 7.988 z m 0.012,1.021 3.994,6.978 h -7.988 z M 313,461.052 h 11 v 1 h -11 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_56"
+   data-name="多边形 660 拷贝 56"
+   class="cls-44"
+   d="M 335.994,461.042 332,454.063 h 7.988 z m 0.012,1.021 3.994,6.978 h -7.988 z M 330,461.052 h 11 v 1 h -11 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_54"
+   data-name="多边形 660 拷贝 54"
+   class="cls-44"
+   d="M 293.994,496.04 290,489.062 h 7.988 z m 0.012,1.021 3.994,6.979 h -7.988 z M 288,496.051 h 11 v 1 h -11 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_33"
+   data-name="多边形 660 拷贝 33"
+   class="cls-44"
+   d="m 477,297.047 -3,-4.98 h 5.991 z m 0.01,1.024 3,4.98 h -5.991 z m -4,-1.012 h 8 v 1 h -8 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_40"
+   data-name="多边形 660 拷贝 40"
+   class="cls-44"
+   d="m 477,326.046 -3,-4.98 h 5.991 z m 0.01,1.024 3,4.98 h -5.991 z m -4,-1.012 h 8 v 1 h -8 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_59"
+   data-name="多边形 660 拷贝 59"
+   class="cls-44"
+   d="m 456,392.043 -3,-4.98 h 5.991 z m 0.01,1.024 3,4.98 h -5.991 z m -4,-1.012 h 8 v 1 h -8 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_43"
+   data-name="多边形 660 拷贝 43"
+   class="cls-44"
+   d="m 411,330.046 -3,-4.98 h 5.991 z m 0.01,1.023 3,4.981 h -5.991 z m -4,-1.011 h 8 v 1 h -8 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_30"
+   data-name="多边形 660 拷贝 30"
+   class="cls-44"
+   d="m 509,278.048 -3,-4.98 h 5.991 z m 0.01,1.024 3,4.98 h -5.991 z m -4,-1.012 h 8 v 1 h -8 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_31"
+   data-name="多边形 660 拷贝 31"
+   class="cls-44"
+   d="m 509,295.047 -3,-4.98 h 5.991 z m 0.01,1.024 3,4.98 h -5.991 z m -4,-1.012 h 8 v 1 h -8 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_4"
+   data-name="多边形 660 拷贝 4"
+   class="cls-44"
+   d="m 775,347.045 -3,-4.98 h 5.991 z m 0.01,1.024 3,4.98 h -5.991 z m -4,-1.012 h 8 v 1 h -8 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_18"
+   data-name="多边形 660 拷贝 18"
+   class="cls-44"
+   d="m 947.012,171.06 4.981,-3 v 5.991 z m -1.024,0.009 -4.98,3 v -5.991 z m 0.012,-4 h 1 v 8 h -1 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_24"
+   data-name="多边形 660 拷贝 24"
+   class="cls-44"
+   d="m 947.012,126.062 4.981,-3 v 5.991 z m -1.024,0.009 -4.98,3 v -5.991 z m 0.012,-4 h 1 v 8 h -1 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_22"
+   data-name="多边形 660 拷贝 22"
+   class="cls-44"
+   d="m 939.012,217.058 4.981,-3 v 5.991 z m -1.024,0.009 -4.98,3 v -5.991 z m 0.012,-4 h 1 v 8 h -1 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_23"
+   data-name="多边形 660 拷贝 23"
+   class="cls-44"
+   d="m 940.012,231.057 4.981,-2.995 v 5.991 z m -1.024,0.009 -4.98,3 v -5.991 z m 0.012,-4 h 1 v 8 h -1 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_16"
+   data-name="多边形 660 拷贝 16"
+   class="cls-44"
+   d="m 811,318.047 -3,-4.981 h 5.991 z m 0.01,1.023 3,4.98 h -5.991 z m -4,-1.012 h 8 v 1 h -8 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_66"
+   data-name="多边形 660 拷贝 66"
+   class="cls-44"
+   d="m 759,321.046 -3,-4.98 h 5.991 z m 0,1.024 3,4.98 h -5.991 z m -4,-1.012 h 8 v 1 h -8 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_17"
+   data-name="多边形 660 拷贝 17"
+   class="cls-44"
+   d="m 811,367.044 -3,-4.98 h 5.991 z m 0.01,1.024 3,4.98 h -5.991 z m -4,-1.012 h 8 v 1 h -8 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+
+
+
+      path
+         id=多边形_660_拷贝_19
+         data-name=多边形 660 拷贝 19
+         class=cls-44
+         d=m 811,416.042 -3,-4.98 h 5.991 z m 0.01,1.024 3,4.98 h -5.991 z m -4,-1.012 h 8 v 1 h -8 z
+         inkscape:connector-curvature=0
+         style=fill:#bfdcff;fill-rule:evenodd /
+      <path
+   id="多边形_660_拷贝_20"
+   data-name="多边形 660 拷贝 20"
+   class="cls-44"
+   d="m 811,442.041 -3,-4.98 h 5.991 z m 0.01,1.024 3,4.98 h -5.991 z m -4,-1.012 h 8 v 1 h -8 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_21"
+   data-name="多边形 660 拷贝 21"
+   class="cls-44"
+   d="m 824.012,426.049 4.98,-3 v 5.99 z m -1.024,0.009 -4.98,3 v -5.991 z m 0.012,-4 h 1 v 8 h -1 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_15"
+   data-name="多边形 660 拷贝 15"
+   class="cls-44"
+   d="m 838,222.051 -3,-4.981 h 5.991 z m 0.01,1.023 3,4.981 h -5.991 z m -4,-1.012 h 8 v 1 h -8 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_67"
+   data-name="多边形 660 拷贝 67"
+   class="cls-44"
+   d="m 819,175.053 -3,-4.981 h 5.991 z m 0,1.023 3,4.981 h -5.991 z m -4,-1.012 h 8 v 1 h -8 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_68"
+   data-name="多边形 660 拷贝 68"
+   class="cls-44"
+   d="m 851,175.053 -3,-4.981 h 5.991 z m 0.01,1.023 3,4.981 h -5.991 z m -4,-1.012 h 8 v 1 h -8 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_5"
+   data-name="多边形 660 拷贝 5"
+   class="cls-44"
+   d="m 775,367.044 -3,-4.98 h 5.991 z m 0.01,1.024 3,4.98 h -5.991 z m -4,-1.012 h 8 v 1 h -8 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_12"
+   data-name="多边形 660 拷贝 12"
+   class="cls-44"
+   d="m 775,416.042 -3,-4.98 h 5.991 z m 0.01,1.024 3,4.98 h -5.991 z m -4,-1.012 h 8 v 1 h -8 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_13"
+   data-name="多边形 660 拷贝 13"
+   class="cls-44"
+   d="m 775,442.041 -3,-4.98 h 5.991 z m 0.01,1.024 3,4.98 h -5.991 z m -4,-1.012 h 8 v 1 h -8 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_14"
+   data-name="多边形 660 拷贝 14"
+   class="cls-44"
+   d="m 800.012,407.05 4.98,-3 v 5.991 z m -1.024,0.009 -4.98,3 v -5.991 z m 0.012,-4 h 1 v 8 h -1 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_62"
+   data-name="多边形 660 拷贝 62"
+   class="cls-44"
+   d="m 785.012,407.05 4.98,-3 v 5.991 z m -1.024,0.009 -4.98,3 v -5.991 z m 0.012,-4 h 1 v 8 h -1 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝"
+   data-name="多边形 660 拷贝"
+   class="cls-44"
+   d="m 281,306.047 -3,-4.98 h 5.991 z m 0.01,1.024 3,4.98 h -5.991 z m -4,-1.012 h 8 v 1 h -8 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_6"
+   data-name="多边形 660 拷贝 6"
+   class="cls-44"
+   d="m 564.012,277.055 4.98,-3 v 5.991 z m -1.024,0.01 -4.98,3 v -5.991 z m 0.012,-4 h 1 v 8 h -1 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_7"
+   data-name="多边形 660 拷贝 7"
+   class="cls-44"
+   d="m 570.012,288.055 4.98,-3 v 5.992 z m -1.024,0.009 -4.98,3 v -5.991 z m 0.012,-4 h 1 v 8 h -1 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_10"
+   data-name="多边形 660 拷贝 10"
+   class="cls-44"
+   d="m 626.012,272.056 4.98,-3 v 5.991 z m -1.024,0.009 -4.98,3 v -5.991 z m 0.012,-4 h 1 v 8 h -1 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_11"
+   data-name="多边形 660 拷贝 11"
+   class="cls-44"
+   d="m 626.012,290.055 4.98,-3 v 5.991 z m -1.024,0.009 -4.98,3 v -5.991 z m 0.012,-4 h 1 v 8 h -1 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_57"
+   data-name="多边形 660 拷贝 57"
+   class="cls-44"
+   d="m 677,301.047 -3,-4.98 h 5.991 z m 0.01,1.024 3,4.98 h -5.991 z m -4,-1.012 h 8 v 1 h -8 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_60"
+   data-name="多边形 660 拷贝 60"
+   class="cls-44"
+   d="m 717.012,284.055 4.98,-3 v 5.992 z m -1.024,0.009 -4.98,3 v -5.991 z m 0.012,-4 h 1 v 8 h -1 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_61"
+   data-name="多边形 660 拷贝 61"
+   class="cls-44"
+   d="m 735.005,297.071 3,4.98 h -5.991 z m -0.005,-1.024 -3,-4.98 h 5.991 z m -4,0.012 h 8 v 1 h -8 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_65"
+   data-name="多边形 660 拷贝 65"
+   class="cls-44"
+   d="m 776.988,287.064 -4.98,3 v -5.992 z m 1.024,-0.009 4.98,-3 v 5.991 z m -1.012,-4 h 1 v 8 h -1 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_58"
+   data-name="多边形 660 拷贝 58"
+   class="cls-44"
+   d="m 645,325.046 -3,-4.98 h 5.991 z m 0.01,1.024 3,4.98 h -5.991 z m -4,-1.012 h 8 v 1 h -8 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_9"
+   data-name="多边形 660 拷贝 9"
+   class="cls-44"
+   d="m 629.012,259.056 4.98,-3 v 5.991 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660_拷贝_8"
+   data-name="多边形 660 拷贝 8"
+   class="cls-44"
+   d="m 553.005,301.071 3,4.98 h -5.991 z m -0.005,-1.024 -3,-4.98 h 5.991 z m -4,0.012 h 8 v 1 h -8 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+<path
+   id="多边形_660"
+   data-name="多边形 660"
+   class="cls-44"
+   d="m 268,306.047 -3,-4.98 h 5.991 z m 0.01,1.024 3,4.98 h -5.991 z m -4,-1.012 h 8 v 1 h -8 z"
+   inkscape:connector-curvature="0"
+   style="fill:#bfdcff;fill-rule:evenodd" />
+</g>
+    <g
+       id="组_869"
+       data-name="组 869">
+      <g
+         id="t5"
+         data-name="组 868"
+         inkscape:label="#组_868">
+        <circle
+           id="椭圆_893"
+           data-name="椭圆 893"
+           class="cls-45"
+           cx="708"
+           cy="124.062"
+           r="9"
+           style="fill:none;stroke:#fbf938;stroke-width:1px" />
+        <text
+           id="_1"
+           data-name="1"
+           class="cls-46"
+           transform="translate(705.02,128.948)"
+           style="font-size:14.00399971px;font-family:'PingFang SC';fill:#fbf938">1</text>
+      </g>
+      <g
+         id="t6"
+         data-name="组 868"
+         inkscape:label="#组_868-2">
+        <circle
+           id="eweerr"
+           data-name="椭圆 893"
+           class="cls-45"
+           cx="730"
+           cy="124.062"
+           r="9"
+           style="fill:none;stroke:#fbf938;stroke-width:1px"
+           inkscape:label="#椭圆_893-2" />
+        <text
+           id="_2"
+           data-name="2"
+           class="cls-46"
+           transform="translate(726.02,128.948)"
+           style="font-size:14.00399971px;font-family:'PingFang SC';fill:#fbf938">2</text>
+      </g>
+    </g>
+    <g
+       id="组_869-2"
+       data-name="组 869">
+      <g
+         id="t7"
+         data-name="组 868"
+         inkscape:label="#组_868-3">
+        <circle
+           id="椭圆_893-3"
+           data-name="椭圆 893"
+           class="cls-45"
+           cx="764"
+           cy="179.062"
+           r="9"
+           style="fill:none;stroke:#fbf938;stroke-width:1px" />
+        <text
+           id="_1-2"
+           data-name="1"
+           class="cls-46"
+           transform="translate(761.02,183.946)"
+           style="font-size:14.00399971px;font-family:'PingFang SC';fill:#fbf938">1</text>
+      </g>
+      <g
+         id="t8"
+         data-name="组 868"
+         inkscape:label="#组_868-4">
+        <circle
+           id="椭圆_893-4"
+           data-name="椭圆 893"
+           class="cls-45"
+           cx="787"
+           cy="179.062"
+           r="9"
+           style="fill:none;stroke:#fbf938;stroke-width:1px" />
+        <text
+           id="_2-2"
+           data-name="2"
+           class="cls-46"
+           transform="translate(783.019,183.946)"
+           style="font-size:14.00399971px;font-family:'PingFang SC';fill:#fbf938">2</text>
+      </g>
+    </g>
+    <g
+       id="组_869-3"
+       data-name="组 869">
+      <g
+         id="t9"
+         data-name="组 868"
+         inkscape:label="#组_868-5">
+        <circle
+           id="椭圆_893-5"
+           data-name="椭圆 893"
+           class="cls-45"
+           cx="930"
+           cy="440.06201"
+           r="9"
+           style="fill:none;stroke:#fbf938;stroke-width:1px" />
+        <text
+           id="_1-3"
+           data-name="1"
+           class="cls-46"
+           transform="translate(927.02,444.935)"
+           style="font-size:14.00399971px;font-family:'PingFang SC';fill:#fbf938">1</text>
+      </g>
+      <g
+         id="t10"
+         data-name="组 868"
+         inkscape:label="#组_868-6">
+        <circle
+           id="椭圆_893-6"
+           data-name="椭圆 893"
+           class="cls-45"
+           cx="952"
+           cy="440.06201"
+           r="9"
+           style="fill:none;stroke:#fbf938;stroke-width:1px" />
+        <text
+           id="_2-3"
+           data-name="2"
+           class="cls-46"
+           transform="translate(948.02,444.935)"
+           style="font-size:14.00399971px;font-family:'PingFang SC';fill:#fbf938">2</text>
+      </g>
+    </g>
+    <rect
+       style="opacity:0;fill:#c2227b;fill-opacity:1;stroke:#ffffff;stroke-opacity:1"
+       id="t11"
+       width="37.500278"
+       height="39.391071"
+       x="918.59955"
+       y="384.6329"
+       rx="10"
+       ry="9.3315401"
+       inkscape:label="#rect5260" />
+  </g>
+  <g
+     id="组_870"
+     data-name="组 870">
+    <path
+       id="矩形_905"
+       data-name="矩形 905"
+       class="cls-47"
+       d="M228.012,304.554l-11,6.505v-5H204v-3h13.013v-5.011Z" />
+    <path
+       id="矩形_905_拷贝_5"
+       data-name="矩形 905 拷贝 5"
+       class="cls-47"
+       d="M821.012,518.545l-11,6.5v-5H797v-3h13.013v-5.011Z" />
+    <path
+       id="矩形_905_拷贝_4"
+       data-name="矩形 905 拷贝 4"
+       class="cls-47"
+       d="M495,238.074v13.987h-3V238.074h-5.011L493.5,227.05,500,238.074h-5Z" />
+    <path
+       id="矩形_905_拷贝"
+       data-name="矩形 905 拷贝"
+       class="cls-47"
+       d="M229.012,363.551l-11.025,6.506v-5H204v-3h13.987v-5.01Z" />
+    <path
+       id="矩形_905_拷贝_2"
+       data-name="矩形 905 拷贝 2"
+       class="cls-47"
+       d="M228.012,394.55l-11,6.506v-5H204v-3h13.013v-5.011Z" />
+    <path
+       id="矩形_905_拷贝_3"
+       data-name="矩形 905 拷贝 3"
+       class="cls-47"
+       d="M228.012,444.548l-11,6.5v-5H204v-3h13.013v-5.011Z" />
+  </g>
+  <circle
+     id="椭圆_699_拷贝_32"
+     data-name="椭圆 699 拷贝 32"
+     class="cls-48"
+     cx="897.5"
+     cy="87.563"
+     r="4.5" />
+</svg>
