@@ -1,6 +1,6 @@
 /**
- * @file homeAction home
- * @author luwenlong <zuiwosuifeng@gmail.com>
+ * @file chaobiaodanAction
+ * @author zlc <lichao9182@126.com>
  */
 
 import axios from 'axios'

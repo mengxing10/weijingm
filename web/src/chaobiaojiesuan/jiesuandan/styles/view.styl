@@ -1,0 +1,211 @@
+/**
+ * @file jiesuandanViewer
+ * @author zlc <lichao9182@126.com>
+ */
+
+
+
+ bgColor1=  #1d468a        /* gray: #2f2e4b   white： #f9fafc  blue: #1d468a  */
+ bgColor2=  #20529e        /* gray: #333254   white： #ffffff  blue: #20529e  */
+ tableTextColor = #ffffff  /* gray: #405e7c   white： #ffffff  blue: #ffffff  */
+
+.jiesuandan
+    width 100%
+    background-size 100% 100%
+    padding 0 10px 10px 10px
+    letter-spacing 1px
+    color white
+    .ui.dropdown
+        color #fff
+        min-width  9em
+        background #3c75c2
+        min-height: 30px;
+        padding-top: 0;
+        padding-bottom: 0;
+        line-height: 30px;
+        .default.text
+            color #fff
+        .ui.label
+            color #fff
+            background #0a448c
+            font-weight normal
+        .menu.visible
+            color #fff
+            background #3c75c2
+            .item
+              color #fff
+              border-bottom 0 solid #5da6ea
+              &:hover
+                  background #59a1e1
+        .dropdown.icon
+            top 7px
+            margin 0
+            padding 0
+    .ui.selection.dropdown
+        .menu > .item
+            border-top-color #5da6ea
+    .jiesuandan-header
+        height 50px
+        .query-condition
+            display flex
+            flex-align center
+            align-items center
+            flex-pack flex-start
+            justify-content flex-start
+            font-size 16px
+            color #969696
+            position relative
+            margin-top 10px
+            padding-bottom 10px
+            .shijian
+                width 600px
+                margin 10px 10px 0 10px
+                display flex
+                flex-align center
+                align-items center
+                flex-pack flex-start
+                justify-content flex-start
+                label
+                    margin 0 10px
+                    color white
+            .jiesuan
+                font-size 16px
+                color white
+                width 120px
+                margin 0 10px 0 10px
+                .ui.checkbox
+                    color white
+                    label
+                        margin 0 10px
+                        color white
+                        font-size 16px
+            .canshu,
+            .dayin,
+            .xinzeng
+                width 90px
+                height 30px
+                top 10px
+                margin auto auto auto 10px
+                line-height 30px
+                text-align center
+                background #254394
+                color #fff
+                border-radius 3px
+                cursor pointer
+                &:hover
+                    background #7ac6ff
+                &.gray,
+                &.gray:hover
+                    background #c6c6c6
+            .canshu
+                position absolute
+                right 120px
+            .xinzeng
+                position absolute
+                right 10px
+             .dayin
+                 position absolute
+                 right 220px
+
+    .jiesuandan-body
+        width 100%
+        height 80%
+        overflow-y auto
+        margin-top 20px
+        font-size 14px
+        border 0px
+        .jiesuandanlist
+            width 100%
+            .jiesuan_table_chakan
+                color #fff
+                cursor pointer
+                &:hover
+                    color #7ac6ff
+            .chakan-table
+                width 100%
+                color tableTextColor
+                border 0px
+                .chakan-tablehead
+                    background bgColor1
+                    color tableTextColor
+                    border 0px
+                    th
+                        color tableTextColor
+                        background bgColor1
+                .chakan-tablebody
+                    background bgColor1
+                    font-size 14px
+                    &:nth-child(even)
+                        background  bgColor2
+                    .jiesuan_table_opt
+                        display flex
+                        flex-align center
+                        align-items center
+                        flex-pack flex-start
+                        justify-content center
+                        height 30px
+                        .jiesuan_table_opt_i
+                            margin-left 10px
+                            color #fff
+                            cursor pointer
+                            &:hover
+                                color #7ac6ff
+                    .jiesuan_table_dropdown
+                        font-size 14px
+                        height 30px
+                        input
+                              border-radius 3px
+
+
+
+
+    .jiesuan-config
+        height 800px
+        background-color bgColor2
+        border-radius 3px
+        font-size 16px
+        position relative
+        h3
+            font-size 16px
+            padding-left 20px
+            background bgColor1
+            height 40px
+            line-height 40px
+        input
+            color #fff
+            background #3c75c2
+        .jiesuan-config-body
+            margin 20px 20px 20px 20px
+            .jiesuan-config-item
+                margin-bottom 5px
+                border-bottom 1px solid rgba(204, 204, 204,0.3)
+                height 30px
+                input
+                    width 20%
+                span
+                    margin-left 10px
+                    margin-right 10px
+                    display inline-block
+                .desc
+                    width 50%
+        .jiesuan-config-footer
+            text-align center
+            position absolute
+            bottom 0px
+            height 40px
+            width 100%
+            .jiesuan-config-commit
+                margin auto
+                width 90px
+                height 30px
+                line-height 30px
+                text-align center
+                background #254394
+                color #fff
+                border-radius 3px
+                cursor pointer
+                &:hover
+                    background #7ac6ff
+                &.gray,
+                &.gray:hover
+                    background #c6c6c6

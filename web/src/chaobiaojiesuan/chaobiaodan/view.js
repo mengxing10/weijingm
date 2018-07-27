@@ -1,6 +1,6 @@
 /**
- * @file monlist
- * @author luwenlong <zuiwosuifeng@gmail.com>
+ * @file chaobiaodanViewer
+ * @author zlc <lichao9182@126.com>
  */
 
 import React, {Component, PropTypes} from 'react'
@@ -8,7 +8,6 @@ import {Link, browserHistory} from 'react-router'
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux';
 import * as actions from './actions.js'
-import {chaobiaodanAPI} from './constants/api'
 import './styles/index.styl'
 import classNames from 'classnames'
 import MyTable from '../../common/components/MyTable'
@@ -17,7 +16,6 @@ import {Icon, Dropdown, Input,Form,Radio,Checkbox} from 'semantic-ui-react'
 import Pager from '../../common/components/Pager'
 import _ from 'lodash'
 import moment from 'moment'
-import Menus from '../../common/components/Menus'
 class Chaobiaodan extends Component {
     constructor(props) {
         super(props)
@@ -34,6 +32,7 @@ class Chaobiaodan extends Component {
             dianbiaos:{},
             waters:{},
             hours:{},
+            loading:false,
         }
     }
 
@@ -206,7 +205,7 @@ class Chaobiaodan extends Component {
                         <div className="fenge"><h3>水表</h3></div>
                         <MyTable thead={shuibiaoThead} tbody={xinzeng?addwaterBody:waterBody}/>
                         <div className="fenge"><h3>合计</h3></div>
-                      <MyTable thead={hejiThead} tbody={xinzeng?addtotalBody:totalBody}/>
+                        <MyTable thead={hejiThead} tbody={xinzeng?addtotalBody:totalBody}/>
                           <div className="fenge"></div>
                           <div className="caozuo">
                               {xinzeng?<div className="item" onClick={this.xinChaobiao.bind(this)}>生成新抄表单</div>:
@@ -383,17 +382,31 @@ class Chaobiaodan extends Component {
     const {startDate,endDate,pageNum} = this.state
     this.getAllChaoBiaoDanList(startDate,dateMoment,pageNum)
   }
-  handleChangeAdd(dateString, { dateMoment, timestamp}){
+  async handleChangeAdd(dateString, { dateMoment, timestamp}){
+    let dateSet = dateMoment
     if(dateMoment.toDate().getTime()>moment().subtract(1,'d').toDate().getTime()){
-      this.setState({
-        addDate:moment().subtract(1,'d')
-      });
+      dateSet =moment().subtract(1,'d')
     }
-    else{
-      this.setState({
-        addDate: dateMoment
-      });
+
+    let {bengzhanid,bengzu,addDate,dianbiaos,waters,hours} = this.state
+    if(bengzhanid==0||bengzu=='all'){
+      alert('泵组选择有误,请返回!')
+    }else{
+
+      const {getChaoBiaoDanAdd} = this.props
+      let params = {pumpgroupid:bengzu,readingdate:dateMoment.format('YYYY-MM-DD')}
+      this.setState({xinzeng:false})
+      await getChaoBiaoDanAdd(params)
+
+      const {chaobiaodanadd} = this.props
+      chaobiaodanadd.waters.forEach(item=>(waters[item.SBS]=item.SBS_value))
+      chaobiaodanadd.hourElectrics.forEach(item=>(hours[item.LSQXSS]=item.LSQXSS_value))
+      chaobiaodanadd.hourElectrics.forEach(item=>(dianbiaos[item.DBDS]=item.DBDS_value))
+
+
+      this.setState({addDate: dateSet,xinzeng:true,dianbiaos:dianbiaos,waters:waters,hours:hours})
     }
+
   }
   getAllChaoBiaoDanList(startT,endT,pageNo,stationID,groupID,hasCharge){
     const {getChaoBiaoDanList}  = this.props

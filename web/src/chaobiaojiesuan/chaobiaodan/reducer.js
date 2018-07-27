@@ -1,5 +1,5 @@
 /**
- * @file homeReducer
+ * @file chaobiaodanReducer
  * @author zlc <lichao9182@126.com>
  */
 const initialState = {

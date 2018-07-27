@@ -1,93 +1,135 @@
 /**
- * @file homeReducer
- * @author luwenlong <zuiwosuifeng@gmail.com>
+ * @file chaobiaodanReducer
+ * @author zlc <lichao9182@126.com>
  */
-
-import {
-  //结算单列表
-  REQUESTJIESUANDANLIST,
-  RECEIVEJIESUANDANLIST,
-  //结算单明细
-  REQUESTJIESUANDANINFO,
-  RECEIVEJIESUANDANINFO,
-  //抄表单列表
-  REQUESTECHAOBIAODANLIST,
-  RECEIVECHAOBIAODANLIST,
-  //生成结算单
-  REQUESTADDJIESUANDAN,
-  RECEIVEADDJIESUANDAN,
-} from './constants/actionTypes'
-
 const initialState = {
-  jiesuandanData:{data:[]},
-  jiesuandanInfo:{billDetails:[]},
-  cbdlist:{data:[]},
+  jiesuanlist:{"pageNo": 1,"pageSize": 20,"pageCount": 1,
+                  "recordCount": 1,"data": []
+                  },
+
+  jiesuandaninfo:{
+                "chargeReport": {},
+                "chargeDetails": []
+              },
+  jiesuandannew:[],
+  jiesuandanmod:{endReadingDate:{},startReadingDate:{}},
+  jiesuandangen:'',
+  jiesuandanconf:[],
+
+
+
+
 }
 
 export default function reducer(state = initialState, action) {
     switch (action.type) {
-      case REQUESTJIESUANDANLIST:
+      case 'REQUESTE_JIESUANLIST':
       {
-        return Object.assign({}, state, {fetchsvgdata: 'start'});
+        return Object.assign({}, state, {REQUESTE_JIESUANLIST: 'start'});
       }
-      case RECEIVEJIESUANDANLIST:
+      case 'RECEIVE_JIESUANLIST':
       {
         return Object.assign(
             {},
             state,
             {
               ...action.data,
-              fetchsvgdata: action.data.errmsg?'start':'done'
+              REQUESTE_JIESUANLIST: 'done'
             }
         )
       }
-      case REQUESTJIESUANDANINFO:
+      case 'REQUESTE_JIESUANDANINFO':
       {
-        return Object.assign({}, state, {fetchsvgdata: 'start'});
+        return Object.assign({}, state, {REQUESTE_JIESUANDANINFO: 'start'});
       }
-      case RECEIVEJIESUANDANINFO:
+      case 'RECEIVE_JIESUANDANINFO':
       {
         return Object.assign(
             {},
             state,
             {
               ...action.data,
-              fetchsvgdata: action.data.errmsg?'start':'done'
+              REQUESTE_JIESUANDANINFO: 'done'
             }
         )
       }
-      case REQUESTECHAOBIAODANLIST:
+      case 'REQUESTE_JIESUANDANNEW':
       {
-        return Object.assign({}, state, {fetchsvgdata: 'start'});
+        return Object.assign({}, state, {REQUESTE_JIESUANDANNEW: 'start'});
       }
-      case RECEIVECHAOBIAODANLIST:
+      case 'RECEIVE_JIESUANDANNEW':
       {
         return Object.assign(
             {},
             state,
             {
               ...action.data,
-              fetchsvgdata: action.data.errmsg?'start':'done'
+              REQUESTE_JIESUANDANNEW: 'done'
             }
         )
       }
-      case REQUESTADDJIESUANDAN:
+      case 'REQUESTE_JIESUANDANMOD':
       {
-        return Object.assign({}, state, {fetchsvgdata: 'start'});
+        return Object.assign({}, state, {REQUESTE_JIESUANDANMOD: 'start'});
       }
-      case RECEIVEADDJIESUANDAN:
+      case 'RECEIVE_JIESUANDANMOD':
       {
         return Object.assign(
             {},
             state,
             {
               ...action.data,
-              fetchsvgdata: action.data.errmsg?'start':'done'
+              REQUESTE_JIESUANDANMOD: 'done'
+            }
+        )
+      }
+      case 'REQUESTE_JIESUANDANGEN':
+      {
+        return Object.assign({}, state, {REQUESTE_JIESUANDANMOD: 'start'});
+      }
+      case 'RECEIVE_JIESUANDANGEN':
+      {
+        return Object.assign(
+            {},
+            state,
+            {
+              ...action.data,
+              REQUESTE_JIESUANDANMOD: 'done'
+            }
+        )
+      }
+      case 'REQUESTE_JIESUANDANCONF':
+      {
+        return Object.assign({}, state, {REQUESTE_JIESUANDANCONF: 'start'});
+      }
+      case 'RECEIVE_JIESUANDANCONF':
+      {
+        return Object.assign(
+            {},
+            state,
+            {
+              ...action.data,
+              REQUESTE_JIESUANDANCONF: 'done'
+            }
+        )
+      }
+      case 'REQUESTE_JIESUANDANCONFMOD':
+      {
+        return Object.assign({}, state, {REQUESTE_JIESUANDANCONFMOD: 'start'});
+      }
+      case 'RECEIVE_JIESUANDANCONFMOD':
+      {
+        return Object.assign(
+            {},
+            state,
+            {
+              REQUESTE_JIESUANDANCONFMOD: 'done'
             }
         )
       }
 
-        default:
-            return state
+
+      default:
+          return state
     }
 }

@@ -1,6 +1,6 @@
 /**
- * @file monlist
- * @author luwenlong <zuiwosuifeng@gmail.com>
+ * @file jiesuandanViewer
+ * @author zlc <lichao9182@126.com>
  */
 
 import React, {Component, PropTypes} from 'react'
@@ -8,325 +8,333 @@ import {Link, browserHistory} from 'react-router'
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux';
 import * as actions from './actions.js'
-import {billAPI} from './constants/api'
 import './styles/index.styl'
 import classNames from 'classnames'
 import MyTable from '../../common/components/MyTable'
 import { DateField,DatePicker } from 'react-date-picker'
-import {Icon, Dropdown, Input,Form,Radio,Checkbox} from 'semantic-ui-react'
+import {Icon, Dropdown, Input,Form,Radio,Checkbox,Table} from 'semantic-ui-react'
 import Pager from '../../common/components/Pager'
-
+import _ from 'lodash'
 import moment from 'moment'
-import Menus from '../../common/components/Menus'
+import {DropModal} from 'boron'
 class Jiesuandan extends Component {
     constructor(props) {
         super(props)
-        this.billid='';
+        this.reportid='';
         this.state = {
-          startDate: moment().subtract(3,'M'),
-          endDate: moment(),
-          cbstartDate:moment().subtract(1,'d'),
-          cbendDate:moment().subtract(1,'d'),
-          xinzeng:false,
-          chakan:false
+            startDate: moment().subtract(1,'Y'),
+            endDate: moment().subtract(1,'d'),
+            pageNum:1,
+            xinzeng:false,
+            chakan:false,
+            queren:false,
+            jiesuanuuid:'',
+            jiesuandannew:[],
+            jiesuannewpars:[],
+            jiesuanmodnum:-9999,
+            jiesuanconfmod:{}
+
         }
     }
 
+//ref 用于新增抄表单传参  一般不得使用
     render() {
-        var startDate= moment("2018-01-01");
-        var endDate= moment().add(1, 'd');
+        let {xinzeng,chakan,queren,pageNum,startDate,endDate,jiesuandannew} = this.state
+        let {jiesuanlist ,jiesuandaninfo,jiesuandanconf} = this.props
+
         const BodyStyle={height: document.documentElement.clientHeight-80  +'px'};
-        let title = ""
-        let project =this.props.location.query.project;
-          title += project=="cb"?"抄表":project=="cbd"?"抄表单":project=="jsd"?"结算单":"抄表"
 
-        const thead=[{width:"10%",value:"编号"},{width:"30%",value:"结算单日期"}
-                    ,{width:"35%",value:"起止日期"},{width:"20%",value:"操作"}];
-                    console.log(this.props.jiesuandanData);
-        const  tbody = this.parseTbBody(this.props.jiesuandanData.data);
+        //编号  泵站名称 系统名称 电表合计 累时器合计 水表合计 抄表时间 抄表人 是否结算
 
-      const thead2=[{width:"20%",value:"编号"},{width:"35%",value:"抄表单日期"}
-                  ,{width:"45%",value:"起止日期"}]
-      const tbody2 = this.parseTbBody2(this.props.cbdlist.data);
+        const jiesuanthead=[{width:"5%",value:"编号"},{width:"20%",value:"结算日期"},
+                              {width:"20%",value:"节能率(%)"},{width:"20%",value:"节能量(kW·h)"},
+                              {width:"20%",value:"节约金额(元)"},{width:"15%",value:"操作"}]
 
-      const thead3=[{width:"10%",value:"结算单元"},{width:"15%",value:"用水总量（吨/立方米）"}
-                  ,{width:"15%",value:"用电总量（kW·h）"},{width:"20%",value:"吨水能耗基准值（kW·h/t）"},{width:"13%",value:"节电量（kW·h）"}
-                ,{width:"13%",value:"节电率（%）"},{width:"13%",value:"节电费（元）"}]
-      const tbody3 = this.parseTbBody3(this.props.jiesuandanInfo.billDetails);
+        //泵站名称 泵组名称 水泵编号 电表读数 累时器读数 抄表时间 抄表人 备注
 
+
+        const tbody =!xinzeng&&!chakan?this.parseTbBody(jiesuanlist.data):[]
+
+        const detailBody = this.parseTbDetailBody(jiesuandaninfo.chargeDetails)
+        const reportBody = this.parseTbReportBody(jiesuandaninfo.chargeReport)
+
+        const newBody = this.parseTbNewBody(jiesuandannew)
+        debugger
         return (
-          <div className="table-chaobiao" style={BodyStyle}>
-            <h3 className="weixiu-title labStyle">{title}</h3>
-            <div className="query-condition">
-                <label className="labStyle">开始时间</label>
-                    <DateField
-                        dateFormat="YYYY-MM-DD"
-                        locale="zh-cn"
-                        forceValidDate={true}
-                        updateOnDateClick={true}
-                        //defaultValue={startDate}
-                        value={this.state.startDate}
-                        onChange={::this.handleChangeStart}
-                        ref="starttime"
-                        >
-                        <DatePicker
-                            navigation={true}
-                            locale="zh-cn"
-                            forceValidDate={true}
-                            highlightWeekends={true}
-                            highlightToday={true}
-                            weekNumbers={true}
-                            weekStartDay={0}
-                            footer={true}
-                            />
-                    </DateField>
-                <label className="labStyle">至</label>
-                    <DateField
-                    dateFormat="YYYY-MM-DD"
-                    locale="zh-cn"
-                    forceValidDate={true}
-                    updateOnDateClick={true}
-                    //defaultValue={endDate}
-                    value={this.state.endDate}
-                    onChange={::this.handleChangeEnd}
-                    ref="endtime"
-                    >
-                    <DatePicker
-                        navigation={true}
-                        locale="zh-cn"
-                        forceValidDate={true}
-                        highlightWeekends={true}
-                        highlightToday={true}
-                        weekNumbers={true}
-                        weekStartDay={0}
-                        footer={true}
-                        />
-                </DateField>
-                <span className="commitBtn" onClick={this.onHandleSearch.bind(this)}>查询</span>
+          <div className="jiesuandan" style={BodyStyle}>
+              <div className="jiesuandan-header">
+                {!xinzeng&&!chakan&&<div className="query-condition">
+                    <div className ="shijian">
+                        <label className="labStyle">结算时间:</label>
+                        <DateField
+                                dateFormat="YYYY-MM-DD"
+                                locale="zh-cn"
+                                forceValidDate={true}
+                                updateOnDateClick={true}
+                                //defaultValue={startDate}
+                                value={this.state.startDate}
+                                onChange={::this.handleChangeStart}
+                                >
+                                <DatePicker
+                                    navigation={true}
+                                    locale="zh-cn"
+                                    forceValidDate={true}
+                                    highlightWeekends={true}
+                                    highlightToday={true}
+                                    weekNumbers={true}
+                                    weekStartDay={0}
+                                    footer={true}
+                                    />
+                        </DateField>
+                        <label className="labStyle">~</label>
+                        <DateField
+                                dateFormat="YYYY-MM-DD"
+                                locale="zh-cn"
+                                forceValidDate={true}
+                                updateOnDateClick={true}
+                                //defaultValue={startDate}
+                                value={this.state.endDate}
+                                onChange={::this.handleChangeEnd}
+                                >
+                                <DatePicker
+                                    navigation={true}
+                                    locale="zh-cn"
+                                    forceValidDate={true}
+                                    highlightWeekends={true}
+                                    highlightToday={true}
+                                    weekNumbers={true}
+                                    weekStartDay={0}
+                                    footer={true}
+                                    />
+                        </DateField>
+                      </div>
+                      <div className="canshu" onClick={this.goConf.bind(this)}>参数设定</div>
+                      <div className="xinzeng" onClick={this.xinZeng.bind(this)}>新增结算单</div>
+
+                </div>}
+                {xinzeng&&<div className="query-condition">
+                      <div className="canshu" onClick={this.shengCheng.bind(this)}>生成结算单</div>
+                      <div className="xinzeng" onClick={this.fanHui.bind(this)}>返回</div>
+                </div>}
+                {chakan&&<div className="query-condition">
+                    <div className="canshu" onClick={this.daoChu.bind(this)}>导出</div>
+                  <div className="xinzeng" onClick={this.fanHui.bind(this)}>返回</div>
+                </div>}
+
             </div>
-            <div className="weixiu-table">
-              <div className="xinzeng-btn"><span onClick={this.onXingzeng.bind(this)} >新增结算单</span></div>
-              <MyTable thead={thead} tbody={tbody}/>
-              <div className="pages">
-              <Pager total={this.props.jiesuandanData.pageCount}
-                     gap={2}
-                     change={::this.changePager}
-                     current ={this.props.jiesuandanData.pageNo}
-                     fetching={false}
-               /></div>
-            </div>
-            {this.state.xinzeng &&
-              <div className="modal-xinzeng">
-                  <div className="query-condition">
-                      <label className="labStyle">开始日期</label>
-                          <DateField
-                              dateFormat="YYYY-MM-DD"
-                              locale="zh-cn"
-                              forceValidDate={true}
-                              updateOnDateClick={true}
-                              value={this.state.cbstartDate}
-                              onChange={::this.handleChangeStartcb}
-                              ref="cbstarttime"
-                              >
-                              <DatePicker
-                                  navigation={true}
-                                  locale="zh-cn"
-                                  forceValidDate={true}
-                                  highlightWeekends={true}
-                                  highlightToday={true}
-                                  weekNumbers={true}
-                                  weekStartDay={0}
-                                  footer={true}
-                                  />
-                          </DateField>
-                      <label className="labStyle">终止日期</label>
-                          <DateField
-                          dateFormat="YYYY-MM-DD"
-                          locale="zh-cn"
-                          forceValidDate={true}
-                          updateOnDateClick={true}
-                          value={this.state.cbendDate}
-                          onChange={::this.handleChangeEndcb}
-                          ref="cbendtime"
-                          >
-                          <DatePicker
-                              navigation={true}
-                              locale="zh-cn"
-                              forceValidDate={true}
-                              highlightWeekends={true}
-                              highlightToday={true}
-                              weekNumbers={true}
-                              weekStartDay={0}
-                              footer={true}
-                              />
-                      </DateField>
-                      <span className="commitBtn" onClick={this.onHandleSearchcb.bind(this)}>查询</span><span onClick={this.onXingzengN.bind(this)} className="commitBtn btn">返回</span>
-                  </div>
-                  <div className="gongdan-content">
-                    <div className="weixiu-table">
-                      <div className="table-title"></div>
-                      <div className="jiesuandan-con">
-                        <div className="ul_1 fix">
-                          <div className="items fix">
-                            <div className="div1"><label>电费单价(元/kW·h)：</label></div>
-                            <div className="div2"><input type="text" ref="electricPrice"/></div>
-                            <div className="div1"><label>分成比例(%)：</label></div>
-                            <div className="div2"><input type="text" ref="sharingRatio"/></div>
+              <div className="jiesuandan-body">
+                   {!xinzeng&&!chakan&&!queren&&
+                    <div className="jiesuandanlist">
+                      <MyTable thead={jiesuanthead} tbody={tbody}/>
+                      <div className="pages">
+                         <Pager total={jiesuanlist.pageCount}
+                                gap={5}
+                                change={::this.changePager}
+                                current ={pageNum}
+                                fetching={false}
+                          />
+                      </div>
+                    </div>}
+                    {chakan&&
+                      <div className="jiesuandanlist">
+                      <Table celled structured   size='large' className ="chakan-table" >
+                                <Table.Header className ="chakan-tablehead">
+                                  <Table.Row  className ="chakan-tablehead"textAlign='center' verticalAlign='middle'>
+                                    <Table.HeaderCell rowSpan='2'>序号</Table.HeaderCell>
+                                    <Table.HeaderCell rowSpan='2'>泵站名称</Table.HeaderCell>
+                                    <Table.HeaderCell rowSpan='2'>系统名称</Table.HeaderCell>
+                                    <Table.HeaderCell rowSpan='2'>节约能源种类</Table.HeaderCell>
+                                    <Table.HeaderCell colSpan='3'>运行时间</Table.HeaderCell>
+                                    <Table.HeaderCell colSpan='3'>电表</Table.HeaderCell>
+                                    <Table.HeaderCell colSpan='3'>水表</Table.HeaderCell>
+                                    <Table.HeaderCell rowSpan='2'>吨水能耗</Table.HeaderCell>
+                                    <Table.HeaderCell rowSpan='2'>基准吨水能耗</Table.HeaderCell>
+                                    <Table.HeaderCell rowSpan='2'>节能率</Table.HeaderCell>
+                                    <Table.HeaderCell rowSpan='2'>节能量</Table.HeaderCell>
+                                    <Table.HeaderCell rowSpan='2'>合同约定能源单价</Table.HeaderCell>
+                                    <Table.HeaderCell rowSpan='2'>调整后能源单价</Table.HeaderCell>
+                                    <Table.HeaderCell rowSpan='2'>节约金额</Table.HeaderCell>
+                                  </Table.Row>
+                                  <Table.Row  className ="chakan-tablehead" textAlign='center' verticalAlign='middle'>
+                                    <Table.HeaderCell>起时间</Table.HeaderCell>
+                                    <Table.HeaderCell>止时间</Table.HeaderCell>
+                                    <Table.HeaderCell>累计量</Table.HeaderCell>
+                                    <Table.HeaderCell>起码</Table.HeaderCell>
+                                    <Table.HeaderCell>止码</Table.HeaderCell>
+                                    <Table.HeaderCell>累计量</Table.HeaderCell>
+                                    <Table.HeaderCell>起码</Table.HeaderCell>
+                                    <Table.HeaderCell>止码</Table.HeaderCell>
+                                    <Table.HeaderCell>累计量</Table.HeaderCell>
+                                  </Table.Row>
+                                </Table.Header>
+                                {detailBody.map((item,i)=>(
+                                  <Table.Body className ="chakan-tablebody" key ={i} textAlign='center' verticalAlign='middle'>
+                                    {item.map((iitem,ii)=>(<Table.Cell key={ii} textAlign='center' verticalAlign='middle'>{iitem}</Table.Cell>))}
+                                  </Table.Body>
+                                ))}
+                                {reportBody.map((item,i)=>(
+                                  <Table.Body className ="chakan-tablebody" key ={i} textAlign='center' verticalAlign='middle'>
+                                    {item.map((iitem,ii)=>(ii==0?<Table.Cell colSpan='14' key={ii} textAlign='center' verticalAlign='middle'>{iitem}</Table.Cell>
+                                      :<Table.Cell  key={ii} textAlign='center' verticalAlign='middle'>{iitem}</Table.Cell>))}
+                                  </Table.Body>
+                                ))}
+                            </Table>
+                    </div>
+                    }
+                    {xinzeng&&
+                      <div className="jiesuandanlist">
+                      <Table celled structured   size='large' className ="chakan-table" >
+                                <Table.Header className ="chakan-tablehead">
+                                  <Table.Row  className ="chakan-tablehead"textAlign='center' verticalAlign='middle'>
+                                    <Table.HeaderCell rowSpan='2'>序号</Table.HeaderCell>
+                                    <Table.HeaderCell rowSpan='2'>系统名称</Table.HeaderCell>
+                                    <Table.HeaderCell colSpan='4'>起</Table.HeaderCell>
+                                    <Table.HeaderCell colSpan='4'>止</Table.HeaderCell>
+                                    <Table.HeaderCell rowSpan='2'>操作</Table.HeaderCell>
+
+                                  </Table.Row>
+                                  <Table.Row  className ="chakan-tablehead" textAlign='center' verticalAlign='middle'>
+                                    <Table.HeaderCell>抄表时间</Table.HeaderCell>
+                                    <Table.HeaderCell>电表合计</Table.HeaderCell>
+                                    <Table.HeaderCell>累时器合计</Table.HeaderCell>
+                                    <Table.HeaderCell>水表合计</Table.HeaderCell>
+                                    <Table.HeaderCell>抄表时间</Table.HeaderCell>
+                                    <Table.HeaderCell>电表合计</Table.HeaderCell>
+                                    <Table.HeaderCell>累时器合计</Table.HeaderCell>
+                                    <Table.HeaderCell>水表合计</Table.HeaderCell>
+                                  </Table.Row>
+                                </Table.Header>
+                                {newBody.map((item,i)=>(
+                                  <Table.Body className ="chakan-tablebody" key ={i} textAlign='center' verticalAlign='middle'>
+                                    {item.map((iitem,ii)=>(<Table.Cell key={ii} textAlign='center' verticalAlign='middle'>{iitem}</Table.Cell>))}
+                                  </Table.Body>
+                                ))}
+
+                            </Table>
+                    </div>
+                    }
+
+              </div>
+              <DropModal ref='setConfig'
+                  closeOnClick={true}
+                  className='globalModal'
+                  backdropStyle={{background: 'rgba(0, 0, 0, .61)'}}
+              >
+                  <div className="jiesuan-config">
+                    <h3>结算参数设定</h3>
+                  <div className="jiesuan-config-body">
+                      {
+                        // "unit": "元",————单位
+                        // "textName": "q_17",————页面文本框名称(保存时的参数名称)
+                        // "baseValue": 1,————值
+                        // "description": "合同约定能源单价"————名称
+                        jiesuandanconf.map((item,i)=>(
+                          <div key ={i} className="jiesuan-config-item" >
+                            <span className="desc">{item.description}</span>
+                          <input data-id={item.textName} defaultValue={item.baseValue} onChange={this.confChange.bind(this)}/>
+                            <span>{item.unit}</span>
                           </div>
-                        </div>
-                      </div>
-                      <MyTable thead={thead2} tbody={tbody2}/>
-                      <span className="content-botm-btn" onClick={this.onAddbill.bind(this)} >生成结算单</span>
+                        ))
+                      }
                     </div>
-                  </div>
-              </div>}
+                    <div className="jiesuan-config-footer">
+                      <div className="jiesuan-config-commit" onClick={this.confMod.bind(this)}>保存</div>
 
+                    </div>
 
-            {this.state.chakan &&
-              <div className="modal-xinzeng">
-                  <div className="title">
-                      <span onClick={this.onDayin.bind(this,billAPI.getexcel,this.billid)} className="btn">导出</span>
-                      <span onClick={this.onXingzengN.bind(this)} className="btn">返回</span>
                   </div>
-                  <div className="gongdan-content">
-                    <div className="table-title">{this.props.jiesuandanInfo.billStartDate}至{this.props.jiesuandanInfo.billEndDate}</div>
-                    <div className="ul_1 fix">
-                      <div className="items fix">
-                        <div className="div1"><label>结算单开始日期：</label></div>
-                        <div className="div1 div2">{this.props.jiesuandanInfo.billStartDate}</div>
-                        <div className="div1"><label>结算单截止日期：</label></div>
-                        <div className="div1 div2">{this.props.jiesuandanInfo.billEndDate}</div>
-                      </div>
-                      <div className="items fix">
-                        <div className="div1"><label>电费单价：</label></div>
-                        <div className="div1 div2">{this.props.jiesuandanInfo.electricPrice}(元/kW·h)</div>
-                        <div className="div1"><label>分成比例（乙方）：</label></div>
-                        <div className="div1 div2">{this.props.jiesuandanInfo.sharingRatio}%</div>
-                      </div>
-                      <div className="items fix">
-                        <div className="div1"><label>节约总金额：</label></div>
-                        <div className="div1 div2">{this.props.jiesuandanInfo.savingTotalAmount}（元）</div>
-                        <div className="div1"><label>分成总金额（乙方）：</label></div>
-                        <div className="div1 div2">{this.props.jiesuandanInfo.sharingAmount}元</div>
-                      </div>
-                      <div className="items fix">
-                        <div className="div1"><label>总节电量：</label></div>
-                        <div className="div1 div2">{this.props.jiesuandanInfo.savingTotalElectric}（kW·h）</div>
-                        <div className="div1"><label>平均节能率：</label></div>
-                        <div className="div1 div2">{this.props.jiesuandanInfo.averageSavingRate}%</div>
-                      </div>
-                    </div>
-                    <div className="weixiu-table">
-                      <MyTable thead={thead3} tbody={tbody3}/>
-                    </div>
-                  </div>
-              </div>}
+              </DropModal>
           </div>
         )
     }
-  changeMenu(event,object)
-  {
-    var selMenu = object.value;
-    //console.log(selMenu)
-  }
-  onDayin(url,query){
-    //window.open(url+'?billid='+query)
-    var element = document.createElement("a");
-    element.setAttribute("href", url+'?billid='+query);
-    element.style.display = "none";
-    document.body.appendChild(element);
-    element.click();
-    document.body.removeChild(element);
-  }
-  async onAddbill(){
-    var electricPrice = this.refs.electricPrice.value;//----电价
-    var sharingRatio = this.refs.sharingRatio.value;//----分成比例(乙方)
-    var reportIDs = [];//----抄表单主表ID集合如：[36,37,38,39,40,41,42,43,44]
-    var cbdlists = this.props.cbdlist.data;
-    cbdlists.forEach(item=>{
-      reportIDs.push(item.reportID);
-    });
-    const {addJiesuandanData} = this.props;
-    let pars={};
-    pars["electricPrice"]=electricPrice;
-    pars["sharingRatio"]=sharingRatio;
-    pars["reportIDs"]=reportIDs;
-    console.log(pars);
-    await addJiesuandanData(pars);
-    this.setState({xinzeng:false});
-    this.onHandleSearch();
-  }
-  changePager(value){
-    const {getBillData}  = this.props
-    let pars ={};
-    var starttime = this.refs.starttime.field.props.value;
-    var endtime = this.refs.endtime.field.props.value;
-    pars["startDate"]=starttime;
-    pars["endDate"]=endtime;
-    pars["pageNo"]=value;
-    pars["pageSize"]=10;
-    getBillData(pars);
-  }
-  //查询结算单
-  onHandleSearch(){
-    var starttime = this.refs.starttime.field.props.value;
-    var endtime = this.refs.endtime.field.props.value;
-    const {getBillData}  = this.props
-    let pars ={};
-    pars["startDate"]=starttime;
-    pars["endDate"]=endtime;
-    pars["pageSize"]=10;
-    getBillData(pars);
-  }
-  //查询抄表单
-  onHandleSearchcb(){
-    var starttime = this.state.cbstartDate;//this.refs.cbstarttime.field.props.value;
-    var endtime = this.state.cbendDte;//this.refs.cbendtime.field.props.value;
-    const {getChaobiaodanData}  = this.props
-    let pars ={};
-    pars["startEndDate"]=starttime;
-    pars["endEndDate"]=endtime;
-    pars["pageSize"]=100;
-    getChaobiaodanData(pars);
-  }
-  parseTbBody(data){
-    return data.map((item, i) => {
-      //[1,"2018年04月02日","2018-02-08至2018-03-08",<span style={{cursor:'pointer'}} onClick={this.onChakan.bind(this)}>查看</span>]
-      var status = <span style={{cursor:'pointer'}} onClick={this.onChakan.bind(this,item.billID)}>查看</span>;
-      return ([i+1,moment(item.createTime).format("YYYY-MM-DD"),item.billStartDate+"至"+item.billEndDate,status]);
-    })
-  }
-  parseTbBody2(data){
-    return data.map((item, i) => {
-      return ([i+1,item.createTime,item.reportStartDate+"至"+item.reportEndDate]);
-    })
-  }
-  parseTbBody3(data){
-    return data.map((item, i) => {
-      //[结算单元,用水总量（吨/立方米）,用电总量（kW·h）,吨水能耗基准值（kW·h/t）,节电量（kW·h）,节电率（%）,节电费（元）]
+    //新增
+    async xinZeng(){
+        const {getJieSuanDanNew} = this.props
+        await getJieSuanDanNew()
+        this.setState({xinzeng:true})
+    }
+    //生成结算单
+    async shengCheng(){
+      const {getJieSuanDanGen,getJieSuanDanInfo} = this.props
+      const {jiesuandannew} = this.state
+      let params = jiesuandannew.map(item=>(_.pick(item,['startId','endId'])))
+      await getJieSuanDanGen({json:params})
+      const {jiesuandangen} = this.props
+      if(jiesuandangen!=''){
+        await  getJieSuanDanInfo(jiesuandangen)
+        this.setState({chakan:true,xinzeng:false})
+      }
+    }
 
-      return ([item.stationGroupName,item.waterUsage,item.electricUsage,item.baseValue,item.savingElectric,item.savingRate,item.savingAmount]);
-    })
+    fanHui(){
+      this.setState({xinzeng:false,chakan:false,queren:false})
+    }
+    goBack(){
+      this.setState({queren:false})
+    }
+
+    async goConf(){
+      const {getJieSuanDanConf,REQUESTE_JIESUANDANCONF} = this.props
+      await getJieSuanDanConf()
+      if(REQUESTE_JIESUANDANCONF=='done')
+        {this.refs.setConfig && this.refs.setConfig.show()}
+    }
+    //修改配置参数
+    confChange(ev){
+      let {jiesuanconfmod} = this.state
+      jiesuanconfmod[ev.target.dataset.id] =ev.target.value
+      this.setState({jiesuanconfmod:jiesuanconfmod})
+
+
+    }
+    //触发修改参数
+    async confMod(){
+      let {jiesuanconfmod} = this.state
+      const {getJieSuanDanConfMod,REQUESTE_JIESUANDANCONFMOD} = this.props
+      await getJieSuanDanConfMod(jiesuanconfmod)
+      if(REQUESTE_JIESUANDANCONFMOD=='done')
+        {this.refs.setConfig && this.refs.setConfig.hide()}
+    }
+    //
+    async  xinChaobiao(){
+      const {bengzhanid,bengzu,dianbiaos,hours,waters,addDate,startDate,endDate,pageNum} = this.state
+
+      const {postChaoBiaoDanNew} = this.props
+      // {"readingDate":"2018-01-01",————抄表日期
+      // "pumpgroupid":9,————泵组ID
+      // "DBDS_101#_00001":100.36,————DBDS_101#_00001输入框名称
+      // "LSQXSS_101#_00002":23.12,
+      // "DBDS_102#_00001":120.36,
+      // "LSQXSS_102#_00002":145.32,
+      // "DBDS_103#_00001":125.31,
+      // "LSQXSS_103#_00002":65.32,
+      // "DBDS_104#_00001":321.02,
+      // "LSQXSS_104#_00002":153.23,
+      // "SBS_100000_00003":542.32
+      // }
+      let params = {readingDate:addDate.format('YYYY-MM-DD'),pumpgroupid:bengzu,...dianbiaos,...hours,...waters}
+      await postChaoBiaoDanNew(params)
+      await this.getAllChaoBiaoDanList(startDate,endDate,pageNum)
+      this.setState({xinzeng:false,chakan:false})
+
+
+    }
+    //导出
+    daoChu(){
+      const {getJieSuanDanDaoChu} = this.props
+      const {jiesuanuuid} = this.state
+      getJieSuanDanDaoChu(jiesuanuuid)
+    }
+
+  //分页
+  changePager(value){
+    const {startDate,endDate} = this.state
+    this.setState({pageNum:value})
+    this.getAllJieSuanDanList(startDate,endDate,value)
+
   }
-  onXingzeng(){
-    this.setState({xinzeng:true});
-    setTimeout(this.onHandleSearchcb(), 1000);
-  }
-  onXingzengN(){
-    this.setState({xinzeng:false,chakan:false})
-  }
-  onChakan(id){
-    this.billid = id;
-    const {getBillInfoData}  = this.props
-    let pars ={};
-    pars["billid"]=id;
-    getBillInfoData(pars);
-    this.setState({chakan:true})
-  }
-  handleChange = (e, { value }) => this.setState({ value })
-  handleChangeInput(ev){
-      this.setState({"deviceFilter":ev.target.value})
-  }
+
+
   handleChangeStart(dateString, { dateMoment, timestamp}){
     if(dateMoment.toDate().getTime()>moment().toDate().getTime()){
       this.setState({
@@ -344,6 +352,8 @@ class Jiesuandan extends Component {
         startDate: dateMoment
       });
     }
+    const {startDate,endDate,pageNum} = this.state
+    this.getAllJieSuanDanList(startDate,dateMoment,pageNum)
   }
   handleChangeEnd(dateString, { dateMoment, timestamp}){
     if(dateMoment.toDate().getTime()>moment().toDate().getTime()){
@@ -362,49 +372,248 @@ class Jiesuandan extends Component {
         endDate: dateMoment
       });
     }
+    const {startDate,endDate,pageNum} = this.state
+    this.getAllJieSuanDanList(startDate,dateMoment,pageNum)
   }
-  handleChangeStartcb(dateString, { dateMoment, timestamp}){
-    if(dateMoment.toDate().getTime()>moment().subtract(1,'d').toDate().getTime()){
-      this.setState({
-        cbstartDate:moment().subtract(1,'d')
-      });
-      return;
-    }
-    if(this.state.cbendDate.toDate().getTime()<dateMoment.toDate().getTime()){
-      this.setState({
-        cbendDate: dateMoment,
-        cbstartDate:this.state.cbendDate
-      });
-    }else{
-      this.setState({
-        cbstartDate: dateMoment
-      });
-    }
+
+  getAllJieSuanDanList(startT,endT,pageNo){
+    const {getJieSuanList}  = this.props
+    const {startDate,endDate,pageNum} = this.state
+
+    let pars ={};
+    if(startT)
+      pars["startChargeDate"]=startT.format('YYYY-MM-DD');
+    else
+      pars["startChargeDate"]=startDate.format('YYYY-MM-DD');
+    if(endT)
+      pars["endChargeDate"]=endT.format('YYYY-MM-DD');
+    else
+      pars["endChargeDate"]=endDate.format('YYYY-MM-DD');
+    if(pageNo)
+      pars["pageNo"]=pageNo;
+    else
+      pars["pageNo"]=pageNum;
+
+
+    //     {"hasCharge":"FALSE",————是否结算, 是：TRUE,否：FALSE
+    // "startReadingDate":"2018-01-01",————结算开始时间
+    // "endReadingDate":"2018-07-01",————结算结束时间
+    // "stationID":1,————泵站ID
+    // "groupID":"9",————泵组ID
+    // "pageNo":1,————页码
+    // "pageSize":20————每页条数
+    // }
+    getJieSuanList(pars);
   }
-  handleChangeEndcb(dateString, { dateMoment, timestamp}){
-    if(dateMoment.toDate().getTime()>moment().subtract(1,'d').toDate().getTime()){
-      this.setState({
-        cbendDate:moment().subtract(1,'d')
-      });
-      return;
-    }
-    if(this.state.cbstartDate.toDate().getTime()>dateMoment.toDate().getTime()){
-      this.setState({
-        cbstartDate: dateMoment,
-        cbendDate:this.state.cbstartDate
-      });
+
+
+
+
+
+  async onChakan(uuid){
+
+    const {getJieSuanDanInfo} = this.props
+    await getJieSuanDanInfo(uuid)
+    const {REQUESTE_JIESUANDANINFO} = this.props
+    if(REQUESTE_JIESUANDANINFO=='done'){
+      this.setState({chakan:true,jiesuanuuid:uuid})
+
     }else{
-      this.setState({
-        cbendDate: dateMoment
-      });
+      alert('请求数据失败！稍后尝试')
     }
   }
 
-  componentWillReceiveProps(nextprops){}
+
+  componentWillReceiveProps(nextprops){
+    this.setState({jiesuandannew:nextprops.jiesuandannew})
+  }
   componentDidMount() {
-    this.onHandleSearch();
+    const {startDate,endDate,pageNum} = this.state
+
+    this.getAllJieSuanDanList(startDate,endDate,pageNum)
+
   }
   componentWillUnmount() {}
+  parseTbBody(data){
+    // {
+    //             "saveMoney": 1000,
+    //             "energySaving": 1000,
+    //             "chargeDate": "2018-07-26",
+    //             "uuid": "223ab5c94672433b99ae6cc82e4d9bf8",
+    //             "energySavingRate": 0.2
+    //         }
+    return data.map((item, i) => {
+      var status = <span className='jiesuan_table_chakan' onClick={this.onChakan.bind(this,item.uuid)}>查看</span>;
+      return ([i+1,item.chargeDate,item.energySavingRate*100,item.energySaving,
+              item.saveMoney,status]);
+    })
+  }
+
+
+  parseTbDetailBody(data){
+    // {
+    //             "endElectrics": 12020,
+    //             "energyConsumption": 4,
+    //             "endWaters": 2000,
+    //             "endHours": 12016,
+    //             "startElectrics": 8020,
+    //             "agreedPrice": 1,
+    //             "energySaving": 1000,
+    //             "baseEnergyConsumption": 5,
+    //             "energyTypes": "电能",
+    //             "adjustedPrice": 1,
+    //             "groupName": "1组",
+    //             "startWaters": 1000,
+    //             "runWaters": 1000,
+    //             "runElectrics": 4000,
+    //             "startHours": 8016,
+    //             "runHours": 4000,
+    //             "saveMoney": 1000,
+    //             "stationName": "28泵站",
+    //             "energySavingRate": 0.2
+    //         }
+    return data.map((item, i) => {
+      return ([i+1,item.stationName,item.groupName,item.energyTypes,
+              item.startHours,item.endHours,item.runHours,
+              item.startElectrics,item.endElectrics,item.runElectrics,
+              item.startWaters,item.endWaters,item.runWaters,
+              item.energyConsumption,item.baseEnergyConsumption,item.energySavingRate,
+              item.energySaving,item.agreedPrice,item.adjustedPrice,item.saveMoney
+
+              ]);
+    })
+  }
+
+    parseTbReportBody(item){
+      // "chargeReport": {
+      //       "saveMoney": 1000,————合计节约金额
+      //       "energySaving": 1000,————合计节电量
+      //       "proportions": 80,————分成比例
+      //       "shareAmount": 800,————合计分享金额
+      //       "energySavingRate": 0.2————合计节能率
+      //   },
+        if(item.hasOwnProperty('saveMoney')){
+          let shareAmount = `应付节能服务公司金额 = （${item.proportions}）×（${item.saveMoney}） =   ${item.shareAmount}   元`
+          return [[shareAmount,'合计',item.energySavingRate,
+            item.energySaving,'-','-',item.saveMoney]]
+        }else
+          return []
+
+    }
+
+    parseTbNewBody(data){
+      // {
+      //      "endReadingDate": "2018-01-02",————止抄表日期
+      //      "endTotalElectric": 8016,————止电表合计
+      //      "endTotalHour": 8020,————止累时器合计
+      //      "endId": 8,————止抄表单ID
+      //      "startTotalHour": 12016,————起累时器合计
+      //      "startId": 7,————起抄表单ID
+      //      "startTotalElectric": 12020,————起电表合计
+      //      "endTotalWater": 1000,————止水表合计
+      //      "name": "28泵站1组",————泵组名称
+      //      "startReadingDate": "2018-05-01",————起抄表日期
+      //      "startTotalWater": 2000————起水表合计
+      //  }
+      const {jiesuanmodnum,jiesuannewpars} = this.state
+      const {jiesuandanmod} = this.props
+      return data.map((item, i) => {
+        var status = jiesuanmodnum==i?
+                    <div className='jiesuan_table_opt'>
+                       <span className='jiesuan_table_opt_i' onClick={this.confirmJieSuanDanNew.bind(this)}>确定</span>
+                       <span className='jiesuan_table_opt_i' onClick={this.cancelJieSuanDanNew.bind(this)}>取消</span>
+                    </div>
+                    :
+                    <div className='jiesuan_table_opt'>
+                        <span className='jiesuan_table_opt_i' onClick={this.modJieSuanDanNew.bind(this,item.startId,i)}>修改</span>
+                        <span className='jiesuan_table_opt_i' onClick={this.delJieSuanDanNew.bind(this,i)}>删除</span>
+                    </div>
+        var startReadingDate = jiesuanmodnum==i?
+                              <div className='jiesuan_table_dropdown'>
+                                <Dropdown
+                                  className="jiesuan_table_dropdown"
+                                   value = {item.startReadingDate}
+                                   selection
+                                   openOnFocus
+                                   options={_.keys(jiesuandanmod.startReadingDate).map((item,i)=>({key:i,text:item,value:item}))}
+                                   onChange = {this.jieduandanStart.bind(this)}
+                                 />
+                              </div>
+                              :
+                              item.startReadingDate
+        let endReadingDate = jiesuanmodnum==i?
+                              <div className='jiesuan_table_dropdown'>
+                                <Dropdown
+                                  className="jiesuan_table_dropdown"
+                                   value = {item.endReadingDate}
+                                   selection
+                                   openOnFocus
+                                   options={_.keys(jiesuandanmod.endReadingDate).map((item,i)=>({key:i,text:item,value:item}))}
+                                   onChange = {this.jieduandanEnd.bind(this)}
+                                 />
+                              </div>
+                              :
+                              item.endReadingDate
+
+
+        return ([i+1,item.name,startReadingDate,
+                item.startTotalElectric,item.startTotalHour,item.startTotalWater,
+                endReadingDate,item.endTotalElectric,item.endTotalHour,item.endTotalWater,status
+                ]);
+      })
+
+    }
+
+    async modJieSuanDanNew(id,num){
+      const {getJieSuanDanMod} = this.props
+      await getJieSuanDanMod(id)
+      const {REQUESTE_JIESUANDANMOD} = this.props
+      if(REQUESTE_JIESUANDANMOD=='done')
+        this.setState({jiesuanmodnum:num})
+      else
+        alert('操作失败，请稍后再试！')
+
+    }
+    delJieSuanDanNew(num){
+      let {jiesuandannew} = this.state
+      jiesuandannew.pop(num,1)
+      this.setState({jiesuandannew:jiesuandannew})
+    }
+    confirmJieSuanDanNew(id,num){
+      this.setState({jiesuanmodnum:-9999})
+    }
+    cancelJieSuanDanNew(num){
+      this.setState({jiesuanmodnum:-9999})
+    }
+    jieduandanStart(e,{value}){
+      let {jiesuandanmod} = this.props
+      let {jiesuandannew,jiesuanmodnum} = this.state
+      let modPar = jiesuandanmod.startReadingDate[value]
+      for(let prop in modPar){
+        jiesuandannew[jiesuanmodnum][prop] = modPar[prop]
+      }
+      jiesuandannew[jiesuanmodnum]['startReadingDate'] = value
+      this.setState({jiesuandannew:jiesuandannew})
+    }
+
+    jieduandanEnd(e,{value}){
+      let {jiesuandanmod} = this.props
+      let {jiesuandannew,jiesuanmodnum} = this.state
+      let modPar = jiesuandanmod.endReadingDate[value]
+      for(let prop in modPar){
+        jiesuandannew[jiesuanmodnum][prop] = modPar[prop]
+      }
+      jiesuandannew[jiesuanmodnum]['endReadingDate'] = value
+      this.setState({jiesuandannew:jiesuandannew})
+    }
+
+
+
+
+
+
+
+
 
 
 }
