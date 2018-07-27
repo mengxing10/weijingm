@@ -93,7 +93,7 @@ class Weixiuweihu extends Component {
 
 
               </div>
-              <div className="right-content">
+              <div className="right-content tposition">
 
                   {this.props.children}
               </div>

@@ -31,7 +31,10 @@ RECEIVECOMPLETEJOB,
    REQUESTYEARMONTH,
    RECEIVEYEARMONTH,
    REQUESTREPORTNOW,
-   RECEIVEREPORTNOW
+   RECEIVEREPORTNOW,
+   //评价工单
+   REQUESTREVIEW,
+   RECEIVEREVIEW,
 
 } from './constants/actionTypes'
 
@@ -353,7 +356,21 @@ export default function reducer(state = initialState, action) {
                 }
             )
           }
-
+        case REQUESTREVIEW:
+        {
+          return Object.assign({}, state, {fetchbaobiao: 'start'});
+        }
+        case RECEIVEREVIEW:
+        {
+          return Object.assign(
+              {},
+              state,
+              {
+                ...action.data,
+                fetchbaobiao: action.data.errmsg?'start':'done'
+              }
+          )
+        }
 
 
 

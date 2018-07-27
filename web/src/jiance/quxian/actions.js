@@ -78,7 +78,7 @@ export function getDatatypes(params) {
         try {
             let datatypes = await axios.post(selectTableDataCondition, params)
             let datas = datatypes.data.result.map(item=>({id:item.xuhao,key:item.pointid,name:item.pointtext}))
-            debugger
+            
             datas = _.orderBy(datas, ['id'], ['asc']);
             let res ={datatypes:{data:datas}}
             dispatch(receive(RECEIVEDATATYPES, res));
@@ -104,7 +104,7 @@ export function getCurves(params) {
 
         try {
           let datatype = params.aggregateAndPointIds[0].split('#')[1]
-          debugger
+          
             let data = await axios.post(chartData, params);
             let curves= {datatype:datatype,col:{time:data.data.dateList,value:data.data.result[params.aggregateAndPointIds[0]]}}
             let res ={curves:curves,datatype:datatype}

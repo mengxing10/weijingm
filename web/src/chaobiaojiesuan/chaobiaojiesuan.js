@@ -13,7 +13,7 @@ class Chaobiaojiesuan extends Component {
       constructor(props) {
           super(props);
            this.typeId = "gongdan";
-           this.state = {typeId:"chaobiao",nameId:'cb'} ;
+           this.state = {typeId:"chaobiao",nameId:'cbd'} ;
       }
       render() {
           const {query} = this.props.location
@@ -21,8 +21,8 @@ class Chaobiaojiesuan extends Component {
            typeId = location.pathname.split('/')[4]
            nameId = location.search.split('=')[1]
            //chaobiao?project=cb
-           if( typeof typeId ==  'undefined')   typeId =  'chaobiao';
-          if( typeof nameId ==  'undefined')   nameId =  'cb';
+           if( typeof typeId ==  'undefined')   typeId =  'chaobiaodan';
+          if( typeof nameId ==  'undefined')   nameId =  'cbd';
 
           //http://localhost:8089/bgp/pc/chaobiaojiesuan/chaobiao?project=cb
 
@@ -30,9 +30,7 @@ class Chaobiaojiesuan extends Component {
             <div className="per-content theBody">
 
               <div className="charts-menu-list2">
-                <div className ={classNames("charts-menu-item",{active:nameId=='cb'})} onClick={this.selectName.bind(this,'cb','chaobiao')}>
-                    <span>抄表</span>
-                </div>
+
                 <div className ={classNames("charts-menu-item",{active:nameId=='cbd'})} onClick={this.selectName.bind(this,'cbd','chaobiaodan')}>
                     <span>抄表单</span>
                 </div>
@@ -40,7 +38,7 @@ class Chaobiaojiesuan extends Component {
                     <span>结算单</span>
                 </div>
               </div>
-              <div className="right-content">
+              <div className="right-content tposition">
                   {this.props.children}
               </div>
             </div>

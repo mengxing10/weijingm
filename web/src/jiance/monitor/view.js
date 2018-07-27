@@ -138,7 +138,7 @@ class Monitor extends Component {
     let {svgMenu,funMenu} = this.state;
     let hang = Math.floor(num/4)*4
     let bzNum = num%4
-    debugger
+    
     if(hang>0){
       let svgM1 =svgMenu.slice(0,hang+1)
       let svgM2 =svgMenu.slice(hang,svgMenu.length-1)

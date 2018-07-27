@@ -59,7 +59,6 @@ import {reducer as gongdan} from './weixiuweihu/gongdan';
 import {reducer as baoxiuwh} from './weixiuweihu/baoxiu';
 import {reducer as jibenxinxi} from './weixiuweihu/jibenxinxi'
 
-import {reducer as chaobiao} from './chaobiaojiesuan/chaobiao'
 import {reducer as chaobiaodan} from './chaobiaojiesuan/chaobiaodan'
 import {reducer as jiesuandan} from './chaobiaojiesuan/jiesuandan'
 
@@ -73,7 +72,7 @@ export default combineReducers({
     //消息
     xiaoxi,
 
-  
+
     //分析
     bengzhan,
     shuibeng,
@@ -109,7 +108,6 @@ export default combineReducers({
     baoxiuwh,
 
     jibenxinxi,
-    chaobiao,
     chaobiaodan,
     jiesuandan,
 

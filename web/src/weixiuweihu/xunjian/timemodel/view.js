@@ -64,10 +64,10 @@ class Timemodel extends Component {
                     [2,"模板二","2018-3-5",<span><i onClick={this.onChakan.bind(this)}>查看</i><i>修改</i></span>],
                     [3,"","",""]
                   ]
-
+        const BodyStyle={height: document.documentElement.clientHeight-130  +'px'};
         return (
-          <div className="timemodel tab-xunjian">
-            <div className="weixiu-table">
+          <div className="tab-xunjian" style={BodyStyle} >
+            <div className="weixiu-table timemodel">
               <div className="xinzeng-btn"><span onClick={this.onXinzeng.bind(this)}>新增</span></div>
               <MyTable thead={thead} tbody={tbody}/>
               <div className="pages">

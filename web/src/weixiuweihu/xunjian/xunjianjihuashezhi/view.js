@@ -116,8 +116,9 @@ class Xunjianjihuashezhi extends Component {
         //           ]
         const bengzhan = this.state.bengzhan;
         const timemodelName = this.state.timemodelName;
+        const BodyStyle={height: document.documentElement.clientHeight-130  +'px'};
         return (
-          <div className="timemodel tab-xunjian">
+          <div className="timemodel tab-xunjian" style={BodyStyle} >
             <div className="query-condition">
               <span className="query-name labStyle">泵站选择：</span>
                 <div className="query-value">

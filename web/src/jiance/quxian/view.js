@@ -475,7 +475,7 @@ class Quxian extends Component {
       const{curveslist} = this.props
       let typemap={}
       this.props.datatypes.data.forEach(item=>(typemap[item["key"]]=item.name));
-      debugger
+
       let myhead=curveslist.map(item=>typemap[item.datatype])
       let mytime =curveslist[0]?curveslist[0].col.time:[]
       let mydata= curveslist.map(item=>(item.col.value))
@@ -485,7 +485,7 @@ class Quxian extends Component {
       thead=thead.concat(myhead)
       let mthead=thead.join()+'\n'
       let arraybody = this.parseTbBodyAll(mybody)
-      debugger
+
 
       return mthead+arraybody
     }

@@ -114,7 +114,7 @@ class Jibenxinxi extends Component {
     // 不同的item 调不同的components 展示完成后[销毁]
     // 公共的弹层组件 内容不同
     render() {
-      debugger
+      
 
         var othis = this;
         var {  devicecountData,layoutData,deviceByTypeData,devicetypeData,deviceInfoData}  =this.props;
@@ -122,7 +122,7 @@ class Jibenxinxi extends Component {
 
         //管理层级
         var layoutDataOptions =[ { key: -1, text: '请选择', value: -1 }];
-        //debugger
+        //
         if(layoutData&&layoutData.resultCode==0)
         {
 
@@ -530,7 +530,7 @@ class Jibenxinxi extends Component {
  {item*3<deviceInfoData.data.length&&<div>
 
    <div className="div1"><label>{ deviceInfoData.data[item*3].attributeKey}</label>: </div>
-   <div className="div1 div1_tl">{ deviceInfoData.data[item*3].attributeValue }{ deviceInfoData.data[item*3].attributeUnit}</div>
+   <div className="div1 div2 div1_tl">{ deviceInfoData.data[item*3].attributeValue }{ deviceInfoData.data[item*3].attributeUnit}</div>
   </div>
  }
 

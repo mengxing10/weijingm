@@ -108,7 +108,7 @@ class Baoxiu extends Component {
 
    checkResult(res,t)
    {
-     // debugger;
+     // ;
 
      if(res.resultCode==0)
       {
@@ -352,7 +352,7 @@ class Baoxiu extends Component {
       // ]
        const BodyStyle={height: document.documentElement.clientHeight-80  +'px'}
         return (
-          <div className="table-baoxiu" style={BodyStyle}>
+          <div className="table-sbbaoxiu" style={BodyStyle}>
             <h3 className="weixiu-title labStyle">{title}</h3>
             <div className="query-condition">
                 <span className="query-name labStyle">泵站选择</span>

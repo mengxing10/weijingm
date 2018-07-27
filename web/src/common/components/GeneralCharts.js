@@ -90,7 +90,7 @@ export default {
             //  },
 
    var yAxisObjs =[];
-   for(var i=0;i<2;i++)
+   for(var i=0;i<option.yAxis.name.length;i++)
     {
       var  splitShow= true;
       if(i==1) splitShow= false;
@@ -128,10 +128,63 @@ export default {
 
       }
     var theyAxis =  yAxisObjs[0];
-    if(option.yAxis.name.length==2)
+    if(option.yAxis.name.length>=2)
           theyAxis = yAxisObjs;
 
+    //处理xAxis:beg
+    var xAxisObjs =[],xAxisArr = [];
+    var xAxisIsArr = option.xAxis instanceof Array 
+    if(xAxisIsArr)  xAxisArr = option.xAxis;
+    else  xAxisArr.push(option.xAxis);
 
+    for(var i=0;i<xAxisArr.length;i++)
+    {
+      var  splitShow= true,iRotate=0;
+      if(i==1) {splitShow= false;iRotate=18}
+      var xAxisObj = {
+            type: 'category',
+            //data: option.xAxis.data,
+            name: xAxisArr[i].name,//option.xAxis.name,
+            nameTextStyle: {
+              color: axisColor
+            },
+            axisLine: {
+              lineStyle: {
+                show: true,
+                color: axisColor
+              }
+            },
+            axisTick: {
+              show: splitShow,
+              alignWithLabel: true
+            },
+            splitLine: {
+                    show:false},
+            axisLabel: {
+              interval: 'auto', //0:强调显示所有刻度值, 'auto':自动显示刻度值，n(1,2...)：表示隔几标签显示一个标签
+              rotate:iRotate,
+              fontSize: 10
+
+            }
+         };
+
+        //xAxisObj.type = 'category';
+        if( 'undefined' != typeof(xAxisArr[i].type ))
+              xAxisObj.type = xAxisArr[i].type;
+
+        if( 'undefined' != typeof(xAxisArr[i].data ))
+              xAxisObj.data = xAxisArr[i].data;     
+
+        xAxisObjs.push(xAxisObj);
+
+      }
+    var thexAxis =  xAxisObjs[0];
+    if( xAxisIsArr )
+          thexAxis = xAxisObjs;
+
+    //处理xAxis:end
+    
+    
     var theLegenddata = [];
     var theSeries = [];
     //formatter: '{b0}' + option.xAxis.name + '<br/>{a0}: {c0} ' + '<br />{a1}: {c1} ' + '<br />{a2}: {c2} '+'<br />{a3}: {c3}'
@@ -237,14 +290,19 @@ export default {
                 itemStyle:{ normal: {color:scatterColors[k]}},  //'#73eecc'
                 data: option.series.scatters[k].data,
                 type: 'scatter',
+                tooltip:{formatter: '{a}:{c0}'},
                 markArea: iMarkArea
              }
 
-
+        if('undefined'!= option.series.scatters[k].xAxisIndex)
+              iSeries.xAxisIndex =  option.series.scatters[k].xAxisIndex;
         theSeries.push(iSeries);
 
-
     }
+
+  var  iTrigger = 'axis'; 
+  if ('undefined' != typeof(option.tooltip) && 'undefined' != typeof(option.tooltip.trigger))
+        iTrigger = option.tooltip.trigger;
 
 
     return {
@@ -260,7 +318,6 @@ export default {
 
       },
       textStyle: {fontSize: 12},
-
       //color:['#2c8cf9','#f8910c','#84d5d8'], #FF6200
       color: lineColors,
       legend: {
@@ -283,7 +340,7 @@ export default {
       //   formatter: "{a} <br/>{b} : {c} ({d}%)"
       // },
       tooltip: {
-        trigger: 'axis',
+        trigger: iTrigger,//'axis',
         axisPointer: {
           type: 'shadow'
         },
@@ -299,30 +356,30 @@ export default {
         containLabel: true
       },
 
-      xAxis: {
-        type: 'category',
-        data: option.xAxis.data,
-        name: option.xAxis.name,
-        nameTextStyle: {
-          color: axisColor
-        },
-        axisLine: {
-          lineStyle: {
-            show: true,
-            color: axisColor
-          }
-        },
-        axisTick: {
-          show: true,
-          alignWithLabel: true
-        },
-        axisLabel: {
-          interval: 'auto', //0:强调显示所有刻度值, 'auto':自动显示刻度值，n(1,2...)：表示隔几标签显示一个标签
-          fontSize: 10
+      // xAxis: {
+      //   type: 'category',
+      //   data: option.xAxis.data,
+      //   name: option.xAxis.name,
+      //   nameTextStyle: {
+      //     color: axisColor
+      //   },
+      //   axisLine: {
+      //     lineStyle: {
+      //       show: true,
+      //       color: axisColor
+      //     }
+      //   },
+      //   axisTick: {
+      //     show: true,
+      //     alignWithLabel: true
+      //   },
+      //   axisLabel: {
+      //     interval: 'auto', //0:强调显示所有刻度值, 'auto':自动显示刻度值，n(1,2...)：表示隔几标签显示一个标签
+      //     fontSize: 10
 
-        }
-      },
-
+      //   }
+      // },
+      xAxis:thexAxis,
       yAxis:theyAxis,
       series:theSeries
     }

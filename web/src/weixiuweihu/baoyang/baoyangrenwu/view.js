@@ -187,18 +187,18 @@ class BaoyangRenwu extends Component {
       }
 
       //项目名称5.1
-      var companyOptions =[];
-      if(companyData&&companyData.resultCode==0)
-      {
-        for(var i=0;i<companyData.data.length;i++)
-        {
-          var newOpt = {};
-          newOpt.key = companyData.data[i].projectID;
-          newOpt.value = companyData.data[i].projectID;
-          newOpt.text = companyData.data[i].projectName;
-          companyOptions.push(newOpt );
-        }
-      }
+      // var companyOptions =[];
+      // if(companyData&&companyData.resultCode==0)
+      // {
+      //   for(var i=0;i<companyData.data.length;i++)
+      //   {
+      //     var newOpt = {};
+      //     newOpt.key = companyData.data[i].projectID;
+      //     newOpt.value = companyData.data[i].projectID;
+      //     newOpt.text = companyData.data[i].projectName;
+      //     companyOptions.push(newOpt );
+      //   }
+      // }
 
       //工单紧急程度:
       var workOrderLevelOptions=[{key: 1,value:1,text: "一般"},{key: 2,value:2,text: "紧急"}];
@@ -207,7 +207,8 @@ class BaoyangRenwu extends Component {
       {
         for(var i=0;i<workOrderStatusData.data.length;i++)
         {
-          if(workOrderStatusData.data[i].statusID>=2){
+          //if(workOrderStatusData.data[i].statusID>=2)
+          {
             var newOpt = {};
             newOpt.key = workOrderStatusData.data[i].statusID;
             newOpt.value = workOrderStatusData.data[i].statusID;
@@ -287,9 +288,10 @@ class BaoyangRenwu extends Component {
           tbody.push(arr);
         }
       }
+      const BodyStyle={height: document.documentElement.clientHeight-130  +'px'}
 
         return (
-          <div className="table-baoxiu">
+          <div className="table-baoyangrenwu" style={BodyStyle}>
            {/*<h3 className="weixiu-title labStyle">{title}</h3>  */}
             <h3>&nbsp;</h3>
             <div className="query-condition">
@@ -378,6 +380,7 @@ class BaoyangRenwu extends Component {
                   <div className="gongdan-content">
                     <div className="ul_1 ul_1b fix">
                       <div className="items fix">
+                       {/*
                         <div className="div1"><label><i className="xing">*</i>项目名称：</label></div>
                         <div className="div2">
                                 <div className="query-value">
@@ -388,7 +391,7 @@ class BaoyangRenwu extends Component {
                                                /></div>
 
 
-                        </div>
+                        </div>*/}
 
                         <div className="div1"><label><i className="xing">*</i>设备名称：</label></div>
                         <div className="div2"><div className="query-value">
@@ -1386,7 +1389,7 @@ class BaoyangRenwu extends Component {
 handleChangeDeviceType(deviceTypeObj,ev,obj)
 {
 
-     //debugger;
+     //;
     var iObj =   {deviceTypeID:deviceTypeObj.deviceTypeID,deviceTypeName:deviceTypeObj.deviceTypeName, quantity:obj.value   } ;
     this.state.workOrderDeviceTypesMap[deviceTypeObj.deviceTypeID] =iObj;
      console.log(iObj);

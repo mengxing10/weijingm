@@ -28,13 +28,13 @@
 
 //`http://192.168.10.105:8080/btplatform/`;
 //export const apiServerBase =  `http://192.168.30.129/`;
-
- export const apiServer = `http://39.106.150.90:8080/btplatform/`; 
-
-
-export const reportAPI ={
-
-
+ //export const apiServer = `http://39.106.150.90:8080/btplatform/`; 
+ 
+ //7.18 开开拆分接口
+    export const apiServer = `http://39.106.150.90:8080/baogang-workorder/`; 
+ // export const apiServer = `http://192.168.30.233:8081/baogang-workorder/`; 
+    export const reportAPI ={
+ 
 
     //月报表:
     monthReport:`${apiServer}report/reportHistory`,
@@ -68,6 +68,7 @@ export const reportAPI ={
      getworkorderfull:`${apiServer}workorder/getfullbyid`,   //6.7  获取完整工单信息
      acceptworkorder:`${apiServer}workorder/accept`,   //6.9  办理领取
      completejob:`${apiServer}workorder/completejob`,   //6.10  反馈工单，完工
+     review:`${apiServer}workorder/review`,//6.11 评价工单
      getalllist:`${apiServer}workorder/getlistbylayoutcratetimetype`,//6.12 获取所有工单
 
 

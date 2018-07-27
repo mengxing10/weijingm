@@ -121,7 +121,7 @@ class Jibenxinxi extends Component {
 
         //管理层级
         var layoutDataOptions =[ { key: -1, text: '请选择', value: -1 }];
-        debugger
+        
         if(layoutData&&layoutData.resultCode==0)
         {
 

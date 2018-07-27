@@ -498,7 +498,7 @@ class GailanShuibeng extends Component {
    }
    componentWillReceiveProps(nextProps) {
     const {jiancedata}=this.state
-    debugger
+    
     let {pagename} = jiancedata
     if(pagename==nextProps.jiancedata.pagename){
     // if (nextProps.jiancestatus == 0 && nextProps.jiancemsg) {

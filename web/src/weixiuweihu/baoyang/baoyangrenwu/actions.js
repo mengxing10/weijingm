@@ -299,16 +299,14 @@ export function getWorkOrderStatus(params) {
              let staffData = await axios.get(reportAPI.getstaff);
 
 
-            let companyData = await axios.get(reportAPI.getprojectlist);
-
-
+            //let companyData = await axios.get(reportAPI.getprojectlist);
 
             //  let companyData = await axios.get(reportAPI.getCompany , params );
 
             // http://192.168.10.112:80/project/company/addcompany
-            // var p = {companyName: "2",companyPinyin: "2",address: "2",isValid: true};
+            // var p = {companyName: "2",companyPinyin: "2",address: "2",isValid: true};  companyData:companyData,
 
-            let res ={layoutData:layoutData,companyData:companyData,workOrderStatusData:workOrderStatusData,workOrderTypeData:workOrderTypeData,deviceTypeData:deviceTypeData,staffData:staffData}
+            let res ={layoutData:layoutData,workOrderStatusData:workOrderStatusData,workOrderTypeData:workOrderTypeData,deviceTypeData:deviceTypeData,staffData:staffData}
             dispatch(receive(RECEIVEWORKORDERSTATUS, res));
         }
 

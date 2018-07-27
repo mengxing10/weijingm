@@ -21,7 +21,7 @@ const initialState = {
 export default function reducer(state=initialState, action) {
   //消息
   switch (action.type) {
-      case "MQTTMESSAGE":
+       case "MQTTMESSAGE":
         {
           if(state.xiaoxis.length>=20){
             state.xiaoxis.pop()
@@ -35,6 +35,20 @@ export default function reducer(state=initialState, action) {
               state,
           )
         }
+        case 'REQUESTOLDXIAOXI':
+        {
+          return Object.assign({}, state, {fetcholdxiaoxi: 'start'});
+        }
+        case 'RECEIVEOLDXIAOXI':
+        {
+            state.xiaoxis=action.data.map(item=>(JSON.parse(item.messageText)))
+          return Object.assign(
+              {},
+              state,
+               {fetcholdxiaoxi: 'done'}
+          )
+        }
+
   }
   let pagename = action.type.split("_")[3]
     switch (pagename) {

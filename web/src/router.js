@@ -92,7 +92,6 @@ import {view as Jihua}  from './weixiuweihu/baoyang/jihua'
 
 
 import Chaobiaojiesuan from './chaobiaojiesuan/chaobiaojiesuan'
-import {view as Chaobiao} from './chaobiaojiesuan/chaobiao'
 import {view as Chaobiaodan} from './chaobiaojiesuan/chaobiaodan'
 import {view as Jiesuandan} from './chaobiaojiesuan/jiesuandan'
 
@@ -196,8 +195,7 @@ export default (
 
 
         <Route path="chaobiaojiesuan" component={Chaobiaojiesuan}>
-            <IndexRoute component={Chaobiao} />
-            <Route path="chaobiao" component={Chaobiao} />
+            <IndexRoute component={Chaobiaodan} />
             <Route path="chaobiaodan" component={Chaobiaodan} />
             <Route path="jiesuandan" component={Jiesuandan} />
         </Route>

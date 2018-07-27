@@ -167,12 +167,12 @@ class Jihua extends Component {
                     that.onChakan()
                 }
         }
-        const BodyStyle={height: document.documentElement.clientHeight-80  +'px'}
+        const BodyStyle={height: document.documentElement.clientHeight-130  +'px'}
 
 
 
         return (
-          <div className="table-baoxiu" style={BodyStyle}>
+          <div className="table-baoyangjihua" style={BodyStyle}>
           <h3>&nbsp;</h3>
             <div className="query-condition">
                 <span className="query-name labStyle">泵站选择</span>

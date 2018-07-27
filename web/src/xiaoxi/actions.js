@@ -6,6 +6,7 @@
 
 
  import mqtt from 'mqtt'
+ import axios from 'axios'
 
 
 let request = (type, params) => {return {type, params}}
@@ -30,6 +31,7 @@ export function mqttConnect(host,options) {
                 console.log(err)
                 dispatch(request("MQTTERROR", {status: 2, jiancemsg: err}));
             })
+
 
             mqttClient.on('message', function (topic, message) {
               // message is Buffer
@@ -68,6 +70,33 @@ export function mqttClose(mqttClient) {
             console.error('捕获到错误: ', err)
 
             dispatch(receive("MQTTCLOSE", {status: 2, errmsg: 'MQTT关闭失败'}))
+        }
+    }
+}
+
+
+/**
+ * 获取待办提醒数据
+ *
+ * @param {all} params
+ */
+export function getOldXiaoXi() {
+    let api = `http://39.106.150.90:8080/baogang-message/message/message/selectmessage`
+    let params = {
+              "messageTypeID":[2,3,4,5,6,7,8,9], 
+              "pageNo":1,
+              "pageSize":3 
+              }
+    return async dispatch => {
+        dispatch(request('REQUESTOLDXIAOXI', params))
+        try {
+          let oldxiaoxi =  await axios.post(api, params);
+          
+          dispatch(receive('RECEIVEOLDXIAOXI', oldxiaoxi.data.data));
+        }
+        catch (err) {
+          console.error('捕获到错误: ', err)
+          dispatch(receive('RECEIVEOLDXIAOXI', {status: 2, errmsg: '数据错误'}))
         }
     }
 }

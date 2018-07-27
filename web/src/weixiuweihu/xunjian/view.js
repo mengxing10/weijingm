@@ -45,7 +45,7 @@ class Xunjian extends Component {
 
 
         return (
-          <div className="table-baoxiu" style={BodyStyle}>
+          <div className="table-xunjian" style={BodyStyle}>
             <div className="right-menus">
               <div className ={classNames("mitem",{active:nameId=='xjjh'})} onClick={this.selectName.bind(this,'xunjianjh','xjjh')} >巡检计划</div>
               <div className ={classNames("mitem",{active:nameId=='xjjhsz'})} onClick={this.selectName.bind(this,'xunjianjhsz','xjjhsz')} >巡检计划设置</div>

@@ -31,7 +31,10 @@ import {
    REQUESTYEARMONTH,
    RECEIVEYEARMONTH,
    REQUESTREPORTNOW,
-   RECEIVEREPORTNOW
+   RECEIVEREPORTNOW,
+   //评价工单
+   REQUESTREVIEW,
+   RECEIVEREVIEW,
 
 
 } from './constants/actionTypes'
@@ -81,6 +84,33 @@ export function getWorkOrder(params) {
   }
 }
 
+/**
+ * 评价工单
+ *
+ * @param {all} params
+ */
+export function review(params,checkResult,t) {
+    return async dispatch => {
+        dispatch(request(REQUESTREVIEW, params))
+        try {
+          axios.post(reportAPI.review, params)
+          .then(function (res) {
+            console.log("验收工单返回：")
+            console.log(res);
+            let res1 = {acceptWorkorderData:res};
+            dispatch(receive(RECEIVEREVIEW, res1));
+            checkResult(res,t);
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+        }
+        catch (err) {
+          console.error('捕获到错误: ', err)
+          dispatch(receive(RECEIVEREVIEW, {status: 2, errmsg: '数据错误'}))
+        }
+    }
+}
 
 
 
@@ -299,16 +329,16 @@ export function getWorkOrderStatus(params) {
              let staffData = await axios.get(reportAPI.getstaff);
 
 
-            let companyData = await axios.get(reportAPI.getprojectlist);
+            //let companyData = await axios.get(reportAPI.getprojectlist);
 
 
 
             //  let companyData = await axios.get(reportAPI.getCompany , params );
-
+                    //companyData:companyData,
             // http://192.168.10.112:80/project/company/addcompany
             // var p = {companyName: "2",companyPinyin: "2",address: "2",isValid: true};
 
-            let res ={layoutData:layoutData,companyData:companyData,workOrderStatusData:workOrderStatusData,workOrderTypeData:workOrderTypeData,deviceTypeData:deviceTypeData,staffData:staffData}
+            let res ={layoutData:layoutData,workOrderStatusData:workOrderStatusData,workOrderTypeData:workOrderTypeData,deviceTypeData:deviceTypeData,staffData:staffData}
             dispatch(receive(RECEIVEWORKORDERSTATUS, res));
         }
 

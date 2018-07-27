@@ -4,7 +4,7 @@
  */
 export const apiServer = `http://39.106.150.90:8080/baogang-inspectionplan/`;
 
-export const apiServer2 = `http://39.106.150.90:8080/btplatform/`;
+export const apiServer2 = `http://39.106.150.90:8080/baogang-device/`;
 
 export const mapAPI ={
 

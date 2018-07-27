@@ -20,7 +20,7 @@ class Xiaoxi extends Component {
       render() { return (<div/>) }
 
       componentDidMount(){
-        let {mqttClient,mqttConnect,mqttClose} = this.props
+        let {mqttClient,mqttConnect,mqttClose,getOldXiaoXi} = this.props
         let options = {
             keepalive: 10,
             clientId: `admin_web_${Math.random()}`,
@@ -41,6 +41,8 @@ class Xiaoxi extends Component {
         }
         let host ='mqtt://118.190.88.23:61614'
         mqttConnect(host,options)
+        //从数据库获取之前消息
+        getOldXiaoXi();
         // mqttClient  = mqtt.connect('mqtt://118.190.88.23:61614',options)
         // mqttClient.on('connect', function () {
         //   console.log("mqtt connected!!!")

@@ -31,6 +31,20 @@ export default function reducer(state = initialState, action) {
                 state,
             )
           }
+          case 'REQUESTOLDXIAOXI':
+          {
+            return Object.assign({}, state, {fetcholdxiaoxi: 'start'});
+          }
+          case 'RECEIVEOLDXIAOXI':
+          {
+            state.xiaoxis=action.data.map(item=>(JSON.parse(item.messageText)))
+
+            return Object.assign(
+                {},
+                state,
+                 {fetcholdxiaoxi: 'done'}
+            )
+          }
 
 
         default:

@@ -41,11 +41,11 @@ class Xunjian extends Component {
        if( typeof typeId ==  'undefined')   typeId =  'xunjianjh';
 
       if( typeof nameId ==  'undefined')   nameId =  'byrw';
-      const BodyStyle={height: document.documentElement.clientHeight  +'px'}
+      const BodyStyle={height: document.documentElement.clientHeight-80  +'px'}
 
 
         return (
-          <div className="table-baoxiu" style={BodyStyle}>
+          <div className="table-baoyang" style={BodyStyle}>
             <div className="right-menus">
               <div className ={classNames("mitem",{active:nameId=='byrw'})} onClick={this.selectName.bind(this,'baoyangrenwu','byrw')} >保养任务</div>
               <div className ={classNames("mitem",{active:nameId=='byjh'})} onClick={this.selectName.bind(this,'jihua','byjh')} >保养计划</div>

@@ -1,29 +1,25 @@
 
 const initialState = {
   xiaoxis:[],
-  // jiancedata:{pagename:'jiance_zonglan',status:2,
-  //      //工艺达标率 累计运行时间  达标运行时间
-  //     d1:{data:[0,1,2],status:2},
-  //     //工艺达标率
-  //     d2:{data:[1,2,3,4,5,6,7,8,9,10],status:2},
-  //     //健康达标率
-  //     d3:{data:[1,2,3,4,5,6,7,8,9,10],status:2},
-  //     //吨水能耗
-  //     d4:{data:[0,1,2],status:2},
-  //     //吨水能耗达标率
-  //     d5:{data:[1,2,3,4,5,6,7,8,9,10],status:2},
-  //     //吨钢水耗
-  //     d6:{data:[1,2,3,4],status:2},
-  //
-  //     d7:{data:[1,1,1,1,1,0,0,0],status:2},
+  jiancedata:{pagename:'jiance_zonglan',status:2,
+       //工艺达标率 累计运行时间  达标运行时间
+      d1:{data:[0.98,1031,1044],status:2},
+      //工艺达标率
+      d2:{data:[0,0,0,0,0,0,37,38,59,610],status:2},
+      //健康达标率
+      d3:{data:[0,0,0,0,0,0,17,8,99,630],status:2},
+      //吨水能耗
+      d4:{data:[0.34,0.21,0.72],status:2},
+      //吨水能耗达标率
+      d5:{data:[0,0,113,634,125,0,0,0,0,0],status:2},
+      //吨钢水耗
+      d6:{data:[35,32122,1233,43214],status:2},
 
-
+      d7:{data:[1,1,1,1,1,1,1,1],status:2},
 
       //报警信息
 
-
-
-  // },
+  },
 }
 export default function reducer(state=initialState, action) {
   //消息
@@ -42,6 +38,20 @@ export default function reducer(state=initialState, action) {
               state,
           )
         }
+        case 'REQUESTOLDXIAOXI':
+        {
+          return Object.assign({}, state, {fetcholdxiaoxi: 'start'});
+        }
+        case 'RECEIVEOLDXIAOXI':
+        {
+            state.xiaoxis=action.data.map(item=>(JSON.parse(item.messageText)))
+          return Object.assign(
+              {},
+              state,
+               {fetcholdxiaoxi: 'done'}
+          )
+        }
+
   }
   let pagename = action.type.split("_")[3]
     switch (pagename) {

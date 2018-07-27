@@ -71,7 +71,7 @@ class BaoyangJihuaShezhi extends Component {
     onXingzengY()
     {
 
-       if(this.state.layoutid==-1 || 
+       if(this.state.layoutid==-1 ||
           this.state.deviceAssetID==-1||
           this.state.description==''||
           this.state.workOrderDeviceTypes.length==0||
@@ -79,7 +79,7 @@ class BaoyangJihuaShezhi extends Component {
           this.state.maintenanceFactory==''||
           this.state.period==0||
           this.state.timeConsuming==0||
-          this.state.title=='')        
+          this.state.title=='')
           {
              alert("内容不完整");return;
           }
@@ -89,10 +89,10 @@ class BaoyangJihuaShezhi extends Component {
       var t2 = moment(this.refs.theEndtime.getInput().value).format('YYYY-MM-DD HH:mm:ss');
       console.log(t1);
       console.log(t2);
- 
+
       var fittings = [];
 
-      this.state.workOrderDeviceTypes.map(function(item){ 
+      this.state.workOrderDeviceTypes.map(function(item){
             fittings.push({fittingid:parseInt(item.categoryid) ,fittingnum:parseInt(item.quantity)})       })
 
       var newObj = {
@@ -125,7 +125,7 @@ class BaoyangJihuaShezhi extends Component {
 
     onChakan(statusFlag,maintenencePlanID)
     {
-     
+
          const { getMainplansetDetail } = this.props;
         // getDeviceByType({devicetypeid:devicecountID});
          getMainplansetDetail({id:maintenencePlanID});
@@ -146,7 +146,7 @@ class BaoyangJihuaShezhi extends Component {
 
 
     onPeijianY(){
-  
+
          //更新this.state.workOrderDeviceTypes的值:
          this.state.workOrderDeviceTypes =[];
          console.log( "配件1_workOrderDeviceTypes的值: ")
@@ -154,8 +154,8 @@ class BaoyangJihuaShezhi extends Component {
 
           for(var key in this.state.workOrderDeviceTypesMap)
           {
-              if(this.state.workOrderDeviceTypesMap[key].quantity!="")   
-                     this.state.workOrderDeviceTypes.push( {categoryid:key,quantity:this.state.workOrderDeviceTypesMap[key].quantity});                                                                                                                                         
+              if(this.state.workOrderDeviceTypesMap[key].quantity!="")
+                     this.state.workOrderDeviceTypes.push( {categoryid:key,quantity:this.state.workOrderDeviceTypesMap[key].quantity});
           }
 
         console.log( "配件2_workOrderDeviceTypes的值: ")
@@ -170,7 +170,7 @@ class BaoyangJihuaShezhi extends Component {
 
     onClickBengzhan(ev,obj){
 
-         
+
          const {getDevicecount } = this.props;
 
          var q = {
@@ -181,9 +181,9 @@ class BaoyangJihuaShezhi extends Component {
                  }
 
         console.log(q);
-         
+
         getDevicecount(q,this);
-  
+
         this.setState({layoutid:obj.value,deviceAssetID:-1})
         console.log("改变DropDown,layoutid===" + obj.value );
 
@@ -200,17 +200,17 @@ class BaoyangJihuaShezhi extends Component {
 
    bengZhanResult(res,t)
    {
-      
+
     // alert(res.resultMessage);
     // this.setState({deviceDataOptions:deviceDataOptions})
     // if(res.resultCode==0)
         //  t.closeCreate();
-               
+
    }
 
    checkResult(res,t)
    {
-      
+
        alert(res.resultMessage);
     }
 
@@ -228,7 +228,7 @@ class BaoyangJihuaShezhi extends Component {
         var endDate= moment().add(1, 'd');
         let title = "";
         var othis = this;
-        // var {  devicecountData,layoutData,deviceByTypeData,devicetypeData,deviceInfoData}  =this.props;  
+        // var {  devicecountData,layoutData,deviceByTypeData,devicetypeData,deviceInfoData}  =this.props;
         var {  devicecountData,layoutData,deviceByTypeData,deviceInfoData,fittingsData,mainPlanSetData,mainPlanSetDetailData}  =this.props;   //devicetypeData
 
 
@@ -265,7 +265,7 @@ class BaoyangJihuaShezhi extends Component {
         //const {devicecountData} = this.props;
         if(devicecountData&&devicecountData.resultCode==0)
         {
-      
+
             for(var i=0;i<devicecountData.data.data.length;i++)
             {
                   var newOpt = {};
@@ -281,12 +281,12 @@ class BaoyangJihuaShezhi extends Component {
        var maintainPeriodOptions =[ //{ key: -1, text: '请选择', value: -1 },
                                     { key: 1, text: '时间周期', value: 1 },{ key: 2, text: '运行时间', value:2 } ];
 
-          
+
       // 保养周期类型选择
        var periodValueOptions =[ { key: 1, text: '月/次', value:1 },
                                     { key: 2, text: '季度/次', value: 2 },{ key: 3, text: '年/次', value:3 } ];
 
-          
+
 
         // const tbody=[[1,"保养","101#水泵","2018-02-12","月",<span><i>修改</i><i onClick={this.onChakan.bind(this)}>查看</i></span>],
         //   [2,"","102#水泵","2018-03-02","",<span><i>修改</i><i onClick={this.onChakan.bind(this)}>查看</i></span>],
@@ -309,36 +309,36 @@ class BaoyangJihuaShezhi extends Component {
 
         var tbody=[];
         var pageCount = 0;
-        if(mainPlanSetData && mainPlanSetData.resultCode == 0 )  
+        if(mainPlanSetData && mainPlanSetData.resultCode == 0 )
           {
 
-             
+
                    pageCount = mainPlanSetData.data.pageCount;
                    for(var i=0;i<mainPlanSetData.data.data.length;i++)
                    {
                         var  arr = new Array();
-                       
+
                         var workOrderTypeName = "维修";
-                  
+
                         var updateTime = moment (mainPlanSetData.data.data[i].updaetTime).format('YYYY-MM-DD HH:mm:ss');
-                      
+
                         // var btnHtml = <Button style={ { fontSize:"14px"}}    color='teal'  onClick={this.openUpdate.bind(this,mainPlanSetData.data[i])}>查看</Button>
-                       
+
                         // var btnHtml = <span style={{color:'#7598f7',cursor:'pointer'}} onClick={this.onChakan3.bind(this)} >查看</span>
                         var  statusFlag = "chakan";
                         var sid = mainPlanSetData.data.data[i].statusID;
-                      
+
 
                         var btnHtml = <span style={{color:'#7598f7',cursor:'pointer'}} onClick={this.onChakan.bind(this,statusFlag,mainPlanSetData.data.data[i].maintenencePlanID)} >查看</span>
                         var arr = [mainPlanSetData.data.data[i].maintenencePlanID, mainPlanSetData.data.data[i].layoutName,mainPlanSetData.data.data[i].deviceAssetName, moment(mainPlanSetData.data.data[i].startTime).format('YYYY-MM-DD HH:mm:ss'),mainPlanSetData.data.data[i].period,mainPlanSetData.data.data[i].title,btnHtml];  //mainPlanSetData.data.data[i].num,
                         tbody.push(arr);
-            
+
 
                    }
           }
 
 
- 
+
 
     var mainTypeStr = '';
     if(mainPlanSetDetailData&&mainPlanSetDetailData.data[0].periodtype==1)
@@ -350,31 +350,31 @@ class BaoyangJihuaShezhi extends Component {
        else if(mainType==3)  mainTypeStr = '年/次';
        else mainTypeStr = '';
     }
-
+        const BodyStyle={height: document.documentElement.clientHeight-130  +'px'}
 
         return (
-          <div className="table-shebei">
+          <div className="table-baoyangjihuashezhi" style={BodyStyle} >
            <h3>&nbsp;</h3>
             {/*<h3 className="weixiu-title labStyle">{title}</h3> */}
              {/*
             <div className="sub-title fix">
-          
+
               <span className={-1 == this.state.qlayoutID? "itab active" : 'itab'} onClick={this.selectDeviceType.bind(this,-1)} >全部</span>
-             
+
               { layoutData&&layoutData.resultCode==0&&layoutData.data.map(function(item){
-                                
+
               return <span key={item.layoutID} className={item.layoutID == othis.state.qlayoutID? "itab active" : 'itab'} onClick={othis.selectDeviceType.bind(othis,item.layoutID)}>{item.layoutName}</span>
 
-              } )} 
+              } )}
 
-        
+
               <span className={'quanbu' == this.state.deviceType? "itab active" : 'itab'} onClick={this.selectDeviceType.bind(this,'quanbu')} >全部</span>
               <span className={'28' == this.state.deviceType? "itab {key:1,text:'28#泵站',value='1'},{key:1,text:'28#泵站',value='1'},active" : 'itab'} onClick={this.selectDeviceType.bind(this,'28')}>28#泵站</span>
               <span className={'38' == this.state.deviceType? "itab active" : 'itab'} onClick={this.selectDeviceType.bind(this,'38')}>38#泵站</span>
               <span className={'huanghe' == this.state.deviceType? "itab active" : 'itab'} onClick={this.selectDeviceType.bind(this,'huanghe')}>黄河泵站</span>
               <span className={'6' == this.state.deviceType? "itab active" : 'itab'} onClick={this.selectDeviceType.bind(this,'6')}>6#泵站</span>
-           
-          
+
+
             </div> */}
             <div className="query-condition">
 
@@ -434,9 +434,10 @@ class BaoyangJihuaShezhi extends Component {
                         footer={true}
                         />
                 </DateField>
-                <span className="commitBtn" onClick={this.queryData.bind(this,1)}>查询</span><span className="commitBtn" onClick={this.onXinzeng.bind(this)}>新增</span>
+                <span className="commitBtn" onClick={this.queryData.bind(this,1)}>查询</span>
             </div>
             <div className="weixiu-table">
+              <div className="xinzeng-btn"><span onClick={this.onXinzeng.bind(this)} >新增</span></div>
               <MyTable thead={thead} tbody={tbody}/>
               <div className="pages">
               <Pager total={pageCount}
@@ -453,7 +454,7 @@ class BaoyangJihuaShezhi extends Component {
                   </div>
                   <div className="gongdan-content">
                     <div className="ul_1 fix">
-                      <div className="items fix">  
+                      <div className="items fix">
                         {/*
                         <div className="div1"><label>类型：</label></div>
                         <div className="div2 div_time"><div className="query-value">
@@ -469,14 +470,14 @@ class BaoyangJihuaShezhi extends Component {
                            className="query-value" style={{width:'160px'}} defaultValue={layoutDataOptions[0].value}
                             selection openOnFocus options={layoutDataOptions} onChange={this.onClickBengzhan.bind(this)}
                           /></div>
-                  
+
                           {/*
-                          {this.state.bengzu.length > 0 && <div className="query-value2"><Dropdown 
+                          {this.state.bengzu.length > 0 && <div className="query-value2"><Dropdown
                             className="query-value" defaultValue={this.state.bengzu[0].value}
                              selection openOnFocus options={this.state.bengzu} onChange={this.onClickBengzu.bind(this)}
                            /></div>}*/}
 
-                             
+
                             <div className="query-value2" style={{width:'43%'}}><Dropdown
                              onChange={this.handleChangeDropdown.bind(this,'deviceAssetID')}
                              className="query-value" defaultValue={deviceDataOptions[0].value}
@@ -486,7 +487,7 @@ class BaoyangJihuaShezhi extends Component {
                       </div>
                       <div className="items fix">
                         <div className="div1"><label>保养周期类型：</label></div>
-                        <div className="div2 div_time">                  
+                        <div className="div2 div_time">
                                  <Dropdown onChange={this.handleChangeDropdown.bind(this,'periodtype')}
                                      className="query-value" defaultValue={maintainPeriodOptions[0].value}
                                      selection openOnFocus options={maintainPeriodOptions}
@@ -494,10 +495,10 @@ class BaoyangJihuaShezhi extends Component {
                         </div>
 
                         <div className="div1"><label ref='periodName'>保养周期：</label></div>
-                        <div className="div2 div_time"> <div className="query-value2"><Input  onChange={this.handleChangeInput.bind(this,'period')}  />   </div>             
+                        <div className="div2 div_time"> <div className="query-value2"><Input  onChange={this.handleChangeInput.bind(this,'period')}  />   </div>
                                  <div ref='periodDrop' className="query-value2"><Dropdown   onChange={this.handleChangeDropdown.bind(this,'maintenenceType')} defaultValue={periodValueOptions[0].value} selection openOnFocus options={periodValueOptions} /></div>
-                                     
-                                   
+
+
                         </div>
 
 
@@ -577,8 +578,8 @@ class BaoyangJihuaShezhi extends Component {
                             <span className="selects_item">配件B，1个<i></i></span>
                                 */}
                              {
-                               Object.keys(this.state.workOrderDeviceTypesMap).map(function(key)    
-                               {    
+                               Object.keys(this.state.workOrderDeviceTypesMap).map(function(key)
+                               {
 
                                   if(othis.state.workOrderDeviceTypesMap[key].quantity!="")
                                   {
@@ -589,11 +590,11 @@ class BaoyangJihuaShezhi extends Component {
 
                                 })
 
-                                                                                       
+
                             }
 
 
-                            
+
                           </span>
                           <span className="span-btn" onClick={this.onPeijian.bind(this)} >选择配件</span></div>
                       </div>
@@ -627,16 +628,16 @@ class BaoyangJihuaShezhi extends Component {
                       </li>*/}
 
                       {
-  
-　　　　　　            fittingsData.data.data.map(function(item){   
+
+　　　　　　            fittingsData.data.data.map(function(item){
                         var theNum = "";
 
                         var iType =  othis.state.workOrderDeviceTypesMap[item.categoryid];
-                        if( typeof(iType)!='undefined')                     
-                            theNum =  othis.state.workOrderDeviceTypesMap[item.categoryid].quantity;                                     
-                
+                        if( typeof(iType)!='undefined')
+                            theNum =  othis.state.workOrderDeviceTypesMap[item.categoryid].quantity;
+
 　　　　　　　　        return <li className="fix"  ><span>{item.name}</span><span> <Input  defaultValue={theNum} onChange={othis.handleChangeDeviceType.bind(othis,item)}/> </span></li>})
-　　　　　      
+　　　　　
 　　　　            }
 
 
@@ -651,7 +652,7 @@ class BaoyangJihuaShezhi extends Component {
                            fetching={false}
                      />
                      */}
-                   
+
                   </div>
                 </div>
               }
@@ -665,7 +666,7 @@ class BaoyangJihuaShezhi extends Component {
                   <div className="gongdan-content">
                     <div className="ul_1 fix">
                       <div className="items fix">
-                       
+
                         <div className="div1"><label>设备：</label></div>
                         <div className="div1 div2 div1_tl">{ mainPlanSetDetailData.data[0].deviceAssetName }</div>
                       </div>
@@ -673,14 +674,14 @@ class BaoyangJihuaShezhi extends Component {
                        {/*
                         <div className="div1"><label>是否周期性安排：</label></div>
                         <div className="div1 div1_tl">是</div>
-                     
+
                         <div className="div1"><label>维保周期：</label></div>
                         <div className="div1 div1_tl">2月/次</div>
                        */}
 
                         { mainPlanSetDetailData.data[0].periodtype==1&&<div><div className="div1"><label>保养周期：</label></div><div className="div1 div1_tl"> {mainPlanSetDetailData.data[0].period} {mainTypeStr}</div></div> }
                         { mainPlanSetDetailData.data[0].periodtype==2&&<div><div className="div1"><label>运行时长(h)：</label></div><div className="div1 div1_tl"> {mainPlanSetDetailData.data[0].period}</div></div> }
-                     
+
 
                       </div>
                       <div className="items fix">
@@ -708,7 +709,7 @@ class BaoyangJihuaShezhi extends Component {
                       </div>
                       <div className="items fix">
                         <div className="div1"><label>配件需求：</label></div>
-                        <div className="div1 div1_tl div2"> 
+                        <div className="div1 div1_tl div2">
                           {
                                 mainPlanSetDetailData.data[0].fitting.map(function(item){
 
@@ -741,8 +742,8 @@ class BaoyangJihuaShezhi extends Component {
     {
       console.log("改变input," + code + " ====" +  ev.target.value )
      // this.setState({[code]:ev.target.value})  //"gongWeiCode"
-      this.state[code] =  ev.target.value;      
-     
+      this.state[code] =  ev.target.value;
+
     }
 
 
@@ -774,7 +775,7 @@ class BaoyangJihuaShezhi extends Component {
        //  var startDate  =  moment(this.state.startDate).format('YYYY-MM-DD');
        //alert(this.refs.startDt.getInput().value );
        //alert(this.refs.endDt.getInput().value );
- 
+
         var q = {
                 pagesize:8,
                 pageno:curPageno,
@@ -785,9 +786,9 @@ class BaoyangJihuaShezhi extends Component {
               }
 
         console.log(q);
-         
+
         const { getMainPlanSet} = this.props;
-    
+
         getMainPlanSet(q);
 
 
@@ -799,12 +800,12 @@ class BaoyangJihuaShezhi extends Component {
         {
 
            //  const { devicecountData}  =this.props;
- 
+
            //  if(id>devicecountData.data.pageCount+1) return;
            //  console.log("curPage:" + id +", totalPageCount:" + devicecountData.data.pageCount )
            // this.setState({fetchcditem: true,page:id});
             this.queryData(id);
-        
+
         }
 
     // selectDeviceType(deviceType)
@@ -822,7 +823,7 @@ class BaoyangJihuaShezhi extends Component {
     handleChangeDeviceType(deviceTypeObj,ev,obj)
     {
 
-         //debugger;
+         //;
         var iObj =   {categoryid:deviceTypeObj.categoryid,name:deviceTypeObj.name, quantity:obj.value   } ;
         this.state.workOrderDeviceTypesMap[deviceTypeObj.categoryid] =iObj;
         console.log(iObj);
@@ -837,7 +838,7 @@ class BaoyangJihuaShezhi extends Component {
 
       if(code=='periodtype')  //切换保养周期类型
       {
-          //debugger;
+          //;
           if( obj.value == 2) //运行时长
           {
               this.refs.periodDrop.style.display='none';
@@ -847,15 +848,15 @@ class BaoyangJihuaShezhi extends Component {
           {
              this.refs.periodDrop.style.display='';
              this.refs.periodName.innerHTML ='保养周期：'
-            
+
           }
          //const {getDeviceByType } = this.props;
          //getDeviceByType({devicetypeid:obj.value});
 
- 
+
       }
 
-     
+
     }
 
 
@@ -874,20 +875,20 @@ class BaoyangJihuaShezhi extends Component {
 
 
         const { getInitData} = this.props;
-    
+
 
 
         // getDevicecount(q);
         getInitData({});
 
- 
 
-             var q = {          
+
+             var q = {
                   pagesize:8,
                   pageno:1
                 };
         const { getFittings } = this.props;
-    
+
         getFittings(q);
 
 

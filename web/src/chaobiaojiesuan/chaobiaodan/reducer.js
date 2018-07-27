@@ -1,91 +1,103 @@
 /**
  * @file homeReducer
- * @author luwenlong <zuiwosuifeng@gmail.com>
+ * @author zlc <lichao9182@126.com>
  */
-
-import {
-  //抄表单列表
-  REQUESTECHAOBIAODANLIST,
-  RECEIVECHAOBIAODANLIST,
-  //抄表列表
-  REQUESTECHAOBIAOLIST,
-  RECEIVECHAOBIAOLIST,
-  //抄表单明细
-  REQUESTCHAOBIAODANINFO,
-  RECEIVECHAOBIAODANINFO,
-  //生成抄表单
-  REQUESTADDCHAOBIAODAN,
-  RECEIVEADDCHAOBIAODAN,
-} from './constants/actionTypes'
-
 const initialState = {
-  chaobiaodanlist:{data:[]},
-  chaobiaolist:[],
-  chaobiaodaninfo:{page:{data:[]}},
+  bengzhanlist:[],
+  bengzus:[{ key: 0, text: '全部', value:'all' }],
+  chaobiaodanlist:{"pageNo": 1,"pageSize": 20,"pageCount": 1,
+                  "recordCount": 1,"data": []
+                  },
+  chaobiaodaninfo:{"waters": [],
+                "groupTotal": {},
+                "hourElectrics": []
+              },
+  chaobiaodanadd:{"waters": [],
+                "groupTotal": {},
+                "hourElectrics": []
+              },
 }
 
 export default function reducer(state = initialState, action) {
     switch (action.type) {
-      case REQUESTECHAOBIAODANLIST:
+      case 'REQUESTE_BENGZHANLIST':
       {
-        return Object.assign({}, state, {fetchsvgdata: 'start'});
+        return Object.assign({}, state, {REQUESTE_BENGZHANLIST: 'start'});
       }
-      case RECEIVECHAOBIAODANLIST:
-      {
-        return Object.assign(
-            {},
-            state,
-            {
-              ...action.data,
-              fetchsvgdata: action.data.errmsg?'start':'done'
-            }
-        )
-      }
-      case REQUESTECHAOBIAOLIST:
-      {
-        return Object.assign({}, state, {fetchsvgdata: 'start'});
-      }
-      case RECEIVECHAOBIAOLIST:
+      case 'RECEIVE_BENGZHANLIST':
       {
         return Object.assign(
             {},
             state,
             {
               ...action.data,
-              fetchsvgdata: action.data.errmsg?'start':'done'
+              REQUESTE_BENGZHANLIST: action.data.errmsg?'start':'done'
             }
         )
       }
-      case REQUESTCHAOBIAODANINFO:
+      case 'REQUESTE_BENGZULIST':
       {
-        return Object.assign({}, state, {fetchsvgdata: 'start'});
+        return Object.assign({}, state, {REQUESTE_BENGZULIST: 'start'});
       }
-      case RECEIVECHAOBIAODANINFO:
+      case 'RECEIVE_BENGZULIST':
       {
         return Object.assign(
             {},
             state,
             {
               ...action.data,
-              fetchsvgdata: action.data.errmsg?'start':'done'
+              REQUESTE_BENGZULIST: action.data.errmsg?'start':'done'
             }
         )
       }
-      case REQUESTADDCHAOBIAODAN:
+      case 'REQUESTE_CHAOBIAODANLIST':
       {
-        return Object.assign({}, state, {fetchsvgdata: 'start'});
+        return Object.assign({}, state, {REQUESTE_CHAOBIAODANLIST: 'start'});
       }
-      case RECEIVEADDCHAOBIAODAN:
+      case 'RECEIVE_CHAOBIAODANLIST':
       {
         return Object.assign(
             {},
             state,
             {
               ...action.data,
-              fetchsvgdata: action.data.errmsg?'start':'done'
+              REQUESTE_CHAOBIAODANLIST: action.data.errmsg?'start':'done'
             }
         )
       }
+
+      case 'REQUESTE_CHAOBIAODANINFO':
+      {
+        return Object.assign({}, state, {REQUESTE_CHAOBIAODANINFO: 'start'});
+      }
+      case 'RECEIVE_CHAOBIAODANINFO':
+      {
+        return Object.assign(
+            {},
+            state,
+            {
+              ...action.data,
+              REQUESTE_CHAOBIAODANINFO: action.data.errmsg?'start':'done'
+            }
+        )
+      }
+      case 'REQUESTE_CHAOBIAODANADD':
+      {
+        return Object.assign({}, state, {REQUESTE_CHAOBIAODANINFO: 'start'});
+      }
+      case 'RECEIVE_CHAOBIAODANADD':
+      {
+        return Object.assign(
+            {},
+            state,
+            {
+              ...action.data,
+              REQUESTE_CHAOBIAODANINFO: action.data.errmsg?'start':'done'
+            }
+        )
+      }
+
+
       default:
           return state
     }

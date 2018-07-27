@@ -223,7 +223,7 @@ export default class TanChuang extends Component {
   }
 
   handleClickStart(type){
-    debugger
+    
     var shuju = this.getCurrentData(this.state.startDate,this.state.endDate,'shishi',type);
     var XiangMuDaBiaoLv_tc = this.getOptions(type,shuju);
     this.setState({optionsType:XiangMuDaBiaoLv_tc});
@@ -339,7 +339,7 @@ export default class TanChuang extends Component {
   }
   onChangeJianyi(){
     //this.setState({jianyi:'建议们'})
-    debugger
+    
     //
     var con = ['建议们建议们泵组泵站XXXXXXXXXXXXXXXsdfdgfrddfdv',
     '运行良好，经常检查维护即可.运行良好，经常检查维护即可.运行良好，经常检查维护即可',

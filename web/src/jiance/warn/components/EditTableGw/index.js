@@ -129,11 +129,11 @@ export default class EditTableGw extends Component {
           modColValue['chuliren'] =sessionStorage.getItem('username')
           modColValue['chuli_time'] =moment().format("YYYY-MM-DD HH:mm:ss")
           modColValue['chuli'] ='已报修'
-          debugger
+          
           this.props.baoxiuChuli&&this.props.baoxiuChuli(modColValue["systemname"],tdata[modColNum]["deviceid"],modColValue["baojing"]+"   "+modColValue["baojing"])
           break;
        case 'hulue':
-           debugger
+           
            thead.forEach(item=>{modColValue[item['id']]=tdata[modColNum][item['id']]})
            modColValue['chuliren'] =sessionStorage.getItem('username')
            modColValue['chuli_time'] =moment().format("YYYY-MM-DD HH:mm:ss")

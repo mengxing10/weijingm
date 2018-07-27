@@ -21,7 +21,7 @@ import Menus from '../../common/components/Menus'
 class Gongdan extends Component {
     constructor(props) {
         super(props)
-        this.curWorkordertypeid = 1; //点检 默认
+        this.curWorkordertypeid = 3; //点检 默认
         this.operateType="" //当前办理类型: linqu, fangong, zuofei
         this.state = {
           //创建用
@@ -42,6 +42,9 @@ class Gongdan extends Component {
           issueAttachmentContent:'',
           issueAttachmentImageBase64s:[],
           issueAttachmentImageBase64sNames:[],//issueAttachmentImageBase64s
+
+          evaluateAttachmentImageBase64s:[],//评价工单附件
+          evaluateAttachmentImageBase64sNames:[],
 
           testImg:'',
           solutionAttachmentContent:'',
@@ -69,9 +72,10 @@ class Gongdan extends Component {
 
            // startDate: moment("2016-01-01"),
            // endDate: moment().add(1, 'd'),
+          starsPj:2,
           page:1,
           deviceFilter:"",
-          xinzengShow:this.props.location.query.xinzeng?true:false,
+          xinzengShow:false,
           paifa:false,
           guanlianGongdan:false,
           peijian:false,
@@ -90,18 +94,19 @@ class Gongdan extends Component {
     render() {
       var startDate= moment("2018-01-01");
       var endDate= moment().add(1, 'd');
+      const BodyStyle={height: document.documentElement.clientHeight-80  +'px'};
       //alert(moment().valueOf());
       var startDatePlan= moment();//.add(1, 'd');
       var endDatePlan= moment().add(1, 'month');
-      let title = "点检";
+      let title = "维修";
       let project =this.props.location.query.project;
       //title += project=="wx"?"维修":project=="xj"?"巡检":project=="bx"?"报修":project=="wbjh"?"维保计划":""
       // title += project=="wx"?"维修":project=="dj"?"点检":project=="dx"?"定修":project=="byang"?"保养":""
 
-      if(project=="wx"){ title= "设备维修";this.curWorkordertypeid = 3; }
+      if(project=="wx"){ title= "维修";this.curWorkordertypeid = 3; }
       else if(project=="dj")  { title= "点检";  this.curWorkordertypeid = 1; }
       else if(project=="dx")  { title= "定修";  this.curWorkordertypeid = 2; }
-      else if(project=="byang")  { title= "设备保养";  this.curWorkordertypeid = 4; }
+      else if(project=="byang")  { title= "保养";  this.curWorkordertypeid = 4; }
       console.log("当前类型: " + title + ","+ this.curWorkordertypeid)
 
       var othis = this;
@@ -116,8 +121,8 @@ class Gongdan extends Component {
         }
       }
       var workOrderInfo2 = workOrderFullData.data;
-      const thead=[{width:"5%",value:"编号"},{width:"10%",value:"类型"},{width:"10%",value:"设备"}
-                  ,{width:"25%",value:"时间"},{width:"15%",value:"标题"},{width:"5%",value:"级别"}
+      const thead=[{width:"5%",value:"编号"},{width:"10%",value:"类型"},{width:"15%",value:"设备"}
+                  ,{width:"15%",value:"时间"},{width:"15%",value:"标题"},{width:"10%",value:"级别"}
                   ,{width:"10%",value:"发布人"},{width:"10%",value:"办理状态"},{width:"10%",value:"操作"}]
 
       const options =[
@@ -159,7 +164,7 @@ class Gongdan extends Component {
       }
 
       //设备名称7.1
-      var deviceAssetOptions =[ ];  //{ key: -1, text: '全部', value: -1 }
+      var deviceAssetOptions =[{ key: -1, text: '请选择', value: -1 }];
       if(deviceAssetData&&deviceAssetData.resultCode==0)
       {
         for(var i=0;i<deviceAssetData.data.length;i++)
@@ -187,18 +192,18 @@ class Gongdan extends Component {
       }
 
       //项目名称5.1
-      var companyOptions =[];
-      if(companyData&&companyData.resultCode==0)
-      {
-        for(var i=0;i<companyData.data.length;i++)
-        {
-          var newOpt = {};
-          newOpt.key = companyData.data[i].projectID;
-          newOpt.value = companyData.data[i].projectID;
-          newOpt.text = companyData.data[i].projectName;
-          companyOptions.push(newOpt );
-        }
-      }
+      // var companyOptions =[];
+      // if(companyData&&companyData.resultCode==0)
+      // {
+      //   for(var i=0;i<companyData.data.length;i++)
+      //   {
+      //     var newOpt = {};
+      //     newOpt.key = companyData.data[i].projectID;
+      //     newOpt.value = companyData.data[i].projectID;
+      //     newOpt.text = companyData.data[i].projectName;
+      //     companyOptions.push(newOpt );
+      //   }
+      // }
 
       //工单紧急程度:
       var workOrderLevelOptions=[{key: 1,value:1,text: "一般"},{key: 2,value:2,text: "紧急"}];
@@ -287,11 +292,10 @@ class Gongdan extends Component {
           tbody.push(arr);
         }
       }
-      let xinzengShow = this.state.xinzengShow
-      const BodyStyle={height: document.documentElement.clientHeight-80  +'px'}
+      var bodybgshow = this.state.xinzengShow||this.state.chakan||this.state.chakan2||this.state.chakan3||this.state.chakan4||this.state.yanshou
 
         return (
-          <div className="table-baoxiu" style={BodyStyle}>
+          <div  style={BodyStyle} className={bodybgshow?'table-weixiu bodybg':'table-weixiu'}>
             <h3 className="weixiu-title labStyle">{title}</h3>
             <div className="query-condition">
                 <span className="query-name labStyle">泵站选择</span>
@@ -371,7 +375,7 @@ class Gongdan extends Component {
                      fetching={false}
                /></div>
             </div>
-            {xinzengShow &&
+            {this.state.xinzengShow &&
               <div className="gongdan-modal">
                   <div className="title">
                       <span className="btn" onClick={this.onPaifa.bind(this)} >派发</span><span onClick={this.onFanHui.bind(this)} className="btn">返回</span>
@@ -379,17 +383,16 @@ class Gongdan extends Component {
                   <div className="gongdan-content">
                     <div className="ul_1 ul_1b fix">
                       <div className="items fix">
+                       {/*
                         <div className="div1"><label><i className="xing">*</i>项目名称：</label></div>
-                        <div className="div2">
+                          <div className="div2">
                                 <div className="query-value">
                                               <Dropdown
                                                 onChange={this.handleChangeDropdown.bind(this,'projectID')}
                                                 className="query-value" defaultValue={companyOptions[0].value}
                                                  selection openOnFocus options={companyOptions}
                                                /></div>
-
-
-                        </div>
+                        </div>*/}
 
                         <div className="div1"><label><i className="xing">*</i>设备名称：</label></div>
                         <div className="div2"><div className="query-value">
@@ -582,7 +585,7 @@ class Gongdan extends Component {
                         <div className="div_fujian div_file"><span><input ref = "issueAttachmentImageBase64s" id="issueAttachmentImageBase64s" onChange={this.handleChangeFile.bind(this,"issueAttachmentImageBase64s")} type="file" /><span className="span-btn file-span">上传文件</span></span>
 
                          {
-                            this.state.issueAttachmentImageBase64sNames.map(function(item){ return  <span>{item} </span> })
+                            this.state.issueAttachmentImageBase64sNames.map(function(item,i){ return  <span key={i}>{item} </span> })
                           }
 
                         </div>
@@ -620,15 +623,15 @@ class Gongdan extends Component {
               </div>
             }
             {this.state.guanlianGongdan &&
-            <div className="modal-alert modal-guanlian">
-              <div className="title">
-                <div className="fix">
-                  <span>工单选择</span>
-                  <div className="spans"><span onClick={this.onGuanlianY.bind(this,'gongdan')} >确认</span><span onClick={this.onGuanlianN.bind(this,'gongdan')} >取消</span></div>
-                </div>
-                <div className="search">
-                  <input placeholder="请输入关键字"/><span className="search-btn">搜索</span>
-                </div>
+              <div className="modal-alert modal-guanlian">
+                <div className="title">
+                  <div className="fix">
+                    <span>工单选择</span>
+                    <div className="spans"><span onClick={this.onGuanlianY.bind(this,'gongdan')} >确认</span><span onClick={this.onGuanlianN.bind(this,'gongdan')} >取消</span></div>
+                  </div>
+                  <div className="search">
+                    <input placeholder="请输入关键字"/><span className="search-btn">搜索</span>
+                  </div>
               </div>
               <div className="content">
                  <ul>
@@ -727,35 +730,23 @@ class Gongdan extends Component {
                       <span>配件</span>
                       <span>选用数量</span>
                     </li>
-
-                    {
-
-                        //deviceTypeName
-　　　　　　            deviceTypeData.data.map(function(item){
+                    {deviceTypeData.data.map(function(item){
                         //var isChk = false;
                         // var idx =  othis.state.workOrderDeviceTypes.indexOf(item.deviceTypeID);
                         // if(idx>-1) isChk = true;
                         var theNum = "";
-
                         var iType =  othis.state.workOrderDeviceTypesMap[item.deviceTypeID];
                         if( typeof(iType)!='undefined')
                             theNum =  othis.state.workOrderDeviceTypesMap[item.deviceTypeID].quantity;
-
                         //<span className="li_span1"> <Checkbox defaultChecked={isChk}  onChange={othis.handleChangeCheckbox.bind(othis,item.deviceTypeID,"workOrderDeviceTypes")}/></span>
-
-　　　　　　　　        return <li className="fix"><span>{item.deviceTypeName}</span><span> <Input  defaultValue={theNum} onChange={othis.handleChangeDeviceType.bind(othis,item)}/> </span></li>})
-　　　　　
-　　　　            }
-
+　　　　　　　　         return <li className="fix"><span>{item.deviceTypeName}</span><span> <Input  defaultValue={theNum} onChange={othis.handleChangeDeviceType.bind(othis,item)}/> </span></li>})}
                   </ul>
                 </div>
                 <div className="footer">
-                  <Pager total={1}
-                         gap={2}
+                  <Pager total={1} gap={2}
                          //change={::this.changePager}
                          current ={1}
-                         fetching={false}
-                   />
+                         fetching={false} />
                 </div>
               </div>
             }
@@ -878,7 +869,9 @@ class Gongdan extends Component {
                   <span className="title_bg">工单详情</span>
                   <span>工单号： {workOrderInfo.workOrderID}</span>
                   <div className="chakan_title_btns">
-                  <span onClick={this.onLingqu.bind(this,'shangbao')}>上报</span><span onClick={this.onLingqu.bind(this,'zuofei')}>作废</span><span onClick={this.onChakan2N.bind(this)}>返回</span></div>
+                  <span onClick={this.onLingqu.bind(this,'shangbao')}>上报</span>
+                  {/*<span onClick={this.onLingqu.bind(this,'zuofei')}>作废</span>*/}
+                  <span onClick={this.onChakan2N.bind(this)}>返回</span></div>
                 </div>
                 <div className="chakan_item">
                   <span>工单信息</span>
@@ -968,7 +961,7 @@ class Gongdan extends Component {
                   <span>工单号：{workOrderInfo.workOrderID}</span>
                   <div className="chakan_title_btns">
                  {/*  <span onClick={this.onYanshou.bind(this)}>验收</span><span onClick={this.onLingqu.bind(this,'fangong')}>返工</span><span onClick={this.onChakan3N.bind(this)}>返回</span></div> */}
-                  <span onClick={this.onChakan3N.bind(this)}>返回</span></div>
+                  <span onClick={this.onYanshou.bind(this)}>验收</span><span onClick={this.onChakan3N.bind(this)}>返回</span></div>
 
                 </div>
                 <div className="chakan_item">
@@ -1120,30 +1113,33 @@ class Gongdan extends Component {
               <div className="content">
                 <div className="banli-item fix">
                   <div className="div1">工作评价：</div>
-                  <div className="div2 stars"><i className="star_r star"></i><i className="star_r star"></i><i className="star_r star"></i>
-                    <i className="star_w star"></i><i className="star_w star"></i></div></div>
+                    <div className="div2 stars">
+                    <i className={this.state.starsPj>=1?'star_r star':'star_w star'} onClick={this.onHandleStar.bind(this,1)}></i>
+                    <i className={this.state.starsPj>=2?'star_r star':'star_w star'} onClick={this.onHandleStar.bind(this,2)}></i>
+                    <i className={this.state.starsPj>=3?'star_r star':'star_w star'} onClick={this.onHandleStar.bind(this,3)}></i>
+                    <i className={this.state.starsPj>=4?'star_r star':'star_w star'} onClick={this.onHandleStar.bind(this,4)}></i>
+                    <i className={this.state.starsPj>=5?'star_r star':'star_w star'} onClick={this.onHandleStar.bind(this,5)}></i>
+                  </div></div>
                 <div className="banli-item fix">
                   <div className="div1">工作评语：</div>
-                  <div className="div2"><textarea></textarea></div></div>
+                  <div className="div2" ><TextArea ref="evaluateMemo" /></div></div>
                 <div className="banli-item fix">
                   <div className="div1">处理结果：</div>
-                  <div className="div2"><div className="query-value">
-                                        <Dropdown
-                                          className="query-value" defaultValue={options3[0].value}
-                                           selection openOnFocus options={options3}
-                                         /></div></div></div>
+                  <div className="div2"><TextArea ref="evaluateAttachmentContent" /></div></div>
                 <div className="banli-item fix">
                     <div className="div1">附件信息：</div>
                     <div className="div2">
                       <div className="div_fujian div_file">
-                        <span><input type="file" /><span className="span-btn file-span">上传文件</span></span>
-                        <span className="fujian selects_item">附件一.doc<i className="close_icon"></i></span>
-                        <span className="fujian selects_item">附件一.doc<i className="close_icon"></i></span>
-                        <span className="fujian selects_item">附件一.doc<i className="close_icon"></i></span>
+                        <span><input ref = "evaluateAttachmentImageBase64s" id="evaluateAttachmentImageBase64s" onChange={this.handleChangeFile.bind(this,"evaluateAttachmentImageBase64s")}  type="file" /><span className="span-btn file-span">上传文件</span></span>
+                        {
+                          this.state.evaluateAttachmentImageBase64sNames.map(function(item,i){
+                            return  <span className="fujian selects_item" key={i}>{item}</span>
+                          })
+                         }
                       </div></div></div>
               </div>
               <div className="footer">
-                <span onClick={this.onPaifaY.bind(this)} >提交</span><span onClick={this.onPaifaN.bind(this)}>取消</span>
+                <span onClick={this.onYanshouY.bind(this)} >提交</span><span onClick={this.onPaifaN.bind(this)}>取消</span>
               </div>
             </div>}
 
@@ -1151,7 +1147,7 @@ class Gongdan extends Component {
         )
     }
   onPaifaN(){
-    this.setState({paifa:false,banli:false,yanshou:false})
+    this.setState({paifa:false,banli:false,yanshou:false,evaluateAttachmentImageBase64s:[],evaluateAttachmentImageBase64sNames:[]})
   }
   onGuanlian(){
     this.setState({guanlianGongdan:true})
@@ -1164,12 +1160,38 @@ class Gongdan extends Component {
     }
     this.setState({guanlianGongdan:false,renyuan:false})
   }
+  //星级评价
+  onHandleStar(num){
+    this.setState({starsPj:num});
+  }
+  //验收
+  async onYanshouY(){
+    var newObj =  {
+      "workOrderID": this.state.selectWorkOrderID, //-- 工单编号
+      "opinion": "",//这里是办理意见
+      "evaluate": this.state.starsPj, //-- 评分
+      "evaluateMemo":this.refs.evaluateMemo.ref.value, //-- 评价
+      "responseID":1,
+      "evaluateAttachmentContent": this.refs.evaluateAttachmentContent.ref.value,//"结果文字描述，只能是文字，2000以内",
+      "evaluateAttachmentImageBase64s": this.state.evaluateAttachmentImageBase64s,//附件信息
+    };
+    console.log("=======================验收工单参数：");
+    console.log(newObj);
+    const {review} = this.props;
+    await review(newObj,this.checkResult,this );
+
+    this.setState({yanshou:false,chakan3:false});
+
+  }
 
   onGuanlianY(){
     this.setState({guanlianGongdan:false,renyuan:false})
   }
   async onPaifaY(){
-    if(this.state.workOrderLinks.length==0||
+    console.log(this.state.issueAttachmentImageBase64s);
+    if(
+     this.state.deviceAssetID == -1||
+     this.state.workOrderLinks.length==0||
      this.state.workOrderStaffs.length==0||
      this.state.workOrderDeviceTypes.length==0||
      this.state.title==''||
@@ -1234,7 +1256,7 @@ class Gongdan extends Component {
   //查看
   onChakan(workorderStatusFlag,workOrderID)
   {
-    // alert(workorderStatusFlag);
+    //alert(workorderStatusFlag);
     //this.state[workorderStatusFlag] = true;
     const {getWorkOrderFull } = this.props;
     getWorkOrderFull({orderid:workOrderID});
@@ -1257,7 +1279,7 @@ class Gongdan extends Component {
       };
       console.log("领取工单:");
       console.log(newObj);
-      //await acceptWorkorder( newObj,this.checkResult,this );
+      await acceptWorkorder( newObj,this.checkResult,this );
     }
     else if( this.operateType == 'shangbao'){
       const  {completeJob}  =this.props;
@@ -1304,13 +1326,13 @@ class Gongdan extends Component {
   handleChange = (e, { value }) => this.setState({ value })
   //工单列表
   getGongdanList(workordertypeid){
+    console.log("加载工单列表++++++++++++++++++++++++");
     const {getWorkOrder} = this.props;
     var q = {
       workordertypeid:workordertypeid,
       pagesize:10,
       pageno:1}
     getWorkOrder(q);
-
   }
 
   handleChangeInput(code,ev)
@@ -1318,27 +1340,20 @@ class Gongdan extends Component {
     console.log("改变input," + code + " ====" +  ev.target.value )
    // this.setState({[code]:ev.target.value})  //"gongWeiCode"
     this.state[code] =  ev.target.value;
-
   }
 
   changePager(id)
   {
-
-     // const { getMonthReportNow,monthReportNow}  =this.props;
-
-     // if(id>monthReportNow.data.page.totalCount/monthReportNow.data.page.pageSize+1) return;
-
-     // this.setState({fetchcditem: true,page:id});
-      this.queryData(id);
-
+    // const { getMonthReportNow,monthReportNow}  =this.props;
+    // if(id>monthReportNow.data.page.totalCount/monthReportNow.data.page.pageSize+1) return;
+    // this.setState({fetchcditem: true,page:id});
+    this.queryData(id);
   }
 
   handleChangeStart(strTime,mTime){
-
-     // var sf = mTime.dateMoment.valueOf();
+    // var sf = mTime.dateMoment.valueOf();
     this.state.planingTimeStart = mTime.dateMoment.valueOf();
     console.log("planingTimeStart:  --- " +  this.state.planingTimeStart)
-
   }
   handleChangeEnd(strTime,mTime){
      this.state.planingTimeEnd = mTime.dateMoment.valueOf();
@@ -1351,10 +1366,8 @@ class Gongdan extends Component {
   handleChangeDropdown(code,ev,obj)
   {
     console.log("改变DropDown," + code + " ====" +  obj.value )
-   // this.setState({[code]:ev.target.value})  //"gongWeiCode"
+    // this.setState({[code]:ev.target.value})  //"gongWeiCode"
     this.state[code] =  obj.value;
-
-
   }
 
   handleChangeCheckbox(code,checkType,name,ev,obj)
@@ -1387,7 +1400,7 @@ class Gongdan extends Component {
 handleChangeDeviceType(deviceTypeObj,ev,obj)
 {
 
-     //debugger;
+     //;
     var iObj =   {deviceTypeID:deviceTypeObj.deviceTypeID,deviceTypeName:deviceTypeObj.deviceTypeName, quantity:obj.value   } ;
     this.state.workOrderDeviceTypesMap[deviceTypeObj.deviceTypeID] =iObj;
      console.log(iObj);
@@ -1434,6 +1447,7 @@ handleChangeDeviceType(deviceTypeObj,ev,obj)
       //alert("派发成功");
       alert(res.resultMessage);
       //t.closeCreate();
+      this.getGongdanList(this.curWorkordertypeid);
     }
   }
 handleChangeFile(fileID,o,t){
@@ -1442,72 +1456,78 @@ handleChangeFile(fileID,o,t){
   //var file = $("#issueAttachmentContent")[0].files[0];
   var file = this.refs[fileID].files[0];
   var imgUrlBase64;
-        if (file) {
-          //将文件以Data URL形式读入页面
-          imgUrlBase64 = reader.readAsDataURL(file);
-          console.log(fileID);
-          //console.log(reader.result);
-          if (AllowImgFileSize != 0 && AllowImgFileSize < reader.result.length){
-            alert( '上传失败，请上传不大于2M的图片！');
-            return;
-          }
-          setTimeout(function(reader,fileID,t){
-              console.log("上传文件内容: ");
-              console.log( reader.result);
-             // this.state[fileID].push(reader.result.substring(reader.result.indexOf(",") + 1) );
-              t.state[fileID].push(reader.result);
-          }, 1000,reader,fileID,this);
+  if (file) {
+    //将文件以Data URL形式读入页面
+    imgUrlBase64 = reader.readAsDataURL(file);
+    console.log(fileID);
+    //console.log(reader.result);
+    if (AllowImgFileSize != 0 && AllowImgFileSize < reader.result.length){
+      alert( '上传失败，请上传不大于2M的图片！');
+      return;
+    }
+    setTimeout(function(reader,fileID,t){
+        console.log("上传文件内容: ");
+        console.log( reader.result);
+        t.state[fileID].push(reader.result.substring(reader.result.indexOf(",") + 1) );
+        //t.state[fileID].push(reader.result);
+    }, 1000,reader,fileID,this);
+    // reader.onload = function(){
+    //   //读取完成后，数据保存在对象的result属性中
+    //   console.log("上传文件内容: ");
+    //   console.log(this.result)
+    //   this.state[fileID].push(this.result);
+    // }
 
-          //更新上传文件名列表:
-          var attNames = fileID+'Names';
-          // this.state[attNames].push(file.name);
-          var tt= {};
-          tt[attNames] = [];
-          this.state[attNames].map(function(t){   tt[attNames].push(t)   })
-          tt[attNames].push(file.name);
-          this.setState(tt);
-          console.log( attNames +",上传文件名: " + file.name);
-          // while(  reader.result.length==0)
-          // {
+    //更新上传文件名列表:
+    var attNames = fileID+'Names';
+    // this.state[attNames].push(file.name);
+    var tt= {};
+    tt[attNames] = [];
+    this.state[attNames].map(function(t){   tt[attNames].push(t)   })
+    tt[attNames].push(file.name);
+    this.setState(tt);
+    console.log( attNames +",上传文件名: " + file.name);
+    // while(  reader.result.length==0)
+    // {
 
-          //   //this.state[fileID].push(reader.result);
-          //   console.log(fileID +": 内容为空," +  reader.result );
-          //  // console.log(  reader.result);
+    //   //this.state[fileID].push(reader.result);
+    //   console.log(fileID +": 内容为空," +  reader.result );
+    //  // console.log(  reader.result);
 
-          //      if( reader.result.length>0) break;
+    //      if( reader.result.length>0) break;
 
-          // }
+    // }
 
-         // console.log(  reader.result);
-
-
-          // else
-          // {
-
-          //    console.log(fileID +": 内容为空");
-          //    console.log(   reader.result );
-
-
-          // }
+   // console.log(  reader.result);
 
 
-             // if(reader.result && reader.result.length>0)
-             //      this.setState({testImg:reader.result});
+    // else
+    // {
+
+    //    console.log(fileID +": 内容为空");
+    //    console.log(   reader.result );
 
 
-            //测试上传的图片文件:
-           // this.refs.testImg.src = reader.result;
-            // reader.onload = function (e)
-            // {
-            //       //var ImgFileSize = reader.result.substring(reader.result.indexOf(",") + 1).length;//截取base64码部分（可选可不选，需要与后台沟通）
-            //       if (AllowImgFileSize != 0 && AllowImgFileSize < reader.result.length) {
-            //             alert( '上传失败，请上传不大于2M的图片！');
-            //             return;
-            //         }else{
-            //             //执行上传操作
-            //             alert(reader.result);
-            //         }
-            // }
+    // }
+
+
+       // if(reader.result && reader.result.length>0)
+       //      this.setState({testImg:reader.result});
+
+
+      //测试上传的图片文件:
+     // this.refs.testImg.src = reader.result;
+      // reader.onload = function (e)
+      // {
+      //       //var ImgFileSize = reader.result.substring(reader.result.indexOf(",") + 1).length;//截取base64码部分（可选可不选，需要与后台沟通）
+      //       if (AllowImgFileSize != 0 && AllowImgFileSize < reader.result.length) {
+      //             alert( '上传失败，请上传不大于2M的图片！');
+      //             return;
+      //         }else{
+      //             //执行上传操作
+      //             alert(reader.result);
+      //         }
+      // }
          }
   }
   queryData(curPageno){
@@ -1527,7 +1547,7 @@ handleChangeFile(fileID,o,t){
   componentWillReceiveProps(nextprops){
     var nextp= nextprops.location.query.project;
     var thisp = this.props.location.query.project;
-    var curWorkordertypeid = 1;
+    var curWorkordertypeid = 3;
     if(thisp!=nextp){
       if(nextp=="wx"){curWorkordertypeid = 3; }
       else if(nextp=="dj")  {curWorkordertypeid = 1; }
@@ -1540,7 +1560,7 @@ handleChangeFile(fileID,o,t){
     const {getWorkOrderStatus,getDeviceAsset} = this.props;
     getWorkOrderStatus({});
     getDeviceAsset({});
-    this.getGongdanList(1);
+    this.getGongdanList(this.curWorkordertypeid);
   }
   componentWillMount(){}
   componentWillUnmount() {}

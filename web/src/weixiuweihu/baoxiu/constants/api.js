@@ -16,7 +16,10 @@
    // export const apiServer = `http://192.168.30.233:8081/btplatform/`;
     
     // export const apiServer = `http://192.168.30.129/`;
-     export const apiServer   = `http://39.106.150.90:8080/btplatform/`;
+    // 2018.7.18 开开合并接口
+    //export const apiServer   = `http://39.106.150.90:8080/btplatform/`;
+
+    export const apiServer   = `http://39.106.150.90:8080/baogang-abnormal/`;
 
     export const API ={
 

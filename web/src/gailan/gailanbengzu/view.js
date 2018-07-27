@@ -32,7 +32,7 @@ class GailanBengzu extends Component {
         this.resizeWindow1=this.resizeWindow.bind(this)
 
         this.state = {
-          jiancedata:{pagename:'jiance_jiankong_28-1',status:2,
+          jiancedata:{pagename:'jiance_jiankong_28-2',status:2,
               d1:{data:[],status:2},
               d2:{data:[],status:2},
               d3:{data:[],status:2},
@@ -68,7 +68,7 @@ class GailanBengzu extends Component {
     // 不同的item 调不同的components 展示完成后[销毁]
     // 公共的弹层组件 内容不同
     render() {
-      debugger
+
       const {jiancedata,bzNum} = this.state
       let {BodyStyle,ChartsStyle,RightHeightStyle} = this.state
       let hour = moment().hours()+1
@@ -150,59 +150,97 @@ class GailanBengzu extends Component {
       };
 
 
-
       var ShuiBengXiaoLvOption = {
           //scatterColors: ['#facc17', '#FFEE2B', '#84d5d8', 'f8910c','#2c8cf9'], //可选
           lineColors: ["#73eecc","#facc17","#5c67e5"], //2c8cf9
           scatterColors: ["#73eecc","#facc17","#5c67e5"],  //2c8cf9
-          grid: ['40%','15%','5%','5%'],
+          grid: ['20%','15%','5%','5%'],
           legend:{left:'30%',top:'-4%'},
-          xAxis: {type:"value",name:"m³/h",data:[924,1082,1281,1508,1797,2046,2160,2284].map(item=>(Math.round(item)))},
+          //xAxis: {type:"category",name:"m³/h",data:[924,1082,1281,1508,1797,2046,2160,2284]},
+          xAxis: [{type:"value",name:"m³/h"},{type:"value",name:"m³/h"}],
           yAxis: {name:["%"]},
+          tooltip:{
+                    trigger: 'item',//'axis',
+                  },
           series: {
+
+                  // lines:   [
+                  //             {name:"203水泵",data:[75,80,85,87,88,87,85,82].map(item=>(Math.round(item)))},
+                  //             {name:"204水泵",data:[79,82,85,87,88,87,85,82].map(item=>(Math.round(item)))},
+                  //          ]
+                  // scatters:[
+
+                  //             {
+                  //                 name:bzNum=='28-2'?"203泵":"2泵",
+                  //                // symbolSize: 20,
+                  //                // itemStyle:{color:'#facc17'},
+                  //                 data:
+                  //                 [
+                  //                     [3, 79],
+                  //                     [3, 82.95],
+                  //                     [4, 79.58],
+                  //                     [4, 82.95],
+                  //                     [5, 82.95],
+
+                  //                 ]
+                  //             },
+                  //             {
+                  //                 name:bzNum=='28-2'?"204泵":"3泵",
+                  //                // symbolSize: 20,
+                  //                // itemStyle:{color:'#facc17'},
+                  //                 data:
+                  //                 [
+                  //                     [3, 78],
+                  //                     [3, 81.95],
+                  //                     [4, 80.58],
+                  //                     [4, 84.95],
+                  //                     [5, 81.25],
+
+                  //                 ]
+                  //             }
+
+                  //          ]
+
+
                   lines:   [
-                              {name:"203水泵",data:[79,82,85,87,88,87,85,82].map(item=>(Math.round(item)))},
-                              {name:"204水泵",data:[79,82,85,87,88,87,85,82].map(item=>(Math.round(item)))},
+                              {name:bzNum=='28-2'?"203泵":"2泵",xAxisIndex:0,data:[[0,75],[8,80],[16,85],[24,87],[32,88],[40,82] ] },
+                              {name:bzNum=='28-2'?"204泵":"3泵",xAxisIndex:0,data:[[0,79],[8,82],[16,80],[24,67],[32,75],[40,80] ] },
                            ],
+
                   scatters:[
-
-
                       {
                           name:bzNum=='28-2'?"203泵":"2泵",
+                          xAxisIndex:0,
                          // symbolSize: 20,
                          // itemStyle:{color:'#facc17'},
                           data:
                           [
                               [3, 79],
-                              [3, 82.95],
-                              [4, 79.58],
-                              [4, 82.95],
-                              [5, 82.95],
+                              [6, 82.95],
+                              [14, 79.58],
+                              [24, 82.95],
+                              [35, 82.95],
 
                           ]
                       },
                       {
                           name:bzNum=='28-2'?"204泵":"3泵",
+                          xAxisIndex:1,
                          // symbolSize: 20,
                          // itemStyle:{color:'#facc17'},
                           data:
                           [
-                              [3, 78],
-                              [3, 81.95],
-                              [4, 80.58],
-                              [4, 84.95],
-                              [5, 81.25],
-
+                              [900, 70],
+                              [1030, 71.95],
+                              [1230, 70.58],
+                              [1500, 74.95],
+                              [1600, 71.25],
                           ]
-                      },
-
-
-
+                      }
                     ]
          }
-
-
       }
+
       var GuZhangPanBieOption =
           {
             //lineColors:  ['#facc17','#73ecee','white'], //可选
@@ -452,7 +490,7 @@ class GailanBengzu extends Component {
         componentWillReceiveProps(nextProps) {
          const {jiancedata}=this.state
 
-         debugger
+
          let {pagename} = jiancedata
          if(pagename==nextProps.jiancedata.pagename){
          // if (nextProps.jiancestatus == 0 && nextProps.jiancemsg) {

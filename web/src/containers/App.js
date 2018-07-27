@@ -106,7 +106,7 @@ class App extends Component {
     //   mqttClient.on('message', function (topic, message) {
     //     // message is Buffer
     //     console.log(message.toString())
-    //     debugger
+    //     
     //     let {xiaoxis} = this.state
     //     xiaoxis.push(message)
     //     sessionStorage.setItem("xiaoxi",JSON.stringify(xiaoxis))

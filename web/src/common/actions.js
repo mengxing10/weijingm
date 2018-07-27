@@ -91,7 +91,7 @@ export function getPageConf(pageName,data={},pageParams={}) {
     res['jiancestatus'] = 2
     res['jiancemsg'] = '请求数据中...'
     res['jiancedata'] = data
-    debugger
+    
     dispatch(request(`GetPageConf_REQ_${pageName}`,res))
 
     try {

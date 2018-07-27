@@ -239,7 +239,7 @@ class GailanZonglan extends Component {
         let svgpath = '/resources/zonglan.svg';
         let svgdata = []
         let xiaoxis = this.props.xiaoxis?this.props.xiaoxis.slice(0,3):[]
-
+        
 
         return (
           <div className="gailanzonglan theBody" style={BodyStyle} >
@@ -814,7 +814,7 @@ class GailanZonglan extends Component {
      const {jiancedata}=this.state
 
      let {pagename} = jiancedata
-     if(pagename==nextProps.jiancedata.pagename){
+     if(nextProps.jiancedata.pagename&&pagename==nextProps.jiancedata.pagename){
      // if (nextProps.jiancestatus == 0 && nextProps.jiancemsg) {
      //   this.refs.toastcontainer.error(`${nextProps.jiancemsg}`, ``, {
      //     timeOut: 2000,
