@@ -96,6 +96,20 @@ export default function reducer(state = initialState, action) {
             }
         )
       }
+      case 'REQUESTE_CHAOBIAODANDEL':
+      {
+        return Object.assign({}, state, {REQUESTE_CHAOBIAODANDEL: 'start'});
+      }
+      case 'RECEIVE_CHAOBIAODANDEL':
+      {
+        return Object.assign(
+            {},
+            state,
+            {
+              REQUESTE_CHAOBIAODANDEL: 'done'
+            }
+        )
+      }
 
 
       default:

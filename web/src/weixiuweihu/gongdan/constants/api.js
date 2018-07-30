@@ -33,6 +33,9 @@
  //7.18 开开拆分接口
     export const apiServer = `http://39.106.150.90:8080/baogang-workorder/`; 
  // export const apiServer = `http://192.168.30.233:8081/baogang-workorder/`; 
+ // export const apiServer = `http://192.168.30.129:8080/`;
+  // var dongdongAPI = 'http://192.168.30.129:8080/';
+    var repairAPI = `http://39.106.150.90:8080/baogang-repair/`;
     export const reportAPI ={
  
 
@@ -65,11 +68,17 @@
 
      //getalllist:`${apiServer}workorder/getalllist`,//6.6获取所有工单
 
-     getworkorderfull:`${apiServer}workorder/getfullbyid`,   //6.7  获取完整工单信息
+     //getworkorderfull:`${apiServer}workorder/getfullbyid`,   //6.7  获取完整工单信息
+     getworkorderfull:`${repairAPI}repairplan/getinfo64`,   //18.10
+    
+
+
      acceptworkorder:`${apiServer}workorder/accept`,   //6.9  办理领取
      completejob:`${apiServer}workorder/completejob`,   //6.10  反馈工单，完工
      review:`${apiServer}workorder/review`,//6.11 评价工单
-     getalllist:`${apiServer}workorder/getlistbylayoutcratetimetype`,//6.12 获取所有工单
+
+   //  getalllist:`${apiServer}workorder/getlistbylayoutcratetimetype`,//6.12 获取所有工单
+      getalllist:`${repairAPI}repairplan/getlist`,//6.12 获取所有工单
 
 
      getdeviceasset:`${apiServer}device/deviceasset/getlistbyname`, //7.1  获取所有设备

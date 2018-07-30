@@ -102,4 +102,4 @@ class Xunjian extends Component {
 function mapDispatchToProps (dispatch) {
         return bindActionCreators(actions, dispatch);
     };
-export default connect(state => state.xunjian, mapDispatchToProps)(Xunjian);
+export default connect(state => state, mapDispatchToProps)(Xunjian);

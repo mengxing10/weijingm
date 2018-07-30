@@ -180,7 +180,7 @@ export default (
             </Route>
 
             <Route path="baoyang" component={Baoyang}>
-              <IndexRoute component={BaoyangRenwu} />
+              <IndexRoute component={Jihua} />
               <Route path="baoyangrenwu" component={BaoyangRenwu} />
               <Route path="baoyangjihuashezhi" component={BaoyangJihuaShezhi} />
               <Route path="jihua" component={Jihua} />
@@ -191,7 +191,6 @@ export default (
 
 
         </Route>
-
 
 
         <Route path="chaobiaojiesuan" component={Chaobiaojiesuan}>

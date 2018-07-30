@@ -21,7 +21,7 @@ import Menus from '../../../common/components/Menus'
 class BaoyangRenwu extends Component {
     constructor(props) {
         super(props)
-        this.curWorkordertypeid = 4; //点检 默认
+        this.curWorkordertypeid = 4; //保养 默认
         this.operateType="" //当前办理类型: linqu, fangong, zuofei
         this.state = {
           //创建用
@@ -98,11 +98,11 @@ class BaoyangRenwu extends Component {
       //title += project=="wx"?"维修":project=="xj"?"巡检":project=="bx"?"报修":project=="wbjh"?"维保计划":""
       // title += project=="wx"?"维修":project=="dj"?"点检":project=="dx"?"定修":project=="byang"?"保养":""
 
-      if(project=="wx"){ title= "设备维修";this.curWorkordertypeid = 3; }
-      else if(project=="dj")  { title= "点检";  this.curWorkordertypeid = 1; }
-      else if(project=="dx")  { title= "定修";  this.curWorkordertypeid = 2; }
-      else if(project=="byrw")  { title= "设备保养";  this.curWorkordertypeid = 4; }
-      console.log("当前类型: " + title + ","+ this.curWorkordertypeid)
+      // if(project=="wx"){ title= "设备维修";this.curWorkordertypeid = 3; }
+      // else if(project=="dj")  { title= "点检";  this.curWorkordertypeid = 1; }
+      // else if(project=="dx")  { title= "定修";  this.curWorkordertypeid = 2; }
+      // else if(project=="byrw")  { title= "设备保养";  this.curWorkordertypeid = 4; }
+      // console.log("当前类型: " + title + ","+ this.curWorkordertypeid)
 
       var othis = this;
 
@@ -115,10 +115,10 @@ class BaoyangRenwu extends Component {
           stars.push(p);
         }
       }
-      var workOrderInfo2 = workOrderFullData.data;
-      const thead=[{width:"5%",value:"编号"},{width:"10%",value:"类型"},{width:"10%",value:"设备"}
-                  ,{width:"25%",value:"时间"},{width:"15%",value:"标题"},{width:"5%",value:"级别"}
-                  ,{width:"10%",value:"发布人"},{width:"10%",value:"办理状态"},{width:"10%",value:"操作"}]
+      var workOrderInfo2 = workOrderFullData.data; //{width:"10%",value:"类型"},
+      const thead=[{width:"10%",value:"编号"},{width:"10%",value:"设备"}
+                  ,{width:"15%",value:"时间"},{width:"15%",value:"标题"},{width:"15%",value:"级别"}
+                  ,{width:"15%",value:"发布人"},{width:"10%",value:"办理状态"},{width:"10%",value:"操作"}]
 
       const options =[
         { key: -1, text: '全部', value: -1 },
@@ -145,21 +145,21 @@ class BaoyangRenwu extends Component {
       }
 
       //工单类别6.2:
-      var workOrderTypeOptions =[];
-      if(workOrderTypeData&&workOrderTypeData.resultCode==0)
-      {
-        for(var i=0;i<workOrderTypeData.data.length;i++)
-        {
-          var newOpt = {};
-          newOpt.key = workOrderTypeData.data[i].workOrderTypeID;
-          newOpt.value = workOrderTypeData.data[i].workOrderTypeID;
-          newOpt.text = workOrderTypeData.data[i].workOrderTypeName;
-          workOrderTypeOptions.push(newOpt );
-        }
-      }
+      // var workOrderTypeOptions =[];
+      // if(workOrderTypeData&&workOrderTypeData.resultCode==0)
+      // {
+      //   for(var i=0;i<workOrderTypeData.data.length;i++)
+      //   {
+      //     var newOpt = {};
+      //     newOpt.key = workOrderTypeData.data[i].workOrderTypeID;
+      //     newOpt.value = workOrderTypeData.data[i].workOrderTypeID;
+      //     newOpt.text = workOrderTypeData.data[i].workOrderTypeName;
+      //     workOrderTypeOptions.push(newOpt );
+      //   }
+      // }
 
       //设备名称7.1
-      var deviceAssetOptions =[ ];  //{ key: -1, text: '全部', value: -1 }
+      var deviceAssetOptions =[ { key: -1, text: '请选择', value: -1 }];  //{ key: -1, text: '全部', value: -1 }
       if(deviceAssetData&&deviceAssetData.resultCode==0)
       {
         for(var i=0;i<deviceAssetData.data.length;i++)
@@ -261,15 +261,15 @@ class BaoyangRenwu extends Component {
           // }
           //
           // this.curWorkordertypeid
-          var workOrderTypeName = "维修";
-          if(workOrderData.data.data[i]. workOrderTypeID==1)
-            workOrderTypeName = "点检";
-          else if(workOrderData.data.data[i]. workOrderTypeID==2)
-            workOrderTypeName = "定修";
-          else if(workOrderData.data.data[i]. workOrderTypeID==3)
-              workOrderTypeName = "维修";
-          else if(workOrderData.data.data[i]. workOrderTypeID==4)
-              workOrderTypeName = "保养";
+          // var workOrderTypeName = "维修";
+          // if(workOrderData.data.data[i]. workOrderTypeID==1)
+          //   workOrderTypeName = "点检";
+          // else if(workOrderData.data.data[i]. workOrderTypeID==2)
+          //   workOrderTypeName = "定修";
+          // else if(workOrderData.data.data[i]. workOrderTypeID==3)
+          //     workOrderTypeName = "维修";
+          // else if(workOrderData.data.data[i]. workOrderTypeID==4)
+          //     workOrderTypeName = "保养";
           var updateTime = moment (workOrderData.data.data[i].updaetTime).format('YYYY-MM-DD HH:mm:ss');
           // var btnHtml = <Button style={ { fontSize:"14px"}}    color='teal'  onClick={this.openUpdate.bind(this,workOrderData.data[i])}>查看</Button>
           // var btnHtml = <span style={{color:'#7598f7',cursor:'pointer'}} onClick={this.onChakan3.bind(this)} >查看</span>
@@ -282,9 +282,9 @@ class BaoyangRenwu extends Component {
           else if(sid == 4)
             statusFlag = "chakan3";
           else if(sid == 5)
-            statusFlag = "chakan4";
+            statusFlag = "chakan4";  //workOrderTypeName,
           var btnHtml = <span style={{color:'#7598f7',cursor:'pointer'}} onClick={this.onChakan.bind(this,statusFlag,workOrderData.data.data[i].workOrderID)} >查看</span>
-          var arr = [workOrderData.data.data[i].workOrderID, workOrderTypeName, workOrderData.data.data[i].deviceAssetName ,updateTime,workOrderData.data.data[i].title,workOrderData.data.data[i].workOrderLevelName,workOrderData.data.data[i].createUserID,workOrderData.data.data[i].statusName,btnHtml];//id:workOrderData.data.data[i].workOrderID
+          var arr = [workOrderData.data.data[i].workOrderID,  workOrderData.data.data[i].deviceAssetName ,updateTime,workOrderData.data.data[i].title,workOrderData.data.data[i].workOrderLevelName,workOrderData.data.data[i].createUserID,workOrderData.data.data[i].statusName,btnHtml];//id:workOrderData.data.data[i].workOrderID
           tbody.push(arr);
         }
       }
@@ -400,8 +400,7 @@ class BaoyangRenwu extends Component {
                                                 className="query-value" defaultValue={deviceAssetOptions[0].value}
                                                  selection openOnFocus options={deviceAssetOptions}
                                                /></div></div>
-                      </div>
-                      <div className="items fix">
+
                         <div className="div1"><label>关联工单：</label></div>
                         <div className="div2">
                             <span className="selectsMul">
@@ -415,6 +414,13 @@ class BaoyangRenwu extends Component {
                               */}
                             </span>
                             <span className="span-btn" onClick={this.onGuanlian.bind(this)}>关联工单</span></div>
+
+
+
+
+                      </div>
+                      {/*
+                      <div className="items fix">
                         <div className="div1"><label><i className="xing">*</i>类别：</label></div>
                         <div className="div2"><div className="query-value">
                              <Dropdown
@@ -427,6 +433,7 @@ class BaoyangRenwu extends Component {
                               /></div>
                            </div>
                       </div>
+                    */}
                       <div className="items fix">
                         <div className="div1"><label><i className="xing">*</i>标题：</label></div>
                         <div className="div2"><Input onChange={this.handleChangeInput.bind(this,'title')}/></div>
@@ -1172,6 +1179,7 @@ class BaoyangRenwu extends Component {
   }
   async onPaifaY(){
     if(this.state.workOrderLinks.length==0||
+       this.state.deviceAssetID == -1||
      this.state.workOrderStaffs.length==0||
      this.state.workOrderDeviceTypes.length==0||
      this.state.title==''||
@@ -1389,7 +1397,7 @@ class BaoyangRenwu extends Component {
 handleChangeDeviceType(deviceTypeObj,ev,obj)
 {
 
-     //;
+     //debugger;
     var iObj =   {deviceTypeID:deviceTypeObj.deviceTypeID,deviceTypeName:deviceTypeObj.deviceTypeName, quantity:obj.value   } ;
     this.state.workOrderDeviceTypesMap[deviceTypeObj.deviceTypeID] =iObj;
      console.log(iObj);

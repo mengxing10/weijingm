@@ -9,7 +9,7 @@ import axios from 'axios'
 let request = (type, params) => {return {type, params}}
 let receive = (type, data) => {return {type, data}}
 
-const apiServer = `http://192.168.30.233:8081/baogang-meterread/`;
+const apiServer = `http://39.106.150.90:8080/baogang-meterread/`;
 
 const api ={
   //获取结算单列表

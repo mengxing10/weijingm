@@ -22,8 +22,8 @@ class Jiesuandan extends Component {
         super(props)
         this.reportid='';
         this.state = {
-            startDate: moment().subtract(1,'Y'),
-            endDate: moment().subtract(1,'d'),
+            startDate: moment().subtract(1,'M'),
+            endDate: moment(),
             pageNum:1,
             xinzeng:false,
             chakan:false,

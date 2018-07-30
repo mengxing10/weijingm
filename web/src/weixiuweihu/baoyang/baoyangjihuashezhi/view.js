@@ -13,7 +13,7 @@ import classNames from 'classnames'
 import CsvFetch from '../../../common/components/CsvFetch'
 import MyTable from '../../../common/components/MyTable'
 import { DateField,DatePicker } from 'react-date-picker'
-import {Icon, Dropdown, Menu,Input,Form,Radio,Checkbox} from 'semantic-ui-react'
+import {Icon, Dropdown, Menu,Input,Form,Radio,Checkbox,TextArea} from 'semantic-ui-react'
 import Pager from '../../../common/components/Pager'
 
 import moment from 'moment'
@@ -53,13 +53,152 @@ class BaoyangJihuaShezhi extends Component {
             endDate: moment().add(1, 'd'),
             deviceType:'quanbu',
             xinzeng:false,
+            xiugai:false,
             chakan:false,
             peijian:false,
             bengzu:[],
-            shebei:[]
+            shebei:[],
+
+
+            //选择某项：
+            //mainPlanSetDetailData.data.layoutID 
+            curLayoutID:-1,
+            curStartTime:1531538019000,
+            curEndTime:1531538019000,
+            curDeviceAssetID:-1,
+            curPeriodtype:-1,
+            curPlan:{}
         }
         //handleChange = (e, { value }) => this.setState({ value })
     }
+
+
+     
+    // onXiugai(){
+    //   this.setState({xinzeng:true})
+    // }
+
+
+     onXiugai(statusFlag,maintenencePlan)
+    {
+
+
+        var maintenencePlanID  = maintenencePlan.maintenencePlanID;
+
+         const { getMainplansetDetail } = this.props;
+        // getDeviceByType({devicetypeid:devicecountID});
+        // getMainplansetDetail({id:maintenencePlanID});
+         var kan = {};
+         kan[statusFlag] = true;
+         kan["selectDevicecountID"] = maintenencePlanID;
+         kan["curLayoutID"] =  maintenencePlan.layoutID; 
+
+        kan["curStartTime"] =  maintenencePlan.startTime; 
+        kan["curEndTime"] =  maintenencePlan.endTime; 
+             
+       kan["curDeviceAssetID"] = maintenencePlan.deviceAssetID;
+       kan["deviceAssetID"]    = maintenencePlan.deviceAssetID;
+        kan["curPeriodtype"] = maintenencePlan.periodtype;
+        
+         kan["curPlan"] = maintenencePlan;
+        //kan["deviceAssetID"] = maintenencePlan.deviceAssetID;
+
+//periodtype 
+         this.setState(kan);
+ 
+
+this.state.description =  maintenencePlan.description;
+this.state.periodtype = maintenencePlan.periodtype;
+this.state.maintenenceType  = maintenencePlan.maintenenceType;
+//this.state.deviceAssetID  = maintenencePlan.deviceAssetID;
+this.state.period  = maintenencePlan.period;
+this.state.title  = maintenencePlan.title;
+
+
+   //                    "description": this.state.description,
+   //                    "periodtype": this.state.periodtype,
+   //                    "maintenenceType": this.state.maintenenceType,
+   //                    "deviceassetid": this.state.deviceAssetID,
+   //                    "period": parseInt(this.state.period),
+   //                    "title":  this.state.title,
+
+
+
+
+
+         this.onClickBengzhan(null,{value:maintenencePlan.layoutID});
+        // this.handleChangeDropdown('periodtype',this,{value: maintenencePlan.periodtype });
+
+    }
+
+
+
+
+    onXiugaiN(){
+      this.setState({xiugai:false,chakan:false})
+    }
+
+    onXiugaiY()
+    {
+     
+
+       if(this.state.layoutid==-1 ||    
+       //   this.state.deviceAssetID==-1||
+          this.state.description==''||
+         // this.state.workOrderDeviceTypes.length==0||
+         // this.state.maintenanceCode==''||
+        //  this.state.maintenanceFactory==''||
+          this.state.period==0||
+         // this.state.timeConsuming==0||
+          this.state.title=='')
+          {  
+             alert("内容不完整");return;
+          }
+
+ 
+       this.setState({xiugai:false,chakan:false})
+      var t1 = moment(this.refs.theStarttime2.getInput().value).format('YYYY-MM-DD 00:00:00');
+      var t2 = moment(this.refs.theEndtime2.getInput().value).format('YYYY-MM-DD 00:00:00');
+      console.log(t1);
+      console.log(t2);
+
+      var fittings = [];
+
+      this.state.workOrderDeviceTypes.map(function(item){
+            fittings.push({fittingid:parseInt(item.categoryid) ,fittingnum:parseInt(item.quantity)})       })
+
+      var assetID = this.state.deviceAssetID;
+
+      if(this.state.deviceAssetID==-1)  assetID = this.state.curDeviceAssetID;
+
+       
+      var newObj = {
+                      "maintenenceplanid":this.state.selectDevicecountID,
+                      "starttime":t1,
+                      "endtime":t2,
+                      "description": this.state.description,
+                      "periodtype": this.state.periodtype,
+                      "maintenencetype": this.state.maintenenceType,
+                      "deviceassetid": assetID,//this.state.deviceAssetID,
+                      "period": parseInt(this.state.period),
+                      "title":  this.state.title,
+                   //   "timeConsuming":  parseInt(this.state.timeConsuming),
+                   //   "maintenanceFactory":this.state.maintenanceFactory,
+                   //   "maintenanceCode":this.state.maintenanceCode,
+                      "layoutID":this.state.layoutid,
+                    //  "fitting":  fittings
+                  }
+
+       console.log(newObj);
+       const {updatePlan} = this.props;
+       updatePlan(newObj,this);
+
+
+
+
+
+    }
+
     onXinzeng(){
       this.setState({xinzeng:true})
     }
@@ -74,19 +213,21 @@ class BaoyangJihuaShezhi extends Component {
        if(this.state.layoutid==-1 ||
           this.state.deviceAssetID==-1||
           this.state.description==''||
-          this.state.workOrderDeviceTypes.length==0||
-          this.state.maintenanceCode==''||
-          this.state.maintenanceFactory==''||
+         // this.state.workOrderDeviceTypes.length==0||
+         // this.state.maintenanceCode==''||
+        //  this.state.maintenanceFactory==''||
           this.state.period==0||
-          this.state.timeConsuming==0||
+         // this.state.timeConsuming==0||
           this.state.title=='')
           {
              alert("内容不完整");return;
           }
 
       this.setState({xinzeng:false,chakan:false})
-      var t1 = moment(this.refs.theStarttime.getInput().value).format('YYYY-MM-DD HH:mm:ss');
-      var t2 = moment(this.refs.theEndtime.getInput().value).format('YYYY-MM-DD HH:mm:ss');
+      var t1 = moment(this.refs.theStarttime.getInput().value).format('YYYY-MM-DD 00:00:00');
+      var t2 = moment(this.refs.theEndtime.getInput().value).format('YYYY-MM-DD 00:00:00');
+
+        //    var t1 = moment(this.refs.theStarttime2.getInput().value).format('YYYY-MM-DD 00:00:00');
       console.log(t1);
       console.log(t2);
 
@@ -104,11 +245,11 @@ class BaoyangJihuaShezhi extends Component {
                       "deviceassetid": this.state.deviceAssetID,
                       "period": parseInt(this.state.period),
                       "title":  this.state.title,
-                      "timeConsuming":  parseInt(this.state.timeConsuming),
-                      "maintenanceFactory":this.state.maintenanceFactory,
-                      "maintenanceCode":this.state.maintenanceCode,
+                   //   "timeConsuming":  parseInt(this.state.timeConsuming),
+                   //   "maintenanceFactory":this.state.maintenanceFactory,
+                   //   "maintenanceCode":this.state.maintenanceCode,
                       "layoutID":this.state.layoutid,
-                      "fitting":  fittings
+                    //  "fitting":  fittings
                   }
 
        console.log(newObj);
@@ -170,7 +311,7 @@ class BaoyangJihuaShezhi extends Component {
 
     onClickBengzhan(ev,obj){
 
-
+ 
          const {getDevicecount } = this.props;
 
          var q = {
@@ -236,7 +377,7 @@ class BaoyangJihuaShezhi extends Component {
           title += project=="jbxx"?"基本信息":project=="wbjh"?"维保计划":project=="wbjl"?"维保记录":"基本信息"
 
         const thead=[{width:"5%",value:"编号"},{width:"15%",value:"泵站"},{width:"20%",value:"设备"},{width:"20%",value:"维保开始日期"}
-                    ,{width:"15%",value:"维保周期"},{width:"20%",value:"标题"},{width:"15%",value:"操作"}]
+                    ,{width:"15%",value:"维保周期"},{width:"20%",value:"标题"},{width:"5%",value:"操作"},{width:"10%",value:""}]
 
         const options =[
           { key: 1, text: '维修', value: 1 },
@@ -261,11 +402,13 @@ class BaoyangJihuaShezhi extends Component {
 
 
        // 设备选择
+      
        var deviceDataOptions =[ { key: -1, text: '请选择', value: -1 }];
         //const {devicecountData} = this.props;
         if(devicecountData&&devicecountData.resultCode==0)
         {
-
+         
+        
             for(var i=0;i<devicecountData.data.data.length;i++)
             {
                   var newOpt = {};
@@ -279,7 +422,7 @@ class BaoyangJihuaShezhi extends Component {
 
       // 保养周期类型选择
        var maintainPeriodOptions =[ //{ key: -1, text: '请选择', value: -1 },
-                                    { key: 1, text: '时间周期', value: 1 },{ key: 2, text: '运行时间', value:2 } ];
+                                    { key: 1, text: '时间周期', value: 1 },{ key: 2, text: '运行时间', value:2 } ,{ key: 3, text: '临时任务', value:3 }];
 
 
       // 保养周期类型选择
@@ -328,9 +471,11 @@ class BaoyangJihuaShezhi extends Component {
                         var  statusFlag = "chakan";
                         var sid = mainPlanSetData.data.data[i].statusID;
 
+// HH:mm:ss
+                        var btnHtml = <span style={{color:'#7598f7',cursor:'pointer'}} onClick={this.onChakan.bind(this,"chakan",mainPlanSetData.data.data[i].maintenencePlanID)} >查看</span> 
+                        var xiugaiHtml = <span style={{color:'#7598f7',cursor:'pointer'}} onClick={this.onXiugai.bind(this,'xiugai',mainPlanSetData.data.data[i])} >修改</span>
 
-                        var btnHtml = <span style={{color:'#7598f7',cursor:'pointer'}} onClick={this.onChakan.bind(this,statusFlag,mainPlanSetData.data.data[i].maintenencePlanID)} >查看</span>
-                        var arr = [mainPlanSetData.data.data[i].maintenencePlanID, mainPlanSetData.data.data[i].layoutName,mainPlanSetData.data.data[i].deviceAssetName, moment(mainPlanSetData.data.data[i].startTime).format('YYYY-MM-DD HH:mm:ss'),mainPlanSetData.data.data[i].period,mainPlanSetData.data.data[i].title,btnHtml];  //mainPlanSetData.data.data[i].num,
+                        var arr = [mainPlanSetData.data.data[i].maintenencePlanID, mainPlanSetData.data.data[i].layoutName,mainPlanSetData.data.data[i].deviceAssetName, moment(mainPlanSetData.data.data[i].startTime).format('YYYY-MM-DD'),mainPlanSetData.data.data[i].period,mainPlanSetData.data.data[i].title,xiugaiHtml,btnHtml];  //mainPlanSetData.data.data[i].num,
                         tbody.push(arr);
 
 
@@ -341,10 +486,10 @@ class BaoyangJihuaShezhi extends Component {
 
 
     var mainTypeStr = '';
-    if(mainPlanSetDetailData&&mainPlanSetDetailData.data[0].periodtype==1)
+    if(mainPlanSetDetailData&&mainPlanSetDetailData.data.periodtype==1)
     {
 
-       var mainType = mainPlanSetDetailData.data[0].maintenenceType;
+       var mainType = mainPlanSetDetailData.data.maintenenceType;
        if(mainType==1)  mainTypeStr = '月/次';
        else if(mainType==2)  mainTypeStr = '季度/次';
        else if(mainType==3)  mainTypeStr = '年/次';
@@ -374,7 +519,7 @@ class BaoyangJihuaShezhi extends Component {
               <span className={'huanghe' == this.state.deviceType? "itab active" : 'itab'} onClick={this.selectDeviceType.bind(this,'huanghe')}>黄河泵站</span>
               <span className={'6' == this.state.deviceType? "itab active" : 'itab'} onClick={this.selectDeviceType.bind(this,'6')}>6#泵站</span>
 
-
+ HH:mm:ss
             </div> */}
             <div className="query-condition">
 
@@ -394,7 +539,7 @@ class BaoyangJihuaShezhi extends Component {
                   <Input type="text" className="query-value" ref="deviceName" onChange={this.handleChangeInput.bind(this,'qname')} />
                 <label className="labStyle">开始时间</label>
                     <DateField ref='qStarttime'
-                        dateFormat="YYYY-MM-DD HH:mm:ss"
+                        dateFormat="YYYY-MM-DD"
                         locale="zh-cn"
                         forceValidDate={true}
                         updateOnDateClick={true}
@@ -415,7 +560,7 @@ class BaoyangJihuaShezhi extends Component {
                     </DateField>
                 <label className="labStyle">结束时间</label>
                     <DateField ref='qEndtime'
-                    dateFormat="YYYY-MM-DD HH:mm:ss"
+                    dateFormat="YYYY-MM-DD"
                     locale="zh-cn"
                     forceValidDate={true}
                     updateOnDateClick={true}
@@ -464,38 +609,40 @@ class BaoyangJihuaShezhi extends Component {
                                                /></div></div>
                         */}
 
-                       <div className="div1"><label>设备：</label></div>
-                       <div className="div2 div_time fix">
-                         <div className="query-value2" style={{width:'43%'}}><Dropdown
+                       <div className="div1"><label>设备名称：</label></div>
+                       <div className="div2 div_time">
+                         <Dropdown
                            className="query-value" style={{width:'160px'}} defaultValue={layoutDataOptions[0].value}
                             selection openOnFocus options={layoutDataOptions} onChange={this.onClickBengzhan.bind(this)}
-                          /></div>
-
-                          {/*
-                          {this.state.bengzu.length > 0 && <div className="query-value2"><Dropdown
-                            className="query-value" defaultValue={this.state.bengzu[0].value}
-                             selection openOnFocus options={this.state.bengzu} onChange={this.onClickBengzu.bind(this)}
-                           /></div>}*/}
-
-
-                            <div className="query-value2" style={{width:'43%'}}><Dropdown
-                             onChange={this.handleChangeDropdown.bind(this,'deviceAssetID')}
-                             className="query-value" defaultValue={deviceDataOptions[0].value}
-                              selection openOnFocus options={deviceDataOptions}
-                            /></div>
+                          /> 
                         </div>
+
+                        <div className="div2 div_time">
+
+                                          <Dropdown
+                                           onChange={this.handleChangeDropdown.bind(this,'deviceAssetID')}
+                                           className="query-value" defaultValue={deviceDataOptions[0].value}
+                                            selection openOnFocus options={deviceDataOptions}
+                                          /> 
+
+                        </div>
+
+
+
+
+
                       </div>
                       <div className="items fix">
-                        <div className="div1"><label>保养周期类型：</label></div>
-                        <div className="div2 div_time">
+                        <div className="div1"><label>周期类型：</label></div>
+                        <div className="div2 div_time ">
                                  <Dropdown onChange={this.handleChangeDropdown.bind(this,'periodtype')}
                                      className="query-value" defaultValue={maintainPeriodOptions[0].value}
                                      selection openOnFocus options={maintainPeriodOptions}
                                    />
                         </div>
 
-                        <div className="div1"><label ref='periodName'>保养周期：</label></div>
-                        <div className="div2 div_time"> <div className="query-value2"><Input  onChange={this.handleChangeInput.bind(this,'period')}  />   </div>
+                        <div className="div1 divlbl"><span ref='periodName'>保养周期：</span></div>
+                        <div className="div2  "> <div  ref='periodInput'className="query-value2"><Input  onChange={this.handleChangeInput.bind(this,'period')}  />   </div>
                                  <div ref='periodDrop' className="query-value2"><Dropdown   onChange={this.handleChangeDropdown.bind(this,'maintenenceType')} defaultValue={periodValueOptions[0].value} selection openOnFocus options={periodValueOptions} /></div>
 
 
@@ -506,9 +653,9 @@ class BaoyangJihuaShezhi extends Component {
 
                       </div>
                       <div className="items fix">
-                        <div className="div1"><label>开始日期：</label></div>
+                        <div className="div1"><label>时间范围：</label></div>
                         <div className="div2 div_time"><DateField ref="theStarttime"
-                              dateFormat="YYYY-MM-DD HH:mm:ss"
+                              dateFormat="YYYY-MM-DD"
                               locale="zh-cn"
                               forceValidDate={true}
                               updateOnDateClick={true}
@@ -527,10 +674,10 @@ class BaoyangJihuaShezhi extends Component {
                                   footer={true}
                                   />
                           </DateField></div>
-                        <div className="div1"><label>结束日期：</label></div>
+                        {/*<div className="div1"><label>结束日期：</label></div> */}
                         <div className="div2 div_time">
                           <DateField ref="theEndtime"
-                            dateFormat="YYYY-MM-DD HH:mm:ss"
+                            dateFormat="YYYY-MM-DD"
                             locale="zh-cn"
                             forceValidDate={true}
                             updateOnDateClick={true}
@@ -550,59 +697,153 @@ class BaoyangJihuaShezhi extends Component {
                                 />
                         </DateField></div>
                       </div>
+
+                    {/*
                       <div className="items fix">
                         <div className="div1"><label>维保厂家：</label></div>
                         <div className="div2"><Input type="text" onChange={this.handleChangeInput.bind(this,'maintenanceFactory')}/></div>
                         <div className="div1"><label>维保电话：</label></div>
                         <div className="div2"><Input type="text" onChange={this.handleChangeInput.bind(this,'maintenanceCode')} /></div>
                       </div>
+                      */}
+                      <div className="items fix">
+                        <div className="div1"><label>保养标题：</label></div>
+                        <div className="div3"><TextArea onChange={this.handleChangeInput.bind(this,'title')} ></TextArea></div>
+                        </div>
+                    
 
                       <div className="items fix">
-                        <div className="div1"><label>标题：</label></div>
-                        <div className="div2"><Input type="text" onChange={this.handleChangeInput.bind(this,'title')} /></div>
-                        <div className="div1"><label>所需工时：</label></div>
-                        <div className="div2"><Input type="text" onChange={this.handleChangeInput.bind(this,'timeConsuming')}/></div>
+                        <div className="div1"><label>保养内容：</label></div>
+                        <div className="div3"><TextArea onChange={this.handleChangeInput.bind(this,'description')}></TextArea></div>
                       </div>
-
-
-                      <div className="items fix">
-                        <div className="div1"><label>维保内容：</label></div>
-                        <div className="div3"><textarea onChange={this.handleChangeInput.bind(this,'description')}></textarea></div>
-                      </div>
-                      <div className="items fix">
-                        <div className="div1"><label>配件需求：</label></div>
-                        <div className="div2">
-                          <span className="selectsMul">
-                            {/*
-                            <span className="selects_item">配件A,3个<i></i></span>
-                            <span className="selects_item">配件B，1个<i></i></span>
-                                */}
-                             {
-                               Object.keys(this.state.workOrderDeviceTypesMap).map(function(key)
-                               {
-
-                                  if(othis.state.workOrderDeviceTypesMap[key].quantity!="")
-                                  {
-
-                                     // othis.state.workOrderDeviceTypes.push( {deviceTypeID:key,quantity:othis.state.workOrderDeviceTypesMap[key].quantity});
-                                      return  <span className="selects_item"> { othis.state.workOrderDeviceTypesMap[key].name +"," + othis.state.workOrderDeviceTypesMap[key].quantity+"个"}</span>
-                                  }
-
-                                })
-
-
-                            }
-
-
-
-                          </span>
-                          <span className="span-btn" onClick={this.onPeijian.bind(this)} >选择配件</span></div>
-                      </div>
+       
 
 
                     </div>
                   </div>
               </div>}
+
+
+
+     {this.state.xiugai &&
+              <div className="modal-xinzeng">
+                  <div className="title">
+                      <span className="btn" onClick={this.onXiugaiY.bind(this)} >保存</span><span onClick={this.onXiugaiN.bind(this)} className="btn">取消</span>
+                  </div>
+                  <div className="gongdan-content">
+                    <div className="ul_1 fix">
+                      <div className="items fix">
+             
+                       <div className="div1"><label>设备名称：</label></div>
+                       <div className="div2 div_time">
+                         <Dropdown
+                           className="query-value" style={{width:'160px'}} defaultValue= {  this.state.curLayoutID }
+                            selection openOnFocus options={layoutDataOptions} onChange={this.onClickBengzhan.bind(this)}
+                          /> 
+                        </div>
+
+                        <div className="div2 div_time">
+
+                                          <Dropdown
+                                           onChange={this.handleChangeDropdown.bind(this,'deviceAssetID')}
+                                           className="query-value" defaultValue={ this.state.curDeviceAssetID}
+                                            selection openOnFocus options={deviceDataOptions}
+                                          /> 
+
+                        </div>
+
+
+
+
+                      </div>
+                      <div className="items fix">
+                        <div className="div1"><label>周期类型：</label></div>
+                        <div className="div2 div_time ">
+                                 <Dropdown onChange={this.handleChangeDropdown.bind(this,'periodtype')}
+                                     className="query-value" defaultValue={ this.state.curPeriodtype}
+                                     selection openOnFocus options={maintainPeriodOptions}
+                                   />
+                        </div>
+
+                        <div className="div1 divlbl"><span ref='periodName'>保养周期：</span></div>
+                        <div className="div2  "> <div  ref='periodInput'className="query-value2"><Input  onChange={this.handleChangeInput.bind(this,'period')} defaultValue={ this.state.curPlan.period } />   </div>
+                                 <div ref='periodDrop' className="query-value2"><Dropdown   onChange={this.handleChangeDropdown.bind(this,'maintenenceType')} defaultValue={ this.state.curPlan.maintenenceType } selection openOnFocus options={periodValueOptions} /></div>
+
+
+                        </div>
+
+
+
+
+                      </div>
+                      <div className="items fix">
+                        <div className="div1"><label>时间范围：</label></div>
+                        <div className="div2 div_time"><DateField ref="theStarttime2"
+                              dateFormat="YYYY-MM-DD"
+                              locale="zh-cn"
+                              forceValidDate={true}
+                              updateOnDateClick={true}
+                              defaultValue= {moment( this.state.curStartTime).format('YYYY-MM-DD')} 
+                              //value={this.state.startDate}
+                              //onChange={::this.handleChangeStart}
+                              >
+                              <DatePicker
+                                  navigation={true}
+                                  locale="zh-cn"
+                                  forceValidDate={true}
+                                  highlightWeekends={true}
+                                  highlightToday={true}
+                                  weekNumbers={true}
+                                  weekStartDay={0}
+                                  footer={true}
+                                  />
+                          </DateField></div>
+                        {/*<div className="div1"><label>结束日期：</label></div> */}
+                        <div className="div2 div_time">
+                          <DateField ref="theEndtime2"
+                            dateFormat="YYYY-MM-DD"
+                            locale="zh-cn"
+                            forceValidDate={true}
+                            updateOnDateClick={true}
+                            defaultValue= {moment( this.state.curEndTime).format('YYYY-MM-DD')}
+                            //value={this.state.endDate}
+                           // onChange={::this.handleChangeEnd}
+                            >
+                            <DatePicker
+                                navigation={true}
+                                locale="zh-cn"
+                                forceValidDate={true}
+                                highlightWeekends={true}
+                                highlightToday={true}
+                                weekNumbers={true}
+                                weekStartDay={0}
+                                footer={true}
+                                />
+                        </DateField></div>
+                      </div>
+ 
+                      <div className="items fix">
+                        <div className="div1"><label>保养标题：</label></div>
+                        <div className="div3"><TextArea defaultValue={ this.state.curPlan.title } onChange={this.handleChangeInput.bind(this,'title')} /> </div>
+                        </div>
+                    
+
+                      <div className="items fix">
+                        <div className="div1"><label>保养内容：</label></div>
+                        <div className="div3"><TextArea defaultValue={ this.state.curPlan.description } onChange={this.handleChangeInput.bind(this,'description')}/> </div>
+                      </div>
+       
+
+
+                    </div>
+                  </div>
+              </div>}
+
+
+
+
+
+
 
               {this.state.peijian &&
                 <div className="modal-alert modal-guanlian modal-peijian">
@@ -625,7 +866,7 @@ class BaoyangJihuaShezhi extends Component {
                       <li className="fix">
                         <span>配件1</span>
                         <span><input type="text"/></span>
-                      </li>*/}
+                      </li>
 
                       {
 
@@ -638,7 +879,7 @@ class BaoyangJihuaShezhi extends Component {
 
 　　　　　　　　        return <li className="fix"  ><span>{item.name}</span><span> <Input  defaultValue={theNum} onChange={othis.handleChangeDeviceType.bind(othis,item)}/> </span></li>})
 　　　　　
-　　　　            }
+　　　　            }*/}
 
 
                     </ul>
@@ -667,8 +908,8 @@ class BaoyangJihuaShezhi extends Component {
                     <div className="ul_1 fix">
                       <div className="items fix">
 
-                        <div className="div1"><label>设备：</label></div>
-                        <div className="div1 div2 div1_tl">{ mainPlanSetDetailData.data[0].deviceAssetName }</div>
+                        <div className="div1"><label>设备名称：</label></div>
+                        <div className="div1 div2 div1_tl">{ mainPlanSetDetailData.data.deviceAssetName }</div>
                       </div>
                       <div className="items fix">
                        {/*
@@ -679,39 +920,50 @@ class BaoyangJihuaShezhi extends Component {
                         <div className="div1 div1_tl">2月/次</div>
                        */}
 
-                        { mainPlanSetDetailData.data[0].periodtype==1&&<div><div className="div1"><label>保养周期：</label></div><div className="div1 div1_tl"> {mainPlanSetDetailData.data[0].period} {mainTypeStr}</div></div> }
-                        { mainPlanSetDetailData.data[0].periodtype==2&&<div><div className="div1"><label>运行时长(h)：</label></div><div className="div1 div1_tl"> {mainPlanSetDetailData.data[0].period}</div></div> }
+                        { mainPlanSetDetailData.data.periodtype==1&&<div><div className="div1"><label>保养周期：</label></div><div className="div1 div1_tl"> {mainPlanSetDetailData.data.period} {mainTypeStr}</div></div> }
+                        { mainPlanSetDetailData.data.periodtype==2&&<div><div className="div1"><label>运行时长(h)：</label></div><div className="div1 div1_tl"> {mainPlanSetDetailData.data.period}</div></div> }
 
 
                       </div>
                       <div className="items fix">
-                        <div className="div1"><label>开始日期：</label></div>
-                        <div className="div1 div1_tl">{moment( mainPlanSetDetailData.data[0].startTime).format('YYYY-MM-DD HH:mm:ss')}</div>
-                        <div className="div1"><label>结束日期：</label></div>
-                        <div className="div1 div1_tl">{moment( mainPlanSetDetailData.data[0].endTime).format('YYYY-MM-DD HH:mm:ss')}</div>
+                        <div className="div1"><label>时间范围：</label></div>
+                        <div className="div1 div1_tl" style={{width:'360px'}}>{moment( mainPlanSetDetailData.data.startTime).format('YYYY-MM-DD')}至{moment( mainPlanSetDetailData.data.endTime).format('YYYY-MM-DD')}</div>
+                        
                       </div>
+                    {/*
+
+                      <div className="div1"><label>结束日期：</label></div>
+                        <div className="div1 div1_tl">{moment( mainPlanSetDetailData.data.endTime).format('YYYY-MM-DD HH:mm:ss')}</div>
+
+
                       <div className="items fix">
                         <div className="div1"><label>维保厂家：</label></div>
-                        <div className="div1 div1_tl">{mainPlanSetDetailData.data[0].maintenanceFactory}</div>
+                        <div className="div1 div1_tl">{mainPlanSetDetailData.data.maintenanceFactory}</div>
                         <div className="div1"><label>维保电话：</label></div>
-                        <div className="div1 div1_tl">{mainPlanSetDetailData.data[0].maintenanceCode}</div>
+                        <div className="div1 div1_tl">{mainPlanSetDetailData.data.maintenanceCode}</div>
                       </div>
+
+                      <div className="div1"><label>所需工时：</label></div>
+                        <div className="div1 div1_tl"> { mainPlanSetDetailData.data.timeConsuming }  </div>
+
+
+                      */}
                       <div className="items fix">
-                        <div className="div1"><label>标题：</label></div>
-                        <div className="div1 div1_tl"> { mainPlanSetDetailData.data[0].title } </div>
-                        <div className="div1"><label>所需工时：</label></div>
-                        <div className="div1 div1_tl"> { mainPlanSetDetailData.data[0].timeConsuming }  </div>
+                        <div className="div1"><label>保养标题：</label></div>
+                        <div className="div1 div1_tl"> { mainPlanSetDetailData.data.title } </div>
+                        
                       </div>
 
                       <div className="items fix">
-                        <div className="div1"><label>维保内容：</label></div>
-                        <div className="div1 div1_tl div3"> { mainPlanSetDetailData.data[0].description }</div>
+                        <div className="div1"><label>保养内容：</label></div>
+                        <div className="div1 div1_tl div3"> { mainPlanSetDetailData.data.description }</div>
                       </div>
+                      {/*
                       <div className="items fix">
                         <div className="div1"><label>配件需求：</label></div>
                         <div className="div1 div1_tl div2">
                           {
-                                mainPlanSetDetailData.data[0].fitting.map(function(item){
+                                mainPlanSetDetailData.data.fitting.map(function(item){
 
                                       return <span>{item.name}，{item.fittingnum}个；</span>
 
@@ -722,6 +974,8 @@ class BaoyangJihuaShezhi extends Component {
 
                         </div>
                       </div>
+                      */}
+                     
                     </div>
                   </div>
               </div>}
@@ -782,7 +1036,7 @@ class BaoyangJihuaShezhi extends Component {
                 layoutid:this.state.qlayoutID,
                 name:this.state.qname,
                 starttime:moment(this.refs.qStarttime.getInput().value).format('YYYY-MM-DD HH:mm:ss'),
-                endtime:moment(this.refs.qEndtime.getInput().value).format('YYYY-MM-DD HH:mm:ss'),
+                endtime:moment(this.refs.qEndtime.getInput().value).format('YYYY-MM-DD 23:59:59'),
               }
 
         console.log(q);
@@ -823,7 +1077,7 @@ class BaoyangJihuaShezhi extends Component {
     handleChangeDeviceType(deviceTypeObj,ev,obj)
     {
 
-         //;
+         //debugger;
         var iObj =   {categoryid:deviceTypeObj.categoryid,name:deviceTypeObj.name, quantity:obj.value   } ;
         this.state.workOrderDeviceTypesMap[deviceTypeObj.categoryid] =iObj;
         console.log(iObj);
@@ -838,18 +1092,32 @@ class BaoyangJihuaShezhi extends Component {
 
       if(code=='periodtype')  //切换保养周期类型
       {
-          //;
+          //debugger;
           if( obj.value == 2) //运行时长
           {
+            this.refs.periodInput.style.visibility="visible";
               this.refs.periodDrop.style.display='none';
+               this.refs.periodName.style.display='';
               this.refs.periodName.innerHTML ='运行时长(h)：'
           }
-          else
+          else if( obj.value ==1) //时间周期
           {
+            this.refs.periodInput.style.visibility="visible";
              this.refs.periodDrop.style.display='';
+              this.refs.periodName.style.display='';
              this.refs.periodName.innerHTML ='保养周期：'
 
           }
+          else  //临时任务
+          {
+               this.refs.periodDrop.style.display='none';
+               this.refs.periodName.style.display='none';
+               this.refs.periodInput.style.visibility="hidden";
+               
+
+          }
+
+
          //const {getDeviceByType } = this.props;
          //getDeviceByType({devicetypeid:obj.value});
 
@@ -858,9 +1126,6 @@ class BaoyangJihuaShezhi extends Component {
 
 
     }
-
-
-
 
 
    componentWillReceiveProps(nextprops){
@@ -872,30 +1137,22 @@ class BaoyangJihuaShezhi extends Component {
 
     componentDidMount() {
 
-
-
         const { getInitData} = this.props;
 
-
-
         // getDevicecount(q);
-        getInitData({});
+         getInitData({});
 
+        this.queryData(1);
 
+        //      var q = {
+        //           pagesize:8,
+        //           pageno:1
+        //         };
+        // const { getFittings } = this.props;
 
-             var q = {
-                  pagesize:8,
-                  pageno:1
-                };
-        const { getFittings } = this.props;
-
-        getFittings(q);
-
-
-
+        // getFittings(q);
 
    }
-
 
 
    componentWillUnmount() {

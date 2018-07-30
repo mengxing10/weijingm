@@ -13,7 +13,7 @@ import classNames from 'classnames'
 import CsvFetch from '../../common/components/CsvFetch'
 import MyTable from '../../common/components/MyTable'
 import { DateField,DatePicker } from 'react-date-picker'
-import {Icon, Dropdown, Input,Form,Radio,Button ,Checkbox,TextArea} from 'semantic-ui-react'
+import {Icon, Dropdown, Input,Form,Radio,Button,Checkbox,TextArea,Image} from 'semantic-ui-react'
 import Pager from '../../common/components/Pager'
 
 import moment from 'moment'
@@ -21,11 +21,11 @@ import Menus from '../../common/components/Menus'
 class Gongdan extends Component {
     constructor(props) {
         super(props)
-        this.curWorkordertypeid = 3; //点检 默认
+        this.curWorkordertypeid = 3; //维修:3  ,保养:4
         this.operateType="" //当前办理类型: linqu, fangong, zuofei
         this.state = {
           //创建用
-          workOrderTypeID:4,
+          workOrderTypeID:3,//-1,
           deviceAssetID:-1,
           projectID:1,
           managerID:1,
@@ -70,6 +70,9 @@ class Gongdan extends Component {
           qlayoutID:-1,
           qstatusid:-1,
 
+
+
+          curBanliStatus:-1,
            // startDate: moment("2016-01-01"),
            // endDate: moment().add(1, 'd'),
           starsPj:2,
@@ -103,27 +106,66 @@ class Gongdan extends Component {
       //title += project=="wx"?"维修":project=="xj"?"巡检":project=="bx"?"报修":project=="wbjh"?"维保计划":""
       // title += project=="wx"?"维修":project=="dj"?"点检":project=="dx"?"定修":project=="byang"?"保养":""
 
-      if(project=="wx"){ title= "维修";this.curWorkordertypeid = 3; }
-      else if(project=="dj")  { title= "点检";  this.curWorkordertypeid = 1; }
-      else if(project=="dx")  { title= "定修";  this.curWorkordertypeid = 2; }
-      else if(project=="byang")  { title= "保养";  this.curWorkordertypeid = 4; }
+      // if(project=="wx"){ title= "维修";this.curWorkordertypeid = 3; }
+      // else if(project=="dj")  { title= "点检";  this.curWorkordertypeid = 1; }
+      // else if(project=="dx")  { title= "定修";  this.curWorkordertypeid = 2; }
+      // else if(project=="byang")  { title= "保养";  this.curWorkordertypeid = 4; }
       console.log("当前类型: " + title + ","+ this.curWorkordertypeid)
 
       var othis = this;
 
       var {workOrderFullData, layoutData, workOrderData,deviceAssetData,workOrderStatusData,workOrderTypeData,staffData,deviceTypeData,companyData}  =this.props;       //,addCompanyData
-      var workOrderInfo = workOrderFullData.data.workOrderInfo;
+      
+      var planImages = workOrderFullData.data.plan.image;
 
+      var workOrderInfo = workOrderFullData.data.plan.planInfo;
+
+  
+      var workInfo = {
+                "workcommentid": 2,
+                "workcomment": "",
+                "workstar": "4.8",
+                "repairplanid": 9,
+                "time": "2018-07-26 19:20",
+                "userid": 1
+            }
+      if(workOrderFullData.data.work&&workOrderFullData.data.work.workInfo)
+          workInfo = workOrderFullData.data.work.workInfo;
+
+
+var repair=[
+            {
+                "repairInfo": {
+                    "repairid": 7,
+                    "repairplanid": 9,
+                    "time": "",
+                    "userid": 1,
+                    "des": "",
+                    "timeconsuming": 0
+                },
+                "fittingList": [
+                             
+                ],
+                "image": []                            
+            }
+        ]
+
+  if(workOrderFullData.data&&workOrderFullData.data.repair)
+        repair = workOrderFullData.data.repair;
       var stars = [];
-      if(workOrderInfo.evaluate >0){
-        for(var p=0;p<workOrderInfo.evaluate;p++){
+
+
+
+      var starNum =  parseInt(workInfo.workstar);
+      if( starNum>0){
+        for(var p=0;p<starNum;p++){
           stars.push(p);
         }
       }
-      var workOrderInfo2 = workOrderFullData.data;
-      const thead=[{width:"5%",value:"编号"},{width:"10%",value:"类型"},{width:"15%",value:"设备"}
-                  ,{width:"15%",value:"时间"},{width:"15%",value:"标题"},{width:"10%",value:"级别"}
-                  ,{width:"10%",value:"发布人"},{width:"10%",value:"办理状态"},{width:"10%",value:"操作"}]
+      var workOrderInfo2 = workOrderFullData.data;  //{width:"10%",value:"类型"},
+      const thead=[{width:"5%",value:"编号"},{width:"15%",value:"设备"}
+                  ,{width:"15%",value:"时间"},{width:"15%",value:"标题"},{width:"15%",value:"级别"}
+                  ,{width:"15%",value:"发布人"},{width:"10%",value:"办理状态"},{width:"10%",value:"操作"}]
 
       const options =[
         { key: -1, text: '全部', value: -1 },
@@ -133,9 +175,10 @@ class Gongdan extends Component {
         // { key: 5, text: '3/4泵站', value: 5 }
       ]
       const options2 =[
-        // { key: 1, text: '代办', value: 1 },
-        // { key: 2, text: '已办', value: 2 }
-        { key: -1, text: '全部', value: -1 }
+         { key: -1, text: '全部', value: -1 },
+         { key: 0, text: '处理中', value: 0 },
+         { key: 1, text: '已完成', value: 1 }
+       
       ]
       //负责人/工作人员 8.1:
       var staffOptions =[];
@@ -150,18 +193,18 @@ class Gongdan extends Component {
       }
 
       //工单类别6.2:
-      var workOrderTypeOptions =[];
-      if(workOrderTypeData&&workOrderTypeData.resultCode==0)
-      {
-        for(var i=0;i<workOrderTypeData.data.length;i++)
-        {
-          var newOpt = {};
-          newOpt.key = workOrderTypeData.data[i].workOrderTypeID;
-          newOpt.value = workOrderTypeData.data[i].workOrderTypeID;
-          newOpt.text = workOrderTypeData.data[i].workOrderTypeName;
-          workOrderTypeOptions.push(newOpt );
-        }
-      }
+      // var workOrderTypeOptions =[{ key: -1, text: '请选择', value: -1 }];
+      // if(workOrderTypeData&&workOrderTypeData.resultCode==0)
+      // {
+      //   for(var i=0;i<workOrderTypeData.data.length;i++)
+      //   {
+      //     var newOpt = {};
+      //     newOpt.key = workOrderTypeData.data[i].workOrderTypeID;
+      //     newOpt.value = workOrderTypeData.data[i].workOrderTypeID;
+      //     newOpt.text = workOrderTypeData.data[i].workOrderTypeName;
+      //     workOrderTypeOptions.push(newOpt );
+      //   }
+      // }
 
       //设备名称7.1
       var deviceAssetOptions =[{ key: -1, text: '请选择', value: -1 }];
@@ -208,19 +251,19 @@ class Gongdan extends Component {
       //工单紧急程度:
       var workOrderLevelOptions=[{key: 1,value:1,text: "一般"},{key: 2,value:2,text: "紧急"}];
 
-      if(workOrderStatusData&&workOrderStatusData.resultCode==0)
-      {
-        for(var i=0;i<workOrderStatusData.data.length;i++)
-        {
-          if(workOrderStatusData.data[i].statusID>=2){
-            var newOpt = {};
-            newOpt.key = workOrderStatusData.data[i].statusID;
-            newOpt.value = workOrderStatusData.data[i].statusID;
-            newOpt.text = workOrderStatusData.data[i].statusName;
-            options2.push(newOpt );
-          }
-        }
-      }
+      // if(workOrderStatusData&&workOrderStatusData.resultCode==0)
+      // {
+      //   for(var i=0;i<workOrderStatusData.data.length;i++)
+      //   {
+      //     if(workOrderStatusData.data[i].statusID>=2){
+      //       var newOpt = {};
+      //       newOpt.key = workOrderStatusData.data[i].statusID;
+      //       newOpt.value = workOrderStatusData.data[i].statusID;
+      //       newOpt.text = workOrderStatusData.data[i].statusName;
+      //       options2.push(newOpt );
+      //     }
+      //   }
+      // }
 
       const options3 =[
         { key: 1, text: '全部', value: 1 },
@@ -256,39 +299,25 @@ class Gongdan extends Component {
         pageCount = workOrderData.data.pageCount;
         for(var i=0;i<workOrderData.data.data.length;i++){
           var  arr = new Array();
-          // var status = workOrderData.data[i].statusName; //未审核，通过，未通过
-          // if(companyData.data.data[i].statusName==false)  status = "无效";
-          // else
-          // {  status = "有效";
-          //      // if(companyData.data.data[i].isValid == 0) status = "有效";
-          //       //else  status = "已通过";
-          // }
-          //
-          // this.curWorkordertypeid
-          var workOrderTypeName = "维修";
-          if(workOrderData.data.data[i]. workOrderTypeID==1)
-            workOrderTypeName = "点检";
-          else if(workOrderData.data.data[i]. workOrderTypeID==2)
-            workOrderTypeName = "定修";
-          else if(workOrderData.data.data[i]. workOrderTypeID==3)
-              workOrderTypeName = "维修";
-          else if(workOrderData.data.data[i]. workOrderTypeID==4)
-              workOrderTypeName = "保养";
-          var updateTime = moment (workOrderData.data.data[i].updaetTime).format('YYYY-MM-DD HH:mm:ss');
+ 
+          //var updateTime = moment (workOrderData.data.data[i].updaetTime).format('YYYY-MM-DD HH:mm:ss');
           // var btnHtml = <Button style={ { fontSize:"14px"}}    color='teal'  onClick={this.openUpdate.bind(this,workOrderData.data[i])}>查看</Button>
           // var btnHtml = <span style={{color:'#7598f7',cursor:'pointer'}} onClick={this.onChakan3.bind(this)} >查看</span>
-          var  statusFlag = ""
-          var sid = workOrderData.data.data[i].statusID;
-          if(sid == 2)
-            statusFlag = "chakan";
-          else if(sid == 3)
-            statusFlag = "chakan2";
-          else if(sid == 4)
-            statusFlag = "chakan3";
-          else if(sid == 5)
-            statusFlag = "chakan4";
-          var btnHtml = <span style={{color:'#7598f7',cursor:'pointer'}} onClick={this.onChakan.bind(this,statusFlag,workOrderData.data.data[i].workOrderID)} >查看</span>
-          var arr = [workOrderData.data.data[i].workOrderID, workOrderTypeName, workOrderData.data.data[i].deviceAssetName ,updateTime,workOrderData.data.data[i].title,workOrderData.data.data[i].workOrderLevelName,workOrderData.data.data[i].createUserID,workOrderData.data.data[i].statusName,btnHtml];//id:workOrderData.data.data[i].workOrderID
+          var  statusFlag = "chakan"
+          // var sid = workOrderData.data.data[i].status;
+          // if(sid == 2)
+          //   statusFlag = "chakan";
+          // else if(sid == 3)
+          //   statusFlag = "chakan2";
+          // else if(sid == 4)
+          //   statusFlag = "chakan3";
+          // else if(sid == 5)
+          //   statusFlag = "chakan4";
+          var btnHtml = <span style={{color:'#7598f7',cursor:'pointer'}} onClick={this.onChakan.bind(this,statusFlag,workOrderData.data.data[i])} >查看</span>
+          //workOrderTypeName,
+         // var arr = [workOrderData.data.data[i].workOrderID, workOrderData.data.data[i].deviceAssetName ,updateTime,workOrderData.data.data[i].title,workOrderData.data.data[i].workOrderLevelName,workOrderData.data.data[i].createUserID,workOrderData.data.data[i].statusName,btnHtml];//id:workOrderData.data.data[i].workOrderID
+            var arr = [workOrderData.data.data[i].repairplanID, workOrderData.data.data[i].deviceAssetName ,workOrderData.data.data[i].repairtime,workOrderData.data.data[i].title,workOrderData.data.data[i].level,workOrderData.data.data[i].userID,workOrderData.data.data[i].status,btnHtml];//id:workOrderData.data.data[i].workOrderID
+          
           tbody.push(arr);
         }
       }
@@ -311,7 +340,7 @@ class Gongdan extends Component {
                   </div>
                 <label className="labStyle">开始时间</label>
                     <DateField ref="theSTime"
-                        dateFormat="YYYY-MM-DD HH:mm:ss"
+                        dateFormat="YYYY-MM-DD HH:mm"
                         locale="zh-cn"
                         forceValidDate={true}
                         updateOnDateClick={true}
@@ -332,7 +361,7 @@ class Gongdan extends Component {
                     </DateField>
                 <label className="labStyle">结束时间</label>
                     <DateField ref="theETime"
-                    dateFormat="YYYY-MM-DD HH:mm:ss"
+                    dateFormat="YYYY-MM-DD HH:mm"
                     locale="zh-cn"
                     forceValidDate={true}
                     updateOnDateClick={true}
@@ -401,8 +430,8 @@ class Gongdan extends Component {
                                                 className="query-value" defaultValue={deviceAssetOptions[0].value}
                                                  selection openOnFocus options={deviceAssetOptions}
                                                /></div></div>
-                      </div>
-                      <div className="items fix">
+
+
                         <div className="div1"><label>关联工单：</label></div>
                         <div className="div2">
                             <span className="selectsMul">
@@ -416,6 +445,10 @@ class Gongdan extends Component {
                               */}
                             </span>
                             <span className="span-btn" onClick={this.onGuanlian.bind(this)}>关联工单</span></div>
+
+
+                      </div>
+                       {/*<div className="items fix">                                            
                         <div className="div1"><label><i className="xing">*</i>类别：</label></div>
                         <div className="div2"><div className="query-value">
                              <Dropdown
@@ -426,8 +459,10 @@ class Gongdan extends Component {
                                 openOnFocus
                                 options={workOrderTypeOptions}
                               /></div>
-                           </div>
-                      </div>
+                           </div>                       
+                      </div> */}
+
+
                       <div className="items fix">
                         <div className="div1"><label><i className="xing">*</i>标题：</label></div>
                         <div className="div2"><Input onChange={this.handleChangeInput.bind(this,'title')}/></div>
@@ -755,75 +790,266 @@ class Gongdan extends Component {
             <div className="gongdan-modal gongdan-chakan">
               <div className="chakan_container">
                 <div className="fix chakan_title">
-                  <span>工单号：{workOrderInfo.workOrderID}</span>
+                  <span> </span>
                   <div className="chakan_title_btns">
                   <span onClick={this.onLingqu.bind(this,'linqu')}>领取</span><span onClick={this.onChakanN.bind(this)}>返回</span></div>
                 </div>
+
+                
                 <div className="chakan_item">
-                  <span>工单信息</span>
+                  <span>维修详情</span>
                   <div className="chakan_item_con fix">
                     <div className="w_3">
-                      <span className="w_3_span1">设备名称:</span><span>{workOrderInfo.deviceAssetName} </span>
-                    </div>
+                      <span className="w_3_span1">状态：</span><span className="tval">{workOrderInfo.status} </span>
+                    </div> 
+                  </div>
+
+
+                  <div className="chakan_item_con fix">
                     <div className="w_3">
-                      <span className="w_3_span1">类别:</span><span>{workOrderInfo.workOrderTypeName}</span>
-                    </div>
+                      <span className="w_3_span1">报修人：</span><span className="tval">{workOrderInfo.userID} </span>
+                    </div> 
+                  </div>
+
+                  <div className="chakan_item_con fix">
                     <div className="w_3">
-                      <span className="w_3_span1">标题:</span><span>{workOrderInfo.title}</span>
-                    </div>
+                      <span className="w_3_span1">报修时间：</span><span className="tval">{workOrderInfo.repairtime} </span>
+                    </div> 
+                  </div>
+
+                  <div className="chakan_item_con fix">
                     <div className="w_3">
-                      <span className="w_3_span1">派发人:</span><span>{workOrderInfo.name}</span>
-                    </div>
+                      <span className="w_3_span1">设备名称：</span><span className="tval">{workOrderInfo.deviceAssetName} </span>
+                    </div> 
+                  </div>
+
+                  <div className="chakan_item_con fix">
                     <div className="w_3">
-                      <span className="w_3_span1">派发时间:</span><span>{moment(workOrderInfo.createTime).format('YYYY-MM-DD HH:mm:ss')}</span>
-                    </div>
+                      <span className="w_3_span1">紧急程度：</span><span className="tval">{workOrderInfo.level} </span>
+                    </div> 
+                  </div>
+
+                  <div className="chakan_item_con fix">
                     <div className="w_3">
-                      <span className="w_3_span1">紧急程度:</span><span>{workOrderInfo.workOrderLevelName}</span>
-                    </div>
+                      <span className="w_3_span1">标题：</span><span className="tval">{workOrderInfo.title} </span>
+                    </div> 
+                  </div>                  
+
+
+                  <div className="chakan_item_con fix">
                     <div className="w_3">
-                      <span className="w_3_span1">计划开始时间:</span><span> {moment(workOrderInfo.planingTimeStart).format('YYYY-MM-DD HH:mm:ss')} </span>
-                    </div>
+                      <span className="w_3_span1">问题描述：</span><span className="tval">{workOrderInfo.des} </span>
+                    </div> 
+                  </div>    
+
+
+                  <div className="chakan_item_con fix">
                     <div className="w_3">
-                      <span className="w_3_span1">计划完成时间:</span><span>{moment(workOrderInfo.planingTimeEnd).format('YYYY-MM-DD HH:mm:ss')}</span>
-                    </div>
-                    <div className="w_3">
-                      <span className="w_3_span1">预算:</span><span>{workOrderInfo.budgetary}元</span>
-                    </div>
-                    <div className="w_3">
-                      <span className="w_3_span1">负责人:</span><span>{workOrderInfo.managerID}</span>
-                    </div>
-                    <div className="w_3">
-                      <span className="w_3_span1">工作人员:</span><span>{workOrderInfo2.workOrderStaffInfos.map(function(item){ return <label>{item.name}&nbsp;&nbsp;</label> }) }       </span>
-                    </div>
-                    <div className="w_3">
-                      <span className="w_3_span1">关联工单:</span><span>{workOrderInfo2.workOrderLinkInfos.map(function(item){ return <label>{item.workOrderIDLink}&nbsp;&nbsp;</label> }) }       </span>
-                    </div>
+                      <span className="w_3_span1">附件信息：</span><span className="tval"> 
+
+                            {  
+                              planImages.map(function(item2,index){
+
+                                  return <Image ref={'ktestImg'+index} id={'ktestImg'+index} onClick={othis.onClickImg.bind(othis,'ktestImg'+index)}   style={{display:'inline-block',paddingLeft:'5px',cursor:'pointer'}} size='mini' src={ item2 }  />
+
+                              })
+                            }
+
+
+                       </span>
+                    </div> 
+                  </div>    
 
 
 
+
+
+
+                </div>
+
+
+
+                <div className="chakan_item">
+                  <span>处理过程</span>
+
+                  <div className="chakan_item_con fix">
+                    <div className="w_3">
+                      <span className="w_3_span1Bold">{workInfo.userid}</span><span className="tval">{workInfo.time} </span>
+                    </div> 
+                  </div>
+
+
+                  <div className="chakan_item_con fix">
+                    <div className="w_3">
+                      <span className="w_3_span1">工作评价</span><span className="tval"> 
+                    
+                       {    stars.map(function(item){
+
+                                return <i className="star_icon"></i>
+
+                             })
+
+                       }
+                      
+
+                       </span>
+                    </div> 
+                  </div>
+
+
+                  <div className="chakan_item_con fix">
+                    <div className="w_3">
+                      <span className="w_3_span1">工作评语</span><span className="tval">{workInfo.workcomment} </span>
+                    </div> 
+                  </div>
+                  <div className="spaceColumn"></div>
+
+                  
+        { repair.map(function(item){
+
+
+          return <div>
+                  <div className="chakan_item_con fix">
+                    <div className="w_3">
+                      <span className="w_3_span1Bold">{item.repairInfo.userid}</span><span className="tval">{item.repairInfo.time} </span>
+                    </div> 
+                  </div>
+
+                <div className="chakan_item_con fix">
+                    <div className="w_3">
+                      <span className="w_3_span1">处理结果</span><span className="tval">{item.repairInfo.des} </span>
+                    </div> 
+                  </div>
+
+                <div className="chakan_item_con fix">
+                    <div className="w_3">
+                      <span className="w_3_span1">附件信息</span><span className="tval"> 
+
+                            {  
+                              item.image.map(function(item2,index){
+
+                                  return <Image ref={'testImg'+index} id={'testImg'+index} onClick={othis.onClickImg.bind(othis,'testImg'+index)}   style={{display:'inline-block',paddingLeft:'5px',cursor:'pointer'}} size='mini' src={ item2 }  />
+
+                              })
+                            }
+
+                       </span>
+                    </div> 
+                </div>
+
+                <div className="chakan_item_con fix">
+                    <div className="w_3">
+                      <span className="w_3_span1">使用配件</span><span className="tval"> 
+
+                    {
+                      item.fittingList.map(function(item){
+
+                          return <span style={{display:'inline'}}>{item.name}，{item.fittingnum}；</span>
+
+
+                      })
+
+                    }
+
+                       </span>
+                    </div> 
+                </div>
+
+
+
+
+            </div>
+
+
+})}
+
+                
+              {this.state.curBanliStatus==0&&
+                <div className="chakan_item">
+                  <span>处理描述</span>
+
+                  <div className="chakan_item_con fix">
+                    <div className="w_3">
+                      <span className="w_3_span1">处理结果</span> 
+                      <span className="tval"><TextArea className="w_3_textarea" onChange={this.handleChangeInput.bind(this,'des')}/></span>
+                    </div> 
+                  </div>
+
+
+                  <div className="chakan_item_con fix">
+                    <div className="w_3">
+                      <span className="w_3_span1">附件信息</span> 
+                      <span className="tval"> 
+
+
+<div className="div_fujian div_file"><span>
+<input ref = "issueAttachmentImageBase64s" id="issueAttachmentImageBase64s" onChange={this.handleChangeFile.bind(this,"issueAttachmentImageBase64s")} type="file" />
+<span className="span-btn file-span">上传文件</span></span>
+
+                         {
+                            this.state.issueAttachmentImageBase64sNames.map(function(item,i){ return  <span style={{ display:'inline'}} key={i}>{item} </span> })
+                         }
+
+  </div>
+
+
+
+                       </span>                      
+                    </div> 
 
                   </div>
+
+
+    {/*
+                  <div className="chakan_item_con fix">
+                    <div className="w_3">
+                      <span className="w_3_span1">使用配件</span> 
+                      <span className="tval"><Input  onChange={this.handleChangeInput.bind(this,'des')}/></span>
+                    </div> 
+                  </div>
+*/}
+
+
+                  <div className="chakan_item_con fix">
+                    <div className="w_3">
+                      <span className="w_3_span1">实际工时</span> 
+                      <span className="tval"><Input  onChange={this.handleChangeInput.bind(this,'des')}/></span>
+                    </div> 
+                  </div>
+
+
+
+            {/* 
+                  <div className="items fix">
+                        
+                       
+                        <div className="div_fujian div_file"><span><input ref = "issueAttachmentImageBase64s" id="issueAttachmentImageBase64s" onChange={this.handleChangeFile.bind(this,"issueAttachmentImageBase64s")} type="file" /><span className="span-btn file-span">上传文件</span></span>
+
+                         {
+                            this.state.issueAttachmentImageBase64sNames.map(function(item,i){ return  <span key={i}>{item} </span> })
+                          }
+
+                        </div>
+                  </div>
+           */}
+
+
+
+
+                 </div> 
+              }
+
+
+
                 </div>
+              {/*
                 <div className="chakan_item">
                   <span>问题描述</span>
                   <div className="chakan_item_con chakan_item_con1 fix">
                    {workOrderInfo2.issueWorkOrderAttachmentIntegratedInfo&&workOrderInfo2.issueWorkOrderAttachmentIntegratedInfo.content}
                   </div>
                 </div>
-                <div className="chakan_item">
-                  <span>技术方案</span>
-                  <div className="chakan_item_con chakan_item_con1 fix">
-                    <p>{workOrderInfo2.solutionWorkOrderAttachmentIntegratedInfo&&workOrderInfo2.solutionWorkOrderAttachmentIntegratedInfo.content} </p>
-                    <p className="fujian">
-
-                      { workOrderInfo2.solutionWorkOrderAttachmentIntegratedInfo&&workOrderInfo2.solutionWorkOrderAttachmentIntegratedInfo.imageCode&&workOrderInfo2.solutionWorkOrderAttachmentIntegratedInfo.imageCode.map(function(item){
-                          return   <span> {item} </span>
-                          })
-                      }
-
-                    </p>
-                  </div>
-                </div>
+               
                 <div className="chakan_item">
                   <span>配件需求</span>
                   <div className="chakan_item_con chakan_item_con1 fix">
@@ -847,18 +1073,14 @@ class Gongdan extends Component {
                           })
                       }
 
-
-
-                      {/*
-                      <li>
-                        <span>2018-6-19 14:00</span><span>张总</span><span>派发维修单-2018061903</span>
-                        <span className="span_w">办理意见办理意见办理意见办理意见办理意见,办理意见办理意见</span>
-                      </li>
-                      */}
+        
 
                     </ul>
                   </div>
                 </div>
+              */}
+
+
               </div>
             </div>}
 
@@ -1160,6 +1382,23 @@ class Gongdan extends Component {
     }
     this.setState({guanlianGongdan:false,renyuan:false})
   }
+
+
+
+
+
+onClickImg(refid)
+{
+
+ // debugger;
+  var sfa = $("#"+ refid);
+  var sf2 = this.refs[refid];
+$( "#"+ refid ).toggleClass( "mini")
+
+}
+
+
+
   //星级评价
   onHandleStar(num){
     this.setState({starsPj:num});
@@ -1253,9 +1492,11 @@ class Gongdan extends Component {
   }
 
 
-  //查看
-  onChakan(workorderStatusFlag,workOrderID)
+ 
+  onChakan(workorderStatusFlag,workOrder)
   {
+
+    var workOrderID= workOrder.repairplanID;
     //alert(workorderStatusFlag);
     //this.state[workorderStatusFlag] = true;
     const {getWorkOrderFull } = this.props;
@@ -1264,6 +1505,8 @@ class Gongdan extends Component {
     var kan = {};
     kan[workorderStatusFlag] = true;
     kan["selectWorkOrderID"] = workOrderID;
+
+    kan["curBanliStatus"] =  workOrder.status;
     this.setState(kan);
   }
 
@@ -1400,7 +1643,7 @@ class Gongdan extends Component {
 handleChangeDeviceType(deviceTypeObj,ev,obj)
 {
 
-     //;
+     //debugger;
     var iObj =   {deviceTypeID:deviceTypeObj.deviceTypeID,deviceTypeName:deviceTypeObj.deviceTypeName, quantity:obj.value   } ;
     this.state.workOrderDeviceTypesMap[deviceTypeObj.deviceTypeID] =iObj;
      console.log(iObj);
@@ -1538,8 +1781,11 @@ handleChangeFile(fileID,o,t){
       workordertypeid:this.curWorkordertypeid,
       layoutid:this.state.qlayoutID,
       statusid:this.state.qstatusid,
-      createtimestart:moment(this.refs.theSTime.getInput().value).toDate().getTime(),
-      createtimeend:moment(this.refs.theETime.getInput().value).toDate().getTime()
+      // createtimestart:moment(this.refs.theSTime.getInput().value).toDate().getTime(),
+      // createtimeend:moment(this.refs.theETime.getInput().value).toDate().getTime()
+      createtimestart: this.refs.theSTime.getInput().value ,
+      createtimeend: this.refs.theETime.getInput().value
+
     }
     getWorkOrder(q);
   }

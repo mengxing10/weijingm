@@ -28,8 +28,8 @@ class Xunjian extends Component {
         this.state = {
             startDate: moment("2016-01-01"),
             endDate: moment().add(1, 'd'),
-            typeId:'byrw',
-            nameId:'byrw'
+            typeId:'byjh',
+            nameId:'byjh'
         }
     }
 
@@ -40,14 +40,14 @@ class Xunjian extends Component {
        nameId = location.search.split('=')[1]
        if( typeof typeId ==  'undefined')   typeId =  'xunjianjh';
 
-      if( typeof nameId ==  'undefined')   nameId =  'byrw';
+      if( typeof nameId ==  'undefined')   nameId =  'byjh';
       const BodyStyle={height: document.documentElement.clientHeight-80  +'px'}
 
-
+ 
         return (
           <div className="table-baoyang" style={BodyStyle}>
             <div className="right-menus">
-              <div className ={classNames("mitem",{active:nameId=='byrw'})} onClick={this.selectName.bind(this,'baoyangrenwu','byrw')} >保养任务</div>
+              {/*<div className ={classNames("mitem",{active:nameId=='byrw'})} onClick={this.selectName.bind(this,'baoyangrenwu','byrw')} >保养任务</div>*/}
               <div className ={classNames("mitem",{active:nameId=='byjh'})} onClick={this.selectName.bind(this,'jihua','byjh')} >保养计划</div>
               <div className ={classNames("mitem",{active:nameId=='byjhsz'})}  onClick={this.selectName.bind(this,'baoyangjihuashezhi','byjhsz')} >保养计划设置</div>
             </div>

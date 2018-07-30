@@ -132,8 +132,36 @@ class Daibantixing extends Component {
     //跳转到维保详情页面
     onClickContent(id,type){
       console.log(type+"--------------"+id);
-      var selMenu = "jiance/warn";
-      this.direact(selMenu);
+      debugger
+      //2 维修 bedo; 3 运行报警 running; 4 能效诊断 energy;  5 故障诊断 fault; 6 点检 dj; 7 报修 wh; 8 定修 dx; 9 保养 by;
+      switch(type){
+
+        case "维修":
+          this.direact(`weixiuwh/gongdan`);
+          break;
+        case "运行报警":
+          this.direact(`jiance/warn`);
+          break;
+
+        case "能效诊断":
+          this.direact(`fenxi/bengzhan`);
+          break;
+
+        case "故障诊断":
+          this.direact(`fenxi/jiankanggailan`);
+          break;
+
+        case "点检":
+          this.direact(`weixiuwh/xunjian`);
+          break;
+
+        case "保养":
+          this.direact(`weixiuwh/baoyang`);
+          break;
+          
+
+      }
+
     }
     changePager(value){
       var typeID=this.getTypeId(this.props.location.query.project);

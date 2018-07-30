@@ -239,7 +239,7 @@ class GailanZonglan extends Component {
         let svgpath = '/resources/zonglan.svg';
         let svgdata = []
         let xiaoxis = this.props.xiaoxis?this.props.xiaoxis.slice(0,3):[]
-        
+
 
         return (
           <div className="gailanzonglan theBody" style={BodyStyle} >
@@ -354,12 +354,12 @@ class GailanZonglan extends Component {
                               <div className="panel-data-bottom" >
                                   <div className="child-left" >
                                         <h3 >总用水</h3>
-                                      <span>434432089 m³</span>
+                                      <span>134432089 m³</span>
                                    </div>
                                    <div className="child-right">
                                         <div className="child-right-item-1">
                                             <h3>生产用水</h3>
-                                          <span>434342898 m³</span>
+                                          <span>134342898 m³</span>
                                         </div>
                                         <div className="child-right-item-2">
                                             <h3>生活用水</h3>

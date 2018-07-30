@@ -108,7 +108,7 @@ class Baoxiu extends Component {
 
    checkResult(res,t)
    {
-     // ;
+     // debugger;
 
      if(res.resultCode==0)
       {
@@ -154,7 +154,7 @@ class Baoxiu extends Component {
     // 公共的弹层组件 内容不同
     render() {
         var startDate= moment("2018-01-01");
-        var   endDate= moment().add(1, 'd');
+        var endDate= moment().add(1, 'd');
         let title = ""
         var pageCount =0;
         const {layoutData2,abnormalData,abnormalResponseData,deviceAssetData,abnormalLevelData,abnormalFullData} = this.props;
@@ -171,7 +171,7 @@ class Baoxiu extends Component {
        if(abnormalData&& abnormalData.resultCode==0)
         {
 
-
+                   tbody= [];
                    pageCount = abnormalData.data.pageCount
                    for(var i=0;i<abnormalData.data.data.length;i++)
                    {
@@ -186,7 +186,7 @@ class Baoxiu extends Component {
                           // }
                           //
                           // this.curWorkordertypeid
-                         var workOrderTypeName = "维修";
+                         // var workOrderTypeName = "维修";
                          // if(abnormalData.data[i]. workOrderTypeID==1)
                          //      workOrderTypeName = "点检";
                          // else if(abnormalData.data[i]. workOrderTypeID==2)
@@ -219,9 +219,9 @@ class Baoxiu extends Component {
                         //   statusFlag = "chakan4";
 
 
-
+                        //workOrderTypeName,
                         var btnHtml = <span style={{color:'#7598f7',cursor:'pointer'}} onClick={this.onChakan.bind(this,statusFlag,abnormalData.data.data[i].abnormalReportID)} >查看</span>
-                        var arr = [abnormalData.data.data[i].abnormalReportID, workOrderTypeName, abnormalData.data.data[i].deviceAssetName ,updateTime,abnormalData.data.data[i].title,abnormalData.data.data[i].abnormalLevelName,abnormalData.data.data[i].createUserName,abnormalData.data.data[i].abnormalResponseName,btnHtml];
+                        var arr = [abnormalData.data.data[i].abnormalReportID,  abnormalData.data.data[i].deviceAssetName ,updateTime,abnormalData.data.data[i].title,abnormalData.data.data[i].abnormalLevelName,abnormalData.data.data[i].createUserName,abnormalData.data.data[i].abnormalResponseName,btnHtml];
 
                        tbody.push(arr);
 
@@ -316,10 +316,10 @@ class Baoxiu extends Component {
                                    ]
                         }
                     ];
-
-        const thead=[{width:"5%",value:"编号"},{width:"10%",value:"类型"},{width:"10%",value:"设备"}
-                    ,{width:"25%",value:"时间"},{width:"15%",value:"内容"},{width:"5%",value:"级别"}
-                    ,{width:"10%",value:"发布人"},{width:"10%",value:"办理状态"},{width:"10%",value:"操作"}]
+        //,{width:"10%",value:"类型"}
+        const thead=[{width:"10%",value:"编号"},{width:"10%",value:"设备"}
+                    ,{width:"15%",value:"时间"},{width:"15%",value:"内容"},{width:"15%",value:"级别"}
+                    ,{width:"15%",value:"发布人"},{width:"10%",value:"办理状态"},{width:"10%",value:"操作"}]
 
 
 
@@ -771,6 +771,7 @@ handleChangeFile(fileID,o,t)
 
       //  var param = {layoutid:1};
       //  getAbnormal(param);
+      this.queryData(1);
 
     }
 

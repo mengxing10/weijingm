@@ -45,7 +45,70 @@ workOrderData:{resultCode:-1,data:[]},
 deviceTypeData:{resultCode:-1,data:[]},
 staffData:{resultCode:-1,data:[]},
 
-workOrderFullData:{
+workOrderFullData:
+{
+
+
+ "resultCode": -1,
+    "resultMessage": "操作正确完成",
+    "data": {
+        "repair": [
+            {
+                "repairInfo": {
+                    "repairid": 7,
+                    "repairplanid": 9,
+                    "time": "2018-07-25 15:25",
+                    "userid": 1,
+                    "des": "测试维修结果2",
+                    "timeconsuming": 2
+                },
+                "fittingList": [
+                    {
+                        "name": "水泵",
+                        "fittingnum": 15
+                    },
+                    {
+                        "name": "压力计",
+                        "fittingnum": 2
+                    }
+                ],
+                "image": [
+                    
+                ]
+            }
+        ],
+        "work": {
+            "workInfo": {
+                "workcommentid": 2,
+                "workcomment": "",
+                "workstar": "4.8",
+                "repairplanid": 9,
+                "time": "2018-07-26 19:20",
+                "userid": 1
+            }
+        },
+        "plan": {
+            "image": [
+                
+            ],
+            "planInfo": {
+                "deviceAssetName": "远传液位计H",
+                "des": "测试内容",
+                "repairplanID": 9,
+                "level": 1,
+                "repairtime": "2018-07-25 14:15",
+                "deviceAssetID": 25,
+                "title": "测试标题",
+                "userID": 1,
+                "status": 1
+            }
+        }
+    }
+
+
+
+},
+workOrderFullData2:{
     resultCode: -1,
     resultMessage: "操作正确完成",
     data: {

@@ -182,10 +182,8 @@ const BodyStyle={height: document.documentElement.clientHeight-130  +'px'}
               <div className="item8"></div>
               {/* <div className="item1">&nbsp;&nbsp;&nbsp;&nbsp;运行</div> */
               }
-              <div className="item2">&nbsp;&nbsp;&nbsp;&nbsp;故障停机</div>
-              <div className="item3">&nbsp;&nbsp;&nbsp;&nbsp;非故障停机</div>
+              <div className="item2">&nbsp;&nbsp;&nbsp;&nbsp;停机</div>
               <div className="item4">&nbsp;&nbsp;&nbsp;&nbsp;维修</div>
-              <div className="item5">&nbsp;&nbsp;&nbsp;&nbsp;报修</div>
               <div className="item6">&nbsp;&nbsp;&nbsp;&nbsp;保养</div>
             </div>
 

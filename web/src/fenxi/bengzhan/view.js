@@ -63,28 +63,54 @@ class Bengzhan extends Component {
         let {typeId} =  this.state
         let paiming = "吨水能耗排名"
         let {project} = this.props.location.query
-        var deviceDatas= [];
-          for(var i=0;i<2;i++)
+        var xiaolvData =
+         {
+           legend:{left:'center'},
+           lineColors: ['#FF6200', '#FFEE2B', '#84d5d8', 'f8910c','#2c8cf9'], //可选
+           barColors:  [['#2febf9','#28d2f9','#0c6df9'],['#FFD531','#FC9000','#F34E00']], //可选
+           xAxis: {name:"月",data:[1,2,3,4,5,6,7,8,9,10,11,12]},
+           yAxis: {name:["%"]},
+           series:{
+                     lines:[
+                             {name:"水泵效率",yAxisIndex:0,data:[80,80,80,80,80,80,80].map(item=>(Math.round(item*(1+Math.random()/5)*10)/10))},
+                          ],
+                     bars: [
+
+                          ]
+                  }
+         };
+         var shuiLiangData =
+          {
+            legend:{left:'center'},
+            lineColors: ['#FF6200', '#FFEE2B', '#84d5d8', 'f8910c','#2c8cf9'], //可选
+            barColors:  [['#2febf9','#28d2f9','#0c6df9'],['#FFD531','#FC9000','#F34E00']], //可选
+            xAxis: {name:"月",data:[1,2,3,4,5,6,7,8,9,10,11,12]},
+            yAxis: {name:["m3"]},
+            series:{
+                      lines:[
+                              {name:"输水量",yAxisIndex:0,data:[6430,6430,6430,6430,6430,6430,6430].map(item=>(Math.round(item*(1+Math.random()/5)*10)/10))},
+                           ],
+                      bars: [
+
+                           ]
+                   }
+          };
+          var dianLiangData =
            {
-              var deviceData =
-               {
-                 legend:{left:'center'},
-                 lineColors: ['#FF6200', '#FFEE2B', '#84d5d8', 'f8910c','#2c8cf9'], //可选
-                 barColors:  [['#2febf9','#28d2f9','#0c6df9'],['#FFD531','#FC9000','#F34E00']], //可选
-                 xAxis: {name:"月",data:[1,2,3,4,5,6,7,8,9,10,11,12]},
-                 yAxis: {name:["%"]},
-                 series:{
-                           lines:[
-                                   {name:"水泵效率",yAxisIndex:0,data:[50,50,50,50,50,50,50].map(item=>(Math.round(item*(1+Math.random()/5)*10)/10))},
-                                ],
-                           bars: [
+             legend:{left:'center'},
+             lineColors: ['#FF6200', '#FFEE2B', '#84d5d8', 'f8910c','#2c8cf9'], //可选
+             barColors:  [['#2febf9','#28d2f9','#0c6df9'],['#FFD531','#FC9000','#F34E00']], //可选
+             xAxis: {name:"月",data:[1,2,3,4,5,6,7,8,9,10,11,12]},
+             yAxis: {name:["kW·h"]},
+             series:{
+                       lines:[
+                               {name:"耗电量",yAxisIndex:0,data:[5210,5210,5210,5210,5210,5210,5210].map(item=>(Math.round(item*(1+Math.random()/5)*10)/10))},
+                            ],
+                       bars: [
 
-                                ]
-                        }
-               };
-               deviceDatas.push(deviceData);
-             }
-
+                            ]
+                    }
+           };
 
       const BodyStyle={height: document.documentElement.clientHeight-130  +'px'}
 
@@ -167,17 +193,17 @@ class Bengzhan extends Component {
               <div className="left-middle-panel">
                 <h3>吨水能耗</h3>
 
-                <ReactEcharts option={GeneralCharts.theLineBar(deviceDatas[0])} style={{height:"220px" ,width:"100%"}} className='div1'/>
+              <ReactEcharts option={GeneralCharts.theLineBar(xiaolvData)} style={{height:"220px" ,width:"100%"}} className='div1'/>
             </div>
               <div className="left-bottom-panel">
                 <div className="right-panel">
                   <h3>能耗</h3>
-                  <ReactEcharts option={GeneralCharts.theLineBar(deviceDatas[0])} style={{height:"220px" ,width:"100%"}} className='div1'/>
+                <ReactEcharts option={GeneralCharts.theLineBar(dianLiangData)} style={{height:"220px" ,width:"100%"}} className='div1'/>
               </div>
                 <div className="left-panel">
                   <h3>输水量</h3>
 
-                  <ReactEcharts option={GeneralCharts.theLineBar(deviceDatas[0])} style={{height:"220px" ,width:"100%"}} className='div1'/>
+                <ReactEcharts option={GeneralCharts.theLineBar(shuiLiangData)} style={{height:"220px" ,width:"100%"}} className='div1'/>
               </div>
 
               </div>

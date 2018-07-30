@@ -30,8 +30,11 @@ import {
   REQUESTMAINPLANSETDETAIL,
   RECEIVEMAINPLANSETDETAIL,
 
-   REQUESTADDFITTING,
+  REQUESTADDFITTING,
   RECEIVEADDFITTING,
+
+  REQUESTUPDATEPLAN,
+  RECEIVEUPDATEPLAN,
 
 } from './constants/actionTypes'
 
@@ -77,6 +80,25 @@ export default function reducer(state = initialState, action) {
 
 
 
+        case REQUESTUPDATEPLAN:
+        {
+            return Object.assign({}, state, {fetchsvgdata: 'start'});
+          }
+
+        case RECEIVEUPDATEPLAN:
+        {
+            return Object.assign(
+                {},
+                state,
+                {
+                  ...action.data,
+                  fetchsvgdata: action.data.errmsg?'start':'done'
+                }
+            )
+          }
+
+
+          
         case REQUESTADDFITTING:
         {
             return Object.assign({}, state, {fetchsvgdata: 'start'});

@@ -26,16 +26,16 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1920"
-     inkscape:window-height="1012"
+     inkscape:window-height="1017"
      id="namedview5904"
      showgrid="false"
-     inkscape:zoom="4.4835808"
-     inkscape:cx="896.9276"
-     inkscape:cy="82.808208"
+     inkscape:zoom="1.5851852"
+     inkscape:cx="235.86691"
+     inkscape:cy="288.31165"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="组_845" />
+     inkscape:current-layer="组_844" />
   <metadata
      id="metadata5507">
 <?xpacket begin="�" id="W5M0MpCehiHzreSzNTczkc9d"?>    <x:xmpmeta
@@ -396,15 +396,16 @@
    in2="composite"
    id="feBlend5557" />
 
+
       feImage
-         preserveAspectRatio=&quot;none&quot;
-         x=&quot;357&quot;
-         y=&quot;81.4375&quot;
-         width=&quot;102.031&quot;
-         height=&quot;96.563&quot;
-         result=&quot;image&quot;
-         xlink:href=&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTAyLjAzMSIgaGVpZ2h0PSI5Ni41NjMiIHZpZXdCb3g9IjAgMCAxMDIuMDMxIDk2LjU2MyI+CiAgPGRlZnM+CiAgICA8c3R5bGU+CiAgICAgIC5jbHMtMSB7CiAgICAgICAgZmlsbDogdXJsKCNsaW5lYXItZ3JhZGllbnQpOwogICAgICB9CiAgICA8L3N0eWxlPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJsaW5lYXItZ3JhZGllbnQiIHgxPSIyLjczNCIgeDI9Ijk5LjI5NyIgeTI9Ijk2LjU2MyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgogICAgICA8c3RvcCBvZmZzZXQ9Ii0wLjI1IiBzdG9wLWNvbG9yPSIjMDllYmZmIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iLTAuMjQyIiBzdG9wLWNvbG9yPSIjMDllYmZmIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMS4yNSIgc3RvcC1jb2xvcj0iIzA5ZWJmZiIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCBjbGFzcz0iY2xzLTEiIHdpZHRoPSIxMDIuMDMxIiBoZWlnaHQ9Ijk2LjU2MyIvPgo8L3N2Zz4K&quot;
-         id=&quot;feImage5559&quot; /&gt;
+         preserveAspectRatio=none
+         x=357
+         y=81.4375
+         width=102.031
+         height=96.563
+         result=image
+         xlink:href=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTAyLjAzMSIgaGVpZ2h0PSI5Ni41NjMiIHZpZXdCb3g9IjAgMCAxMDIuMDMxIDk2LjU2MyI+CiAgPGRlZnM+CiAgICA8c3R5bGU+CiAgICAgIC5jbHMtMSB7CiAgICAgICAgZmlsbDogdXJsKCNsaW5lYXItZ3JhZGllbnQpOwogICAgICB9CiAgICA8L3N0eWxlPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJsaW5lYXItZ3JhZGllbnQiIHgxPSIyLjczNCIgeDI9Ijk5LjI5NyIgeTI9Ijk2LjU2MyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgogICAgICA8c3RvcCBvZmZzZXQ9Ii0wLjI1IiBzdG9wLWNvbG9yPSIjMDllYmZmIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iLTAuMjQyIiBzdG9wLWNvbG9yPSIjMDllYmZmIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMS4yNSIgc3RvcC1jb2xvcj0iIzA5ZWJmZiIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCBjbGFzcz0iY2xzLTEiIHdpZHRoPSIxMDIuMDMxIiBoZWlnaHQ9Ijk2LjU2MyIvPgo8L3N2Zz4K
+         id=feImage5559 /
       <feComposite
    result="composite-2"
    operator="in"
@@ -1514,7 +1515,7 @@
            inkscape:label="#g4602">
           <path
              inkscape:label="#矩形_6409"
-             style="fill:#0a5cb8;fill-rule:evenodd"
+             style="opacity:1;fill:#59b725;fill-opacity:0.89767444;fill-rule:evenodd"
              inkscape:connector-curvature="0"
              transform="translate(0,-3)"
              d="m 838.01,528 h 54.008 a 4,4 0 0 1 4,4 v 30 a 4,4 0 0 1 -4,4 H 838.01 a 4,4 0 0 1 -4,-4 v -30 a 4,4 0 0 1 4,-4 z"
@@ -1615,7 +1616,7 @@
            height="38"
            rx="4"
            ry="4"
-           style="fill:#0a5cb8" />
+           style="fill:#59b725;fill-opacity:0.89767444" />
         <path
            id="矩形_6409_拷贝_2-2"
            data-name="矩形 6409 拷贝 2"
@@ -1711,7 +1712,7 @@
            height="38"
            rx="4"
            ry="4"
-           style="fill:#afa722" />
+           style="fill:#59b725;fill-opacity:0.89767444" />
         <path
            id="矩形_6409_拷贝_2-3"
            data-name="矩形 6409 拷贝 2"
@@ -1730,99 +1731,99 @@
       </g>
       <g
          id="组_845-4"
-         data-name="组 845">
-        <rect
-           id="矩形_6407_拷贝_11-4"
-           data-name="矩形 6407 拷贝 11"
-           class="cls-22"
-           x="608.93799"
-           y="70"
-           width="102.343"
-           height="97"
-           rx="10"
-           ry="10"
-           style="opacity:0.26000001;fill:#f7ea29" />
-        <rect
-           id="矩形_6407_拷贝_10-4"
-           data-name="矩形 6407 拷贝 10"
-           class="cls-23"
-           x="604.93799"
-           y="73"
-           width="102.312"
-           height="97"
-           rx="10"
-           ry="10"
-           style="opacity:0.26000001;fill:#f7ef13" />
-        <rect
-           id="矩形_6407_拷贝-4"
-           data-name="矩形 6407 拷贝"
-           class="cls-27"
-           x="599"
-           y="79.438004"
-           width="102.031"
-           height="96.563004"
-           rx="10"
-           ry="10"
-           style="fill:#043c98;filter:url(#filter-8)" />
-        <rect
-           id="矩形_6407_拷贝_4-4"
-           data-name="矩形 6407 拷贝 4"
-           class="cls-28"
-           x="599"
-           y="79.438004"
-           width="102.031"
-           height="96.563004"
-           rx="10"
-           ry="10"
-           style="opacity:0.54000005;fill:#043c98;filter:url(#filter-9)" />
-        <path
-           id="矩形_6407_拷贝_2-4"
-           data-name="矩形 6407 拷贝 2"
-           class="cls-12"
-           d="m 606,79 h 88.312 a 10,10 0 0 1 10,10 v 83 a 10,10 0 0 1 -10,10 H 606 A 10,10 0 0 1 596,172 V 89 a 10,10 0 0 1 10,-10 z m 0.755,1 h 86.625 a 9.827,9.827 0 0 1 9.848,9.806 v 81.388 A 9.827,9.827 0 0 1 693.38,181 h -86.625 a 9.827,9.827 0 0 1 -9.848,-9.806 V 89.806 A 9.827,9.827 0 0 1 606.755,80 Z"
-           transform="translate(0,-3)"
-           inkscape:connector-curvature="0"
-           style="fill:#0acedf;fill-rule:evenodd" />
-        <path
-           id="矩形_6407_拷贝_5-4"
-           data-name="矩形 6407 拷贝 5"
-           class="cls-13"
-           d="m 615.938,71 h 88.343 a 10,10 0 0 1 10,10 v 83 a 10,10 0 0 1 -10,10 h -88.343 a 10,10 0 0 1 -10,-10 V 81 a 10,10 0 0 1 10,-10 z m 0.757,1 h 86.65 a 9.829,9.829 0 0 1 9.852,9.806 v 81.388 A 9.829,9.829 0 0 1 703.345,173 H 616.7 a 9.829,9.829 0 0 1 -9.851,-9.806 V 81.806 A 9.829,9.829 0 0 1 616.7,72 Z"
-           transform="translate(0,-3)"
-           inkscape:connector-curvature="0"
-           style="opacity:0.32000002;fill:#0acedf;fill-rule:evenodd" />
+         data-name="组 845"><rect
+   id="矩形_6407_拷贝_11-4"
+   data-name="矩形 6407 拷贝 11"
+   class="cls-22"
+   x="608.93799"
+   y="70"
+   width="102.343"
+   height="97"
+   rx="10"
+   ry="10"
+   style="opacity:0.26000001;fill:#f7ea29" />
+<rect
+   id="矩形_6407_拷贝_10-4"
+   data-name="矩形 6407 拷贝 10"
+   class="cls-23"
+   x="604.93799"
+   y="73"
+   width="102.312"
+   height="97"
+   rx="10"
+   ry="10"
+   style="opacity:0.26000001;fill:#f7ef13" />
+<rect
+   id="矩形_6407_拷贝-4"
+   data-name="矩形 6407 拷贝"
+   class="cls-27"
+   x="599"
+   y="79.438004"
+   width="102.031"
+   height="96.563004"
+   rx="10"
+   ry="10"
+   style="fill:#043c98;filter:url(#filter-8)" />
+<rect
+   id="矩形_6407_拷贝_4-4"
+   data-name="矩形 6407 拷贝 4"
+   class="cls-28"
+   x="599"
+   y="79.438004"
+   width="102.031"
+   height="96.563004"
+   rx="10"
+   ry="10"
+   style="opacity:0.54000005;fill:#043c98;filter:url(#filter-9)" />
+<path
+   id="矩形_6407_拷贝_2-4"
+   data-name="矩形 6407 拷贝 2"
+   class="cls-12"
+   d="m 606,79 h 88.312 a 10,10 0 0 1 10,10 v 83 a 10,10 0 0 1 -10,10 H 606 A 10,10 0 0 1 596,172 V 89 a 10,10 0 0 1 10,-10 z m 0.755,1 h 86.625 a 9.827,9.827 0 0 1 9.848,9.806 v 81.388 A 9.827,9.827 0 0 1 693.38,181 h -86.625 a 9.827,9.827 0 0 1 -9.848,-9.806 V 89.806 A 9.827,9.827 0 0 1 606.755,80 Z"
+   transform="translate(0,-3)"
+   inkscape:connector-curvature="0"
+   style="fill:#0acedf;fill-rule:evenodd" />
+<path
+   id="矩形_6407_拷贝_5-4"
+   data-name="矩形 6407 拷贝 5"
+   class="cls-13"
+   d="m 615.938,71 h 88.343 a 10,10 0 0 1 10,10 v 83 a 10,10 0 0 1 -10,10 h -88.343 a 10,10 0 0 1 -10,-10 V 81 a 10,10 0 0 1 10,-10 z m 0.757,1 h 86.65 a 9.829,9.829 0 0 1 9.852,9.806 v 81.388 A 9.829,9.829 0 0 1 703.345,173 H 616.7 a 9.829,9.829 0 0 1 -9.851,-9.806 V 81.806 A 9.829,9.829 0 0 1 616.7,72 Z"
+   transform="translate(0,-3)"
+   inkscape:connector-curvature="0"
+   style="opacity:0.32000002;fill:#0acedf;fill-rule:evenodd" />
+<text
+   id="调节泵站"
+   class="cls-4"
+   transform="translate(614.208,107.858)"
+   style="font-size:17.99500084px;font-family:'PingFang SC';fill:#ffffff">调节泵站</text>
+<rect
+   id="矩形_6409-4"
+   data-name="矩形 6409"
+   class="cls-26"
+   x="618.06201"
+   y="125"
+   width="62.157001"
+   height="38"
+   rx="4"
+   ry="4"
+   style="fill:#59b725;fill-opacity:0.89767444" />
+
+        path
+           id=&quot;矩形_6409_拷贝_2-4&quot;
+           data-name=&quot;矩形 6409 拷贝 2&quot;
+           class=&quot;cls-15&quot;
+           d=&quot;m 679.156,141 v -8.211 A 3.839,3.839 0 0 0 675.27,129 h -52.412 a 3.839,3.839 0 0 0 -3.885,3.789 V 141 h -0.91 v -9 a 4,4 0 0 1 4,-4 h 54.157 a 4,4 0 0 1 4,4 v 9 h -1.063 z m -60.183,9 v 11.211 a 3.839,3.839 0 0 0 3.885,3.789 h 52.412 a 3.839,3.839 0 0 0 3.886,-3.789 V 150 h 1.063 v 12 a 4,4 0 0 1 -4,4 h -54.157 a 4,4 0 0 1 -4,-4 v -12 h 0.91 z&quot;
+           transform=&quot;translate(0,-3)&quot;
+           inkscape:connector-curvature=&quot;0&quot;
+           style=&quot;fill:#1ce3f5;fill-rule:evenodd&quot; /&gt;
         <text
-           id="调节泵站"
-           class="cls-4"
-           transform="translate(614.208,107.858)"
-           style="font-size:17.99500084px;font-family:'PingFang SC';fill:#ffffff">调节泵站</text>
-        <rect
-           id="矩形_6409-4"
-           data-name="矩形 6409"
-           class="cls-26"
-           x="618.06201"
-           y="125"
-           width="62.157001"
-           height="38"
-           rx="4"
-           ry="4"
-           style="fill:#afa722" />
-        <path
-           id="矩形_6409_拷贝_2-4"
-           data-name="矩形 6409 拷贝 2"
-           class="cls-15"
-           d="m 679.156,141 v -8.211 A 3.839,3.839 0 0 0 675.27,129 h -52.412 a 3.839,3.839 0 0 0 -3.885,3.789 V 141 h -0.91 v -9 a 4,4 0 0 1 4,-4 h 54.157 a 4,4 0 0 1 4,4 v 9 h -1.063 z m -60.183,9 v 11.211 a 3.839,3.839 0 0 0 3.885,3.789 h 52.412 a 3.839,3.839 0 0 0 3.886,-3.789 V 150 h 1.063 v 12 a 4,4 0 0 1 -4,4 h -54.157 a 4,4 0 0 1 -4,-4 v -12 h 0.91 z"
-           transform="translate(0,-3)"
-           inkscape:connector-curvature="0"
-           style="fill:#1ce3f5;fill-rule:evenodd" />
-        <text
-           id="一组泵-4"
-           data-name="一组泵"
-           class="cls-16"
-           x="628.18298"
-           y="151.355"
-           style="font-size:14px;font-family:'PingFang SC';fill:#ffffff">一组泵</text>
-      </g>
+   id="一组泵-4"
+   data-name="一组泵"
+   class="cls-16"
+   x="628.18298"
+   y="151.355"
+   style="font-size:14px;font-family:'PingFang SC';fill:#ffffff">一组泵</text>
+</g>
       <g
          id="组_845-5"
          data-name="组 845">
@@ -1901,7 +1902,7 @@
            height="38"
            rx="4"
            ry="4"
-           style="fill:#b02940" />
+           style="fill:#59b725;fill-opacity:0.89767444" />
         <path
            id="矩形_6409_拷贝_2-5"
            data-name="矩形 6409 拷贝 2"
@@ -1995,7 +1996,7 @@
              height="38"
              rx="4"
              ry="4"
-             style="fill:#afa722" />
+             style="fill:#59b725;fill-opacity:0.89767444" />
           <path
              id="矩形_6409_拷贝_2-6"
              data-name="矩形 6409 拷贝 2"
@@ -2026,7 +2027,7 @@
              height="38"
              rx="4"
              ry="4"
-             style="fill:#afa722" />
+             style="fill:#59b725;fill-opacity:0.89767444" />
           <path
              id="矩形_6409_拷贝_2-7"
              data-name="矩形 6409 拷贝 2"
@@ -2125,7 +2126,7 @@
              height="38"
              rx="4"
              ry="4"
-             style="fill:#afa722" />
+             style="fill:#59b725;fill-opacity:0.89767444" />
           <path
              id="矩形_6409_拷贝_2-8"
              data-name="矩形 6409 拷贝 2"
@@ -2155,7 +2156,7 @@
              height="38"
              rx="4"
              ry="4"
-             style="fill:#afa722" />
+             style="fill:#59b725;fill-opacity:0.89767444" />
           <path
              id="矩形_6409_拷贝_2-9"
              data-name="矩形 6409 拷贝 2"
@@ -2254,7 +2255,7 @@
              height="38"
              rx="4"
              ry="4"
-             style="fill:#afa722" />
+             style="fill:#59b725;fill-opacity:0.89767444" />
           <path
              id="矩形_6409_拷贝_2-10"
              data-name="矩形 6409 拷贝 2"
@@ -2283,7 +2284,7 @@
              height="38"
              rx="4"
              ry="4"
-             style="fill:#afa722" />
+             style="fill:#59b725;fill-opacity:0.89767444" />
           <path
              id="矩形_6409_拷贝_2-11"
              data-name="矩形 6409 拷贝 2"
@@ -2312,7 +2313,7 @@
              height="38"
              rx="4"
              ry="4"
-             style="fill:#afa722" />
+             style="fill:#59b725;fill-opacity:0.89767444" />
           <path
              id="矩形_6409_拷贝_2-12"
              data-name="矩形 6409 拷贝 2"

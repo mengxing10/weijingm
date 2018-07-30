@@ -116,6 +116,241 @@
         top 7px
         margin 0
         padding 0
+
+
+  .gongdan-modal
+     position: absolute
+     top 0
+     left: 0
+     right 0
+     bottom 0
+     overflow: auto;
+     padding 10px
+     background: linear-gradient(#162467, #0562a1);
+     .title
+        text-align: right
+        padding: 10px
+        .btn
+          cursor pointer
+          display: inline-block;
+          width: 70px
+          margin 0 10px
+          height: 30px
+          line-height: 30px
+          background-color: #2c8cf9
+          color: #fff
+          text-align: center
+          border-radius: 3px
+          &:hover
+            background-color: #2a57ff
+     .gongdan-content
+       width: 90%
+       margin 0 auto
+       padding-bottom 60px
+       .lanTitle
+           color white
+           font-size 18px
+       .ul_1b
+         border-bottom: 0px solid #ccc
+         padding-bottom 20px
+       .ul_1
+         margin-top 20px
+         .items
+           float: left
+           width: 100%
+           padding: 5px 0
+           color #fff
+           .div1 
+             float left
+             width: 15%
+             padding 6px
+             text-align: right;
+             .xing
+               display: inline-block
+               margin-right: 5px
+               vertical-align: top;
+               color: #f00
+               font-size: 26px
+           .div12
+               text-align left
+           .div2
+             float left
+             width: 30%
+             input[type='text'],textarea
+               display: inline-block;
+               width 70%
+               outline: none
+               border: 2px solid #5da6ea
+               padding-top 0
+               padding-bottom 0
+               padding-left 10px
+               height: 30px
+               line-height: 30px
+               border-radius: 3px
+               background: transparent;
+               color #4591d5
+               &:focus
+                 border-color #fff
+                 color #fff
+             label
+               display: inline-block;
+               margin-left 13px
+               margin-top 0px
+               line-height 25px
+             .span-btn
+               cursor pointer
+               display: inline-block;
+               margin-left: 10px
+               margin-top 6px
+               vertical-align top
+               text-decoration underline
+             .span-btn.span-btn-b
+               border 1px solid #ccc
+               margin-top 0
+               background: #c9c9c9
+               border-radius: 2px
+               padding 5px 30px
+             .selectsMul
+               display: inline-block;
+               width 70%
+               height: 80px
+               padding 6px
+               border 1px solid #c6c6c6
+               background-color #fff
+               border-radius 3px
+               overflow: auto
+               color: #333
+               .selects_item
+                 display: inline-block
+                 padding 3px 5px
+                 background-color: rgba(0,0,0,0.08)
+                 margin: 5px
+                 font-size 13px
+                 i
+                   display: inline-block;
+                   width: 10px
+                   height: 10px
+                   margin-left: 5px
+                   background: url(img/u9571.png) no-repeat
+                   background-size 100%
+           .div3
+             float left
+             width 60%
+             textarea
+               resize none
+               display: inline-block;
+               width: 100%
+               padding 5px
+               background-color: transparent
+               border: 2px solid #5da6ea
+               height: 6em
+               color #4591d5
+               &:focus
+                  border-color #fff
+                  color #fff
+           .div_fujian
+             float left
+             width 20%
+             height: 6em
+             padding-top: 30px
+             >span
+               display: block;
+               padding 5px 0       
+
+
+  .modal-alert
+     position: absolute;
+     padding 10px
+     width: 300px
+     top 12%
+     left: 50%
+     transform translate(-50%,0)
+     background-color: #fff
+     border 1px solid #ccc
+     border-radius: 5px
+     box-shadow: 1px 2px 12px rgba(0,0,0,0.5)
+     .title
+       height: 30px
+       line-height: 30px
+       padding-left: 10px
+     .content
+       padding: 10px
+       text-align: center
+     .footer
+       margin: 20px 0
+       text-align: center;
+       span
+         cursor pointer
+         display: inline-block;
+         margin: 0 20px
+         border: 1px solid #c6c6c6
+         padding: 10px 15px
+         border-radius: 5px
+  .modal-alert.modal-guanlian
+     width 60%
+     .title
+       height: auto;
+       .spans
+         float: right;
+         text-align: right;
+       .spans,.search
+         span
+           cursor pointer
+           display: inline-block;
+           margin: 0 10px
+           padding: 0 15px
+           border-radius: 5px
+           background: #0a5fbb
+           color #fff
+           font-size: 14px
+       .search
+          padding: 10px
+          input
+            outline: none
+            border 1px solid #dfdfdf
+            padding 5px
+            font-size: 14px
+            border-radius: 3px
+            margin-right: 10px
+          span
+            background: #dfdfdf
+            font-size: 13px
+            color #333
+     .content
+       font-size: 14px
+       max-height 400px
+       overflow: auto
+       li
+         padding: 10px 0
+         border-top 1px solid #ccc
+         span
+           float left
+           width 28%
+           text-align: left
+         .li_span1
+           width 12%
+           text-align: center
+       li:last-child
+         border-bottom 1px solid #ccc
+  .modal-alert.modal-guanlian.modal-peijian
+     z-index: 10
+     li
+       span
+         width: 33.33%
+         height: 20px
+         line-height: 20px
+         text-align center
+         input
+           outline: none
+           border: 1px solid #ccc
+           border-radius: 3px
+           padding 2px 5px
+
+
+
+           
+
+
   .weixiu-table
     width 96%
     margin-left 2%
@@ -231,6 +466,27 @@
        float left
        width: 75%
        text-align: left;
+
+     .btnDiv
+       text-align: right
+       padding: 10px
+       .btn
+         cursor pointer
+         display: inline-block;
+         width: 70px
+         margin 0 10px
+         height: 30px
+         line-height: 30px
+         background-color: #2c8cf3
+         color: #fff
+         text-align: center
+         border-radius: 5px
+         font-size: 15px
+         &:hover
+           background-color: #2a57ff
+
+
+
   .modal-alert.modal-timemodel.modal-jihua.modal-jihua-bg
      background-color: #349aef
      color #f6f6f6

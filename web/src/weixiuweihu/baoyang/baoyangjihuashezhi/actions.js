@@ -34,6 +34,9 @@ import {
   REQUESTADDFITTING,
   RECEIVEADDFITTING,
 
+  REQUESTUPDATEPLAN,
+  RECEIVEUPDATEPLAN,
+
 } from './constants/actionTypes'
 
 import {reportAPI} from './constants/api'
@@ -48,8 +51,42 @@ let receive = (type, data) => {return {type, data}}
 
 
 
+export function updatePlan(params,t) {
+
+    return async dispatch => {
+
+        dispatch(request(REQUESTUPDATEPLAN, params))
+
+        try {
+
+            // let addfittingData =  await axios.post(reportAPI.addfitting, params);     
+            // let res = {addfittingData:addfittingData };
+            // dispatch(receive(RECEIVEADDFITTING, res));
+            axios.post(reportAPI.updateplan,params).then(function (res) {
+
+                let res1 = {updatePlanData:res};
+                dispatch(receive(RECEIVEUPDATEPLAN, res1));
+                 t.checkResult(res,t); 
+  
+                console.log(res);
+              }).catch(function (error) {
+                console.log(error);
+
+            });
+
+        }
+
+        catch (err) {
+            console.error('捕获到错误: ', err)
+
+            dispatch(receive(RECEIVEUPDATEPLAN, {status: 2, errmsg: '数据错误'}))
+        }
+    }
+}
+
+
 /**
- * 获取监测主页数据
+ * 添加配件
  *
  * @param {all} params
  */

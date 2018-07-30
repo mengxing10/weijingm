@@ -114,7 +114,7 @@ class Jibenxinxi extends Component {
     // 不同的item 调不同的components 展示完成后[销毁]
     // 公共的弹层组件 内容不同
     render() {
-      
+       
 
         var othis = this;
         var {  devicecountData,layoutData,deviceByTypeData,devicetypeData,deviceInfoData}  =this.props;
@@ -122,7 +122,7 @@ class Jibenxinxi extends Component {
 
         //管理层级
         var layoutDataOptions =[ { key: -1, text: '请选择', value: -1 }];
-        //
+        //debugger
         if(layoutData&&layoutData.resultCode==0)
         {
 
@@ -324,6 +324,16 @@ class Jibenxinxi extends Component {
                         />
                 </DateField>
                  */}
+                
+
+                <Dropdown
+                              onChange={this.handleChangeDropdown.bind(this,'layoutID')}
+                              className="query-value"
+                               defaultValue={devicetypeOptions[0].value}
+                               selection
+                               openOnFocus
+                               options={devicetypeOptions}
+                             />
                 <span className="commitBtn"  onClick={this.queryData.bind(this,1)}>查询</span><span className="commitBtn" onClick={this.onXinzeng.bind(this)}>新增</span>
             </div>
             <div className="weixiu-table">

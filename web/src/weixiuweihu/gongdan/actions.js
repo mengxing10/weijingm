@@ -58,18 +58,19 @@ export function getWorkOrder(params) {
     dispatch(request(REQUESTBAOBIAO, params))
     try {
       var  p='';
+       
       if(params!=null){
-        //var p = '?pagesize=' + params.pagesize + '&pageno=' + params.pageno + '&companyname=' + params.companyname ;
-        p='?workordertypeid=' + params.workordertypeid +'&pagesize=' + params.pagesize + '&pageno=' + params.pageno;  // + '&createtimestart=' + params.createtimestart+ '&createtimeend=' + params.createtimeend;
+        //var p = '?pagesize=' + params.pagesize + '&pageno=' + params.pageno + '&companyname=' + params.companyname ; workordertypeid=' + params.workordertypeid +'&
+        p='?pagesize=' + params.pagesize + '&pageno=' + params.pageno;  // + '&createtimestart=' + params.createtimestart+ '&createtimeend=' + params.createtimeend;
         if(  params.createtimestart )
-           p =p+ '&createtimestart=' + params.createtimestart
+           p =p+ '&starttime=' + params.createtimestart
 
         if(params.createtimeend)
-           p =p+ '&createtimeend=' + params.createtimeend
+           p =p+ '&endtime=' + params.createtimeend
 
-        if(params.statusid && params.statusid!=-1)
-           p =p+ '&statusid=' + params.statusid
-        if(params.layoutid && params.layoutid!=-1)
+        if( typeof(params.statusid)!='undefined'&&params.statusid!=-1)
+           p =p+ '&status=' + params.statusid
+        if( typeof(params.layoutid)!='undefined'&&params.layoutid!=-1)
            p =p+ '&layoutid=' + params.layoutid
 
       }
@@ -129,7 +130,9 @@ export function getWorkOrderFull(params) {
             if(params!=null)
                 {
                         //var p = '?pagesize=' + params.pagesize + '&pageno=' + params.pageno + '&companyname=' + params.companyname ;
-                        p='?orderid=' + params.orderid ;
+                        //p='?orderid=' + params.orderid ;
+                        p='?planid=' + params.orderid ;
+                        
 
                 }
 
@@ -320,7 +323,7 @@ export function getWorkOrderStatus(params) {
 
              let layoutData  = await axios.get(reportAPI.getlayout + '?projectid=1');
 
-             let workOrderStatusData = await axios.get(reportAPI.getworkorderstatus);
+            // let workOrderStatusData = await axios.get(reportAPI.getworkorderstatus);
 
              let workOrderTypeData = await axios.get(reportAPI.getworkordertype);
 
@@ -336,9 +339,9 @@ export function getWorkOrderStatus(params) {
             //  let companyData = await axios.get(reportAPI.getCompany , params );
                     //companyData:companyData,
             // http://192.168.10.112:80/project/company/addcompany
-            // var p = {companyName: "2",companyPinyin: "2",address: "2",isValid: true};
+            // var p = {companyName: "2",companyPinyin: "2",address: "2",isValid: true}; workOrderStatusData:workOrderStatusData,
 
-            let res ={layoutData:layoutData,workOrderStatusData:workOrderStatusData,workOrderTypeData:workOrderTypeData,deviceTypeData:deviceTypeData,staffData:staffData}
+            let res ={layoutData:layoutData,workOrderTypeData:workOrderTypeData,deviceTypeData:deviceTypeData,staffData:staffData}
             dispatch(receive(RECEIVEWORKORDERSTATUS, res));
         }
 

@@ -78,11 +78,11 @@ export default class SVGIDMap extends Component {
            let key = `#s${i+1}`
            let keyb = `#b1-${i+1}`
            // console.log(iitem);
-           // d3.select(svgData).select(key).selectAll('circle').style("fill","#00ff00")
+           // d3.select(svgData).select(key).selectAll('circle').style("fill","#00ff00")#fffd10
             if(iitem==1){//1为黄色正常
-                d3.select(svgData).select(key).selectAll('circle').style("fill","#fbf938");
-                d3.select(svgData).select(filters[i]).select("[result=flood]").attr("flood-color","#fffe02");
-                d3.select(svgData).select(filters[i]).select("[result=flood-2]").attr("flood-color","#fffd10");
+                d3.select(svgData).select(key).selectAll('circle').style("fill","#00ff00");
+                d3.select(svgData).select(filters[i]).select("[result=flood]").attr("flood-color","#00ff00");
+                d3.select(svgData).select(filters[i]).select("[result=flood-2]").attr("flood-color","#00ff00");
 
             }else{//0为故障
               d3.select(svgData).select(key).selectAll('circle').style("fill","#ff6058");

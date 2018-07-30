@@ -111,7 +111,18 @@
         &.gray,
         &.gray:hover
             background #c6c6c6
-
+    .dropdown
+      min-width: 9em;
+      min-height: 30px;
+      line-height: 30px;
+      padding-top: 0;
+      padding-bottom: 0;
+      .dropdown.icon
+        width 20px
+        right -38px
+        top 7px
+        margin 0
+        padding 0
   .weixiu-table
     width 96%
     margin-left 2%
@@ -386,19 +397,56 @@
         >span
           color #a3cff6
         .chakan_item_con
-          margin-top 20px
+          margin-top 0px
           line-height: 1.6
           font-size: 14px
           .w_3
             float: left
-            width: 33%
-            padding: 10px 0
+            width: 60%
+            padding: 3px 0
             span
               display: inline-block;
               width: 60%
               font-size: 14px
-            .w_3_span1
+            .w_3_span1,.w_3_span1Bold
               width: 30%
+              text-align:right
+            .tval
+              padding-left 20px
+              input[type='text'],textarea
+                 display: inline-block;
+                 width 70%
+                 outline: none
+                 border: 2px solid #5da6ea
+                 padding-top 0
+                 padding-bottom 0
+                 padding-left 10px
+                 height: 30px
+                 line-height: 30px
+                 border-radius: 3px
+                 background: transparent;
+                 color #4591d5
+                 &:focus
+                   border-color #fff
+                   color #fff
+
+            .w_3_span1Bold
+                font-weight:bold
+
+            .w_3_textarea
+              resize none
+              width: 70%
+              height: 100px
+              background-color: transparent
+              border-radius: 3px
+              padding: 5px
+              border 2px solid #5da6ea
+              color #4591d5
+              &:focus
+                border-color #fff
+                color #fff
+
+
           .w_1
             width 100%
             .w_1_span1
@@ -474,6 +522,8 @@
               cursor pointer
         .chakan_item_con2
           padding-left 5%
+        .spaceColumn
+          padding-top 10px
   .modal-alert.modal-guanlian.modal-banli
     .banli-item
       margin-bottom: 10px

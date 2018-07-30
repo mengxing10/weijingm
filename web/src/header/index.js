@@ -84,19 +84,19 @@ export default class Header extends Component {
             value: 'fenxi',
             content: '分析报表',
           },
-
-          {
-            key: '设备资产',
-            text: '设备资产',
-            value: 'shebeizichan',
-            content: '设备资产',
-          },
-          {
-            key: '系统配置',
-            text: '系统配置',
-            value: 'peizhi',
-            content: '系统配置',
-          },
+          //
+          // {
+          //   key: '设备资产',
+          //   text: '设备资产',
+          //   value: 'shebeizichan',
+          //   content: '设备资产',
+          // },
+          // {
+          //   key: '系统配置',
+          //   text: '系统配置',
+          //   value: 'peizhi',
+          //   content: '系统配置',
+          // },
           {
             key: '退出系统',
             text: '退出系统',

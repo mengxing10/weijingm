@@ -55,13 +55,14 @@ class Weixiuweihu extends Component {
                 <div className ={classNames("charts-menu-item",{active:nameId=='wx'})} onClick={this.selectName.bind(this,'wx','gongdan')}>
                     <span>设备维修</span>
                 </div>
-                <div className ={classNames("charts-menu-item",{active:nameId=='byrw'})} onClick={this.selectName.bind(this,'byrw','baoyang')}>
+                <div className ={classNames("charts-menu-item",{active:nameId=='byjh'})} onClick={this.selectName.bind(this,'byjh','baoyang')}>
                     <span>设备保养</span>
                 </div>
+              {/*
                 <div className ={classNames("charts-menu-item",{active:nameId=='bx'})} onClick={this.selectName.bind(this,'bx','baoxiu')}>
                     <span>设备报修</span>
                 </div>
-
+              */}
                 <div className ={classNames("charts-menu-item",{active:nameId=='xjjh'})} onClick={this.selectName.bind(this,'xjjh','xunjian')}>
                     <span>设备点检</span>
                 </div>

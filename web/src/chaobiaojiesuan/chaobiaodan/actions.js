@@ -9,21 +9,26 @@ import axios from 'axios'
 let request = (type, params) => {return {type, params}}
 let receive = (type, data) => {return {type, data}}
 
-const apiServer = `http://192.168.30.233:8081/baogang-meterread/`;
+const apiServer = `http://39.106.150.90:8080/baogang-meterread/`;
 
-const chaobiaoAPI ={
+const api ={
+  //泵站列表
   bengzhanlist:`${apiServer}pump/level/option?parentid=0`,
-
+  //泵组列表
   bengzulist:`${apiServer}pump/level/option?parentid=`,
 
   // 抄表列表
   chaobiaodanlist:`${apiServer}meterreading/report/select`,
   //抄表单明细查看
   chaobiaodaninfo:`${apiServer}meterreading/detail/tbldata?uuid=`,
+  //抄表单导出
+  chaobiaodandaochu:`${apiServer}meterreading/detail/export?uuid=`,
   //新增抄表单
   chaobiaodanadd:`${apiServer}standard/index/tbl`,
   //生成抄表单
-  chaobiaodannew:`${apiServer}meterreading/report/generate`
+  chaobiaodannew:`${apiServer}meterreading/report/generate`,
+  //删除抄表单
+  chaobiaodandel:`${apiServer}meterreading/report/delete?uuid=`,
 
 }
 
@@ -39,7 +44,7 @@ export function getBengZhanList() {
       try {
 
 
-        let result =  await axios.get(chaobiaoAPI.bengzhanlist)
+        let result =  await axios.get(api.bengzhanlist)
         if(result.resultCode==0){
 
           let bengzhanlist = result.data
@@ -48,12 +53,12 @@ export function getBengZhanList() {
           dispatch(receive('RECEIVE_BENGZHANLIST', res));
 
         }else{
-            dispatch(receive('RECEIVE_BENGZHANLIST', {status: result.resultCode, errmsg: result.resultMessage}))
+            alert(`获取数据失败！错误编码：${result.resultCode},错误提示：${result.resultMessage}`)
         }
       }
       catch (err) {
         console.error('捕获到错误: ', err)
-        dispatch(receive('RECEIVE_BENGZHANLIST', {status: 2, errmsg: '数据错误'}))
+        alert("服务器无响应！请稍后再试")
       }
   }
 }
@@ -70,7 +75,7 @@ export function getBengZuList(params) {
       dispatch(request('REQUESTE_BENGZULIST',params))
       try {
 
-        let result =  await axios.get(`${chaobiaoAPI.bengzulist}${params}`)
+        let result =  await axios.get(`${api.bengzulist}${params}`)
         if(result.resultCode==0){
 
           let bengzus = result.data.map(item=>({key:item.id,text:item.name,value:item.id}))
@@ -79,12 +84,12 @@ export function getBengZuList(params) {
           dispatch(receive('RECEIVE_BENGZULIST', res));
 
         }else{
-            dispatch(receive('RECEIVE_BENGZULIST', {status: result.resultCode, errmsg: result.resultMessage}))
+            alert(`获取数据失败！错误编码：${result.resultCode},错误提示：${result.resultMessage}`)
         }
       }
       catch (err) {
         console.error('捕获到错误: ', err)
-        dispatch(receive('RECEIVE_BENGZULIST', {status: 2, errmsg: '数据错误'}))
+        alert("服务器无响应！请稍后再试")
       }
   }
 }
@@ -103,20 +108,20 @@ export function getChaoBiaoDanList(params) {
   return async dispatch => {
       dispatch(request('REQUESTE_CHAOBIAODANLIST', params))
       try {
-        let result =  await axios.post(chaobiaoAPI.chaobiaodanlist, params)
+        let result =  await axios.post(api.chaobiaodanlist, params)
         if(result.resultCode==0){
           let res = {"chaobiaodanlist":result.data};
           dispatch(receive('RECEIVE_CHAOBIAODANLIST', res));
         }
         else{
-            dispatch(receive('RECEIVE_BENGZULIST', {status: result.resultCode, errmsg: result.resultMessage}))
+            alert(`获取数据失败！错误编码：${result.resultCode},错误提示：${result.resultMessage}`)
         }
 
 
       }
       catch (err) {
         console.error('捕获到错误: ', err)
-        dispatch(receive('RECEIVE_CHAOBIAODANLIST', {status: 2, errmsg: '数据错误'}))
+        alert("服务器无响应！请稍后再试")
       }
   }
 }
@@ -132,23 +137,84 @@ export function getChaoBiaoDanInfo(params) {
   return async dispatch => {
       dispatch(request('REQUESTE_CHAOBIAODANINFO', params))
       try {
-        let result =  await axios.get(`${chaobiaoAPI.chaobiaodaninfo}${params}`)
+        let result =  await axios.get(`${api.chaobiaodaninfo}${params}`)
         if(result.resultCode==0){
           let res = {"chaobiaodaninfo":result.data};
           dispatch(receive('RECEIVE_CHAOBIAODANINFO', res));
         }
         else{
-            dispatch(receive('RECEIVE_CHAOBIAODANINFO', {status: result.resultCode, errmsg: result.resultMessage}))
+            alert(`获取数据失败！错误编码：${result.resultCode},错误提示：${result.resultMessage}`)
         }
 
 
       }
       catch (err) {
         console.error('捕获到错误: ', err)
-        dispatch(receive('RECEIVE_CHAOBIAODANINFO', {status: 2, errmsg: '数据错误'}))
+        alert("服务器无响应！请稍后再试")
       }
   }
 }
+
+
+
+/**
+ * 导出抄表单
+ *
+ * @param {all} params
+ */
+export function getChaoBiaoDanDaoChu(params) {
+  return async dispatch => {
+      try {
+        let href = `${api.chaobiaodandaochu}${params}`
+        let element = document.createElement("a");
+        element.setAttribute("href", href);
+        element.style.display = "none";
+        document.body.appendChild(element);
+        element.click();
+        document.body.removeChild(element);
+
+      }
+      catch (err) {
+        console.error('捕获到错误: ', err)
+        alert("导出失败，服务器无响应！")
+      }
+  }
+}
+
+
+
+
+/**
+ * 删除抄表单
+ *
+ * @param {all} params
+ */
+export function getChaoBiaoDanDel(params) {
+  return async dispatch => {
+      dispatch(request('REQUESTE_CHAOBIAODANDEL', params))
+      try {
+        let result =  await axios.get(`${api.chaobiaodandel}${params}`)
+        if(result.resultCode==0){
+          let res = {"chaobiaodandel":result.data};
+          dispatch(receive('RECEIVE_CHAOBIAODANDEL', params))
+        }
+        else{
+            alert(`获取数据失败！错误编码：${result.resultCode},错误提示：${result.resultMessage}`)
+        }
+
+
+      }
+      catch (err) {
+        console.error('捕获到错误: ', err)
+        alert("服务器无响应！请稍后再试")
+      }
+  }
+}
+
+
+
+
+
 
 
 
@@ -162,20 +228,20 @@ export function getChaoBiaoDanAdd(params) {
       dispatch(request('REQUESTE_CHAOBIAODANADD', params))
       try {
         let pars = `?pumpgroupid=${params.pumpgroupid}&readingdate=${params.readingdate}`
-        let result =  await axios.get(`${chaobiaoAPI.chaobiaodanadd}${pars}`)
+        let result =  await axios.get(`${api.chaobiaodanadd}${pars}`)
         if(result.resultCode==0){
           let res = {"chaobiaodanadd":result.data};
           dispatch(receive('RECEIVE_CHAOBIAODANADD', res));
         }
         else{
-            dispatch(receive('RECEIVE_CHAOBIAODANADD', {status: result.resultCode, errmsg: result.resultMessage}))
+            alert(`获取数据失败！错误编码：${result.resultCode},错误提示：${result.resultMessage}`)
         }
 
 
       }
       catch (err) {
         console.error('捕获到错误: ', err)
-        dispatch(receive('RECEIVE_CHAOBIAODANADD', {status: 2, errmsg: '数据错误'}))
+        alert("服务器无响应！请稍后再试")
       }
   }
 }
@@ -191,7 +257,7 @@ export function postChaoBiaoDanNew(params) {
   return async dispatch => {
       try {
 
-        let result =  await axios.post(chaobiaoAPI.chaobiaodannew, params)
+        let result =  await axios.post(api.chaobiaodannew, params)
         if(result.resultCode==0){
           alert('生成新抄表单成功')
         }

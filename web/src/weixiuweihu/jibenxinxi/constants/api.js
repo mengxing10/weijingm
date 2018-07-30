@@ -26,21 +26,21 @@ export const reportAPI ={
     getdevicecount:`${apiServer}device/deviceasset/getdevicecountbyname`,
 
     // getlayout:`http://192.168.30.129/organization/managementlayout/getlayout?projectid=1`,
-    // getdeviceByType:`http://192.168.30.129/device/deviceasset/getlist`,  // 7.5
-
+    // getdeviceByType:`http://192.168.30.129/device/deviceasset/getlist`,  // 7.5 
+    
     getlayout:`${apiServer}organization/managementlayout/getlayout?projectid=1`,
-    getdeviceByType:`${apiServer}device/deviceasset/getlist`,  // 7.5
+    getdeviceByType:`${apiServer}device/deviceasset/getlist`,  // 7.5 
 
-
+    
 
     getalldevicetype:`${apiServer}device/devicetype/getalllist`,  //7.2
     getdeviceinfo:`${apiServer}/device/deviceasset/getdeviceinfo`,  // 7.9
     adddevice:`${apiServer}/device/deviceasset/adddevice`,  // 7.10
-
+    
 
     //2018.7.9 开开:
      // getlayout:`http://192.168.30.233:8081/btplatform/organization/managementlayout/getlayout?projectid=1`,
      // getdeviceByType:`${apiServer}device/deviceasset/getlist?devicetypeid=3`,
-
+    
 
 }

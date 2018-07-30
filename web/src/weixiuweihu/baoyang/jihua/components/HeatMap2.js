@@ -113,8 +113,10 @@ export default class HeatMap extends Component {
                 calculable: true,
                 orient: 'horizontal',
                 pieces: [
-                    {value: 1, label: '维修计划', color: '#f5b054'},
-                    {value: 2, label: '保养计划', color: '#090'}
+                    {value: 0, label: '未开始', color: '#f5b054'},
+                    {value: 1, label: '处理中', color: '#999'},
+                    {value: 2, label: '完成', color: '#090'},
+                   // {value: 4, label: '逾期', color: '#999'}
                 ],
                 right: '15%',
                 top: '1%',

@@ -33,6 +33,7 @@ class Chaobiaodan extends Component {
             waters:{},
             hours:{},
             loading:false,
+            chaobiaodanuuid:'',
         }
     }
 
@@ -209,7 +210,7 @@ class Chaobiaodan extends Component {
                           <div className="fenge"></div>
                           <div className="caozuo">
                               {xinzeng?<div className="item" onClick={this.xinChaobiao.bind(this)}>生成新抄表单</div>:
-                                       <div className="item" onClick={this.backList.bind(this)}>打印</div>
+                                       <div className="item" onClick={this.daochuInfo.bind(this)}>导出</div>
                               }
                               <div className="item" onClick={this.backList.bind(this)}>返回</div>
                           </div>
@@ -241,12 +242,13 @@ class Chaobiaodan extends Component {
         this.setState({xinzeng:true,dianbiaos:dianbiaos,waters:waters,hours:hours})
       }
     }
+    //是否结算
     selectCharged(e, { checked }){
       const {bengzu,bengzhanid} = this.state
       this.getAllChaoBiaoDanList(undefined,undefined,undefined,bengzhanid==0?undefined:bengzhanid,
         bengzu=='all'?undefined:bengzu,checked)
     }
-
+    //泵站改变
     async changeBengzhan(id){
       this.setState({bengzhanid:id,bengzu:'all'})
       if(id!=0){
@@ -258,7 +260,7 @@ class Chaobiaodan extends Component {
       }
 
     }
-
+    //泵组改变
     changeBengZu(e, { value }){
       this.setState({bengzu:value})
       if(value!='all'){
@@ -271,6 +273,7 @@ class Chaobiaodan extends Component {
 
     }
 
+    //新增抄表单电表数字改变
     dianbiaoChange(ev){
       let {dianbiaos} = this.state
       dianbiaos[ev.target.dataset.id] = parseFloat(ev.target.value)
@@ -278,7 +281,7 @@ class Chaobiaodan extends Component {
       this.setState({dianbiaos:dianbiaos})
 
     }
-
+    //新增抄表单累时器数字改变
     leishiqiChange(ev){
       let {hours} = this.state
       hours[ev.target.dataset.id] = parseFloat(ev.target.value)
@@ -286,7 +289,7 @@ class Chaobiaodan extends Component {
 
 
     }
-
+    //新增抄表单水表数字改变动作
     shuibiaoChange(ev){
       let {waters} = this.state
       waters[ev.target.dataset.id] =parseFloat( ev.target.value)
@@ -294,10 +297,11 @@ class Chaobiaodan extends Component {
 
 
     }
+    //返回抄表单列表页面
     backList(){
       this.setState({xinzeng:false,chakan:false})
     }
-    //
+    //新增抄表单动作
     async  xinChaobiao(){
       const {bengzhanid,bengzu,dianbiaos,hours,waters,addDate,startDate,endDate,pageNum} = this.state
 
@@ -323,17 +327,14 @@ class Chaobiaodan extends Component {
 
     }
     //导出
-    onDayin(url,query){
-      //window.open(url+'?reportid='+query)
-      var element = document.createElement("a");
-      element.setAttribute("href", url+'?reportid='+query);
-      element.style.display = "none";
-      document.body.appendChild(element);
-      element.click();
-      document.body.removeChild(element);
-    }
+  daochuInfo(){
+    const {chaobiaodanuuid} = this.state
+    const {getChaoBiaoDanDaoChu} = this.props
+    if(chaobiaodanuuid!='')
+        {getChaoBiaoDanDaoChu(chaobiaodanuuid)}
+  }
 
-  //分页
+  //分页,请求新的抄表单列表
   changePager(value){
     const {startDate,endDate} = this.state
     this.setState({pageNum:value})
@@ -408,6 +409,7 @@ class Chaobiaodan extends Component {
     }
 
   }
+  //统一请求动作
   getAllChaoBiaoDanList(startT,endT,pageNo,stationID,groupID,hasCharge){
     const {getChaoBiaoDanList}  = this.props
     const {startDate,endDate,pageNum,bengzu,bengzhanid} = this.state
@@ -447,11 +449,21 @@ class Chaobiaodan extends Component {
 
 
 
-
-  onChakan(uuid){
-    this.setState({chakan:true})
+  //查看抄表单详情
+  async onChakan(uuid){
     const {getChaoBiaoDanInfo} = this.props
-    getChaoBiaoDanInfo(uuid)
+    await getChaoBiaoDanInfo(uuid)
+    const {REQUESTE_CHAOBIAODANINFO} = this.props
+    if(REQUESTE_CHAOBIAODANINFO=='done')
+      {this.setState({chaobiaodanuuid:uuid,chakan:true})}
+  }
+  //删除抄表单
+  async onDel(uuid){
+    const {getChaoBiaoDanDel} = this.props
+    await getChaoBiaoDanDel(uuid)
+    const {REQUESTE_CHAOBIAODANDEL} = this.props
+    if(REQUESTE_CHAOBIAODANDEL=='done')
+      {this.getAllChaoBiaoDanList()}
   }
 
 
@@ -478,7 +490,10 @@ class Chaobiaodan extends Component {
     //   "totalElectric": 66705
     // }]
     return data.map((item, i) => {
-      var status = <span className='chaobiao_table_chakan' onClick={this.onChakan.bind(this,item.uuid)}>查看</span>;
+      var status = <div className='chaobiao_table_opt'>
+                      <span className='chaobiao_table_opt_i' onClick={this.onChakan.bind(this,item.uuid)}>查看</span>
+                      {!item.hasCharge&&<span className='chaobiao_table_opt_i' onClick={this.onDel.bind(this,item.uuid)}>删除</span>}
+                    </div>
       return ([i+1,item.stationName,item.groupName,item.totalElectric,
               item.totalHour,item.totalWater,item.readingDate,
               item.nickName,item.hasCharge?'是':'否',status]);

@@ -81,7 +81,7 @@ export default class SVGIDMap extends Component {
         })
         bengzu.forEach(function(iitem,i){
           let key = `#s${i+1}`
-          d3.select(svgData).select(key).attr("cursor","pointer").on("click", function(d) {
+          d3.select(svgData).select(key).style("fill","#00ff00").attr("cursor","pointer").on("click", function(d) {
                   if(goNewPage){goNewPage(iitem)}
             })
           })

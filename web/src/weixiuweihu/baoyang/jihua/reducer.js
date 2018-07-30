@@ -18,9 +18,53 @@ import {
   REQUESTTERMDATA,
   RECEIVETERMDATA,
 
+  REQUESTMAINPLANSET,
+  RECEIVEMAINPLANSET,
+
+  REQUESTMAINPLANSETDETAIL,
+  RECEIVEMAINPLANSETDETAIL,
+
+  REQUESTTOTALFITTING,
+  RECEIVETOTALFITTING,
+
+
+  REQUESTADDREPAIR,
+  RECEIVEADDREPAIR,
+
+
+
 } from './constants/actionTypes'
 
-const initialState = {svgdata:{},
+const initialState = {
+deviceTypeData:{resultCode:-1,data:[]},
+totalfittingData:{
+ resultCode:-1,
+ data: {timeCosuming:0,fitting:[]}
+
+},
+
+resultInfoData:{
+          resultCode:-1,
+          data:{  
+
+
+          description:"测试一",
+          deviceAssetName:"name",
+          endTime:1531402562000,
+          fitting:[],
+          maintenencePlanID:6,
+          maintenenceType:2,
+          name:"变压器",
+          period:"3",
+          periodtype:3,
+          startTime:1530279324000,
+          timeConsuming:25,
+          title:"标题测试",
+
+          }
+
+         },
+  svgdata:{},
                       powerdata:{},
                       energydata:{},
                       gl:{},
@@ -33,6 +77,86 @@ export default function reducer(state = initialState, action) {
     switch (action.type) {
 
 
+
+        case REQUESTADDREPAIR:
+        {
+            return Object.assign({}, state, {fetchsvgdata: 'start'});
+        }
+
+        case RECEIVEADDREPAIR:
+        {
+            return Object.assign(
+                {},
+                state,
+                {
+                  ...action.data,
+                  fetchsvgdata: action.data.errmsg?'start':'done'
+                }
+            )
+          }
+
+
+
+        case REQUESTTOTALFITTING:
+        {
+            return Object.assign({}, state, {fetchsvgdata: 'start'});
+          }
+
+        case RECEIVETOTALFITTING:
+        {
+            return Object.assign(
+                {},
+                state,
+                {
+                  ...action.data,
+                  fetchsvgdata: action.data.errmsg?'start':'done'
+                }
+            )
+          }
+
+
+
+          
+        
+        case REQUESTMAINPLANSETDETAIL:
+        {
+            return Object.assign({}, state, {fetchsvgdata: 'start'});
+          }
+
+        case RECEIVEMAINPLANSETDETAIL:
+        {
+            return Object.assign(
+                {},
+                state,
+                {
+                  ...action.data,
+                  fetchsvgdata: action.data.errmsg?'start':'done'
+                }
+            )
+          }
+
+          
+
+        case REQUESTMAINPLANSET:
+        {
+            return Object.assign({}, state, {fetchsvgdata: 'start'});
+          }
+
+        case RECEIVEMAINPLANSET:
+        {
+            return Object.assign(
+                {},
+                state,
+                {
+                  ...action.data,
+                  fetchsvgdata: action.data.errmsg?'start':'done'
+                }
+            )
+          }
+
+
+
+          
         case REQUESTLENGZHANDATA:
         {
             return Object.assign({}, state, {fetchsvgdata: 'start'});
