@@ -1,6 +1,6 @@
 /**
  * @file Header component
- * @author luwenlong <zuiwosuifeng@gmail.com>
+ * @author zlc <lichao9182@126.com>
  */
 
 import React, {Component, PropTypes} from 'react'
@@ -91,12 +91,12 @@ export default class Header extends Component {
           //   value: 'shebeizichan',
           //   content: '设备资产',
           // },
-          // {
-          //   key: '系统配置',
-          //   text: '系统配置',
-          //   value: 'peizhi',
-          //   content: '系统配置',
-          // },
+          {
+            key: '系统配置',
+            text: '系统配置',
+            value: 'peizhi',
+            content: '系统配置',
+          },
           {
             key: '退出系统',
             text: '退出系统',

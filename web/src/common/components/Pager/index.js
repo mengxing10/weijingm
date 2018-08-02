@@ -1,6 +1,6 @@
 /**
  * @file Pager component
- * @author luwenlong <zuiwosuifeng@gmail.com>
+ * @author zlc <lichao9182@126.com>
  *
  * @gap         参数   选传   {number}      分割段 默认5
  * @prefix      参数   选传   {string}      分页器样式前缀 默认 el

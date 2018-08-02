@@ -1,6 +1,6 @@
 /**
  * @file 定义响应状态码
- * @author luwenlong <zuiwosuifeng@gmail.com>
+ * @author zlc <lichao9182@126.com>
  */
 
 export default {

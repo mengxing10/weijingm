@@ -1,6 +1,6 @@
 /**
  * @file indexReducer
- * @author luwenlong <zuiwosuifeng@gmail.com>
+ * @author zlc <lichao9182@126.com>
  */
 
 import {combineReducers} from 'redux';

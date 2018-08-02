@@ -1,6 +1,6 @@
 /**
  * @file 统一维护API
- * @author luwenlong <zuiwosuifeng@gmail.com>
+ * @author zlc <lichao9182@126.com>
  */
 
 //export const apiServer = 'http://118.190.88.23:8080/energycloud.portal/';

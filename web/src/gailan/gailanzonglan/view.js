@@ -1,6 +1,6 @@
 /**
  * @file monlist
- * @author luwenlong <zuiwosuifeng@gmail.com>
+ * @author zlc <lichao9182@126.com>
  */
 
 import React, {Component, PropTypes} from 'react'
@@ -119,7 +119,7 @@ class GailanZonglan extends Component {
                                         color: 'rgba(0,0,0,0)',
                                         label: {show:false},
                                         labelLine: {show:false}
-                                    },
+                                    }
                                   }}
                                    ]
                               },
@@ -145,7 +145,7 @@ class GailanZonglan extends Component {
                                           color: 'rgba(0,0,0,0)',
                                           label: {show:false},
                                           labelLine: {show:false}
-                                      },
+                                      }
                                     }}
                                    ]
                               }
@@ -157,7 +157,7 @@ class GailanZonglan extends Component {
         var daBiaoFbOption ={
             barWidth: 8,
             legend:{
-                  show:false,
+                  show:false
                    },
             grid: ['20%','15%','5%','5%'],
             lineColors: ['white'], //可选
@@ -173,7 +173,7 @@ class GailanZonglan extends Component {
         //健康度分布
         var jianKangFbOption ={
             legend:{
-                  show:false,
+                  show:false
                    },
             grid: ['20%','15%','5%','5%'],
             barColors:  [['#facc17','#facc17','#facc17'],['#677ee0','#677ee0','#677ee0'],['#FFD531','#FC9000','#F34E00']], //可选
@@ -190,7 +190,7 @@ class GailanZonglan extends Component {
         var dunShuiFbOption ={
             barWidth: 8,
             legend:{
-                  show:false,
+                  show:false
                    },
             lineColors: ['white'], //可选
             grid: ['20%','15%','5%','5%'],
@@ -254,7 +254,7 @@ class GailanZonglan extends Component {
                         <h3>工艺达标率 %</h3>
                         <div className="charts" >
                           <div className="charts-body">
-                            <ReactEcharts  option= {daBiaoOption}  style={ ChartsStyle}/>
+                            <ReactEcharts  option={daBiaoOption}  style={ ChartsStyle}/>
                           </div>
                           <div className="charts-text" >
                             <div className={classNames({active:false})}></div>

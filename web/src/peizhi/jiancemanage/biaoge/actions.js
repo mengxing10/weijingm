@@ -1,6 +1,6 @@
 /**
  * @file libraryAction 设备库
- * @author luwenlong <zuiwosuifeng@gmail.com>
+ * @author zlc <lichao9182@126.com>
  */
  import axios from 'axios'
  import _ from 'lodash'

@@ -1,6 +1,6 @@
 /**
  * @file 通用本地存储
- * @author luwenlong <zuiwosuifeng@gmail.com>
+ * @author zlc <lichao9182@126.com>
  */
 
 let storage = window.localStorage

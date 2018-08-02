@@ -1,6 +1,6 @@
 /**
  * @file loginReducer
- * @author luwenlong <zuiwosuifeng@gmail.com>
+ * @author zlc <lichao9182@126.com>
  */
 
 import Cookies from 'universal-cookie'

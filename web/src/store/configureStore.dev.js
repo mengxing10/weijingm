@@ -1,6 +1,6 @@
 /**
  * @file createStore.dev.js
- * @author luwenlong <zuiwosuifeng@gmail.com>
+ * @author zlc <lichao9182@126.com>
  */
 
 import {createStore, applyMiddleware, compose} from 'redux'

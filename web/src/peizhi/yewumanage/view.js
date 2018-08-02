@@ -1,6 +1,6 @@
 /**
  * @file App smart component
- * @author luwenlong <zuiwosuifeng@gmail.com>
+ * @author zlc <lichao9182@126.com>
  */
 
 import 'velocity-animate';

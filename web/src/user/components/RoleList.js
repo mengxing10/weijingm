@@ -1,6 +1,6 @@
 /**
  * @file RoleList component 角色列表
- * @author luwenlong <zuiwosuifeng@gmail.com>
+ * @author zlc <lichao9182@126.com>
  */
 
 import React, {PropTypes, Component} from 'react'

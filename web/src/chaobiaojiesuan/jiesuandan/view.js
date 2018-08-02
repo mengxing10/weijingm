@@ -44,6 +44,8 @@ class Jiesuandan extends Component {
 
         const BodyStyle={height: document.documentElement.clientHeight-80  +'px'};
 
+        const TableStyle={height: document.documentElement.clientHeight-130  +'px'};
+
         //编号  泵站名称 系统名称 电表合计 累时器合计 水表合计 抄表时间 抄表人 是否结算
 
         const jiesuanthead=[{width:"5%",value:"编号"},{width:"20%",value:"结算日期"},
@@ -122,7 +124,7 @@ class Jiesuandan extends Component {
                 </div>}
 
             </div>
-              <div className="jiesuandan-body">
+              <div className="jiesuandan-body" style={TableStyle}>
                    {!xinzeng&&!chakan&&!queren&&
                     <div className="jiesuandanlist">
                       <MyTable thead={jiesuanthead} tbody={tbody}/>

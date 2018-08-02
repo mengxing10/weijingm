@@ -1,6 +1,6 @@
 /**
  * @file 404view
- * @author luwenlong <zuiwosuifeng@gmail.com>
+ * @author zlc <lichao9182@126.com>
  */
 
 import React, {Component} from 'react'

@@ -1,6 +1,6 @@
 /**
  * @file actionTypes
- * @author luwenlong <zuiwosuifeng@gmail.com>
+ * @author zlc <lichao9182@126.com>
  */
 
 // 登录

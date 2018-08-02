@@ -1,6 +1,6 @@
 /**
  * @file actionTypes
- * @author luwenlong <zuiwosuifeng@gmail.com>
+ * @author zlc <lichao9182@126.com>
  */
 //根据topic查询对应的设备
  export const REQUESTXIAOXIBAOXIU = "REQUESTXIAOXIBAOXIU"

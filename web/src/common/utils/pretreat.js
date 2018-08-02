@@ -1,6 +1,6 @@
 /**
  * @file 通用请求预处理
- * @author luwenlong <zuiwosuifeng@gmail.com>
+ * @author zlc <lichao9182@126.com>
  */
 
 import axios from 'axios'

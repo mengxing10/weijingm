@@ -1,6 +1,6 @@
 /**
  * @file 用户界面
- * @author luwenlong <zuiwosuifeng@gmail.com>
+ * @author zlc <lichao9182@126.com>
  */
 
 import React, {Component, PropTypes} from 'react'
