@@ -54,7 +54,7 @@ export default class Login extends Component {
         let username=this.refs.username.value=localStorage.getItem("username");
         let password=this.refs.password.value=localStorage.getItem("password");
         if(password!=null&&password!=''){
-            $(".aaa").click()
+            $(".aaa").click();
         }
     }
     componentDidUpdate(){
