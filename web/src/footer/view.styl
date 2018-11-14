@@ -1,0 +1,42 @@
+.tabbar
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: px2rem(98);
+  border-top: 1px solid #f0f0f0;
+  clearfix()
+  background: #fff;
+  .tabbar-item
+    float: left;
+    width: 33.333%
+    text-align: center;
+    color: #848689;
+    .tabbar-icon
+      display: block;
+      width: px2rem(40);
+      height: px2rem(40);
+      margin: px2rem(14) auto;
+      &.home
+        background: url('./img/home.png') no-repeat
+        background-size: 100% 100%
+      &.message
+        background: url('./img/message.png') no-repeat
+        background-size: 100% 100%
+      &.my
+        background: url('./img/my.png') no-repeat
+        background-size: 100% 100%
+    .tabbar-title
+      display: block;
+      font-size: px2rem(20);
+    &.active
+      color: #5994f8;
+      .home
+        background: url('./img/home_b.png') no-repeat
+        background-size: 100% 100%
+      .message
+        background: url('./img/message_b.png') no-repeat
+        background-size: 100% 100%
+      .my
+        background: url('./img/my_b.png') no-repeat
+        background-size: 100% 100%

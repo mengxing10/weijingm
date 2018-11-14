@@ -1,0 +1,138 @@
+.weixiupjwrap
+  background: #f6f6f6
+  height: 100%
+  position relative
+  .pj-container,.shopCar
+    position absolute
+    top px2rem(76)
+    bottom px2rem(83)
+    width: 100%
+    box-sizing: border-box;
+    overflow: auto
+    .pj-item,.pj-item-car
+      clearfix()
+      padding 0 px2rem(20)
+      background #fff
+      .left
+        float left
+        width px2rem(56)
+        padding-top px2rem(20)
+        .checkbox
+          display inline-block
+          width px2rem(34)
+          height px2rem(34)
+          border 1px solid #c7c7cc
+          border-radius 50%
+          position relative
+        .checkbox.blue:before
+          content ''
+          display inline-block
+          width px2rem(34)
+          height px2rem(34)
+          border-radius px2rem(34)
+          background url(./img/gou_w.png) center center no-repeat
+          background-size 60%
+          background-color #64a3fb
+          position absolute
+          left 0
+          top 0
+      .right
+        margin-left px2rem(56)
+        padding px2rem(20) 0
+        border-bottom 1px solid #f0f0f0
+        clearfix()
+        .center
+          float left
+          width 60%
+          .center-top,.center-bottom
+            font-size px2rem(28)
+            color #3d3d3d
+            padding-top px2rem(6)
+          .center-bottom
+            margin-top px2rem(10)
+        .right-r
+          float right
+          width 40%
+          text-align right
+          .sub,input,.add
+            float right
+            box-sizing border-box
+          .sub,.add
+            width px2rem(50)
+            height px2rem(50)
+            border 1px solid #c7c7cc
+            text-align center
+            line-height px2rem(50)
+            // border-radius 4px
+          .sub
+            border-right none
+            line-height px2rem(40)
+          .add
+            border-left none
+          input
+            width px2rem(100)
+            height px2rem(50)
+            outline: none
+            border 1px solid #c7c7cc
+            // border-radius 4px
+            text-align center
+            font-size px2rem(28)
+            color #848689
+    .pj-item:first-child
+      margin-top px2rem(30)
+  .weixiupj-footer
+    position: fixed;
+    width: 100%
+    height: px2rem(83)
+    text-align: center
+    bottom: 0
+    font-size: px2rem(36)
+    color #ffffff
+    z-index 102
+    clearfix()
+    .footer-left
+      float left
+      width 70%
+      line-height px2rem(83)
+      text-align center
+      background #646464
+      position relative
+      .list-icon
+        position absolute
+        top px2rem(-40)
+        left 10%
+        width px2rem(92)
+        height px2rem(92)
+        background url('./img/list.png') center center no-repeat
+        background-size 100% 100%
+    .footer-right
+      float left
+      width 30%
+      line-height px2rem(83)
+      text-align center
+      background #64a3fb
+  .shopCar_bg
+    background rgba(0,0,0,0.2)
+    position: absolute
+    top px2rem(76)
+    bottom px2rem(83)
+    width: 100%
+    z-index 10
+  .shopCar
+    position absolute
+    top auto
+    bottom px2rem(83)
+    width: 100%
+    box-sizing: border-box;
+    overflow: auto
+    max-height: px2rem(600)
+    padding-bottom px2rem(50)
+    background #fff
+    z-index 100
+    .pj-item-car
+      .right
+        margin-left 0
+  .shopCar_bg_body
+    overflow hidden
+  .dpn
+    display none

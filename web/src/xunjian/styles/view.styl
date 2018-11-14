@@ -1,0 +1,115 @@
+.xunjianwrap
+  background: #fff
+  width: 100%
+  // position: absolute;
+  // top: 0
+  // bottom px2rem(100)
+  // overflow-y: auto;
+  // padding-bottom px2rem(100)
+  .xunjian-search
+    margin: px2rem(20)
+    height px2rem(56)
+    border-radius: px2rem(10)
+    background: #f0f0f0
+    clearfix()
+    .search-left
+      float: left
+      width 40%
+      line-height px2rem(56)
+      border-right: 1px solid #e5e5e5
+      box-sizing: border-box;
+      padding-left px2rem(20)
+      font-size: px2rem(24)
+      color #666
+      position: relative
+      &:after
+        position: absolute
+        right:px2rem(25)
+        top:px2rem(25)
+        content:""
+        display: inline-block
+        border-width:5px
+        border-style: solid
+        border-color:#b5b5b5 transparent transparent
+    .search-right
+      float: left
+      width 59%
+      position: relative;
+      font-size: px2rem(26)
+      color #b2b2b2
+      .input
+        display: inline-block;
+        width: 100%
+        height: px2rem(56)
+        line-height: px2rem(56)
+        position: relative;
+        input
+          float: left;
+          position: absolute;
+          top 0
+          left: px2rem(85)
+          bottom: 0
+          right: 0
+          background: transparent
+          border: none
+          outline: none
+          line-height: px2rem(56)
+          vertical-align: bottom;
+      .input:before
+        content: ''
+        float: left
+        position: absolute;
+        top px2rem(15)
+        left px2rem(30)
+        width: px2rem(25)
+        height: px2rem(25)
+        background: url('./img/search.png') no-repeat
+        background-size 100% 100%
+  .xunjian-body
+    // padding px2rem(58) px2rem(20) px2rem(20)
+    .body-ii
+      width: 100%
+      padding: px2rem(30) 0
+      background-color: #f6f6f6;
+    .body-ii+.body-ii
+      padding-top:0
+    .body-head
+      background-color: #fff;
+      padding 0 px2rem(20)
+      height px2rem(68)
+      border-bottom: 1px dashed #f0f0f0
+      clearfix()
+      font-size: px2rem(24)
+      .head-title
+        float: left
+        line-height px2rem(68)
+        color #1a1a1a
+        font-size px2rem(28)
+        font-weight: bold
+      .head-status
+        float right
+        line-height px2rem(68)
+        font-size: px2rem(28)
+        color #848689
+      .head-status.zhong
+        color #5a95f8
+      .head-status.wei
+        color #fdb055
+    .body-b
+      padding px2rem(20)
+      font-size px2rem(28)
+      background-color: #fff;
+      .b-t
+        clearfix()
+        margin-bottom: px2rem(20)
+        color: #848689
+        span:first-child
+          float: left
+          font-size px2rem(30)
+          color: #1a1a1a
+        span:last-child
+          float: right
+      .b-b
+        color #1f1f1f
+        div
+          margin-top px2rem(16)

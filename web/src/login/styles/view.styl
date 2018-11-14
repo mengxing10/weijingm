@@ -1,155 +1,71 @@
-/**
- * @file login
- * @author qiaolifeng <qiao.l.f@outlook.com>
- */
-
-.login
-    width 100%
-    background url('./img/bglogin.jpg') no-repeat
-    background-size 100% 100%
-    border 0px solid red
-    .header
-        padding 0 30px
-        height 65px
-        line-height 55px
-        background #0b1a49
-        color #919193
-        clearfix()
-        h1
-            float left
-            width 100%
-            font-size 30px
-            color #3a9ae6
-            margin-right 50px
-            text-align left center
-            a
-                display inline-block
-                line-height 55px
-                text-decoration none
-                color $normal
-                & hover
-                    color $normal
-
-   .login-page
-        background-color  rgba(255, 255, 255, 20%)
-        position  absolute
-        left  38%
-        top  81px
-        width  398px
-        height  398px
-        .login-form
-            left  0%
-            top  0%
-            width  100%
-            height  100%
-            button,.checkbox
-                font-size 18px
-            /*h1,h2
-                font-size  36px
-                font-family  "Microsoft YaHei"
-                color  rgb(254, 254, 254)
-                font-weight  bold
-                line-height  0.696
-                text-align  right
-                -moz-transform  matrix( 0.99961350723698,0,0,1.00178323756687,0,0)
-                -webkit-transform  matrix( 0.99961350723698,0,0,1.00178323756687,0,0)
-                -ms-transform  matrix( 0.99961350723698,0,0,1.00178323756687,0,0)
-                position  absolute
-                left  120.227px
-                top  76.044px
-            */
-            h2
-             padding-top  76px
-              
-             font-size 20px
-             text-align center
-             color  rgb(254, 254, 254)
-             font-weight  bold
-           
-            .login-name
-                border-width  1px
-                border-color  rgb(246, 246, 246)
-                border-style  solid
-                background-color  rgb(255, 255, 255)
-                font-size  14px
-                font-family  "Microsoft YaHei"
-                color  rgb(150, 150, 150)
-                line-height  1.786
-                position  absolute
-                left  70px
-                top  146.494px
-                width  283px
-                height  40px
-                input
-                  border 0px solid blue
-
-            .login-pw
-                border-width  1px
-                border-color  rgb(246, 246, 246)
-                border-style  solid
-                background-color  rgb(255, 255, 255)
-                font-size  14px
-                font-family  "Microsoft YaHei"
-                color  rgb(150, 150, 150)
-                line-height  1.786
-                position  absolute
-                left  70px
-                top  218.494px
-                width  283px
-                height  40px
-                input
-                  border 0px solid blue
-            .login-button
-              background-color  #254394
-              color #fff
-              position  absolute
-              left  70px
-              top  319.287px
-              width  285px
-              height  46px
-              font-size 18px
-              font-weight normal
-              &:hover
-                background #7ac6ff
-                color #fff
- 
-            .message
-                font-size  12px
-                font-family  "Microsoft YaHei"
-                color  rgb(255, 255, 255)
-                position  absolute
-                left  70px
-                top  279.713px
-                .pwdlabel
-                   font-size  12px
-                   label
-                      color white
-                 
-
-
-
-    .ff
-        width 100%
-        height 35px
-        line-height 35px
-        position absolute
-        bottom 0
-        h1
-            font-size  18px
-            font-family  "Microsoft YaHei"
-            color  rgb(53, 153, 228)
-            font-weight  bold
-            line-height  1.397
-            text-align  center
-            bottom 0
-            -moz-transform  matrix( 0.99952856742554,0,0,1.00575994672882,0,0)
-            -webkit-transform  matrix( 0.99952856742554,0,0,1.00575994672882,0,0)
-            -ms-transform  matrix( 0.99952856742554,0,0,1.00575994672882,0,0)
-        p
-            font-size  12px
-            font-family  "Microsoft YaHei"
-            color  rgb(53, 153, 228)
-            line-height  2.083
-            position  absolute
-            left  70%
-            bottom 0
+.denglu_one
+  width: 100%
+  height: 100%
+  background #fff
+  .denglu_one_head
+    width: 100%;
+    height: 47%;
+    position: relative;
+    .dengluone
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: url('./img/dengluone.png') no-repeat
+      background-size 100% 100%
+    .denglu_one_head_title
+      position: absolute
+      top:42%
+      left: 26%
+      color: #fff
+      font-size 1rem
+  .denglu_one_cont
+    width: 87%;
+    margin:0 auto;
+    overflow: hidden;
+    .zhanghao
+      width: 100%;
+      overflow: hidden;
+      height: 2rem;
+      padding-left: 0.8rem;
+      .zhanghao_title
+        font-size:0.7rem;
+        padding-right: 0.4rem;
+        color: #848689;
+      .zhanghao_inout
+        width: 75%;
+        border:none;
+        border-bottom: 1px solid #ccc;
+        font-size: 0.7rem;
+        padding-left: 0.3rem;
+    .mima
+      width: 100%;
+      overflow: hidden;
+      padding-left: 0.8rem;
+      margin-bottom: 1rem;
+      .mima_title
+        font-size:0.7rem;
+        padding-right: 0.4rem;
+        color: #848689;
+      .mima_inout
+        width: 75%;
+        border:none;
+        border-bottom: 1px solid #ccc;
+        font-size: 0.7rem;
+        padding-left: 0.3rem;
+    .mima_submit
+      width: 100%;
+      height: 2rem;
+      line-height: 2rem;
+      font-size: 0.75rem;
+      color: #fff;
+      background: #3a9ae6;
+      text-align: center;
+      margin-top: 3rem;
+  .denglu_foot
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    right: 0
+    font-size: 0.5rem;
+    color: #ccc;
+    text-align: center

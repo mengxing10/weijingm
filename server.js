@@ -16,7 +16,7 @@ var axios = require('axios');
 var express = require('express')
 
 var app = new express()
-var port = 8089
+var port = 8080
 var host = getHost()
 
 // 定义环境变量
@@ -51,10 +51,10 @@ var statics = require('./statics.json')
 
 
 // 开发
-app.get(/bgp/, function(req, res) {
+app.get(/weijingm/, function(req, res) {
   if (env === 'development') {
     console.log(req.path.split('/'));
-    res.sendFile(path.join(__dirname, 'web/entry/pc.html'))
+    res.sendFile(path.join(__dirname, 'web/entry/mobile.html'))
 
   }
 })

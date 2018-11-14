@@ -1,246 +1,111 @@
 /**
- * @file 登录页view
- * @author qiaolifeng <qiao.l.f@outlook.com>
+ * @file MMonitor
+ * @author luwenlong
  */
-
 import React, {Component, PropTypes} from 'react'
-import {Form, Button, Input,Checkbox} from 'semantic-ui-react'
-import {browserHistory} from 'react-router'
 import classNames from 'classnames'
+import {Button, Input, Icon, Divider, Checkbox} from 'semantic-ui-react'
+import {Link, browserHistory} from 'react-router'
+import moment from 'moment'
+import './styles/index.styl'
 import Cookies from 'universal-cookie'
-import $ from './constants/jquery.js'
-
+import $ from 'jquery'
 const cookies = new Cookies();
 
-
-
-
-import {bindActionCreators} from 'redux'
-import {connect} from 'react-redux';
-import * as actions from './actions.js'
-import './styles/index.styl'
-
-
-
-class Login extends Component {
-
+export default class Login extends Component {
     static contextTypes = {
-        allData: PropTypes.object.isRequired,
+        //allData: PropTypes.object.isRequired
     }
-
-    constructor(props, context) {
-        super(props, context)
-        let user = cookies.get("user")=='undefined'?'':cookies.get("user")
-
-        let password = cookies.get("password")=='undefined'?'':cookies.get("password")
-
-
-        this.state={
-          "user":user,
-          "password":password
-
+    constructor(props,context) {
+        super(props,context)
+        this.state = {
         }
     }
 
     render() {
-
-
-   const { loginResult} = this.props
-
- //defaultChecked={this.state.user?true:false}
-
-
-     const theHeight = {height: document.documentElement.clientHeight + 'px' }
-
         return (
-          <div className="login"  style={theHeight}>
-            {/*<div className="header"></div>*/}
-
-            
-            <div className="login-page">
-              <div className="login-form">
-
-                <h2>包钢智慧泵站云平台</h2>
-                <Input ref="username" className="login-name" type="text"   value={this.state.user}  onChange={this.userchange.bind(this)} placeholder="请输入账号" />
-                <Input ref="password" className="login-pw" type="password"  value={this.state.password}   onChange={this.pwchange.bind(this)}  placeholder="请输入密码"/>
-                <div className = "message" >
-                <Checkbox  className = "pwdlabel" label ="&nbsp;&nbsp;&nbsp;&nbsp;记住密码"  defaultChecked={this.state.user!=''?true:false}  onChange={this.savechange.bind(this)} />
+          <div className="denglu_one">
+            <div className="denglu_one_head">
+                <i className="dengluone"></i>
+                <div className="denglu_one_head_title">智能化管理监测平台</div>
+            </div>
+            <div className="denglu_one_cont">
+              <from>
+                <div className="zhanghao">
+                    <span className="zhanghao_title">账号</span>
+                    <input className="zhanghao_inout" type="text" ref="username" />
                 </div>
-                <Button className="login-button"  onClick={this.submit.bind(this)} >登陆</Button>
-
-              </div>
-
+                <div className="mima">
+                    <span className="mima_title">密码</span>
+                    <input  className="mima_inout" type="password" ref="password" />
+                </div>
+                <Checkbox label='记住密码' className="aaa" style={{height:"0.7rem",fontSize:"0.6rem",marginLeft:"1rem"}} onClick={this.click.bind(this)} />
+                <div className="mima_submit" onClick={this.brower_denglunext.bind(this)}>
+                  <span>登录</span>
+                </div>
+              </from>
             </div>
-            <div className="ff">
-                <h1>浙江瀚普智慧科技有限公司</h1>
-                <p>当前在线人数：2  人 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  累计访问： 23  次 </p>
-            </div>
+            <div className="denglu_foot">浙江瀚普智慧科技有限公司</div>
           </div>
         )
     }
 
-    userchange(ev){
-      this.setState({"user":ev.target.value})
-
+    componentDidMount(){
+        let username=this.refs.username.value=localStorage.getItem("username");
+        let password=this.refs.password.value=localStorage.getItem("password");
+        if(password!=null&&password!=''){
+            $(".aaa").click()
+        }
     }
-
-    pwchange(ev){
-      this.setState({"password":ev.target.value})
-
-    }
-
-    savechange(ev,data){
-
-
-
-      if(data.checked){
-
-        cookies.set("user",this.state.user)
-        cookies.set("password",this.state.password)
-
-
-
-      }
-      else{
-        cookies.remove("user")
-        cookies.remove("password")
-
-      }
-
-    }
-
-
-    checkResult(res,t){
-
-        //alert("test");
-
-
-
-           var ds= res;  //{"status":0,"errorCode":-2,"errorMessage":"用户不存在"}
-             //{"status":0,"errorCode":-3,"errorMessage":"密码错误"}
-             //if (window.history.length)
-             if(ds.status==1)
-             {
-                //browserHistory.goBack()
-
-                 var exp = new Date();
-                exp.setTime(exp.getTime() + 10*60*1000);
-                cookies.set("isLogin",true,exp.getTime());
-                cookies.set("userid",ds.data.userid,exp.getTime());
-/*
-
-                var userid=ds.data.userid;
-                var username=ds.data.username;
-                var avatar=ds.data.avatar;
-                var isadmin=ds.data.isadmin
-                localStorage.setItem("titles", "SY");
-                localStorage.setItem("topicprefix", "SYc");
-                localStorage.setItem("username", username);
-                //localStorage.setItem("password", password)
-                localStorage.setItem("userid", userid);
-                localStorage.setItem("isadmin", isadmin);
-                localStorage.setItem("avatar", avatar);
-                //云接口
-                localStorage.setItem("host", "http://118.190.88.23:61614");
-                localStorage.setItem("ip", "http://118.190.88.23:8086");
-                localStorage.setItem("ips", "http://118.190.88.23:8086/SanYaBoYue.portal/");
-
-                // localStorage.setItem("host", "http://192.168.30.142:61614");
-                // localStorage.setItem("ip", "http://192.168.30.142:8080");
-                // localStorage.setItem("ips", "http://192.168.30.142:8080/SanYaBoYue.portal/");
-
-
-                localStorage.setItem("bengzhan", "bengzhan");
-                localStorage.setItem("path", "1");
-
- */
-
-
-
-                browserHistory.push('/bgp/pc/gailan'); //  nengxiao
-            }
-            // HACK手工敲url直接进入登录页面的情况
-            else {
-                alert(ds.errorMessage);
-                if(ds.errorCode==-2)
-                 t.setState({"user":''})
-                else  if(ds.errorCode==-3)
-                 t.setState({"password":''})
-
-
-             //  var dsds=  t.refs.password;
-
-             // t.refs.password.getDOMNode().focus();
-              // React.findDOMNode(t.refs.password).focus();
-
-                //window.location.href = '/yayd/pc/login'
-            }
-
-
-
-
-
-
-    }
-    submit(ev) {
-
-
-
-
-       // const {user, password}=this.state;
-        const {getLoginInfo}=this.props;
-
-
-
-        // var user = "admin"; //this.refs.username.value;
-        // var password = "sd";//this.refs.password.value;
-
-        getLoginInfo({"username":this.state.user,"password":this.state.password},this.checkResult,this);
-        //const isLogin = cookies.get("isLogin")?true:false
-
-        // var isLogin = false;
-        // if(user=="admin"  && password == "admin")
-        //     isLogin = true;
-
-        // if (isLogin)
-        // {
-
-        //     if (window.history.length) {
-        //         //browserHistory.goBack()
-        //         browserHistory.push('/yayd/pc/home')
-        //     }
-        //     // HACK手工敲url直接进入登录页面的情况
-        //     else {
-        //         window.location.href = '/yayd/pc/login'
+    componentDidUpdate(){
+        // var username=this.refs.username.value;
+        // var password=this.refs.password.value;
+        // const {fetchdenglu}=this.context.allData.Mdenglu;
+        // if(fetchdenglu=="done"){
+        //     var mdenglu=this.context.allData.Mdenglu.denglu;
+        //     if(mdenglu){
+        //         localStorage.setItem("username", username);
+        //         sessionStorage.setItem("denglu", "true");
+        //         let guangfu = [];
+        //         mdenglu.projectList.map((item)=>{
+        //           if(item.cloud=='guangfu') guangfu.push(JSON.parse(JSON.stringify(item)))
+        //         })
+        //         sessionStorage.setItem("projectList", JSON.stringify(guangfu))
+        //         browserHistory.push(`/yili/enter/mobile/denglunext`)
+        //     }else if(mdenglu==false){
+        //         alert("用户名或密码错误，请重新输入")
         //     }
         // }
-       //else
-           // alert("用户或密码错误");
-
-
-
     }
 
-    componentWillReceiveProps(nextProps, nextState)
-  {
-        const isLogin = cookies.get("isLogin")?true:false
-        if (isLogin)
-    {
+    brower_denglunext(){
+        var username=this.refs.username.value;
+        var password=this.refs.password.value;
+        // const {getMdenglu}=this.context.allData;
+        //var params={"username":username,"password":password}
+        //getMdenglu(params);
 
-            if (window.history.length) {
-                //browserHistory.goBack()
-                browserHistory.push('/bgp/pc/nengxiao')
-            }
-            // HACK手工敲url直接进入登录页面的情况
-            else {
-                window.location.href = '/bgp/pc/login'
-            }
+        // browserHistory.push(`/mobile/denglunext`)
+        // localStorage.setItem("username", username)
+        // sessionStorage.setItem("denglu", "true");
+        if(username=='admin'&&password=='ganwei'){
+            var exp = new Date();
+            exp.setTime(exp.getTime() + 10*60*1000);
+            cookies.set("isLogin",true,exp.getTime());
+            browserHistory.push(`/weijingm/home`)
+        }else{
+            alert("用户名或密码错误，请重新输入")
         }
-      }
+
+    }
+    click(){
+        if($(".aaa").hasClass("checked")){
+            localStorage.clear();
+        }else{
+            var username=this.refs.username.value;
+            var password=this.refs.password.value;
+            localStorage.setItem("password", password)
+            localStorage.setItem("username", username)
+        }
+    }
 }
-
-
-function mapDispatchToProps (dispatch) {
-        return bindActionCreators(actions, dispatch);
-    };
-export default connect(state => state.login, mapDispatchToProps)(Login);

@@ -98,6 +98,8 @@ export default {
            {
                 show: true,
                 type: 'value',
+                max:option.yAxis.max&&option.yAxis.max[i]?option.yAxis.max[i]:null,
+                min:option.yAxis.min&&option.yAxis.min[i]?option.yAxis.min[i]:null,
                 name: option.yAxis.name[i],
                 nameLocation: 'end',
                 nameTextStyle: {
@@ -133,7 +135,7 @@ export default {
 
     //处理xAxis:beg
     var xAxisObjs =[],xAxisArr = [];
-    var xAxisIsArr = option.xAxis instanceof Array 
+    var xAxisIsArr = option.xAxis instanceof Array
     if(xAxisIsArr)  xAxisArr = option.xAxis;
     else  xAxisArr.push(option.xAxis);
 
@@ -173,7 +175,7 @@ export default {
               xAxisObj.type = xAxisArr[i].type;
 
         if( 'undefined' != typeof(xAxisArr[i].data ))
-              xAxisObj.data = xAxisArr[i].data;     
+              xAxisObj.data = xAxisArr[i].data;
 
         xAxisObjs.push(xAxisObj);
 
@@ -183,8 +185,8 @@ export default {
           thexAxis = xAxisObjs;
 
     //处理xAxis:end
-    
-    
+
+
     var theLegenddata = [];
     var theSeries = [];
     //formatter: '{b0}' + option.xAxis.name + '<br/>{a0}: {c0} ' + '<br />{a1}: {c1} ' + '<br />{a2}: {c2} '+'<br />{a3}: {c3}'
@@ -221,6 +223,7 @@ export default {
                   shadowBlur: 10
                 }
               },
+              markLine:option.series.lines[i].markLine?option.series.lines[i].markLine:{},
 
               areaStyle: iAreaStyle,
               data: option.series.lines[i].data
@@ -300,7 +303,7 @@ export default {
 
     }
 
-  var  iTrigger = 'axis'; 
+  var  iTrigger = 'axis';
   if ('undefined' != typeof(option.tooltip) && 'undefined' != typeof(option.tooltip.trigger))
         iTrigger = option.tooltip.trigger;
 

@@ -37,13 +37,13 @@ export default class Menus extends Component {
             //           {name:'project1',text:'项目2',haschild:false,address:'/bgp/pc/nengxiao/weixiu2',openchild:false,
             //             value:[]
             //                },
-            //         ] ▼ 
+            //         ] ▼
             menus:this.props.menus,
           }
       }
       render() {
          const {menus} = this.state
-          
+
           return (
                 <div className="charts-menu-2">
                     <div className="charts-menu-head"></div>

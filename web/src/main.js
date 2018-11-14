@@ -14,6 +14,7 @@ import axios from 'axios'
 import configureStore from './store'
 import routes from './router.js'
 import './common/utils/pretreat'
+import rem from './common/utils/rem.js'
 import './common/index.styl'
 
 const store = configureStore()
@@ -21,17 +22,10 @@ const store = configureStore()
 const history = syncHistoryWithStore(browserHistory, store)
 
 match({routes, location: createLocation}, () => {
-
     render(
-
-
         <Provider store={store}>
-
             <Router history={history}>{routes}</Router>
-
         </Provider>,
-
         document.getElementById('app')
-
     )
 })

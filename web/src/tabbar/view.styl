@@ -1,0 +1,54 @@
+.tabbar2
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: px2rem(98);
+  border-top: 1px solid #f0f0f0;
+  clearfix()
+  background: #fff;
+  .tabbar-item
+    float: left;
+    width: 20%
+    text-align: center;
+    color: #848689;
+    .tabbar-icon
+      display: block;
+      width: px2rem(40);
+      height: px2rem(40);
+      margin: px2rem(14) auto;
+      &.jiance
+        background: url('./img/jiance.png') no-repeat
+        background-size: 100% 100%
+      &.bj
+        background: url('./img/baojing.png') no-repeat
+        background-size: 100% 100%
+      &.wx
+        background: url('./img/weixiu.png') no-repeat
+        background-size: 100% 100%
+      &.by
+        background: url('./img/baoyang.png') no-repeat
+        background-size: 100% 100%
+      &.xj
+        background: url('./img/xunjian.png') no-repeat
+        background-size: 100% 100%
+    .tabbar-title
+      display: block;
+      font-size: px2rem(20);
+    &.active
+      color: #5994f8;
+      .jiance
+        background: url('./img/jiance_b.png') no-repeat
+        background-size: 100% 100%
+      .bj
+        background: url('./img/baojing_b.png') no-repeat
+        background-size: 100% 100%
+      .wx
+        background: url('./img/weixiu_b.png') no-repeat
+        background-size: 100% 100%
+      .by
+        background: url('./img/baoyang_b.png') no-repeat
+        background-size: 100% 100%
+      .xj
+        background: url('./img/xunjian_b.png') no-repeat
+        background-size: 100% 100%

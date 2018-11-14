@@ -1,0 +1,65 @@
+.weixiuyswrap
+  background: #f6f6f6
+  height: 100%
+  flexbox()
+  flex-direction(column)
+  .container
+    width: 100%
+  .weixiu-item1
+    padding 0 px2rem(18)
+    margin-top px2rem(30)
+    clearfix()
+    background #fff
+    position: relative;
+    .title1
+      float: left
+      line-height: px2rem(88)
+      color: #060606
+      font-size px2rem(30)
+    .title2
+      margin-left px2rem(150)
+      height: px2rem(88)
+      line-height: px2rem(88)
+      position: relative;
+      .stars
+        position absolute
+        top 50%
+        left 0
+        transform translate(0,-50%)
+        clearfix()
+        .star
+          float left
+          width px2rem(54)
+          height px2rem(54)
+          margin-right px2rem(20)
+          background url('./img/star.png') center center no-repeat
+          background-size 100% 100%
+          &.act
+            background url('./img/star_b.png') center center no-repeat
+            background-size 100% 100%
+  .weixiu-item2
+    min-height: px2rem(340)
+    padding px2rem(27) px2rem(18)
+    margin-top px2rem(30)
+    font-size px2rem(30)
+    color: #1a1a1a
+    background #fff
+    .con1
+      padding px2rem(20)
+      line-height: 1.3
+      font-size: px2rem(26)
+      color #858689
+      outline none
+      &:empty::before
+        color:lightgrey;
+        content:attr(placeholder)
+  .weixiuys-btn
+    position: fixed;
+    width: 100%
+    height: px2rem(87)
+    line-height: px2rem(87)
+    text-align: center
+    bottom: 0
+    font-size: px2rem(36)
+    color #fff
+    background-color #64a3fb

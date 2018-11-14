@@ -1,0 +1,129 @@
+/**
+ * @file 报表
+ * @author zlc <lichao9182@126.com>
+ */
+.tgquxian
+    display flex
+    position fixed
+    top 0px
+    left 0px
+    height 100%
+    width 100%
+    background-image linear-gradient(-4deg,rgba(5, 98, 161, 0.5) 0%,rgba(22, 36, 103, 0.5) 100%)
+    z-index 9999
+    .tgquxianbody
+        height 500px
+        margin auto
+        width 90%
+        background-image linear-gradient(#1e4386,#1e4386)
+        position relative
+        .top-charts
+            height 50px
+            width 98%
+            flexbox()
+            justify-content(space-between)
+            align-items(center)
+            font-size 16px
+            color #fff
+            position relative
+            padding 20px
+            // text-indent 10px  取消，影响datepicker
+            .query-data
+                font-size 16px
+                height 50px
+                width 120px
+                color #fff
+                margin-left 30px
+                .ui.fluid.selection.dropdown
+                    min-height 30px
+                    margin-top 10px
+                    padding 6px 0px 6px 10px
+                    .dropdown.icon
+                        padding 5px 10px
+                .ui.dropdown
+                    color #fff
+                    background #3c75c2
+                    margin auto
+                    .default.text
+                        color #fff
+                    .ui.label
+                        color #fff
+                        background #0a448c
+                        font-weight normal
+                    .menu.visible
+                        color #fff
+                        background #3c75c2
+                        .item
+                            color #fff
+                            border-bottom 1px solid #5da6ea
+                            &:hover
+                                background #59a1e1
+            .labStyle
+                line-height 50px
+            .query-condition
+                flexbox()
+                justify-content(flex-start)
+                align-items(center)
+                font-size 16px
+                position relative
+                margin auto
+                label
+                    margin 0 10px
+                    color #fff
+                .query-name
+                    font-size 16px
+                    margin-right 10px
+                .query-value
+                    font-size 14px
+                .daily-wrap
+                    margin auto
+                    border 1px solid #ebebed
+                    width 216px
+                    height 28px
+                    line-height 28px
+                    inline-flex()
+                    justify-content(flex-start)
+                    align-items(center)
+                    font-size 14px
+                    .icon.calendar
+                        margin 0 5px
+                        height auto
+                    >div
+                        display inline-block
+                    input
+                        border none
+                        width 90px
+            .query-btn
+                width 106px
+                height 30px
+                line-height 30px
+                text-align center
+                background #254394
+                color #fff
+                border-radius 3px
+                cursor pointer
+                position absolute
+                right 0px
+                &:hover
+                    background #2a57ff
+                &.gray,
+                &.gray:hover
+                    background #c6c6c6
+            .close_icon
+              float right
+              display inline-block
+              width 20px
+              height 20px
+              background: url(./img/close.png) no-repeat
+              background-size 100%
+              cursor pointer
+              &:hover
+                  transform rotate(30deg)
+        .rp-wrap
+            width 96%
+            height 450px
+            display flex
+            .charts_body
+                margin auto
+                height 400px
+                width 100%

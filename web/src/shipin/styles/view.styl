@@ -1,0 +1,120 @@
+.shipin-head
+  width: 100%
+  position: fixed;
+  top 0
+  height: px2rem(76)
+  background-color: #fff
+  color #1a1a1a
+  font-size: px2rem(34)
+  z-index: 10
+  clearfix()
+  .head_iconleft
+    float: left
+    width: px2rem(20)
+    height: 100%
+    margin-left: px2rem(13)
+    position: relative;
+    &:after
+      content:"";
+      width:px2rem(25);
+      height:px2rem(25);
+      border-left:2px solid #000;
+      border-bottom:2px solid #000;
+      display:inline-block;
+      vertical-align: middle;
+      transform:translate(-50%,-50%) rotate(45deg);
+      position:absolute;left:50%;top:50%;margin-left: 2px;
+      box-sizing:border-box;
+  .head_title
+    float: left
+    width px2rem(600)
+    text-align: center
+    margin-left: px2rem(60)
+    line-height: px2rem(76)
+  .head_rig
+    float: right
+    width px2rem(40)
+    height px2rem(40)
+    margin-top px2rem(15)
+    margin-right px2rem(10)
+    background url('./img/ls.png') center center no-repeat
+    background-size 100% 100%
+.shipinwrap
+  padding-top px2rem(30)
+  background: #fff
+  .shipin-ss
+    padding-left px2rem(20)
+    padding-right px2rem(20)
+    .ss-input-w
+      display: block
+      width 100%
+      height px2rem(56)
+      border-radius px2rem(10)
+      background #f0f0f0
+      border 1px solid #e6e6ea
+      position relative
+      &:before
+        content: '';
+        float: left;
+        position: absolute;
+        top: px2rem(15)
+        left: 50%
+        transform translate(-50%,0)
+        width: px2rem(25)
+        height: px2rem(25)
+        background: url('./img/search.png') no-repeat
+        background-size: 100% 100%
+      .ss-input
+        display: none
+        height 100%
+        padding px2rem(10) 0
+        font-size px2rem(26)
+        overflow hidden
+        box-sizing: border-box
+        margin-left px2rem(70)
+        outline none
+        border none
+        background transparent
+    .foc.ss-input-w:before
+      left: px2rem(20)
+      transform translate(0,0)
+    .foc.ss-input-w
+      .ss-input
+        display: inline-block
+        width 80%
+  .shipin-menu
+    height px2rem(100)
+    .swiper-slide
+      text-align: center
+    .menu-name
+      display: inline-block
+      line-height px2rem(96)
+      color #0d0d0d
+      font-size px2rem(26)
+      &.active
+        border-bottom 2px solid #6b9bfc
+        color #6b9bfc
+  .shipin-body
+    padding-left px2rem(20)
+    padding-right px2rem(20)
+    flexbox()
+    justify-content(space-between)
+    flex-wrap(wrap)
+    .shipin-item
+      width: 49%
+      padding-top px2rem(40)
+      .item-top
+        height px2rem(200)
+        background url('./img/sp.png') center center no-repeat
+        background-size 100% 100%
+      .item-bottom
+        margin-top px2rem(20)
+        font-size px2rem(26)
+        color #000
+        line-height: 1.5
+    .shipin-item:nth-child(even)
+      .item-top
+        background url('./img/sp1.png') center center no-repeat
+        background-size 100% 100%
+        
+      

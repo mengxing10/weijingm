@@ -1,3 +1,0 @@
-//消息查询
-export const REQUESTXXLIST = "REQUESTXXLIST"
-export const RECEIVEXXLIST = "RECEIVEXXLIST"

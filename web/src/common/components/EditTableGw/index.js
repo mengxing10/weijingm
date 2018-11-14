@@ -74,7 +74,7 @@ export default class EditTableGw extends Component {
                                 {hasId&&<div>{pageNum*10+i+1}</div>}
                                 {body.map((item, ii) => {
                                   let regPos = /^-?\d+\.\d+$/
-                                  if(regPos.test(item.value)){item.value=parseFloat(item.value).toFixed(2)}
+                                  if(regPos.test(item.value)){item.value=parseFloat(item.value).toFixed(6)}
                                   return(
                                     <div className={classNames({nodisplay:item.id=='uuid' })}  style={{width: liwidths[ii]}} key={ii}>
                                     {modColNum==i&&!addNewCol?<input ref={item.id} type="text" defaultValue={item.value}/>:item.value}

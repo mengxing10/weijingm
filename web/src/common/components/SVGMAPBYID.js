@@ -42,6 +42,8 @@ export default class SVGIDMap extends Component {
     draw_id_svg(bg_svg, props){
 
       const svg_container_id='#'+this.props.id
+      let openCures = this.props.openCures
+      let dataConfs = this.props.dataConfs
       d3.html(bg_svg,function(svgData){
 
 
@@ -56,8 +58,11 @@ export default class SVGIDMap extends Component {
             switch(item.valuetype){
               case 1:
                  d3.select(svgData).select("#p"+item.pointid).text(`${Math.round(item.value*100)/100} `)
+                 .attr("cursor","pointer").on("click", function(d) {
+                         if(openCures){openCures(dataConfs[item.pointid-1])}
+                   })
                  break;
-              case 2:
+              case 2://运行
                   if(item.value==1) {d3.select(svgData).select("#s"+item.pointid).style("fill","#00ff00")
                   .selectAll("path,circle").style("fill","#00ff00")}
                   else if(item.value==0) {
@@ -65,11 +70,11 @@ export default class SVGIDMap extends Component {
                     .selectAll("path,circle").style("fill","#fa607e")
                   }
                   break;
-              case 3:
+              case 3://停机
                   if(item.value==1) d3.select(svgData).select("#s"+item.pointid).style("fill","#fa607e")
                   .selectAll("path,circle").style("fill","#fa607e")
                   break;
-              case 4:
+              case 4: //故障
                   if(item.value==1) d3.select(svgData).select("#s"+item.pointid).style("fill","#d7d20f")
                   .selectAll("path,circle").style("fill","#d7d20f")
                   break;

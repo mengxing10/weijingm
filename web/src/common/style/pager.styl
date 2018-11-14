@@ -1,0 +1,26 @@
+/**
+ * @file 分页器样式
+ * @author luwenlong <zuiwosuifeng@gmail.com>
+ */
+
+.el-pager
+    margin 20px 0
+    ul
+        flexbox()
+        align-items(center)
+        justify-content(center)
+        li
+            padding 5px 8px
+            margin-right 10px
+            background #f2f4f6
+            color #5c5c5c
+            cursor pointer
+            border-radius 3px
+            &.active,
+            &:hover
+                background $normal
+                color #fff
+            &.first
+                padding-left 1px
+            &.last
+                padding-right 1px

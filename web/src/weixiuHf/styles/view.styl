@@ -1,0 +1,87 @@
+.weixiuhfwrap
+  background: #f6f6f6
+  height: 100%
+  flexbox()
+  flex-direction(column)
+  .container
+    width: 100%
+    // position: absolute;
+    // top: 0
+    // bottom px2rem(90)
+    // overflow-y: auto;
+  .weixiu-item1
+    padding 0 px2rem(18)
+    clearfix()
+    font-size px2rem(30)
+    background: #fff
+    position: relative;
+    .title1
+      float: left
+      line-height: px2rem(88)
+      color: #1a1a1a
+    .title2
+      float: right;
+      padding-right: px2rem(42)
+      height: px2rem(88)
+      line-height: px2rem(88)
+      color: #848680
+      position: relative;
+      &:after
+        content:"";
+        width: px2rem(25)
+        height: px2rem(25)
+        border-right:2px solid #c7c7cc;
+        border-top:2px solid #c7c7cc;
+        display:inline-block;
+        vertical-align: middle;
+        transform:translate(-50%,-50%) rotate(45deg);
+        position:absolute;right:0;top:50%;margin-left: 2px;
+        box-sizing:border-box;
+    .title3
+      float: right;
+      padding-right: px2rem(42)
+      height: px2rem(88)
+      line-height: px2rem(88)
+      color: #848680
+      .input
+        display: inline-block
+        outline none 
+        &:empty::before
+          color:lightgrey
+          content:attr(placeholder)
+  .weixiu-item1+.weixiu-item1
+    border-top: 1px solid #f0f0f0
+  .weixiu-item2
+    min-height: px2rem(195)
+    padding px2rem(27) px2rem(18)
+    font-size px2rem(30)
+    color: #1a1a1a
+    background: #fff
+    .con1
+      margin-top 20px
+      font-size: px2rem(26)
+      color #858689
+      outline: none 
+      line-height: 1.3
+      &:empty::before
+        color:lightgrey
+        content:attr(placeholder)
+    .weixiu_img
+      display: inline-block;
+      width: px2rem(150)
+      height px2rem(150)
+  .weixiu-item3
+    min-height: px2rem(350)
+  .fenge
+    height: px2rem(30)
+    background: #f6f6f6
+  .weixiuhf-btn
+    position: fixed;
+    width: 100%
+    height: px2rem(87)
+    line-height: px2rem(87)
+    text-align: center
+    bottom: 0
+    font-size: px2rem(36)
+    color #fff
+    background-color #64a3fb

@@ -40,7 +40,7 @@ export default class EditTable extends Component {
                     </ul>
                     {tbody.map((body, i) => {
                         return (
-                            <ul className="el-tbody" key={i}>
+                            <ul className="el-tbody" key={i} onClick={this.pointOption.bind(this,i)}>
                                 {body.map((item, ii) => {
                                     return (
                                         <li
@@ -59,6 +59,9 @@ export default class EditTable extends Component {
             </div>
         )
     }
-
+pointOption(i){
+  let {pointOption} = this.props
+  pointOption&&pointOption(i)
+}
 
 }

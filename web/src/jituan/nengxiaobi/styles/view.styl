@@ -1,0 +1,80 @@
+/**集团-能效比
+*/
+.nengxiaobiwrap
+  padding: 0 px2rem(20)
+  .jituan-menu
+    height: px2rem(72)
+    // margin-top px2rem(50)
+    margin-bottom px2rem(23)
+    background-color: #fff
+    span
+      display: inline-block
+      height: px2rem(47)
+      font-size: px2rem(28)
+      color: #848689
+      margin-right: px2rem(60)
+      padding 0 px2rem(5)
+      &.active
+        color: #1a1a1a
+        border-bottom 2px solid #5a95f8
+  .jituan-menu.menufix
+    position: fixed;
+    top px2rem(76)
+    left: 0
+    right: 0
+    z-index: 100
+    margin-top 0
+    padding-top: px2rem(30)
+    padding-left px2rem(20)
+    height auto
+  .table-head
+    flexbox()
+    justify-content(space-between)
+    border-bottom 1px solid #f0f0f0
+    line-height: px2rem(57)
+    font-size: px2rem(24)
+    color #848689
+    div
+      float: left
+      width: 20%
+      text-align: center
+    div:nth-child(1)
+      width: 15%
+    div:nth-child(2)
+      width: 30%
+  .table-body
+    .body-tr
+      padding px2rem(30) 0
+      border-bottom: 1px solid #f0f0f0
+      font-size: px2rem(28)
+      color #1a1a1a
+      flexbox()
+      justify-content(space-between)
+      .body-td
+        float: left
+        width: 20%
+        text-align: center
+        position: relative;
+      .body-td:nth-child(1)
+        width: 15%
+      .body-td:nth-child(2)
+        width: 30%
+        text-align: left
+    .body-tr:nth-child(1),.body-tr:nth-child(2),.body-tr:nth-child(3)
+      .body-td:first-child span
+        position: absolute;
+        top: 50%
+        left: 50%
+        display: inline-block;
+        width: px2rem(40)
+        height px2rem(40)
+        margin: px2rem(-20)
+        line-height: px2rem(40)
+        color: #fff
+        border-radius: 50%
+    .body-tr:nth-child(1) .body-td:first-child span
+        background: #5a95f8
+    .body-tr:nth-child(2)  .body-td:first-child span
+        background: #00b3ad
+    .body-tr:nth-child(3) .body-td:first-child span
+        background: #859db4

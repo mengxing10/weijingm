@@ -1,0 +1,91 @@
+title-height = px2rem(85)
+.jdxzwrap
+  background: #fff
+  height: 100%
+  .container
+    width: 100%
+    overflow hidden
+    .jiudian-ss
+      padding-left px2rem(20)
+      padding-right px2rem(20)
+      height px2rem(56)
+      .ss-input-w
+        display: block
+        width 100%
+        height px2rem(56)
+        line-height px2rem(60)
+        border-radius px2rem(10)
+        background #f0f0f0
+        border 1px solid #e6e6ea
+        position relative
+        font-size px2rem(26)
+        color #b2b2b2
+        text-align: center
+        &:before
+          content: '';
+          float: left;
+          position: absolute;
+          top: px2rem(15)
+          left: 40%
+          transform translate(-50%,0)
+          width: px2rem(25)
+          height: px2rem(25)
+          background: url('./img/search.png') no-repeat
+          background-size: 100% 100%
+        .ss-input
+          display: none
+          height 100%
+          padding px2rem(10) 0
+          font-size px2rem(26)
+          overflow hidden
+          box-sizing: border-box
+          margin-left px2rem(70)
+          outline none
+          border none
+          background transparent
+      .foc.ss-input-w:before
+        left: px2rem(20)
+        transform translate(0,0)
+      .foc.ss-input-w
+        .ss-input
+          display: inline-block
+          width 80%
+    .jiudian-list
+      height "calc(100% - %s)" % title-height
+      margin-top px2rem(25)
+      margin-bottom px2rem(85)
+      border-top 1px solid #f0f0f0
+      clearfix()
+      .left
+        float left
+        width px2rem(250)
+        height 100%
+        box-sizing: border-box
+        overflow auto
+        background #f6f6f6
+        // border-right 1px solid #f0f0f0
+        .quyu
+          height px2rem(86)
+          line-height px2rem(86)
+          text-align center
+          font-size px2rem(28)
+          color #98999c
+          border-bottom 1px solid #f0f0f0
+          &.act
+            border-bottom none
+            border-right 1px solid #fff
+            margin-right -1px
+            background #fff
+      .right
+        height 100%
+        overflow auto
+        margin-left px2rem(250)
+        padding 0 px2rem(20)
+        .name
+          height px2rem(86)
+          line-height px2rem(86)
+          font-size px2rem(28)
+          color #090909
+          border-bottom 1px solid #f0f0f0
+
+    

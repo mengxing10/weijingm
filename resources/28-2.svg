@@ -27,12 +27,12 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1920"
-     inkscape:window-height="1012"
+     inkscape:window-height="1017"
      id="namedview244"
      showgrid="false"
-     inkscape:zoom="1.7264425"
-     inkscape:cx="363.37137"
-     inkscape:cy="369.85717"
+     inkscape:zoom="3.452885"
+     inkscape:cx="1102.9604"
+     inkscape:cy="455.91118"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -478,9 +478,10 @@
            id="p10"
            data-name="0.000"
            class="cls-6"
-           transform="translate(994.743,316.1)"
            style="font-size:14px;font-family:'PingFang SC';fill:#fefefe"
-           inkscape:label="#_0.000-9">0.000</text>
+           inkscape:label="#_0.000-9"
+           x="980.74298"
+           y="316.10001">0.000</text>
         <text
            id="m3_h"
            data-name="m3/h"
@@ -535,14 +536,14 @@
          id="组_853-11"
          data-name="组 853">
         path
-           id=&quot;s30&quot;
-           data-name=&quot;矩形 4944 拷贝 7&quot;
-           class=&quot;cls-5&quot;
-           d=&quot;m 2194,3659 h 122 v 51 h -122 z m 2,2 h 118 v 47 h -118 z m -2,21 h 121 v 2 h -121 z m 68,0 h 2 v 28 h -2 z&quot;
-           transform=&quot;translate(-1220,-3140)&quot;
-           inkscape:connector-curvature=&quot;0&quot;
-           style=&quot;fill:#5085c6;fill-rule:evenodd&quot;
-           inkscape:label=&quot;#矩形_4944_拷贝_7&quot; /&gt;
+           id=s30
+           data-name=矩形 4944 拷贝 7
+           class=cls-5
+           d=m 2194,3659 h 122 v 51 h -122 z m 2,2 h 118 v 47 h -118 z m -2,21 h 121 v 2 h -121 z m 68,0 h 2 v 28 h -2 z
+           transform=translate(-1220,-3140)
+           inkscape:connector-curvature=0
+           style=fill:#5085c6;fill-rule:evenodd
+           inkscape:label=#矩形_4944_拷贝_7 /
         <text
    id="p21"
    data-name="0.000"
@@ -955,9 +956,10 @@
          id="p12"
          data-name="155605.4 m"
          class="cls-13"
-         transform="translate(1141.711,284.275)"
          style="font-size:14.00399971px;font-family:'PingFang SC';fill:#fbfdff"
-         inkscape:label="#_155605.4_m">155605.4</text>
+         inkscape:label="#_155605.4_m"
+         x="1109.7111"
+         y="316.27499">155605.4</text>
       <text
          id="_204"
          data-name="204"
@@ -1423,13 +1425,13 @@
        inkscape:label="#阀门-12"
        style="fill:#f0f0f0;fill-opacity:1">
       path
-         id=&quot;多边形_4635_拷贝-9&quot;
-         data-name=&quot;多边形 4635 拷贝&quot;
-         class=&quot;cls-16&quot;
-         d=&quot;m 1684,3720 h 19 v 18 h -19 z m 16.99,15.99 h -15.98 v -1.97 h 15.98 z m 9,-6.85 -7.07,8.87 -0.92,-1.15 7.07,-8.87 z m -0.91,0.85 -7.07,-8.85 0.92,-1.15 7.07,8.85 z M 1709,3728 h 12 v 2 h -12 z m -1,-7 h 2 v 16 h -2 z m -7.01,10.99 h -15.98 v -1.97 h 15.98 z m 0,-4 h -15.98 v -1.97 h 15.98 z m 0,-4 h -15.98 v -1.97 h 15.98 z&quot;
-         transform=&quot;translate(-1220,-3140)&quot;
-         inkscape:connector-curvature=&quot;0&quot;
-         style=&quot;fill:#f0f0f0;fill-opacity:1;fill-rule:evenodd&quot; /&gt;
+         id=多边形_4635_拷贝-9
+         data-name=多边形 4635 拷贝
+         class=cls-16
+         d=m 1684,3720 h 19 v 18 h -19 z m 16.99,15.99 h -15.98 v -1.97 h 15.98 z m 9,-6.85 -7.07,8.87 -0.92,-1.15 7.07,-8.87 z m -0.91,0.85 -7.07,-8.85 0.92,-1.15 7.07,8.85 z M 1709,3728 h 12 v 2 h -12 z m -1,-7 h 2 v 16 h -2 z m -7.01,10.99 h -15.98 v -1.97 h 15.98 z m 0,-4 h -15.98 v -1.97 h 15.98 z m 0,-4 h -15.98 v -1.97 h 15.98 z
+         transform=translate(-1220,-3140)
+         inkscape:connector-curvature=0
+         style=fill:#f0f0f0;fill-opacity:1;fill-rule:evenodd /
       <path
    id="多边形_4635-12"
    data-name="多边形 4635"
@@ -1747,12 +1749,24 @@
      inkscape:label="#_13.11_m"
      x="1211.3145"
      y="124.17731">m</text>
+  <path
+     id="矩形_4944_拷贝_5-5"
+     data-name="矩形 4944 拷贝 5"
+     class="cls-5"
+     d="m 1100.9362,275.45212 h 122 v 51 h -122 z m 2,2 h 118 v 47 h -118 z m -2,21 h 121 v 2 h -121 z m 68,0 h 2 v 28 h -2 z"
+     inkscape:connector-curvature="0"
+     style="display:inline;fill:#5085c6;fill-rule:evenodd" />
   <text
-     id="p3-6-2"
-     data-name="13.11 m"
-     class="cls-14"
-     style="font-size:20.00600052px;font-family:'PingFang SC';fill:#ffffff"
-     inkscape:label="#_13.11_m"
-     x="1232.6708"
-     y="283.21594">m</text>
+     y="315.51987"
+     x="1186.1981"
+     id="m3_h-26"
+     data-name="m3/h"
+     class="cls-7"
+     style="font-size:14.00399971px;font-family:'PingFang SC';fill:#a3cff6">m3</text>
+  <text
+     y="293.28799"
+     x="1106.5861"
+     id="去白云水流量-7"
+     class="cls-7"
+     style="font-size:14.00399971px;font-family:'PingFang SC';fill:#a3cff6">去白云水累计流量</text>
 </svg>

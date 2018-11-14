@@ -1,0 +1,140 @@
+.jiancewrap
+  background: #fff
+  // padding-bottom px2rem(100)
+  width: 100%
+  position: absolute;
+  top: 0
+  bottom px2rem(100)
+  overflow-y: auto;
+  .jiance-search
+    margin: px2rem(20)
+    height px2rem(56)
+    border-radius: px2rem(10)
+    background: #f0f0f0
+    clearfix()
+    .search-left
+      float: left
+      width 40%
+      line-height px2rem(56)
+      border-right: 1px solid #e5e5e5
+      box-sizing: border-box;
+      padding-left px2rem(20)
+      font-size: px2rem(24)
+      color #666
+      position: relative
+      &:after
+        position: absolute
+        right:px2rem(25)
+        top:px2rem(25)
+        content:""
+        display: inline-block
+        border-width:5px
+        border-style: solid
+        border-color:#b5b5b5 transparent transparent
+    .search-right
+      float: left
+      width 59%
+      position: relative;
+      font-size: px2rem(26)
+      color #b2b2b2
+      .input
+        display: inline-block;
+        width: 100%
+        height: px2rem(56)
+        line-height: px2rem(56)
+        position: relative;
+        input
+          float: left;
+          position: absolute;
+          top 0
+          left: px2rem(85)
+          bottom: 0
+          right: 0
+          background: transparent
+          border: none
+          outline: none
+          line-height: px2rem(56)
+          vertical-align: bottom;
+      .input:before
+        content: ''
+        float: left
+        position: absolute;
+        top px2rem(15)
+        left px2rem(30)
+        width: px2rem(25)
+        height: px2rem(25)
+        background: url('./img/search.png') no-repeat
+        background-size 100% 100%
+  .jiance-menu
+    height: px2rem(60)
+    border-bottom 1px solid #f0f0f0
+    margin-top px2rem(30)
+    flexbox()
+    justify-content(space-between)
+    .menu
+      float: left
+      width: 33.333%
+      text-align: center
+      font-size: px2rem(28)
+      color #131313
+      span
+        display: inline-block;
+        height: px2rem(58)
+      &.active span
+        border-bottom: 2px solid #5994f8
+        color #5994f8
+  .jiance-body
+    padding px2rem(58) px2rem(20) px2rem(20)
+    .body-top
+      flexbox()
+      justify-content(space-between)
+      margin-bottom: px2rem(50)
+      .top-i
+        width: 32%
+        padding px2rem(37) 0
+        border-radius: px2rem(10)
+        background: linear-gradient(-30deg,#52c7ca 0%,rgba(48, 163, 166, 0.37) 100%)
+        text-align: center
+        span:first-child
+          display: block;
+          font-size px2rem(24)
+          color: #d3f0f1
+        span:last-child
+          display: block;
+          margin-top: px2rem(18)
+          font-size px2rem(36)
+          color: #fff
+      .top-i:nth-child(2)
+        background: linear-gradient(-9deg,#462ddd 0%,rgba(70, 45, 221, 0.61) 100%)
+        span:first-child
+          color #dcddff
+      .top-i:nth-child(3)
+        background: linear-gradient(-21deg,#46589a 0%,rgba(70, 88, 154, 0.61) 100%)
+        span:first-child
+          color #d9dffd
+    .conf-i
+      margin-top: px2rem(37)
+      .title
+        padding-bottom: px2rem(30)
+        border-bottom 1px solid #f0f0f0
+        color: #121212
+        font-size: px2rem(28)
+      .conn
+        flexbox()
+        justify-content(space-between)
+        flex-wrap(wrap)
+        .conn-i
+          width 50%
+          border-right: 1px solid #f0f0f0
+          border-bottom 1px solid #f0f0f0
+          padding px2rem(30) 0 px2rem(30) px2rem(30)
+          box-sizing: border-box;
+          div:first-child
+            font-size: px2rem(24)
+            color #848689
+          div:last-child
+            margin-top px2rem(13)
+            font-size: px2rem(28)
+            color #222
+        .conn-i:nth-child(even)
+          border-right: none

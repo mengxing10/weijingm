@@ -13,7 +13,8 @@
  let receive = (type, data) => {return {type, data}}
 
 
- let apiPath = `http://39.106.150.90:8080/baogang/`
+ let apiPath = `http://118.190.44.91:8080/hangang/`
+ //let apiPath = `http://192.168.30.140:8080/EnergyBureau.portal/`
 
 let deleteTableData = `${apiPath}confTable/deleteTableData`
 //{"tableName":"test1","uuid":"d4c8a909-1a80-4d21-9c6f-4126a34f43ab"}
@@ -88,10 +89,9 @@ export function getPageConf(pageName,data={},pageParams={}) {
   return async dispatch => {
     let res = {}
 
-    res['jiancestatus'] = 2
-    res['jiancemsg'] = '请求数据中...'
-    res['jiancedata'] = data
-    
+    res['status'] = 2
+    res['msg'] = '请求数据中...'
+    res['data'] = data
     dispatch(request(`GetPageConf_REQ_${pageName}`,res))
 
     try {
@@ -99,15 +99,15 @@ export function getPageConf(pageName,data={},pageParams={}) {
       let dataconfPars = {"tableName":pageDataConfTable,
       	"selectConditionPo":[{"columnName":"page","logicalSymbol":"=","condition":`${pageName}`}]}
         let dataCfs= await axios.post(selectTableDataCondition, {...dataconfPars,...pageParams})
-        res['jiancedata']['dataConfs'] = dataCfs.data.result[0]
-        res['jiancestatus']=dataCfs['status']
-        res['jiancemsg']='请求页面配置成功'
+        res['data']['dataConfs'] = dataCfs.data.result[0]
+        res['status']=dataCfs['status']
+        res['msg']='请求页面配置成功'
         dispatch(receive(`GetPageConf_REC_${pageName}`,res))
     } catch (err) {
       console.error('捕获到错误: ', err)
-      res['jiancestatus'] = 0
-      res['jiancemsg'] = '请求页面配置失败，服务器无响应'
-      dispatch(request(`GetPageConf_REC_${pageName}`,res))
+      res['status'] = 0
+      res['msg'] = '请求页面配置失败，服务器无响应'
+      dispatch(request(`GetPageConf_ERR_${pageName}`,res))
     }
   }
 }
@@ -118,15 +118,16 @@ export function getPageData(pageName,data={},pageParams={},reLoading=false) {
   initApi()
   return async dispatch => {
     let res = {}
-    res['jiancemsg'] = '请求数据中...'
-    res['jiancedata'] = data
-    if(reLoading) {res['jiancestatus'] = 2,res['jiancedata']['status'] = 2}
+    res['msg'] = '请求数据中...'
+    res['data'] = data
+    if(reLoading) {res['status'] = 2,res['data']['status'] = 2}
+
     dispatch(request(`GetPageData_REQ_${pageName}`,res))
-    res['jiancemsg']=''
+    res['msg']=''
     try {
 
       //@test
-      let dataConfs = res['jiancedata']['dataConfs']
+      let dataConfs = res['data']['dataConfs']
       let confKeys =[]
       let confDatas = []
       let i =0
@@ -197,18 +198,15 @@ export function getPageData(pageName,data={},pageParams={},reLoading=false) {
       for(var i=0; i < rPs.length ; i++){
 
         let readRealData =  await axios.post(spotData, rPs[i])
-        if(readRealData.status==1){
-          res['jiancemsg']+=`获取${rPsKeys[i]}实时点成功;             `
-          let lastDate = readRealData['data']['lastDate']
-
-
-          sessionStorage.setItem('lastDate',lastDate)
-        }
+        res['msg']+=`获取${rPsKeys[i]}实时点成功;             `
         //readRealData['msg']+
-        res['jiancedata'][rPsKeys[i]]['status'] =  readRealData.status
+        let lastDate = readRealData['data']['lastDate']
+
+        sessionStorage.setItem('lastDate',lastDate)
+        res['data'][rPsKeys[i]]['status'] =  readRealData.status
 
         if(readRealData.status==1){
-              res['jiancedata'][rPsKeys[i]]['data']=rPs[i]['dateAndPointId'].map((item,i)=>(readRealData.data[item]))
+              res['data'][rPsKeys[i]]['data']=rPs[i]['dateAndPointId'].map((item,i)=>(readRealData.data[item]))
 
         }
       }
@@ -216,30 +214,32 @@ export function getPageData(pageName,data={},pageParams={},reLoading=false) {
       for(var i=0; i < cPs.length ; i++){
         let pagePars = {...cPs[i],...cPsTime[i],...cPsInerval[i],...pageParams}
         let readChartData =  await axios.post(chartData, {...cPs[i],...cPsTime[i],...cPsInerval[i]})
-        res['jiancedata'][cPsKeys[i]]['status'] =  readChartData.status
-        res['jiancemsg']+=`获取${cPsKeys[i]}曲线成功;             `
+        res['data'][cPsKeys[i]]['status'] =  readChartData.status
+        res['msg']+=`获取${cPsKeys[i]}曲线成功;             `
         // readChartData['msg']+'\n'
 
         if(readChartData.status==1){
-              res['jiancedata'][cPsKeys[i]]['data']['result']=cPs[i]['aggregateAndPointIds'].map((item,i)=>(readChartData.data.result[item]))
-              res['jiancedata'][cPsKeys[i]]['data']['dateList']=readChartData.data.dateList
+              res['data'][cPsKeys[i]]['data']['result']=cPs[i]['aggregateAndPointIds'].map((item,i)=>(readChartData.data.result[item]))
+              res['data'][cPsKeys[i]]['data']['dateList']=readChartData.data.dateList
         }
       }
       //获取表格数据
       for (var i = 0; i < tPs.length; i++) {
-          res['jiancedata'][tPsKeys[i]]= await axios.post(selectTableDataCondition, {...tPs[i],...tPsCols[i],...tPsCons[i],...pageParams[tPsKeys[i]]})
-          res['jiancemsg']+=`获取${tPsKeys[i]}表格成功;         `
-          //res['jiancedata'][tPsKeys[i]]+'\n'
+
+          res['data'][tPsKeys[i]]= await axios.post(selectTableDataCondition, {...tPs[i],...tPsCols[i],...tPsCons[i],...pageParams[tPsKeys[i]]})
+
+          res['msg']+=`获取${tPsKeys[i]}表格成功;         `
+          //res['data'][tPsKeys[i]]+'\n'
       }
-      res['jiancedata']['status']=1
+      res['data']['status']=1
       dispatch(receive(`GetPageData_REC_${pageName}`,res))
     } catch (err) {
       console.error('捕获到错误: ', err)
-      res['jiancestatus'] = 0
-      res['jiancedata']['status'] = 0
+      res['status'] = 0
+      res['data']['status'] = 0
 
-      res['jiancemsg'] = '请求数据失败'
-      dispatch(request(`GetPageData_REQ_${pageName}`,res))
+      res['msg'] = '请求数据失败'
+      dispatch(request(`GetPageData_ERR_${pageName}`,res))
     }
   }
 }
@@ -247,21 +247,21 @@ export function operateTableData(pageName,opt,dataId,data={},dataParams={},pageP
   initApi()
   return async dispatch => {
       let res = {}
-
-      res['jiancemsg'] = '请求数据中...'
-      res['jiancedata'] = data
-      res['jiancestatus'] =  2
+      res['msg'] = '请求数据中...'
+      res['data'] = data
+      res['status'] =  2
       if(reLoading)
-        {res['jiancedata'][dataId]['status'] =2}
-      dispatch(request(`GetPageData_REQ_${pageName}_${dataId}`,res))
+        {res['data'][dataId]['status'] =2}
+      dispatch(request(`OPERATETABLE_REQ_${pageName}_${dataId}`,res))
+
       try {
           let dataConf = data['dataConfs'][dataId].split('@')
           let tPs ={}
           if(dataConf[1]){tPs['tableName']=dataConf[1]}
           if(dataConf[2]){tPs['columnNames']=dataConf[2].split(',')}
           tPs['type']=0
-          let obj = {object:dataParams}
-
+          let obj = dataParams
+          
           let optRes ={}
           switch (opt) {
             case 'del':
@@ -275,24 +275,23 @@ export function operateTableData(pageName,opt,dataId,data={},dataParams={},pageP
               break;
             default:
           }
-          res['jiancestatus'] = optRes['status']
-          res['jiancemsg'] = optRes['msg']
-          dispatch(receive(`GetPageData_REC_${pageName}_${dataId}`,res))
+          res['status'] = optRes['status']
+          res['msg'] = optRes['msg']
+          dispatch(receive(`OPERATETABLE_REC_${pageName}_${dataId}`,res))
           //更新页面对应数据
 
            let resTd= await axios.post(selectTableDataCondition, {...tPs,...pageParams})
-          res['jiancedata'][dataId] =resTd
-          res['jiancestatus'] = resTd['status']
-          res['jiancemsg'] = resTd['msg']
+          res['data'][dataId] =resTd
+          res['status'] = resTd['status']
+          res['msg'] = resTd['msg']
           dispatch(receive(`GetPageData_REC_${pageName}_${dataId}`,res))
       }catch (err) {
         console.error('捕获到错误: ', err)
-        res['jiancestatus'] = 0
-        res['jiancemsg'] = '操作失败,服务器无响应'
-        res['jiancedata'][dataId]['status'] =0
+        res['status'] = 0
+        res['msg'] = '操作失败,服务器无响应'
+        res['data'][dataId]['status'] =0
 
-        dispatch(receive(`GetPageData_REC_${pageName}_${dataId}`,res))
+        dispatch(receive(`OPERATETABLE_ERR_${pageName}_${dataId}`,res))
       }
     }
-
-}
+  }

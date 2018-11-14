@@ -24,7 +24,7 @@ module.exports = {
 		  //publicPath: isProduction ? '/baogang/asset/' : 'http://127.0.0.1:8089/baogang/asset/',
           // publicPath: isProduction ? '/baogang/asset/' : 'http://localhost:8089/baogang/asset/',
           // publicPath: isProduction ? '/baogang/asset/' : 'http://192.168.30.130:8089/baogang/asset/',
-             publicPath: isProduction ? '/bgp/asset/' : 'http://127.0.0.1:8089/baogang/asset/',
+             publicPath: isProduction ? '/weijingm/asset/' : 'http://127.0.0.1:8080/weijingm/asset/',
         //服务器上:
         // publicPath: isProduction ? '/baogang/asset/' : 'http://118.190.44.91:8089/baogang/asset/',
     },

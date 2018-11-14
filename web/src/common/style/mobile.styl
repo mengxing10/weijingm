@@ -1,0 +1,49 @@
+@require 'initialize';
+@require 'image';
+@require 'mixin';
+
+
+initialize()
+
+html,
+body
+    height 100%
+    -webkit-overflow-scrolling touch
+    -webkit-text-size-adjust 100% !important
+    background #f3f3f3
+    width 100%
+
+html
+    font-size 62.5%
+    color #333
+
+a
+    color #3a9ae6
+    text-decoration none
+
+input,
+select {
+    -webkit-appearance:none; /*去除系统默认的样式*/
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /*点击高亮的颜色*/
+    outline: none;
+}
+
+//a:focus,
+button:focus,
+input:focus {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-user-modify: read-write-plaintext-only;
+    outline: none;
+}
+
+.blur
+    filter blur(px2rem(5))
+
+::-webkit-input-placeholder
+    position relative
+    top -1px
+    color #999
+
+$base = #3a9ae6
+$gray = #848689
+$black = #252525
